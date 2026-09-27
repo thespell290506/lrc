@@ -1,0 +1,86 @@
+[
+ {
+  "id": "SB_72",
+  "q": "Welche GW/KW-Frequenz ist für den koordinierten Such- und Rettungsfunkverkehr (SAR) vorgesehen?",
+  "correct": "3023 kHz",
+  "wrong": [
+   {"t": "2182 kHz", "why": "2182 kHz ist die allgemeine Not- und Sicherheitsfrequenz im Sprechfunk (LRC_fragen #148/SB_68); 3023 kHz ist speziell für koordinierte SAR-Einsätze vorgesehen (SRC_SB #72/LRC_fragen #124)."},
+   {"t": "2187,5 kHz", "why": "2187,5 kHz ist die GW-DSC-Alarmierungsfrequenz (LRC_fragen #89/SB_55); für koordinierte SAR-Einsätze wird 3023 kHz benutzt (SRC_SB #72)."},
+   {"t": "8414,5 kHz", "why": "8414,5 kHz ist eine KW-DSC-Alarmierungsfrequenz (SB_10/57); für koordinierte SAR-Einsätze ist 3023 kHz vorgesehen (SRC_SB #72)."}
+  ],
+  "src": "SRC_SB #72 (Z.341); LRC_fragen #124",
+  "action": "fixed"
+ },
+ {
+  "id": "SB_78",
+  "q": "Auf welcher GW-Frequenz soll eine Seefunkstelle im Sprechfunk die Dringlichkeitsmeldung im GMDSS aussenden?",
+  "correct": "2182 kHz",
+  "wrong": [
+   {"t": "2187,5 kHz", "why": "2187,5 kHz ist ausschließlich für DSC reserviert (LRC_fragen #89/SB_55/69); Sprechfunk-Dringlichkeitsmeldungen laufen auf 2182 kHz (SRC_SB #78/LRC_fragen #139)."},
+   {"t": "2177 kHz", "why": "2177 kHz ist für DSC-Anrufe zwischen Schiffen (LRC_fragen #197); Dringlichkeitsmeldungen im Sprechfunk laufen auf 2182 kHz (SRC_SB #78)."},
+   {"t": "3023 kHz", "why": "3023 kHz ist für koordinierte SAR-Einsätze vorgesehen (SRC_SB #72); Dringlichkeitsmeldungen werden auf 2182 kHz gesendet (SRC_SB #78)."}
+  ],
+  "src": "SRC_SB #78 (Z.379); LRC_fragen #139",
+  "action": "fixed"
+ },
+ {
+  "id": "SB_82",
+  "q": "Auf welcher GW-Frequenz soll eine Seefunkstelle im Sprechfunk die Sicherheitsmeldung im GMDSS im Regelfall aussenden?",
+  "correct": "2182 kHz",
+  "wrong": [
+   {"t": "2187,5 kHz", "why": "2187,5 kHz ist ausschließlich für DSC reserviert (LRC_fragen #89/SB_55/69); Sprechfunk-Sicherheitsmeldungen laufen auf 2182 kHz (SRC_SB #82/LRC_fragen #148)."},
+   {"t": "518 kHz", "why": "518 kHz ist die internationale NAVTEX-Frequenz für automatische Warnnachrichten (LRC_fragen #153), nicht für Sprechfunk-Sicherheitsmeldungen."},
+   {"t": "490 kHz", "why": "490 kHz ist die nationale NAVTEX-Frequenz (LRC_fragen #126); Sicherheitsmeldungen im Sprechfunk laufen auf 2182 kHz (SRC_SB #82)."}
+  ],
+  "src": "SRC_SB #82 (Z.403); LRC_fragen #148",
+  "action": "fixed"
+ },
+ {
+  "id": "SB_84",
+  "q": "Wie können im Küstenbereich automatisch Warnnachrichten empfangen werden?",
+  "correct": "über NAVTEX",
+  "wrong": [
+   {"t": "über EGC (Enhanced Group Call) auf Inmarsat-C", "why": "EGC ist für MSI über Satelliten in den Seegebieten A3/A4 zuständig (LRC_fragen #160/161); im Küstenbereich wird NAVTEX benutzt (SRC_SB #84/LRC_fragen #152)."},
+   {"t": "durch kontinuierliches Abhören von Kanal 16", "why": "Kanal 16 ist der Not- und Anrufkanal; NAVTEX ist das automatische System für Warnnachrichten im Küstenbereich (SRC_SB #84/LRC_fragen #152)."},
+   {"t": "durch DSC-Sicherheitsanrufe auf 2187,5 kHz", "why": "DSC-Sicherheitsanrufe kündigen Sicherheitsmeldungen an; NAVTEX ist das automatische Empfangssystem für Warnnachrichten (SRC_SB #84/LRC_fragen #152)."}
+  ],
+  "src": "SRC_SB #84 (Z.413); LRC_fragen #152",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_95",
+  "q": "Muss eine Seefunkstelle den Empfang eines DSC-Notalarms auf GW einer zweifellos weit entfernten Seefunkstelle, der sie nicht helfen kann, über Sprechfunk bestätigen?",
+  "correct": "die Bestätigung erfolgt in diesem Fall nur dann, wenn die Notmeldung von anderen Funkstellen nicht bestätigt worden ist",
+  "wrong": [
+   {"t": "ja, jede Seefunkstelle muss jeden empfangenen Notalarm auf 2182 kHz bestätigen", "why": "Wenn die Funkstelle zweifellos weit entfernt ist, wird nur bestätigt, wenn keine andere Funkstelle den Alarm bestätigt hat (LRC_fragen #95/SB_64)."},
+   {"t": "nein, weit entfernte Notalarme dürfen grundsätzlich nicht bestätigt werden", "why": "Sie dürfen bestätigt werden, wenn keine andere Funkstelle bestätigt hat (LRC_fragen #95/SB_64); es gibt kein grundsätzliches Verbot."},
+   {"t": "ja, aber nur per DSC auf 2187,5 kHz, nicht im Sprechfunk", "why": "Wenn in der Nähe, wird im Sprechfunk auf 2182 kHz bestätigt (SB_61/63); bei weit entfernten Alarmen nur, wenn sonst niemand bestätigt (LRC_fragen #95)."}
+  ],
+  "src": "LRC_fragen #95 (Z.876); SB_64",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_108",
+  "q": "Darf die Frequenz 2187,5 kHz für Sprechfunkverkehr benutzt werden?",
+  "correct": "nein",
+  "wrong": [
+   {"t": "ja, aber nur im Notfall", "why": "2187,5 kHz ist ausschließlich für DSC reserviert (LRC_fragen #89/SB_55/69); Sprechfunk-Notverkehr läuft auf 2182 kHz (LRC_fragen #148/SB_68)."},
+   {"t": "ja, für DSC-Anrufe im Sprechfunkmodus", "why": "DSC ist ein digitales Anrufverfahren, kein Sprechfunk; 2187,5 kHz ist ausschließlich für DSC (LRC_fragen #108/SB_69)."},
+   {"t": "ja, mit Genehmigung der Küstenfunkstelle", "why": "2187,5 kHz ist ausschließlich für DSC reserviert (LRC_fragen #89/SB_69); Sprechfunkverkehr ist nicht zulässig."}
+  ],
+  "src": "LRC_fragen #108 (implizit via SB_69); SB_69",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_110",
+  "q": "Für welchen Zweck darf die Frequenz 121,5 MHz benutzt werden?",
+  "correct": "für Not- und Dringlichkeitszwecke im Sprechfunk durch Funkstellen des mobilen Flugfunkdienstes, für Rettungsgerätefunkstellen und zum ‚Homeing’ von EPIRB's",
+  "wrong": [
+   {"t": "für den öffentlichen Seefunkverkehr mit Küstenfunkstellen", "why": "121,5 MHz ist die Notfrequenz des Flugfunkdienstes (LRC_fragen #71/110); der öffentliche Seefunkverkehr läuft auf anderen UKW-Kanälen."},
+   {"t": "für DSC-Alarmierungen im UKW-Bereich", "why": "DSC-Alarmierungen im UKW laufen auf Kanal 70 (LRC_fragen #88/90); 121,5 MHz ist die Flugfunk-Notfrequenz und für Rettungsgeräte (LRC_fragen #110)."},
+   {"t": "für NAVTEX-Aussendungen im UKW-Bereich", "why": "NAVTEX läuft auf Grenzwelle (518 kHz/490 kHz, LRC_fragen #126/153); 121,5 MHz ist die Flugfunk-Notfrequenz (LRC_fragen #71/110)."}
+  ],
+  "src": "LRC_fragen #110 (Z.947); #71",
+  "action": "fixed"
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "id": "LRC_113",
+  "q": "Eine Funkstelle sendet einen „DSC distress relay alert“ aus, was bedeutet das?",
+  "correct": "dass sich eine andere Stelle in Not (unmittelbarer, schwerer Gefahr) befindet",
+  "wrong": [
+   {"t": "dass die eigene Funkstelle selbst in unmittelbarer Gefahr ist und Hilfe braucht", "why": "Das wäre ein normaler DSC distress alert; das Kennwort 'relay' bedeutet gerade die Weitergabe für eine FREMDE Stelle."},
+   {"t": "dass ein zuvor empfangener Notalarm als Fehlalarm zurückgenommen wird", "why": "Die Rücknahme heißt 'cancel my distress alert' und ist ein eigenes Verfahren, kein relay alert."},
+   {"t": "dass der Empfang eines Notalarms quittiert und der Notverkehr übernommen wird", "why": "Das ist die 'distress acknowledgement' — Bestätigung, nicht Weiterleitung."}
+  ],
+  "src": "LRC_fragen #113 (Z.975)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_114",
+  "q": "Wann wird „SILENCE MAYDAY“ ausgesendet?",
+  "correct": "wenn die Funkstelle in Not oder die Funkstelle, die den Notverkehr leitet, einer oder mehreren Funkstellen das Senden untersagt (Funkstille auferlegt)",
+  "wrong": [
+   {"t": "wenn der Notverkehr beendet ist und die auferlegte Funkstille wieder aufgehoben wird", "why": "Das Aufheben der Funkstille erfolgt mit SILENCE FINI (LRC_fragen #117/#118), nicht mit SILENCE MAYDAY."},
+   {"t": "wenn eine Funkstelle den Empfang eines Notalarms bestätigt und den Notverkehr übernimmt", "why": "Die Übernahme wird mit MAYDAY/RECEIVED MAYDAY quittiert; SILENCE MAYDAY verbietet ausschließlich das Senden."},
+   {"t": "wenn ein Schiff, das selbst nicht in Not ist, den Notalarm für ein anderes Schiff weitergibt", "why": "Das ist das MAYDAY RELAY-Verfahren (LRC_fragen #112) und hat mit Funkstille nichts zu tun."}
+  ],
+  "src": "LRC_fragen #114 (Z.978)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_115",
+  "q": "Mit welchen Zeichen dürfen RCC´s, die den Notverkehr, oder Einheiten, die Such- und Rettungsarbeiten koordinieren, Funkstellen, die einen Notverkehr im GMDSS stören, im Sprechfunk Funkstille auferlegen?",
+  "correct": "SILENCE MAYDAY",
+  "wrong": [
+   {"t": "SILENCE FINI", "why": "SILENCE FINI hebt die Funkstille auf, statt sie aufzuerlegen (LRC_fragen #117)."},
+   {"t": "SEELONCE DISTRESS", "why": "Erfundene Mischform; das internationale Verfahrenswort für das Auferlegen der Funkstille ist SILENCE MAYDAY."},
+   {"t": "PRUDENCE MAYDAY", "why": "PRUDENCE existiert als Lockerung der Funkstille bei teilweise wieder freigegebenem Verkehr, verbietet also nicht das Senden."}
+  ],
+  "src": "LRC_fragen #115 (Z.982)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_117",
+  "q": "Was besagt die Meldung, an deren Ende „SILENCE FINI“ steht?",
+  "correct": "dass der Notverkehr beendet und die Funkstille aufgehoben ist",
+  "wrong": [
+   {"t": "dass allen Funkstellen ab sofort das Senden untersagt ist", "why": "Das Auferlegen der Funkstille erfolgt mit SILENCE MAYDAY (LRC_fragen #115); FINI bedeutet das Gegenteil."},
+   {"t": "dass der Notverkehr auf eine andere Frequenz verlegt wird", "why": "Ein Frequenzwechsel wird ausdrücklich angesagt und benutzt kein eigenes Verfahrenswort dieser Art."},
+   {"t": "dass die eigene Funkstelle den Notverkehr nicht länger mithören kann", "why": "SILENCE FINI ist eine Ansage der leitenden Stelle an alle, keine Statusmeldung einer einzelnen Funkstelle."}
+  ],
+  "src": "LRC_fragen #117 (Z.991)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_122",
+  "q": "Wem obliegt in der Regel das Koordinieren des Notverkehrs im GMDSS?",
+  "correct": "einem RCC (MRCC)",
+  "wrong": [
+   {"t": "dem Kapitän des zuerst am Unfallort eintreffenden Schiffes", "why": "Der On-Scene-Coordinator führt nur die Maßnahmen vor Ort; die Leitung des Notverkehrs liegt beim RCC."},
+   {"t": "der nächstgelegenen Küstenfunkstelle", "why": "Die Küstenfunkstelle nimmt den Alarm auf und leitet ihn weiter, koordiniert aber nicht die Rettung."},
+   {"t": "der Fernmeldebehörde des Flaggenstaates", "why": "Die Fernmeldebehörde vergibt Rufzeichen und MMSI (LRC_fragen #67) und hat keine operative SAR-Rolle."}
+  ],
+  "src": "LRC_fragen #122 (Z.1014)",
+  "action": "fixed"
+ }
+]

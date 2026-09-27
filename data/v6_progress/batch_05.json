@@ -1,0 +1,122 @@
+[
+ {
+  "id": "LRC_182",
+  "q": "Welche Nachrichten dürfen im Seefunkdienst auf den Kanälen des Hafenfunkdienstes übermittelt werden?",
+  "correct": "Nachrichten zur Abwicklung von Vorgängen mit Schleppern, Lotsen und Hafenbehörden",
+  "wrong": [
+   {"t": "ausschließlich Not-, Dringlichkeits- und Sicherheitsmeldungen", "why": "Not- und Sicherheitsverkehr läuft über Kanal 16 und die Notfrequenzen; Hafenfunkkanäle sind für den Hafenbetrieb bestimmt (LRC_fragen #182)."},
+   {"t": "private Gespräche der Besatzung über eine Küstenfunkstelle", "why": "Privatgespräche gehören zum öffentlichen Nachrichtenaustausch über Küstenfunkstellen, nicht auf Hafenfunkkanäle (LRC_fragen #182)."},
+   {"t": "Wetterberichte und Navigationswarnungen für das Seegebiet", "why": "Maritime Sicherheitsinformationen werden über NAVTEX bzw. EGC verbreitet (LRC_fragen #152/160), nicht über Hafenfunkkanäle."}
+  ],
+  "src": "LRC_fragen #182 (Z.1246)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_184",
+  "q": "Über welches Verfahren können ausgewählte Seefunkstellen im Raumsegment des GMDSS gerufen werden?",
+  "correct": "EGC Fleet-Net",
+  "wrong": [
+   {"t": "EGC Safety-Net", "why": "SafetyNET verbreitet maritime Sicherheitsinformationen an alle Schiffe in einem Gebiet (LRC_fragen #190/SB_39); FleetNET richtet sich an ausgewählte Stationen (z.B. eine Reedereiflotte)."},
+   {"t": "DSC-Gruppenruf auf Kanal 70", "why": "DSC auf Kanal 70 ist terrestrischer UKW-Funk (LRC_fragen #173/196), nicht Raumsegment (Satellit)."},
+   {"t": "NAVTEX-Gruppenaussendung auf 518 kHz", "why": "NAVTEX ist ein terrestrischer Grenzwellendienst ohne Adressierung einzelner Stationen (LRC_fragen #153/155)."}
+  ],
+  "src": "LRC_fragen #184 (Z.1253)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_187",
+  "q": "Wie wird der Winkel zwischen Horizont und Satellit vom Schiff aus gesehen in der englischen Sprache genannt?",
+  "correct": "Elevation",
+  "wrong": [
+   {"t": "Azimuth", "why": "Azimuth ist der Winkel zwischen Meridian und Satellit, also die Richtung rechtweisend (LRC_fragen #188/140), nicht die Höhe über dem Horizont."},
+   {"t": "Declination", "why": "Deklination ist ein astronomischer bzw. magnetischer Begriff und wird für die Satellitenausrichtung an Bord nicht verwendet."},
+   {"t": "Inclination", "why": "Inklination beschreibt die Neigung einer Satellitenbahn gegen die Äquatorebene, nicht den Blickwinkel vom Schiff aus."}
+  ],
+  "src": "LRC_fragen #187 (Z.1263); LRC_188",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_189",
+  "q": "Welche Institution muss vor Inbetriebnahme einer (Inmarsat-) SATCOM-Anlage ihre Zustimmung geben?",
+  "correct": "Inmarsat",
+  "wrong": [
+   {"t": "die IMO (Internationale Seeschifffahrts-Organisation)", "why": "Die IMO gibt den GMDSS Master Plan heraus (SB_7/SB_47), erteilt aber keine Betriebszustimmung für einzelne SATCOM-Anlagen."},
+   {"t": "die ITU (Internationale Fernmeldeunion)", "why": "Die ITU erlässt die Vollzugsordnung für den Funkdienst (LRC_fragen #17/59); die Freigabe der Anlage erteilt Inmarsat selbst (LRC_fragen #189)."},
+   {"t": "das zuständige RCC (Rescue Coordination Center)", "why": "Das RCC koordiniert Rettungsoperationen (LRC_fragen #73/86), hat keine Zulassungsfunktion für Bordanlagen."}
+  ],
+  "src": "LRC_fragen #189 (Z.1271)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_190",
+  "q": "Welche Dienste bietet Inmarsat-C?",
+  "correct": "MSI über EGC / Safety-Net",
+  "wrong": [
+   {"t": "Sprechfunkverbindungen (Telefonie) über Satellit", "why": "Inmarsat-C ermöglicht keine Sprachübertragung (LRC_fragen #118); es ist ein Daten-/Telexdienst."},
+   {"t": "Radarortung von Schiffen in Seenot", "why": "Radarortung erfolgt über SART im 9-GHz-Bereich (LRC_fragen #74/107), nicht über Inmarsat-C."},
+   {"t": "DSC-Alarmierung auf den Grenz- und Kurzwellenfrequenzen", "why": "DSC ist ein terrestrisches Verfahren auf GW/KW/UKW (LRC_fragen #85/89/173); Inmarsat-C arbeitet über das Raumsegment."}
+  ],
+  "src": "LRC_fragen #190 (Z.1275); LRC_118",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_198",
+  "q": "Wer setzt bei Funkgesprächen von und nach See die Verbindungszeit zur Gebührenberechnung fest?",
+  "correct": "die Küstenfunkstelle",
+  "wrong": [
+   {"t": "die Abrechnungsgesellschaft (AAIC) anhand der Gesprächsprotokolle", "why": "Die Abrechnungsgesellschaft rechnet ab (LRC_fragen #199/201), die Verbindungszeit setzt aber die Küstenfunkstelle fest (LRC_fragen #198)."},
+   {"t": "der Kapitän durch Eintrag in das Funktagebuch", "why": "Der Eintrag im Funktagebuch dient der Dokumentation; die gebührenrelevante Verbindungszeit bestimmt die Küstenfunkstelle (LRC_fragen #198)."},
+   {"t": "die anrufende Seefunkstelle selbst", "why": "Die Seefunkstelle hat keine Abrechnungshoheit; die Küstenfunkstelle setzt die Verbindungszeit fest (LRC_fragen #198)."}
+  ],
+  "src": "LRC_fragen #198 (Z.1304)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_199",
+  "q": "Welche Voraussetzung ist für die Teilnahme am öffentlichen Nachrichtenaustausch erforderlich?",
+  "correct": "ein Vertrag mit einer Abrechnungsgesellschaft",
+  "wrong": [
+   {"t": "eine Genehmigung des zuständigen RCC", "why": "Das RCC ist für Rettungsoperationen zuständig (LRC_fragen #73/86) und hat keine Rolle beim öffentlichen Nachrichtenaustausch."},
+   {"t": "eine gesonderte Eintragung im GMDSS Master Plan", "why": "Der GMDSS Master Plan dokumentiert Küstenfunkstellen und RCC-Zuständigkeiten (SB_7/SB_47), nicht die Teilnahmeberechtigung einzelner Schiffe."},
+   {"t": "eine zusätzliche Prüfung über den öffentlichen Nachrichtenaustausch", "why": "Es ist keine Zusatzprüfung, sondern ein Vertrag mit einer Abrechnungsgesellschaft erforderlich (LRC_fragen #199)."}
+  ],
+  "src": "LRC_fragen #199 (Z.1308)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_200",
+  "q": "In welcher Verrechnungseinheit erfolgt die Internationale Abrechnung des Funkverkehrs?",
+  "correct": "Sonderziehungsrechte oder Goldfranken",
+  "wrong": [
+   {"t": "in Euro nach dem Tageskurs der Europäischen Zentralbank", "why": "Die internationale Abrechnung erfolgt in Sonderziehungsrechten oder Goldfranken (LRC_fragen #200), nicht in einer Landeswährung."},
+   {"t": "in US-Dollar als internationale Leitwährung", "why": "Die Verrechnungseinheiten sind Sonderziehungsrechte oder Goldfranken (LRC_fragen #200)."},
+   {"t": "in Funkminuten-Einheiten (Radio Accounting Units)", "why": "Erfundene Einheit; die tatsächlichen Verrechnungseinheiten sind Sonderziehungsrechte oder Goldfranken (LRC_fragen #200)."}
+  ],
+  "src": "LRC_fragen #200 (Z.1312)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_201",
+  "q": "In Ihrer Funk-Betriebsbewilligung steht der Ausdruck ‚DP02’. Was bedeutet das?",
+  "correct": "Es ist die Kennung (AAIC) einer Abrechnungsgesellschaft",
+  "wrong": [
+   {"t": "Es ist der Landeskenner für die Zuordnung des Schiffes zum Flaggenstaat", "why": "Das Land wird über die MID in der MMSI gekennzeichnet (LRC_fragen #18); DP02 ist eine AAIC-Kennung (LRC_fragen #201)."},
+   {"t": "Es ist die Zulassungsnummer der Funkanlage nach der Jachtzulassungsverordnung", "why": "DP02 bezeichnet die Abrechnungsgesellschaft (AAIC), nicht die Anlagenzulassung (LRC_fragen #201)."},
+   {"t": "Es ist der NAVTEX-Kennbuchstabe der zuständigen Sendestation", "why": "NAVTEX-Stationen haben einen einzelnen Kennbuchstaben (LRC_fragen #127); DP02 ist die AAIC einer Abrechnungsgesellschaft (LRC_fragen #201)."}
+  ],
+  "src": "LRC_fragen #201 (Z.1315)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_202",
+  "q": "Was ist eine Schiffserdfunkstelle?",
+  "correct": "eine Satellitenfunkanlage an Bord eines Schiffes",
+  "wrong": [
+   {"t": "eine Küsten-Erdfunkstelle, die den Satellitenverkehr in das Festnetz überleitet", "why": "Das ist die CES (Coast Earth Station, LRC_fragen #79); die Schiffserdfunkstelle (SES) ist die Anlage an Bord (LRC_fragen #202/76/80)."},
+   {"t": "die Erdungsanlage der Funkanlage am Schiffsrumpf", "why": "Wortfalle: 'Erdfunkstelle' bezeichnet eine Bodenstation im Satellitenfunk, nicht eine elektrische Erdung (LRC_fragen #202/80)."},
+   {"t": "eine Bodenstation im COSPAS-SARSAT-System zum Empfang von EPIRB-Alarmen", "why": "Das ist ein LUT (Local User Terminal, LRC_fragen #84); die Schiffserdfunkstelle ist die Satellitenanlage an Bord (LRC_fragen #202)."}
+  ],
+  "src": "LRC_fragen #202 (Z.1319); LRC #76 (Z.283)",
+  "action": "fixed"
+ }
+]

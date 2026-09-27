@@ -1,0 +1,122 @@
+[
+ {
+  "id": "LRC_62",
+  "q": "In welcher Funkregion liegt Österreich?",
+  "correct": "Region 1",
+  "wrong": [
+   {"t": "Region 2", "why": "Region 2 umfasst Nord- und Südamerika; Österreich liegt in Region 1 (LRC_fragen #62/SB_41)."},
+   {"t": "Region 3", "why": "Region 3 umfasst Asien und Ozeanien; Österreich liegt in Region 1 (LRC_fragen #62/SB_41)."},
+   {"t": "Region 4", "why": "Die VO-Funk kennt nur drei Funkregionen; eine Region 4 existiert nicht."}
+  ],
+  "src": "LRC_fragen #62 (Z.767); SB_41",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_64",
+  "q": "Was bedeutet die Abkürzung GMDSS?",
+  "correct": "Global Maritime Distress and Safety System – Weltweites Seenot- und Sicherheitsfunksystem",
+  "wrong": [
+   {"t": "General Maritime Data and Signalling System – Allgemeines maritimes Datenfunksystem", "why": "Erfundene Auflösung; GMDSS steht für Global Maritime Distress and Safety System (LRC_fragen #64)."},
+   {"t": "Global Marine Direction and Safety Service – Weltweiter Navigations- und Sicherheitsdienst", "why": "Erfundene Auflösung; das zweite D steht für Distress (Seenot), nicht Direction (LRC_fragen #64)."},
+   {"t": "Global Maritime Digital Satellite System – Weltweites maritimes Digitalsatellitensystem", "why": "Erfundene Auflösung; das GMDSS umfasst terrestrische UND satellitengestützte Komponenten (LRC_fragen #64)."}
+  ],
+  "src": "LRC_fragen #64 (Z.773)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_67",
+  "q": "Wer teilt in Österreich das Rufzeichen und die MMSI für eine Seefunkstelle zu?",
+  "correct": "Fernmeldebehörde (Fernmeldebüro)",
+  "wrong": [
+   {"t": "die ITU (Internationale Fernmeldeunion) in Genf", "why": "Die ITU vergibt die Länderkenner (MID/Landeskenner, LRC_fragen #17/18); die konkrete Zuteilung an ein Schiff erfolgt national durch die Fernmeldebehörde (LRC_fragen #67)."},
+   {"t": "die zuständige Küstenfunkstelle bei der Anmeldung", "why": "Küstenfunkstellen wickeln den Funkverkehr ab; die Zuteilung von Rufzeichen und MMSI ist Sache der Fernmeldebehörde (LRC_fragen #67)."},
+   {"t": "der österreichische Segel-Verband bei der Jachtzulassung", "why": "Die Jachtzulassungsverordnung regelt die Ausrüstung (LRC_fragen #70); Rufzeichen und MMSI teilt die Fernmeldebehörde zu (LRC_fragen #67)."}
+  ],
+  "src": "LRC_fragen #67 (Z.784)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_68",
+  "q": "Ist das Senden auf UKW in ausländischen Häfen gestattet?",
+  "correct": "das hängt von den jeweiligen Bestimmungen ab",
+  "wrong": [
+   {"t": "ja, UKW-Sendungen sind in allen Häfen international freigegeben", "why": "Die Zulässigkeit hängt von den Bestimmungen des jeweiligen Landes ab (LRC_fragen #68/SB_44)."},
+   {"t": "nein, in ausländischen Häfen ist das Senden grundsätzlich verboten", "why": "Es gibt kein generelles Verbot; es hängt von den nationalen Bestimmungen ab (LRC_fragen #68)."},
+   {"t": "ja, aber ausschließlich auf Kanal 16 für Notfälle", "why": "Die Frage betrifft die grundsätzliche Zulässigkeit, die von den nationalen Bestimmungen abhängt (LRC_fragen #68)."}
+  ],
+  "src": "LRC_fragen #68 (Z.787); SB_44",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_69",
+  "q": "Ist das Senden auf Grenz- oder Kurzwelle in ausländischen Häfen gestattet?",
+  "correct": "das hängt von den jeweiligen Bestimmungen ab (eher nicht)",
+  "wrong": [
+   {"t": "ja, GW/KW-Sendungen sind in ausländischen Häfen uneingeschränkt erlaubt", "why": "Die Zulässigkeit hängt von den Bestimmungen des jeweiligen Landes ab und ist auf GW/KW eher nicht gestattet (LRC_fragen #69/SB_44)."},
+   {"t": "nein, ein absolutes internationales Sendeverbot gilt in allen Häfen", "why": "Es gibt kein absolutes Verbot; es hängt von den nationalen Bestimmungen ab (LRC_fragen #69)."},
+   {"t": "ja, sofern die Sendeleistung auf 1 W reduziert wird", "why": "Eine Leistungsreduzierung hebt die nationale Genehmigungspflicht nicht auf (LRC_fragen #69)."}
+  ],
+  "src": "LRC_fragen #69 (Z.790); SB_44",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_70",
+  "q": "Wo ist die Ausrüstung österreichischer Jachten mit Funkanlagen geregelt?",
+  "correct": "Jachtzulassungsverordnung",
+  "wrong": [
+   {"t": "in der VO-Funk (Vollzugsordnung für den Funkdienst)", "why": "Die VO-Funk regelt die internationalen betrieblichen Verfahren (LRC_fragen #59); die Ausrüstung österreichischer Jachten regelt die Jachtzulassungsverordnung (LRC_fragen #70/SB_23)."},
+   {"t": "in SOLAS Kapitel IV", "why": "SOLAS Kapitel IV gilt für ausrüstungspflichtige Handelsschiffe; für österreichische Jachten gilt die Jachtzulassungsverordnung (LRC_fragen #70)."},
+   {"t": "in der Seeschifffahrtsverordnung", "why": "Die Seeschifffahrtsverordnung regelt Betriebsverfahren (SB_30); die Funkausrüstung von Jachten regelt die Jachtzulassungsverordnung (LRC_fragen #70)."}
+  ],
+  "src": "LRC_fragen #70 (Z.797); SB_23",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_76",
+  "q": "Welche Aussendung hat im Seefunk unbedingten Vorrang?",
+  "correct": "Notverkehr",
+  "wrong": [
+   {"t": "Dringlichkeitsverkehr (PAN PAN)", "why": "Dringlichkeitsverkehr steht in der Rangfolge an zweiter Stelle, nach dem Notverkehr (LRC_fragen #14/15/76)."},
+   {"t": "Sicherheitsverkehr (SECURITE)", "why": "Sicherheitsverkehr steht an dritter Stelle der Rangfolge (LRC_fragen #14/15/76)."},
+   {"t": "Verkehr mit der Hafenbehörde und Lotsen", "why": "Hafenfunkverkehr gehört zum Betriebsverkehr und steht in der Rangfolge unter Not-, Dringlichkeits- und Sicherheitsverkehr (LRC_fragen #15/182)."}
+  ],
+  "src": "LRC_fragen #76 (Z.816); LRC_14/15",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_77",
+  "q": "Wie lautet das Notzeichen?",
+  "correct": "Mayday",
+  "wrong": [
+   {"t": "PAN PAN", "why": "PAN PAN ist das Dringlichkeitszeichen (LRC_fragen #133/134), nicht das Notzeichen."},
+   {"t": "SECURITE", "why": "SECURITE ist das Sicherheitszeichen (LRC_fragen #143/144), nicht das Notzeichen."},
+   {"t": "SOS", "why": "SOS war das Notzeichen in der Morsetelegrafie; im Sprechfunk lautet das Notzeichen MAYDAY (LRC_fragen #77/SB_94)."}
+  ],
+  "src": "LRC_fragen #77 (Z.819); SB_94",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_78",
+  "q": "Was bedeutet DISTRESS ALERT?",
+  "correct": "den Notalarm einer Person oder eines Fahrzeug, in unmittelbarer, schwerer Gefahr",
+  "wrong": [
+   {"t": "die Bestätigung des Empfangs eines Notalarms durch eine andere Funkstelle", "why": "Das ist das DISTRESS ALERT ACKNOWLEDGEMENT; DISTRESS ALERT ist der Notalarm selbst (LRC_fragen #78)."},
+   {"t": "die Weitergabe eines Notalarms für ein anderes Schiff", "why": "Das ist der DISTRESS RELAY ALERT (LRC_fragen #113); DISTRESS ALERT ist der eigene Notalarm (LRC_fragen #78)."},
+   {"t": "eine Dringlichkeitsmeldung wegen eines medizinischen Notfalls an Bord", "why": "Medizinische Notfälle ohne unmittelbare Lebensgefahr für Schiff/Person laufen als Dringlichkeitsverkehr mit PAN PAN (LRC_fragen #133/141)."}
+  ],
+  "src": "LRC_fragen #78 (Z.822)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_88",
+  "q": "Auf welchem UKW-Kanal erfolgt die DSC-Alarmierung?",
+  "correct": "Kanal 70",
+  "wrong": [
+   {"t": "Kanal 16", "why": "Kanal 16 ist der Not- und Anrufkanal im Sprechfunk (LRC_fragen #149/174); DSC-Alarmierung läuft auf Kanal 70 (LRC_fragen #88/90)."},
+   {"t": "Kanal 13", "why": "Kanal 13 ist der Brücke-zu-Brücke-Kanal für Navigationsabsprachen; DSC läuft auf Kanal 70 (LRC_fragen #88)."},
+   {"t": "Kanal 6", "why": "Kanal 6 ist für koordinierte SAR-Einsätze vorgesehen (LRC_fragen #123); DSC-Alarmierung erfolgt auf Kanal 70 (LRC_fragen #88)."}
+  ],
+  "src": "LRC_fragen #88 (Z.863); LRC_90",
+  "action": "fixed"
+ }
+]

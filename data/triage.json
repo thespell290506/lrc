@@ -1,0 +1,569 @@
+[
+ {
+  "id": "LRC_47",
+  "flags": [
+   "substring:'Demodulation'"
+  ]
+ },
+ {
+  "id": "LRC_197",
+  "flags": [
+   "type-mismatch-num:1"
+  ]
+ },
+ {
+  "id": "SB_72",
+  "flags": [
+   "type-mismatch-num:2"
+  ]
+ },
+ {
+  "id": "LRC_148",
+  "flags": [
+   "type-mismatch-num:1"
+  ]
+ },
+ {
+  "id": "LRC_126",
+  "flags": [
+   "type-mismatch-num:2"
+  ]
+ },
+ {
+  "id": "LRC_158",
+  "flags": [
+   "substring:'Wahlweise Englisch oder die Landessprache'"
+  ]
+ },
+ {
+  "id": "LRC_175",
+  "flags": [
+   "stub:'Auf Kanal 16'"
+  ]
+ },
+ {
+  "id": "LRC_113",
+  "flags": [
+   "stub:'DSC-Anruf'",
+   "stub:'DSC-Controller'",
+   "stub:'Gruppenruf'"
+  ]
+ },
+ {
+  "id": "LRC_114",
+  "flags": [
+   "stub:'Im Seegebiet A1'",
+   "stub:'In allen Seegebieten'",
+   "stub:'Über DSC'"
+  ]
+ },
+ {
+  "id": "LRC_115",
+  "flags": [
+   "stub:'Seegebiet A3'",
+   "stub:'Seegebiet A4'",
+   "stub:'Weltweit'"
+  ]
+ },
+ {
+  "id": "LRC_117",
+  "flags": [
+   "stub:'Durch den Kapitän'",
+   "stub:'Durch die Küstenfunkstelle'",
+   "stub:'Im Seegebiet A1'"
+  ]
+ },
+ {
+  "id": "LRC_122",
+  "flags": [
+   "stub:'Seegebiet A1'",
+   "stub:'Seegebiet A2'",
+   "stub:'Seegebiet A4'"
+  ]
+ },
+ {
+  "id": "LRC_123",
+  "flags": [
+   "type-mismatch-num:3"
+  ]
+ },
+ {
+  "id": "LRC_127",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'Durch den Kapitän'",
+   "stub:'Im Seegebiet A1'"
+  ]
+ },
+ {
+  "id": "LRC_128",
+  "flags": [
+   "stub:'DSC-Anruf'",
+   "stub:'DSC-Controller'",
+   "stub:'Gruppenruf'"
+  ]
+ },
+ {
+  "id": "LRC_131",
+  "flags": [
+   "stub:'Durch die Küstenfunkstelle'",
+   "stub:'Im Seegebiet A1'",
+   "stub:'Nur im Notfall'"
+  ]
+ },
+ {
+  "id": "LRC_133",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'Durch den Kapitän'",
+   "stub:'Über DSC'"
+  ]
+ },
+ {
+  "id": "LRC_137",
+  "flags": [
+   "stub:'DSC-Anruf'",
+   "stub:'DSC-Controller'",
+   "stub:'Gruppenruf'"
+  ]
+ },
+ {
+  "id": "LRC_141",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'Durch die Küstenfunkstelle'",
+   "stub:'Nur im Notfall'"
+  ]
+ },
+ {
+  "id": "LRC_144",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'In allen Seegebieten'",
+   "stub:'Nach Bestätigung'"
+  ]
+ },
+ {
+  "id": "LRC_145",
+  "flags": [
+   "stub:'Automatische Alarmierung'",
+   "stub:'DSC-Anruf'",
+   "stub:'DSC-Controller'"
+  ]
+ },
+ {
+  "id": "LRC_146",
+  "flags": [
+   "stub:'Automatische Alarmierung'",
+   "stub:'Gruppenruf'",
+   "stub:'Selektivruf'"
+  ]
+ },
+ {
+  "id": "LRC_147",
+  "flags": [
+   "stub:'Durch den Kapitän'",
+   "stub:'Durch die Küstenfunkstelle'",
+   "stub:'In allen Seegebieten'"
+  ]
+ },
+ {
+  "id": "LRC_151",
+  "flags": [
+   "stub:'DSC-Controller'",
+   "stub:'Selektivruf'"
+  ]
+ },
+ {
+  "id": "LRC_152",
+  "flags": [
+   "stub:'Durch den Kapitän'",
+   "stub:'Nach Bestätigung'",
+   "stub:'Über DSC'"
+  ]
+ },
+ {
+  "id": "LRC_155",
+  "flags": [
+   "stub:'Inmarsat-Abdeckung'",
+   "stub:'Seegebiet A3'",
+   "stub:'Weltweit'"
+  ]
+ },
+ {
+  "id": "LRC_160",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'Durch den Kapitän'",
+   "stub:'Über DSC'"
+  ]
+ },
+ {
+  "id": "LRC_161",
+  "flags": [
+   "stub:'Durch den Kapitän'",
+   "stub:'Im Seegebiet A1'",
+   "stub:'Über DSC'"
+  ]
+ },
+ {
+  "id": "LRC_164",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'Im Seegebiet A1'",
+   "stub:'Nach Bestätigung'"
+  ]
+ },
+ {
+  "id": "LRC_168",
+  "flags": [
+   "stub:'nein'"
+  ]
+ },
+ {
+  "id": "LRC_170",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'Durch den Kapitän'",
+   "stub:'Gemäß SOLAS'"
+  ]
+ },
+ {
+  "id": "LRC_171",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'Durch den Kapitän'",
+   "stub:'Im Seegebiet A1'"
+  ]
+ },
+ {
+  "id": "LRC_172",
+  "flags": [
+   "freq-stub:2"
+  ]
+ },
+ {
+  "id": "LRC_177",
+  "flags": [
+   "freq-stub:1"
+  ]
+ },
+ {
+  "id": "LRC_182",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'Im Seegebiet A1'",
+   "stub:'Über DSC'"
+  ]
+ },
+ {
+  "id": "LRC_184",
+  "flags": [
+   "stub:'Seegebiet A1'",
+   "stub:'Seegebiet A3'",
+   "stub:'Seegebiet A4'"
+  ]
+ },
+ {
+  "id": "LRC_187",
+  "flags": [
+   "stub:'Durch die Küstenfunkstelle'",
+   "stub:'In allen Seegebieten'",
+   "stub:'Nach Bestätigung'"
+  ]
+ },
+ {
+  "id": "LRC_189",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'In allen Seegebieten'",
+   "stub:'Nach Bestätigung'"
+  ]
+ },
+ {
+  "id": "LRC_190",
+  "flags": [
+   "stub:'Im Seegebiet A1'",
+   "stub:'In allen Seegebieten'",
+   "stub:'Nach Bestätigung'"
+  ]
+ },
+ {
+  "id": "LRC_198",
+  "flags": [
+   "stub:'Nur im Notfall'",
+   "stub:'Über DSC'"
+  ]
+ },
+ {
+  "id": "LRC_199",
+  "flags": [
+   "stub:'Durch die Küstenfunkstelle'",
+   "stub:'Nach Bestätigung'",
+   "stub:'Nur im Notfall'"
+  ]
+ },
+ {
+  "id": "LRC_200",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'Gemäß SOLAS'",
+   "stub:'Nur im Notfall'"
+  ]
+ },
+ {
+  "id": "LRC_201",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'Durch den Kapitän'",
+   "stub:'Im Seegebiet A1'"
+  ]
+ },
+ {
+  "id": "LRC_202",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'In allen Seegebieten'",
+   "stub:'Nach Bestätigung'"
+  ]
+ },
+ {
+  "id": "LRC_24",
+  "flags": [
+   "stub:'Durch den Kapitän'",
+   "stub:'Gemäß SOLAS'",
+   "stub:'Nach Bestätigung'"
+  ]
+ },
+ {
+  "id": "LRC_35",
+  "flags": [
+   "freq-stub:1"
+  ]
+ },
+ {
+  "id": "LRC_40",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'Im Seegebiet A1'",
+   "stub:'Über DSC'"
+  ]
+ },
+ {
+  "id": "LRC_45",
+  "flags": [
+   "stub:'Seegebiet A1'",
+   "stub:'Seegebiet A4'",
+   "stub:'Weltweit'"
+  ]
+ },
+ {
+  "id": "LRC_46",
+  "flags": [
+   "stub:'Inmarsat-Abdeckung'",
+   "stub:'Seegebiet A4'"
+  ]
+ },
+ {
+  "id": "LRC_48",
+  "flags": [
+   "stub:'nein'"
+  ]
+ },
+ {
+  "id": "LRC_49",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'In allen Seegebieten'",
+   "stub:'Nach Bestätigung'"
+  ]
+ },
+ {
+  "id": "LRC_56",
+  "flags": [
+   "stub:'Gemäß SOLAS'",
+   "stub:'Nur im Notfall'",
+   "stub:'Über DSC'"
+  ]
+ },
+ {
+  "id": "LRC_59",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'Gemäß SOLAS'",
+   "stub:'Über DSC'"
+  ]
+ },
+ {
+  "id": "LRC_60",
+  "flags": [
+   "stub:'Durch die Küstenfunkstelle'",
+   "stub:'Im Seegebiet A1'",
+   "stub:'Nach Bestätigung'"
+  ]
+ },
+ {
+  "id": "LRC_62",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'In allen Seegebieten'",
+   "stub:'Über DSC'"
+  ]
+ },
+ {
+  "id": "LRC_64",
+  "flags": [
+   "stub:'Inmarsat-Abdeckung'",
+   "stub:'Seegebiet A2'",
+   "stub:'Weltweit'",
+   "substring:'Weltweit'"
+  ]
+ },
+ {
+  "id": "LRC_67",
+  "flags": [
+   "stub:'Gemäß SOLAS'",
+   "stub:'Im Seegebiet A1'",
+   "stub:'In allen Seegebieten'"
+  ]
+ },
+ {
+  "id": "LRC_68",
+  "flags": [
+   "stub:'Durch den Kapitän'",
+   "stub:'Gemäß SOLAS'",
+   "stub:'Nur im Notfall'"
+  ]
+ },
+ {
+  "id": "LRC_69",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'Gemäß SOLAS'",
+   "stub:'Über DSC'"
+  ]
+ },
+ {
+  "id": "LRC_70",
+  "flags": [
+   "stub:'Durch den Kapitän'",
+   "stub:'In allen Seegebieten'",
+   "stub:'Nach Bestätigung'"
+  ]
+ },
+ {
+  "id": "LRC_76",
+  "flags": [
+   "stub:'Durch den Kapitän'",
+   "stub:'In allen Seegebieten'",
+   "stub:'Über DSC'"
+  ]
+ },
+ {
+  "id": "LRC_77",
+  "flags": [
+   "stub:'Auf Kanal 16'",
+   "stub:'Durch die Küstenfunkstelle'",
+   "stub:'Nach Bestätigung'"
+  ]
+ },
+ {
+  "id": "LRC_78",
+  "flags": [
+   "stub:'Gemäß SOLAS'",
+   "stub:'Nach Bestätigung'",
+   "stub:'Über DSC'"
+  ]
+ },
+ {
+  "id": "LRC_83",
+  "flags": [
+   "stub:'Nach Bestätigung'",
+   "stub:'Nur im Notfall'",
+   "stub:'Über DSC'"
+  ]
+ },
+ {
+  "id": "LRC_88",
+  "flags": [
+   "freq-stub:1",
+   "type-mismatch-num:2"
+  ]
+ },
+ {
+  "id": "LRC_95",
+  "flags": [
+   "stub:'DSC-Anruf'",
+   "stub:'Selektivruf'"
+  ]
+ },
+ {
+  "id": "SB_1",
+  "flags": [
+   "stub:'Seegebiet A1'",
+   "stub:'Seegebiet A2'"
+  ]
+ },
+ {
+  "id": "SB_15",
+  "flags": [
+   "type-mismatch-num:1"
+  ]
+ },
+ {
+  "id": "SB_20",
+  "flags": [
+   "stub:'im Seegebiet A2'",
+   "stub:'im Seegebiet A3'",
+   "stub:'im Seegebiet A4'"
+  ]
+ },
+ {
+  "id": "SB_29",
+  "flags": [
+   "substring:'VO Funk (Vollzugsordnung für den Funkdienst)'"
+  ]
+ },
+ {
+  "id": "SB_40",
+  "flags": [
+   "identical:'VO Funk (Vollzugsordnung für den Funkdienst)'"
+  ]
+ },
+ {
+  "id": "SB_55",
+  "flags": [
+   "substring:'2187,5 kHz'"
+  ]
+ },
+ {
+  "id": "SB_57",
+  "flags": [
+   "substring:'8414,5 kHz'"
+  ]
+ },
+ {
+  "id": "SB_58",
+  "flags": [
+   "substring:'2187,5 kHz'"
+  ]
+ },
+ {
+  "id": "SB_78",
+  "flags": [
+   "type-mismatch-num:2"
+  ]
+ },
+ {
+  "id": "SB_82",
+  "flags": [
+   "type-mismatch-num:3"
+  ]
+ },
+ {
+  "id": "SB_84",
+  "flags": [
+   "substring:'NAVTEX'"
+  ]
+ }
+]

@@ -1,0 +1,122 @@
+[
+ {
+  "id": "LRC_24",
+  "q": "Welche Aufgabe hat die Funktion ‚Durchführung von Funkverkehr vor Ort’?",
+  "correct": "die Abwicklung von Funkverkehr in Notfällen, direkt am Unfallort",
+  "wrong": [
+   {"t": "die Koordinierung der gesamten Rettungsoperation durch das RCC", "why": "Das RCC koordiniert die Operation zentral (LRC_fragen #73/122), die Funktion 'vor Ort' wickelt den Funkverkehr zwischen den SAR-Einheiten am Unfallort ab (LRC_fragen #24/SB_17)."},
+   {"t": "die Alarmierung aller Schiffe im Umkreis von 100 Seemeilen", "why": "Das ist die Aufgabe des DSC-Notalarms (LRC_fragen #83/114); 'vor Ort' bezieht sich auf den Funkverkehr zwischen den bereits eingesetzten Helfern (LRC_fragen #24)."},
+   {"t": "die Übermittlung von Wetterwarnungen und Navigationsmeldungen für das Seegebiet", "why": "Das sind maritime Sicherheitsinformationen (MSI) über NAVTEX oder EGC (LRC_fragen #152/160), nicht der Funkverkehr vor Ort im Notfall."}
+  ],
+  "src": "LRC_fragen #24 (Z.621); SB_17",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_35",
+  "q": "Welche Kanäle umfasst der Schutzbereich für Kanal 16?",
+  "correct": "Kanäle 75 und 76",
+  "wrong": [
+   {"t": "Kanal 15 und Kanal 17", "why": "Die Schutzkanäle für Kanal 16 sind 75 und 76 (LRC_fragen #35), nicht die benachbarten Kanalnummern."},
+   {"t": "Kanal 13 und Kanal 70", "why": "Kanal 13 ist der Brücke-zu-Brücke-Verkehrskanal, Kanal 70 ist für DSC; die Schutzkanäle für Kanal 16 sind 75 und 76 (LRC_fragen #35)."},
+   {"t": "keine, Kanal 16 hat als Notkanal keinen separaten Schutzbereich", "why": "Kanal 16 hat die Schutzkanäle 75 und 76 (LRC_fragen #35), um Interferenzen auf der Notfrequenz zu vermeiden."}
+  ],
+  "src": "LRC_fragen #35 (Z.663)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_40",
+  "q": "Wo ist festgelegt, welche Dienstbehelfe und Dokumente an Bord von Seefunkstellen mitzuführen sind?",
+  "correct": "je nachdem was zur Auswahl steht: VO-Funk (Radio Regulations), SOLAS",
+  "wrong": [
+   {"t": "im GMDSS Master Plan der IMO", "why": "Der GMDSS Master Plan dokumentiert Küstenfunkstellen und RCC-Zuständigkeiten (SB_7/SB_47), nicht die Mitführungspflicht für Schiffsdokumente."},
+   {"t": "in der Jachtzulassungsverordnung", "why": "Die Jachtzulassungsverordnung regelt die Ausrüstung österreichischer Jachten (LRC_fragen #70/SB_23), VO-Funk und SOLAS legen die Dokumentationspflicht international fest (LRC_fragen #40)."},
+   {"t": "in der Betriebsbewilligung der nationalen Fernmeldebehörde", "why": "Die Betriebsbewilligung ist selbst ein mitzuführendes Dokument (enthält MMSI, SB_37); die Mitführungspflicht ist in VO-Funk/SOLAS geregelt (LRC_fragen #40)."}
+  ],
+  "src": "LRC_fragen #40 (Z.679)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_45",
+  "q": "Welches Funker-Zeugnis ist mindestens erforderlich, um weltweit am GMDSS mit einer GW/KW-Funkanlage im Seegebiet A3 teilnehmen zu dürfen?",
+  "correct": "LRC (Allgemeines Betriebszeugnis II)",
+  "wrong": [
+   {"t": "SRC (UKW-Betriebszeugnis II)", "why": "SRC berechtigt nur zur Teilnahme im Seegebiet A1 (nur UKW, LRC_fragen #46); für GW/KW im Seegebiet A3 ist LRC erforderlich (LRC_fragen #45/SB_32)."},
+   {"t": "GOC (General Operator's Certificate)", "why": "GOC ist das höchste Zeugnis für die Berufsschifffahrt; für Sportschifffahrt und GW/KW im Seegebiet A3 genügt LRC (LRC_fragen #45)."},
+   {"t": "ROC (Restricted Operator's Certificate)", "why": "ROC ist ein beschränktes Zeugnis; für GW/KW im Seegebiet A3 ist LRC erforderlich (LRC_fragen #45/SB_32)."}
+  ],
+  "src": "LRC_fragen #45 (Z.701); SB_32",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_46",
+  "q": "Welches Funker-Zeugnis ist mindestens erforderlich, um weltweit am GMDSS im Seegebiet A1 teilnehmen zu dürfen?",
+  "correct": "SRC (UKW-Betriebszeugnis II)",
+  "wrong": [
+   {"t": "LRC (Allgemeines Betriebszeugnis II)", "why": "LRC berechtigt auch zu GW/KW (LRC_fragen #45); für Seegebiet A1 (nur UKW) genügt SRC (LRC_fragen #46)."},
+   {"t": "ein UKW-Sprechfunkzeugnis für den Binnenfunk", "why": "Binnenfunkzeugnisse gelten nicht für den Seefunkdienst; für Seegebiet A1 ist SRC erforderlich (LRC_fragen #46)."},
+   {"t": "kein Zeugnis, wenn die Anlage zugelassen ist", "why": "Die Teilnahme am GMDSS erfordert immer ein Funkzeugnis; für Seegebiet A1 ist SRC erforderlich (LRC_fragen #46)."}
+  ],
+  "src": "LRC_fragen #46 (Z.705)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_48",
+  "q": "Ist das Funker-Zeugnis an Bord mitzuführen?",
+  "correct": "ja",
+  "wrong": [
+   {"t": "nein, die Eintragung in der Betriebsbewilligung genügt", "why": "Das Funkzeugnis muss an Bord mitgeführt werden (LRC_fragen #48)."},
+   {"t": "nur bei Fahrten außerhalb der Hoheitsgewässer", "why": "Das Funkzeugnis ist generell an Bord mitzuführen (LRC_fragen #48), nicht nur außerhalb der Hoheitsgewässer."},
+   {"t": "nur auf Verlangen der Behörden", "why": "Das Funkzeugnis ist ständig an Bord mitzuführen (LRC_fragen #48), nicht erst auf Nachfrage."}
+  ],
+  "src": "LRC_fragen #48 (Z.712)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_49",
+  "q": "Welche Aussendungen sind gemäß der Vollzugsordnung für den Funkdienst verboten?",
+  "correct": "Aussendungen mit falschen oder irreführenden Rufzeichen",
+  "wrong": [
+   {"t": "Aussendungen von Zeichen, die mit internationalen Notzeichen verwechselt werden könnten", "why": "Auch diese Aussendungen sind verboten (SB_36), aber die Frage zielt auf falsche/irreführende Rufzeichen (LRC_fragen #49)."},
+   {"t": "alle Versuchssendungen auf den Not- und Sicherheitsfrequenzen", "why": "Versuchssendungen sind auf das nötige Maß zu beschränken und auf Anruffrequenzen zu vermeiden (SB_27), aber nicht generell verboten."},
+   {"t": "Aussendungen in einer anderen Sprache als Englisch", "why": "Im Seefunkdienst sind viele Sprachen zulässig (z.B. national auf NAVTEX 490 kHz); verboten sind falsche Rufzeichen (LRC_fragen #49)."}
+  ],
+  "src": "LRC_fragen #49 (Z.715)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_56",
+  "q": "In welchem Warndienst wird der Gruppenanruf (EGC) verwendet?",
+  "correct": "MSI (Safety-Net)",
+  "wrong": [
+   {"t": "NAVTEX auf 518 kHz und 490 kHz", "why": "NAVTEX ist ein terrestrisches Grenzwellensystem (LRC_fragen #126/152/153); EGC ist der Satellitenwarndienst (LRC_fragen #56/160)."},
+   {"t": "DSC-Sammelanrufe auf Kanal 70 und 2187,5 kHz", "why": "DSC dient der Alarmierung und dem Anruf (LRC_fragen #13/173); EGC ist ein Satellitenwarndienst für MSI (LRC_fragen #56/160)."},
+   {"t": "Sprechfunk-Sicherheitsmeldungen auf Kanal 16", "why": "Kanal 16 ist der Not- und Anrufkanal im Sprechfunk; EGC (Enhanced Group Call) ist ein automatischer Satellitenwarndienst (LRC_fragen #56/160)."}
+  ],
+  "src": "LRC_fragen #56 (Z.745)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_59",
+  "q": "Welches internationale Regelwerk legt die betrieblichen Verfahren für das weltweite Seenotund Sicherheitsfunksystem für die Schifffahrt fest?",
+  "correct": "VO-Funk (Radio Regulations)",
+  "wrong": [
+   {"t": "SOLAS (Safety of Life at Sea)", "why": "SOLAS regelt die Ausrüstungspflicht und Sicherheitsstandards; die betrieblichen Verfahren stehen in der VO-Funk (LRC_fragen #59)."},
+   {"t": "der GMDSS Master Plan der IMO", "why": "Der GMDSS Master Plan dokumentiert Küstenfunkstellen und RCC-Zuständigkeiten (SB_7/SB_47); die betrieblichen Verfahren stehen in der VO-Funk (LRC_fragen #59)."},
+   {"t": "die Seeschifffahrtsverordnung", "why": "Die Seeschifffahrtsverordnung regelt nationale Betriebsverfahren (SB_30); das internationale Regelwerk ist die VO-Funk (LRC_fragen #59)."}
+  ],
+  "src": "LRC_fragen #59 (Z.755)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_60",
+  "q": "In welchem Fall darf von den Bestimmungen der Vollzugsordnung für den Funkdienst abgewichen werden?",
+  "correct": "in Notfällen",
+  "wrong": [
+   {"t": "bei Fahrten außerhalb der Hoheitsgewässer", "why": "Die VO-Funk gilt international; Abweichungen sind nur in Notfällen zulässig (LRC_fragen #60)."},
+   {"t": "mit Genehmigung der zuständigen Küstenfunkstelle", "why": "Nur in Notfällen darf abgewichen werden (LRC_fragen #60), nicht durch Genehmigung einer Küstenfunkstelle."},
+   {"t": "bei technischen Mängeln an der Funkanlage", "why": "Technische Mängel erlauben keine Abweichung von den Verfahren; nur Notfälle rechtfertigen Abweichungen (LRC_fragen #60)."}
+  ],
+  "src": "LRC_fragen #60 (Z.759)",
+  "action": "fixed"
+ }
+]

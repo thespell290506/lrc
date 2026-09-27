@@ -1,0 +1,191 @@
+[
+ {
+  "id": "LRC_161",
+  "q": "Mit welcher Einrichtung können Sie MSI über Satelliten empfangen?",
+  "correct": "Inmarsat-C, EGC-Empfänger, Safety-Net",
+  "wrong": [
+   {
+    "t": "NAVTEX-Empfänger auf 518 kHz oder 490 kHz",
+    "why": "NAVTEX ist ein terrestrisches Grenzwellensystem (LRC_fragen #126/152/153), nicht satellitengestützt."
+   },
+   {
+    "t": "DSC-Controller auf Kanal 70 und 2187,5 kHz",
+    "why": "DSC dient der Alarmierung und dem Anruf (LRC_fragen #13/87), nicht dem Empfang von MSI über Satelliten."
+   },
+   {
+    "t": "UKW-Sprechfunkanlage mit Dual-Watch auf Kanal 16",
+    "why": "Kanal 16 ist der Not- und Anrufkanal im Sprechfunk (LRC_fragen #174/149); MSI über Satelliten wird mit Inmarsat-C/EGC empfangen (LRC_fragen #161/125)."
+   }
+  ],
+  "src": "LRC_fragen #161 (Z.1157)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_164",
+  "q": "Wie können Sie feststellen, ob bei einer Küstenfunkstelle Nachrichten für Sie vorliegen, ohne dass Sie dort anrufen?",
+  "correct": "durch das Abhören des Sammelanrufes (Traffic List)",
+  "wrong": [
+   {
+    "t": "durch kontinuierliches Abhören von Kanal 16",
+    "why": "Kanal 16 ist der Not- und Anrufkanal; vorliegende Nachrichten werden im Sammelanruf (Traffic List) angekündigt (LRC_fragen #164/163)."
+   },
+   {
+    "t": "durch Empfang einer DSC-Dringlichkeitsmeldung mit meiner MMSI",
+    "why": "DSC-Dringlichkeit dient nicht der Nachrichtenankündigung; der Sammelanruf (Traffic List) zeigt, ob Nachrichten vorliegen (LRC_fragen #163/164)."
+   },
+   {
+    "t": "durch NAVTEX-Aussendungen auf 518 kHz",
+    "why": "NAVTEX sendet maritime Sicherheitsinformationen (Wetterwarnungen, Navigationshinweise, LRC_fragen #152/153), nicht individuelle Nachrichten für einzelne Schiffe."
+   }
+  ],
+  "src": "LRC_fragen #164 (Z.1168); LRC_163",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_168",
+  "q": "Darf eine Seefunkstelle auch dann gerufen werden, wenn der Schiffsname unbekannt ist?",
+  "correct": "ja",
+  "wrong": [
+   {
+    "t": "nein, der Schiffsname ist zwingend für jeden Anruf erforderlich",
+    "why": "Eine Seefunkstelle darf auch ohne bekannten Schiffsnamen gerufen werden (LRC_fragen #168)."
+   },
+   {
+    "t": "ja, aber nur über DSC unter Angabe der MMSI",
+    "why": "Auch im Sprechfunk darf ohne Schiffsnamen gerufen werden (LRC_fragen #168); die MMSI ist keine Voraussetzung."
+   },
+   {
+    "t": "nein, außer im Notfall",
+    "why": "Das Rufen ohne bekannten Schiffsnamen ist generell zulässig (LRC_fragen #168), nicht nur im Notfall."
+   }
+  ],
+  "src": "LRC_fragen #168 (Z.1188)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_170",
+  "q": "Welche Form hat die Positionsangabe im Seefunkdienst?",
+  "correct": "z.B. 32-17.5 S 065-02.8 E",
+  "wrong": [
+   {
+    "t": "z.B. S32°17,5' E065°02,8' (Grad-Minuten-Format mit Gradsymbol)",
+    "why": "Die Positionsangabe im Seefunkdienst verwendet Bindestriche statt Gradsymbole und Punkt statt Komma (LRC_fragen #170)."
+   },
+   {
+    "t": "z.B. -32.2917, 65.0467 (Dezimalgrad-Format)",
+    "why": "Der Seefunkdienst nutzt das Grad-Minuten-Format mit Himmelsrichtung, nicht Dezimalgrad mit Vorzeichen (LRC_fragen #170)."
+   },
+   {
+    "t": "z.B. 32S 065E (nur Gradangaben ohne Minuten)",
+    "why": "Die Positionsangabe enthält Grad und Minuten mit einer Dezimalstelle, nicht nur Gradangaben (LRC_fragen #170)."
+   }
+  ],
+  "src": "LRC_fragen #170 (Z.1194)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_171",
+  "q": "Sie haben gehört, dass Sie von einer Funkstelle gerufen wurden, konnten aber wegen Störungen nicht verstehen, wer Sie gerufen hat. Was müssen Sie tun?",
+  "correct": "ich sende folgenden Anruf: wer hat mich gerufen station calling hier ist this is Schiffsname mit Rufzeichen shipsname and callsign",
+  "wrong": [
+   {
+    "t": "Ich warte 3 Minuten und wiederhole dann meinen eigenen Anruf auf Kanal 16",
+    "why": "Bei unverstandenem Anruf sendet man 'wer hat mich gerufen / station calling', nicht einen eigenen Anruf (LRC_fragen #171)."
+   },
+   {
+    "t": "Ich sende: 'Alle Funkstellen, hier ist (Schiffsname), bitte wiederholen Sie Ihren Anruf'",
+    "why": "Die Standardformulierung ist 'wer hat mich gerufen / station calling' (LRC_fragen #171), nicht eine freie Textansage."
+   },
+   {
+    "t": "Ich wechsle auf einen Arbeitskanal und warte dort auf einen erneuten Anruf",
+    "why": "Der Anruf 'station calling' wird auf der Frequenz gesendet, auf der der unverstandene Ruf gehört wurde (LRC_fragen #171), nicht auf einem Arbeitskanal."
+   }
+  ],
+  "src": "LRC_fragen #171 (Z.1197)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_172",
+  "q": "Was ist vor dem Anruf auf einem Arbeitskanal zu beachten?",
+  "correct": "es muss sichergestellt werden, dass laufender Funkverkehr nicht gestört wird",
+  "wrong": [
+   {
+    "t": "Der Anruf muss zuerst auf Kanal 16 angekündigt werden",
+    "why": "Wenn der Arbeitskanal bekannt ist, wird direkt dort gerufen (LRC_fragen #175); nur bei unbekanntem Kanal wird Kanal 16 benutzt (LRC_fragen #174)."
+   },
+   {
+    "t": "Die Sendeleistung muss auf 1 W reduziert werden",
+    "why": "Die Leistungsreduzierung dient der Reichweitenbegrenzung im Nahbereich; die Voraussetzung vor dem Anruf ist, dass kein Funkverkehr gestört wird (LRC_fragen #172)."
+   },
+   {
+    "t": "Es muss eine DSC-Ankündigung auf Kanal 70 gesendet werden",
+    "why": "DSC auf Kanal 70 dient der Alarmierung und dem Selektivruf (LRC_fragen #173/87); vor einem Anruf im Sprechfunk muss geprüft werden, dass kein Verkehr gestört wird (LRC_fragen #172)."
+   }
+  ],
+  "src": "LRC_fragen #172 (Z.1204)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_173",
+  "q": "Wie heißt das Verfahren zur Verkehrsaufnahme auf Kanal 70 bzw. der Frequenz 2187,5 kHz?",
+  "correct": "DSC",
+  "wrong": [
+   {
+    "t": "NAVTEX",
+    "why": "NAVTEX läuft auf 518 kHz und 490 kHz (LRC_fragen #126/153) und dient dem automatischen Empfang von Warnnachrichten, nicht der Verkehrsaufnahme per Anruf."
+   },
+   {
+    "t": "Sprechfunk-Anruf",
+    "why": "Kanal 70 und 2187,5 kHz sind ausschließlich für DSC (Digital Selective Calling) reserviert (LRC_fragen #13/173/196), nicht für Sprechfunk."
+   },
+   {
+    "t": "EGC (Enhanced Group Call)",
+    "why": "EGC ist ein Satellitenwarndienst auf Inmarsat-C (LRC_fragen #160/162), nicht das Anrufverfahren auf Kanal 70 oder 2187,5 kHz."
+   }
+  ],
+  "src": "LRC_fragen #173 (Z.1207)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_175",
+  "q": "Auf welchem Kanal sollen Sie eine Küstenfunkstelle rufen, die auf Kanal 16 und einem Arbeitskanal empfangsbereit ist?",
+  "correct": "Auf dem Arbeitskanal",
+  "wrong": [
+   {
+    "t": "Auf Kanal 16",
+    "why": "Wenn der Arbeitskanal bekannt ist, soll direkt dort gerufen werden (LRC_fragen #175); Kanal 16 wird nur bei unbekanntem Empfangskanal benutzt (LRC_fragen #174)."
+   },
+   {
+    "t": "Auf Kanal 70 mittels DSC",
+    "why": "Kanal 70 ist für DSC-Anrufe vorgesehen; wenn ein Sprechfunk-Arbeitskanal bekannt ist, wird direkt dort im Sprechfunk gerufen (LRC_fragen #175)."
+   },
+   {
+    "t": "Abwechselnd auf beiden Kanaelen, bis geantwortet wird",
+    "why": "Direkt auf dem Arbeitskanal rufen, wenn bekannt (LRC_fragen #175); ein abwechselndes Rufen ist nicht vorgesehen."
+   }
+  ],
+  "src": "LRC_fragen #175 (Z.1214)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_177",
+  "q": "Sie befinden sich in einem Gebiet, in dem es möglich ist, mit einer Küstenfunkstelle auf ihrem Arbeitskanal eine sichere UKW-Verbindung herzustellen. Wann dürfen Sie einen unbeantworteten Anruf an die betreffende Küstenfunkstelle wiederholen?",
+  "correct": "sobald sichergestellt ist, dass der Sprechfunkverkehr bei der Küstenfunkstelle nicht gestört wird",
+  "wrong": [
+   {
+    "t": "nach genau 3 Minuten, wenn kein anderer Funkverkehr läuft",
+    "why": "Die 3-Minuten-Regel gilt für Anrufe an Seefunkstellen (LRC_fragen #179); bei Küstenfunkstellen auf dem Arbeitskanal darf sofort wiederholt werden, sobald kein Verkehr gestört wird (LRC_fragen #177)."
+   },
+   {
+    "t": "sofort, da auf Arbeitskanälen keine Wartezeit vorgeschrieben ist",
+    "why": "Auch auf Arbeitskanälen muss sichergestellt sein, dass der laufende Sprechfunkverkehr nicht gestört wird (LRC_fragen #177)."
+   },
+   {
+    "t": "erst nach Ankündigung auf Kanal 16",
+    "why": "Wenn der Arbeitskanal bekannt ist, wird direkt dort wiederholt (LRC_fragen #175/177), ohne Umweg über Kanal 16."
+   }
+  ],
+  "src": "LRC_fragen #177 (Z.1222)",
+  "action": "fixed"
+ }
+]

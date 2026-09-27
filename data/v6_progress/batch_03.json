@@ -1,0 +1,98 @@
+[
+ {
+  "id": "LRC_144",
+  "q": "Wie lautet das Sicherheitszeichen?",
+  "correct": "‚SECURITE’",
+  "wrong": [
+   {"t": "PAN PAN", "why": "PAN PAN ist das Dringlichkeitszeichen (LRC_fragen #133/134), nicht das Sicherheitszeichen."},
+   {"t": "MAYDAY", "why": "MAYDAY ist das Notzeichen (SB_94/LRC_77), nicht das Sicherheitszeichen."},
+   {"t": "SAFETY CALL", "why": "Erfundene englische Entsprechung; das internationale Verfahrenswort ist das französische SECURITE."}
+  ],
+  "src": "LRC_fragen #144 (Z.1099)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_145",
+  "q": "An wen darf der DSC-Sicherheitsanruf auf GW und UKW gerichtet werden?",
+  "correct": "an alle",
+  "wrong": [
+   {"t": "nur an eine bestimmte Küstenfunkstelle", "why": "Auf GW und UKW darf der Sicherheitsanruf an alle gerichtet werden (LRC_fragen #145); auf KW ist ein Gebietsruf (area call) oder eine CS/RCC üblich (LRC_fragen #146)."},
+   {"t": "an alle Schiffe in einem definierten geografischen Gebiet (area call)", "why": "Area call ist typisch für Kurzwelle (LRC_fragen #146/SB_81); auf GW/UKW ist der Anruf 'an alle' ohne Gebietsbeschränkung zulässig."},
+   {"t": "nur an das zuständige RCC", "why": "Der Sicherheitsanruf kann an alle gerichtet werden, nicht nur an ein RCC (LRC_fragen #145)."}
+  ],
+  "src": "LRC_fragen #145 (Z.1102)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_146",
+  "q": "An wen wird der DSC-Sicherheitsanruf auf Kurzwelle im Regelfall gerichtet?",
+  "correct": "an ein definiertes Gebiet (area call), oder eine CS oder ein RCC",
+  "wrong": [
+   {"t": "an alle Funkstellen weltweit ohne Gebietsbeschränkung", "why": "Auf Kurzwelle wird im Regelfall ein definiertes Gebiet (area call) angegeben (LRC_fragen #146/SB_81), nicht weltweit."},
+   {"t": "an eine einzelne Seefunkstelle über deren MMSI", "why": "Sicherheitsmeldungen richten sich an ein Gebiet, eine Küstenfunkstelle oder ein RCC, nicht an einzelne Schiffe (Selektivruf ist für andere Zwecke)."},
+   {"t": "ausschließlich an die nächstgelegene Küstenfunkstelle", "why": "Der Anruf kann auch an ein definiertes Gebiet oder ein RCC gerichtet sein (LRC_fragen #146/SB_81)."}
+  ],
+  "src": "LRC_fragen #146 (Z.1105); SB_81",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_147",
+  "q": "Was ist bei der Ankündigung einer Sicherheitsmeldung auf UKW zu beachten?",
+  "correct": "die Sicherheitsmeldung muss mittels des digitalen Selektivrufs (DSC) auf Kanal 70 angekündigt werden dass kein höherrangiger Verkehr gestört wird",
+  "wrong": [
+   {"t": "die Ankündigung erfolgt im Sprechfunk auf Kanal 16 durch dreimaliges SECURITE", "why": "Die Ankündigung muss per DSC auf Kanal 70 erfolgen (LRC_fragen #147/138); das dreimalige SECURITE leitet die Meldung selbst ein (LRC_150), nicht die DSC-Ankündigung."},
+   {"t": "eine Ankündigung ist nicht erforderlich, die Meldung wird direkt auf einem Arbeitskanal gesendet", "why": "Sicherheitsmeldungen müssen per DSC angekündigt werden (LRC_fragen #147)."},
+   {"t": "die Ankündigung erfolgt über NAVTEX auf 518 kHz", "why": "NAVTEX ist ein automatischer Warndienst für Küstenbereiche (LRC_fragen #152/153), nicht das Verfahren zur Ankündigung von Sicherheitsmeldungen im Sprechfunk."}
+  ],
+  "src": "LRC_fragen #147 (Z.1108)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_151",
+  "q": "Was muss oder darf eine Seefunkstelle tun, die einen DSC-Sicherheitsanruf empfängt, der eine Sicherheitsmeldung an alle Schiffe ankündigt?",
+  "correct": "niederrangigen Funkverkehr einstellen",
+  "wrong": [
+   {"t": "den Empfang per DSC auf Kanal 70 bestätigen", "why": "Sicherheitsanrufe werden nicht quittiert; die Funkstelle hört nur die folgende Meldung ab und stellt niederrangigen Verkehr ein (LRC_fragen #151)."},
+   {"t": "sofort auf Kanal 16 wechseln und die Sicherheitsmeldung im Sprechfunk bestätigen", "why": "Bestätigung erfolgt nur bei Not- und Dringlichkeitsalarmen, nicht bei Sicherheitsmeldungen (LRC_fragen #151)."},
+   {"t": "die Meldung ignorieren, wenn sie das eigene Schiff nicht betrifft", "why": "Sicherheitsmeldungen betreffen die Sicherheit der Seeschifffahrt allgemein; niederrangiger Verkehr muss eingestellt werden (LRC_fragen #151)."}
+  ],
+  "src": "LRC_fragen #151 (Z.1129)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_152",
+  "q": "Wie können im Küstenbereich automatisch Warnnachrichten empfangen werden?",
+  "correct": "mittels NAVTEX",
+  "wrong": [
+   {"t": "über EGC (Enhanced Group Call) auf Inmarsat-C", "why": "EGC ist für MSI über Satelliten in den Seegebieten A3/A4 zuständig (LRC_fragen #160/161/125), nicht im Küstenbereich."},
+   {"t": "durch kontinuierliches Abhören von Kanal 16", "why": "Kanal 16 ist der Not- und Anrufkanal; NAVTEX ist das automatische System für Warnnachrichten im Küstenbereich (LRC_fragen #152/153)."},
+   {"t": "durch DSC-Sammelanrufe auf 2187,5 kHz", "why": "2187,5 kHz ist die DSC-Alarmierungsfrequenz auf Grenzwelle (LRC_fragen #89/SB_55), nicht das Warnnachrichtensystem."}
+  ],
+  "src": "LRC_fragen #152 (Z.1133)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_155",
+  "q": "In welchem Seegebiet wird NAVTEX angewandt?",
+  "correct": "im Regelfall A1 + A2",
+  "wrong": [
+   {"t": "nur im Seegebiet A1", "why": "NAVTEX deckt im Regelfall A1 und A2 ab (LRC_fragen #155/SB_86: ~400 sm Reichweite)."},
+   {"t": "weltweit über Satelliten", "why": "NAVTEX ist ein terrestrisches Grenzwellensystem (518 kHz/490 kHz, LRC_fragen #126/153); weltweit über Satelliten läuft EGC/SafetyNET (LRC_fragen #125/160)."},
+   {"t": "nur in Seegebiet A4 (Polkappen)", "why": "Seegebiet A4 liegt außerhalb der Reichweite von Küstenfunkstellen und wird nicht von NAVTEX abgedeckt (LRC_fragen #155)."}
+  ],
+  "src": "LRC_fragen #155 (Z.1142); SB_86",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_160",
+  "q": "In welchem Dienst wird der Gruppenanruf (EGC) verwendet?",
+  "correct": "MSI (Maritime Safety Information) auf Inmarsat-C",
+  "wrong": [
+   {"t": "NAVTEX auf 518 kHz und 490 kHz", "why": "NAVTEX ist ein terrestrisches Grenzwellensystem (LRC_fragen #126/152/153); EGC läuft über Satelliten auf Inmarsat-C (LRC_fragen #160/161/125)."},
+   {"t": "DSC-Sammelanrufe auf den Notfrequenzen 2187,5 kHz und Kanal 70", "why": "DSC dient der Alarmierung und dem Anruf einzelner Stationen (LRC_fragen #13/87/89); EGC ist ein Satellitenwarndienst."},
+   {"t": "Sprechfunk-Rundrufe auf Kanal 16", "why": "Kanal 16 ist der Not- und Anrufkanal im Sprechfunk; EGC ist ein automatischer Satellitenwarndienst (LRC_fragen #160/162)."}
+  ],
+  "src": "LRC_fragen #160 (Z.1154)",
+  "action": "fixed"
+ }
+]

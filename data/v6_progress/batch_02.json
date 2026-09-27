@@ -1,0 +1,98 @@
+[
+ {
+  "id": "LRC_123",
+  "q": "Welcher Kanal im UKW-Seefunkbereich ist vorzugsweise für den Verkehr und koordinierte SAR-Einsätze vorgesehen?",
+  "correct": "Kanal 6",
+  "wrong": [
+   {"t": "Kanal 13", "why": "Kanal 13 ist der Brücke-zu-Brücke-Verkehrskanal für Schiffsverkehrskommunikation (Navigationsabsprachen), nicht für SAR."},
+   {"t": "Kanal 16", "why": "Kanal 16 ist der Not- und Anrufkanal, auf dem SAR nur angekündigt wird; der koordinierte Verkehr läuft auf einem Arbeitskanal."},
+   {"t": "Kanal 70", "why": "Kanal 70 ist ausschließlich für DSC (Digital Selective Calling) reserviert, nicht für Sprechfunk-SAR-Verkehr."}
+  ],
+  "src": "LRC_fragen #123 (Z.1017)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_126",
+  "q": "Welche Frequenz wird für den nationalen NAVTEX-Dienst benützt?",
+  "correct": "490 kHz",
+  "wrong": [
+   {"t": "518 kHz", "why": "518 kHz ist die internationale NAVTEX-Frequenz (immer auf Englisch, LRC_fragen #126/153/158)."},
+   {"t": "2187,5 kHz", "why": "2187,5 kHz ist die Grenzwellen-DSC-Alarmierungsfrequenz (LRC_fragen #89/SB_55), kein NAVTEX."},
+   {"t": "4209,5 kHz", "why": "4209,5 kHz ist eine KW-DSC-Frequenz für den öffentlichen Nachrichtenaustausch, nicht für NAVTEX."}
+  ],
+  "src": "LRC_fragen #126 (Z.463)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_127",
+  "q": "Was müssen Sie tun, wenn Sie eine Seenotfunkbake unabsichtlich ausgelöst haben?",
+  "correct": "Verbindungsaufnahme mit der nächsten Küsten-, Küsten-Erdfunkstelle oder einem RCC und den Alarm widerrufen",
+  "wrong": [
+   {"t": "Die Bake sofort ausschalten und keine weitere Maßnahme ergreifen", "why": "Das Ausschalten allein genügt nicht; der bereits ausgesendete Alarm hat SAR-Einheiten alarmiert und muss aktiv widerrufen werden."},
+   {"t": "Eine DSC-Dringlichkeitsmeldung auf 2187,5 kHz mit dem Inhalt 'Fehlalarm' aussenden", "why": "Die Rücknahme erfolgt im Sprechfunk (2182 kHz GW, Kanal 16 UKW) nach festem Wortlaut (LRC_fragen #128/SB_73), nicht per DSC-Dringlichkeit."},
+   {"t": "Drei Minuten warten und prüfen, ob eine Rückmeldung erfolgt; sonst gilt der Alarm als automatisch gelöscht", "why": "EPIRB-Alarme werden nicht automatisch gelöscht und müssen immer ausdrücklich widerrufen werden (LRC_fragen #127/SB_74)."}
+  ],
+  "src": "LRC_fragen #127 (Z.1033)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_128",
+  "q": "Wie lautet auf Grenzwelle das Verfahren zur Rücknahme von Fehlalarmen über DSC?",
+  "correct": "auf 2182 kHz im Sprechfunk: ALL STATONS ALL STATIONS ALL STATIONS THIS IS (Schiffsname)/ (Rufzeichen)/ (MMSI) CANCEL MY DISTRESS ALERT OF (Zeit des Fehlalarms )UTC",
+  "wrong": [
+   {"t": "Erneute DSC-Aussendung auf 2187,5 kHz mit der Priorität 'Routine' und dem Zusatz 'Test'", "why": "Die Rücknahme erfolgt im Sprechfunk auf 2182 kHz, nicht per DSC (LRC_fragen #128/SB_73)."},
+   {"t": "Sprechfunk auf Kanal 16: MAYDAY MAYDAY MAYDAY, THIS IS (Schiffsname), CANCEL DISTRESS", "why": "Auf GW ist 2182 kHz die richtige Frequenz; außerdem wird 'MAYDAY' nur für echte Notfälle benutzt, nicht für die Rücknahme."},
+   {"t": "Anruf der zuständigen Küstenfunkstelle auf einem Arbeitskanal und mündliche Erklärung", "why": "Das Verfahren schreibt die Ansage auf der Not- und Sicherheitsfrequenz 2182 kHz vor, nicht auf einem Arbeitskanal."}
+  ],
+  "src": "LRC_fragen #128 (Z.1037); SB_73",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_131",
+  "q": "Welches Betriebsverfahren muss im Verkehr mit Luftfahrzeugfunkstellen angewendet werden?",
+  "correct": "das des Schiffsfunkdienstes",
+  "wrong": [
+   {"t": "das des Flugfunkdienstes", "why": "Im gemischten Verkehr gilt immer das Verfahren des Schiffsfunkdienstes (LRC_fragen #131)."},
+   {"t": "ein vereinfachtes internationales Verfahren ohne Verkehrsrangfolge", "why": "Die Verkehrsrangfolge (Not > Dringlichkeit > Sicherheit > öffentlicher Verkehr, LRC_fragen #14/15) gilt auch im Verkehr mit Luftfahrzeugen."},
+   {"t": "das Verfahren, das die Luftfahrzeugfunkstelle vorgibt", "why": "Schiffe wenden ihr eigenes Verfahren an; Luftfahrzeuge passen sich im Seefunk an (LRC_fragen #131)."}
+  ],
+  "src": "LRC_fragen #131 (Z.1051)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_133",
+  "q": "Wie wird die Wortgruppe ‚PAN PAN’ genannt?",
+  "correct": "Dringlichkeitszeichen",
+  "wrong": [
+   {"t": "Notzeichen", "why": "Das Notzeichen ist MAYDAY (SB_94/LRC_77), nicht PAN PAN."},
+   {"t": "Sicherheitszeichen", "why": "Das Sicherheitszeichen ist SECURITE (LRC_143/150), nicht PAN PAN."},
+   {"t": "Verkehrszeichen", "why": "PAN PAN kennzeichnet Dringlichkeitsverkehr (dringend, aber nicht lebensbedrohlich); ein 'Verkehrszeichen' für Routineverkehr existiert nicht."}
+  ],
+  "src": "LRC_fragen #133 (Z.1059)",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_137",
+  "q": "An wen wird der DSC-Dringlichkeitsanruf auf Kurzwelle im Regelfall gerichtet?",
+  "correct": "an alle Fahrzeuge in einem definierten Gebiet (area call), oder CS oder RCC",
+  "wrong": [
+   {"t": "ausschließlich an das zuständige RCC", "why": "Der Anruf kann auch an eine Küstenfunkstelle (CS) oder als Gebietsruf (area call) gerichtet sein (LRC_fragen #137/SB_77)."},
+   {"t": "an alle Funkstellen weltweit ohne Gebietsbeschränkung", "why": "Auf Kurzwelle wird im Regelfall ein definiertes Gebiet angegeben (area call), nicht weltweit gesendet."},
+   {"t": "an eine einzelne Seefunkstelle, deren MMSI bekannt ist", "why": "Dringlichkeitsmeldungen richten sich an eine Küstenfunkstelle, ein RCC oder ein Gebiet, nicht an ein einzelnes Schiff."}
+  ],
+  "src": "LRC_fragen #137 (Z.1075); SB_77",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_141",
+  "q": "Wie wird im Sprechfunk die Dringlichkeitsmeldung eingeleitet?",
+  "correct": "durch das Dringlichkeitszeichen, das 3-malige ‚PAN PAN’",
+  "wrong": [
+   {"t": "durch das einmalige Dringlichkeitszeichen PAN PAN", "why": "Das Dringlichkeitszeichen wird dreimal gesprochen (LRC_fragen #141), analog zu MAYDAY dreimal (SB_99)."},
+   {"t": "durch das dreimalige Notzeichen MAYDAY", "why": "MAYDAY ist das Notzeichen für lebensbedrohliche Lagen (SB_94/99); PAN PAN kennzeichnet Dringlichkeit ohne unmittelbare Lebensgefahr."},
+   {"t": "durch das dreimalige Sicherheitszeichen SECURITE", "why": "SECURITE (LRC_143/150) leitet Sicherheitsmeldungen ein, nicht Dringlichkeitsmeldungen."}
+  ],
+  "src": "LRC_fragen #141 (Z.1090)",
+  "action": "fixed"
+ }
+]

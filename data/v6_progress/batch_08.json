@@ -1,0 +1,146 @@
+[
+ {
+  "id": "LRC_47",
+  "q": "Wie nennt man den Vorgang, bei dem niederfrequente Schwingungen einer hochfrequenten ‚aufgedrückt’ werden?",
+  "correct": "Modulation",
+  "wrong": [
+   {"t": "Demodulation", "why": "Demodulation ist der umgekehrte Vorgang: die Gewinnung der niederfrequenten Information aus dem modulierten hochfrequenten Signal (LRC_fragen #47)."},
+   {"t": "Interferenz", "why": "Interferenz bezeichnet die Überlagerung mehrerer Wellen, die zu Verstärkung oder Schwächung führt; Modulation ist das Aufprägen von Information (LRC_fragen #47)."},
+   {"t": "Selektion", "why": "Selektion bedeutet die Auswahl einer Frequenz im Empfänger; Modulation ist das Aufprägen der Sprache auf die Hochfrequenz beim Sender (LRC_fragen #47)."}
+  ],
+  "src": "LRC_fragen #47 (Z.185)",
+  "action": "kept"
+ },
+ {
+  "id": "LRC_148",
+  "q": "Auf welcher GW-Frequenz soll die Sicherheitsmeldung im Sprechfunk im Regelfall ausgesendet werden?",
+  "correct": "2182 kHz",
+  "wrong": [
+   {"t": "2177 kHz", "why": "2177 kHz ist die GW-Frequenz für DSC-Anrufe zwischen Schiffen (LRC_fragen #197), nicht für Sprechfunk-Sicherheitsmeldungen."},
+   {"t": "518 kHz", "why": "518 kHz ist die internationale NAVTEX-Frequenz für automatische Warnnachrichten (LRC_fragen #153), nicht für Sprechfunk."},
+   {"t": "3023 kHz", "why": "3023 kHz ist für koordinierte SAR-Einsätze (Search and Rescue) vorgesehen (SB_72), nicht für Sicherheitsmeldungen im Regelfall."}
+  ],
+  "src": "LRC_fragen #148 (Z.1093); #149",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_158",
+  "q": "Welche Sprache wird bei NAVTEX-Aussendungen auf 518 kHz grundsätzlich benutzt?",
+  "correct": "Englisch",
+  "wrong": [
+   {"t": "die jeweilige Landessprache der sendenden Küstenfunkstelle", "why": "518 kHz ist die internationale NAVTEX-Frequenz, auf der grundsätzlich Englisch gesendet wird; die Landessprache wird auf 490 kHz benutzt (LRC_fragen #126/158)."},
+   {"t": "Französisch als zweite Amtssprache der IMO", "why": "Auf 518 kHz wird Englisch gesendet (LRC_fragen #158), nicht Französisch."},
+   {"t": "wahlweise Englisch oder die Landessprache, je nach Empfängereinstellung", "why": "Der Empfänger kann die Station wählen, nicht die Sprache; 518 kHz sendet grundsätzlich Englisch, 490 kHz die Landessprache (LRC_fragen #126/158)."}
+  ],
+  "src": "LRC_fragen #158 (Z.1148); #126",
+  "action": "fixed"
+ },
+ {
+  "id": "LRC_197",
+  "q": "Welche Grenzwellen-Frequenz wird zum DSC-Anruf zwischen Schiffen international benutzt?",
+  "correct": "2177 kHz",
+  "wrong": [
+   {"t": "2182 kHz", "why": "2182 kHz ist die Not- und Sicherheitsfrequenz im Sprechfunk (LRC_fragen #148/SB_68), nicht für DSC-Anrufe."},
+   {"t": "2187,5 kHz", "why": "2187,5 kHz ist die GW-DSC-Alarmierungsfrequenz für Not/Dringlichkeit/Sicherheit und Anrufe Schiff→Land (LRC_fragen #89/SB_55), nicht für Schiff→Schiff."},
+   {"t": "3023 kHz", "why": "3023 kHz ist für koordinierte SAR-Einsätze vorgesehen (SB_72), nicht für DSC-Anrufe zwischen Schiffen."}
+  ],
+  "src": "LRC_fragen #197 (Z.1301)",
+  "action": "fixed"
+ },
+ {
+  "id": "SB_1",
+  "q": "Wie werden im GMDSS die für die Ausrüstung mit Funkanlagen festgelegten Seengebiete bezeichnet?",
+  "correct": "A1, A2, A3, A4",
+  "wrong": [
+   {"t": "Zone 1, Zone 2, Zone 3, Zone 4", "why": "Die Bezeichnungen sind A1, A2, A3, A4 (SRC_SB #1/LRC_fragen #1), nicht Zone 1–4."},
+   {"t": "Gebiet I, Gebiet II, Gebiet III, Gebiet IV", "why": "Die Bezeichnungen sind A1, A2, A3, A4 (SRC_SB #1/LRC_fragen #1), nicht Gebiet I–IV."},
+   {"t": "Region 1, Region 2, Region 3", "why": "Regionen 1–3 sind die Funkregionen der ITU (LRC_fragen #62/SB_41); die Seegebiete heißen A1, A2, A3, A4 (SRC_SB #1)."}
+  ],
+  "src": "SRC_SB #1; LRC_fragen #1",
+  "action": "fixed"
+ },
+ {
+  "id": "SB_15",
+  "q": "Welcher UKW-Kanal sollte im GMDSS nach Möglichkeit für den Empfang von Meldungen betreffend die Sicherheit der Seeschifffahrt dauernd abgehört werden?",
+  "correct": "Kanal 13",
+  "wrong": [
+   {"t": "Kanal 16", "why": "Kanal 16 ist der Not- und Anrufkanal; Kanal 13 ist der Brücke-zu-Brücke-Kanal, auf dem auch Sicherheitsmeldungen für die Navigation abgehört werden sollten (SRC_SB #15)."},
+   {"t": "Kanal 70", "why": "Kanal 70 ist ausschließlich für DSC reserviert (LRC_fragen #88/173/196); Sprechfunk-Sicherheitsmeldungen werden auf Kanal 13 empfangen (SRC_SB #15)."},
+   {"t": "Kanal 6", "why": "Kanal 6 ist für koordinierte SAR-Einsätze vorgesehen (LRC_fragen #123); dauernd abgehört werden sollte Kanal 13 für Sicherheitsmeldungen (SRC_SB #15)."}
+  ],
+  "src": "SRC_SB #15 (Z.81)",
+  "action": "fixed"
+ },
+ {
+  "id": "SB_20",
+  "q": "Wo ist die Ausrüstung mit einer UKW-DSC-EPIRB sinnvoll?",
+  "correct": "im Seegebiet A1",
+  "wrong": [
+   {"t": "in den Seegebieten A3 und A4, wo keine Küstenfunkstellen erreichbar sind", "why": "In A3/A4 ist eine Satelliten-EPIRB (406 MHz oder Inmarsat-E) erforderlich (SB_21/SB_22); UKW-DSC-EPIRB funktioniert nur im Küstenbereich A1 (SRC_SB #20)."},
+   {"t": "weltweit, da UKW-DSC von allen Schiffen empfangen wird", "why": "UKW hat quasioptische Reichweite (LRC_fragen #28) und funktioniert nur küstennah; für Seegebiete A2–A4 sind andere EPIRB-Typen erforderlich (SRC_SB #20/21)."},
+   {"t": "in Seegebiet A2, innerhalb der Grenzwellenreichweite", "why": "UKW-DSC-EPIRB ist für Seegebiet A1 sinnvoll (SRC_SB #20); in A2 wären GW- oder Satellitensysteme geeigneter."}
+  ],
+  "src": "SRC_SB #20 (Z.102); SB_21/22",
+  "action": "fixed"
+ },
+ {
+  "id": "SB_29",
+  "q": "Wo ist international die Führung von Aufzeichnungen im Funkverkehr geregelt?",
+  "correct": "VO Funk",
+  "wrong": [
+   {"t": "SOLAS Kapitel IV", "why": "SOLAS Kapitel IV regelt die Funkausrüstung; die Aufzeichnungspflicht ist in der VO-Funk geregelt (SRC_SB #29/LRC_fragen #36)."},
+   {"t": "Seeschifffahrtsverordnung", "why": "Die Seeschifffahrtsverordnung regelt nationale Betriebsverfahren (SB_30); die internationale Aufzeichnungspflicht steht in der VO-Funk (SRC_SB #29)."},
+   {"t": "im GMDSS Master Plan der IMO", "why": "Der GMDSS Master Plan dokumentiert Küstenfunkstellen und RCC-Zuständigkeiten (SB_7/47); die Aufzeichnungspflicht ist in der VO-Funk geregelt (SRC_SB #29)."}
+  ],
+  "src": "SRC_SB #29 (Z.141); LRC_fragen #36",
+  "action": "fixed"
+ },
+ {
+  "id": "SB_40",
+  "q": "In welcher internationalen Vorschrift sind die Frequenzbereiche für die einzelnen Funkdienste festgelegt?",
+  "correct": "VO Funk Vollzugsordnung für den Funkdienst",
+  "wrong": [
+   {"t": "SOLAS (Safety of Life at Sea)", "why": "SOLAS regelt die Ausrüstungspflicht und Sicherheitsstandards; die Frequenzbereiche sind in der VO-Funk festgelegt (SRC_SB #40/LRC_fragen #61)."},
+   {"t": "Seeschifffahrtsverordnung", "why": "Die Seeschifffahrtsverordnung regelt nationale Betriebsverfahren (SB_30); die internationale Frequenzzuteilung steht in der VO-Funk (SRC_SB #40)."},
+   {"t": "im GMDSS Master Plan der IMO", "why": "Der GMDSS Master Plan dokumentiert Küstenfunkstellen und RCC-Zuständigkeiten (SB_7/47); die Frequenzbereiche sind in der VO-Funk festgelegt (SRC_SB #40)."}
+  ],
+  "src": "SRC_SB #40 (Z.191); LRC_fragen #61",
+  "action": "fixed"
+ },
+ {
+  "id": "SB_55",
+  "q": "Auf welcher Grenzwellen-Frequenz erfolgt die DSC-Alarmierung?",
+  "correct": "auf 2187,5 kHz",
+  "wrong": [
+   {"t": "auf 2182 kHz", "why": "2182 kHz ist die Sprechfunkfrequenz für Not-, Dringlichkeits- und Sicherheitsverkehr (LRC_fragen #148/SB_68), nicht für DSC."},
+   {"t": "auf 2177 kHz", "why": "2177 kHz ist für DSC-Anrufe zwischen Schiffen vorgesehen (LRC_fragen #197), nicht für Alarmierungen."},
+   {"t": "auf 518 kHz", "why": "518 kHz ist die internationale NAVTEX-Frequenz (LRC_fragen #153), nicht für DSC-Alarmierung."}
+  ],
+  "src": "LRC_fragen #84/89 (Z.845); SB_55",
+  "action": "fixed"
+ },
+ {
+  "id": "SB_57",
+  "q": "In welchem Frequenzbereich soll die DSC-Alarmierung Schiff – Land aus den Seegebieten A3 und A4 erfolgen?",
+  "correct": "auf einer der Kurzwellen Not- und Sicherheitsfrequenzen, vorzugsweise 8414,5 kHz",
+  "wrong": [
+   {"t": "auf 2182 kHz (Grenzwelle)", "why": "2182 kHz ist Grenzwelle und hat keine ausreichende Reichweite für A3/A4; für diese Seegebiete wird Kurzwelle benutzt, vorzugsweise 8414,5 kHz (LRC_fragen #86/SB_57)."},
+   {"t": "auf 2187,5 kHz (Grenzwellen-DSC)", "why": "2187,5 kHz ist die GW-DSC-Alarmierungsfrequenz mit begrenzter Reichweite; aus A3/A4 wird vorzugsweise 8414,5 kHz (Kurzwelle) benutzt (LRC_fragen #86/SB_57)."},
+   {"t": "auf 4207,5 kHz", "why": "4207,5 kHz ist eine KW-DSC-Frequenz (LRC_fragen #85), aber für Schiff→Land aus A3/A4 wird vorzugsweise 8414,5 kHz empfohlen (SB_57/SB_10)."}
+  ],
+  "src": "LRC_fragen #86 (Z.855); SB_57",
+  "action": "fixed"
+ },
+ {
+  "id": "SB_58",
+  "q": "In welchem Frequenzbereich soll die DSC-Alarmierung von Schiffen in der Nähe in den Seegebieten A3 und A4 erfolgen?",
+  "correct": "auf 2187,5 kHz und/oder auf dem UKW-Kanal 70",
+  "wrong": [
+   {"t": "auf 8414,5 kHz (Kurzwelle für Schiff→Land)", "why": "8414,5 kHz ist vorzugsweise für Schiff→Land aus A3/A4 (SB_57/SB_10); für Schiffe in der Nähe wird GW (2187,5 kHz) oder UKW (Kanal 70) benutzt (LRC_fragen #87/SB_58)."},
+   {"t": "auf 4125 kHz", "why": "4125 kHz ist keine DSC-Alarmierungsfrequenz; für Schiffe in der Nähe in A3/A4 wird 2187,5 kHz und/oder Kanal 70 benutzt (LRC_fragen #87/SB_58)."},
+   {"t": "auf 2182 kHz (Sprechfunk)", "why": "2182 kHz ist die Sprechfunkfrequenz (LRC_fragen #148/SB_68), nicht DSC; für Schiffe in der Nähe: 2187,5 kHz DSC und/oder Kanal 70 DSC (LRC_fragen #87/SB_58)."}
+  ],
+  "src": "LRC_fragen #87 (Z.859); SB_58",
+  "action": "fixed"
+ }
+]

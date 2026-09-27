@@ -1,0 +1,74 @@
+[
+ {
+  "id": "SB_12",
+  "q": "Im GMDSS werden die Not- und Sicherheitsfrequenzen im Kurzwellenbereich durch was überwacht?",
+  "correct": "Empfangsbereitschaft für DSC-Alarmierungen auf 8414,5 kHz",
+  "wrong": [
+   {"t": "Empfangsbereitschaft für DSC-Alarmierungen auf 2187,5 kHz", "why": "2187,5 kHz ist die Grenzwellen-DSC-Frequenz (SB_9/SB_11/SB_55); im Kurzwellenbereich ist 8414,5 kHz die DSC-Wachfrequenz (SRC_SB #12/SB_10)."},
+   {"t": "kontinuierlichen Sprechfunk-Hördienst auf 2182 kHz", "why": "2182 kHz ist eine Sprechfunkfrequenz auf Grenzwelle (SB_67/68); die Überwachung im GMDSS erfolgt durch DSC-Empfangsbereitschaft (SRC_SB #12)."},
+   {"t": "automatische NAVTEX-Empfänger auf 518 kHz", "why": "NAVTEX verbreitet maritime Sicherheitsinformationen (SB_85/86), überwacht aber keine Not- und Sicherheitsfrequenzen (SRC_SB #12)."}
+  ],
+  "src": "SRC_SB #12 (Z.63/65); SB_10",
+  "action": "new"
+ },
+ {
+  "id": "SB_26",
+  "q": "Die Bestimmung ‚Bevor eine Funkstelle, die nicht in Not ist, auf einer der für Not- und Sicherheitsverkehr bestimmten Frequenz zu senden beginnt, muss sie diese so lange abhören, bis sie sich vergewissert hat, dass kein Notverkehr stattfindet’ — wozu dient sie?",
+  "correct": "dem Schutz der Not- und Sicherheitsfrequenzen im GMDSS",
+  "wrong": [
+   {"t": "der Einsparung von Sendeleistung und Batteriekapazität an Bord", "why": "Die Bestimmung schützt die Not- und Sicherheitsfrequenzen vor Störungen (SRC_SB #26), sie hat keinen energietechnischen Zweck."},
+   {"t": "der Gebührenerfassung für den öffentlichen Nachrichtenaustausch", "why": "Gebühren werden von der Küstenfunkstelle festgesetzt (LRC_fragen #198) und betreffen nicht die Notfrequenzen (SRC_SB #26)."},
+   {"t": "der Prüfung, ob der eigene Sender technisch einwandfrei arbeitet", "why": "Das wäre eine Versuchssendung (SB_27); die Bestimmung dient dem Schutz der Not- und Sicherheitsfrequenzen (SRC_SB #26)."}
+  ],
+  "src": "SRC_SB #26 (Z.126/130)",
+  "action": "new"
+ },
+ {
+  "id": "SB_28",
+  "q": "Welche Kanäle umfasst der Schutzbereich für Kanal 16?",
+  "correct": "75 und 76",
+  "wrong": [
+   {"t": "15 und 17", "why": "Die Schutzkanäle für Kanal 16 sind 75 und 76 (SRC_SB #28/LRC_fragen #35), nicht die unmittelbar benachbarten Kanalnummern."},
+   {"t": "13 und 70", "why": "Kanal 13 ist der Brücke-zu-Brücke-Kanal, Kanal 70 ist für DSC reserviert; die Schutzkanäle sind 75 und 76 (SRC_SB #28)."},
+   {"t": "6 und 8", "why": "Kanal 6 ist für koordinierte SAR-Einsätze vorgesehen (LRC_fragen #123); die Schutzkanäle für Kanal 16 sind 75 und 76 (SRC_SB #28)."}
+  ],
+  "src": "SRC_SB #28 (Z.137/139); LRC_fragen #35",
+  "action": "new"
+ },
+ {
+  "id": "SB_48",
+  "q": "Eine Rettungsorganisation für die Seeschifffahrt ist …",
+  "correct": "die USCG",
+  "wrong": [
+   {"t": "die IMO (Internationale Seeschifffahrts-Organisation)", "why": "Die IMO ist eine UN-Sonderorganisation, die Regelwerke und den GMDSS Master Plan herausgibt (SB_7/SB_47), keine operative Rettungsorganisation (SRC_SB #48)."},
+   {"t": "die IALA (Internationale Vereinigung für Seezeichen)", "why": "Die IALA befasst sich mit Seezeichen und Navigationshilfen, nicht mit Rettungsoperationen (SRC_SB #48)."},
+   {"t": "die ITU (Internationale Fernmeldeunion)", "why": "Die ITU erlässt die Vollzugsordnung für den Funkdienst (LRC_fragen #17/59) und ist keine Rettungsorganisation (SRC_SB #48)."}
+  ],
+  "src": "SRC_SB #48 (Z.226/228)",
+  "action": "new"
+ },
+ {
+  "id": "SB_62",
+  "q": "Welche Maßnahmen sind von einer Seefunkstelle zu ergreifen, wenn sie einen mittels DSC ausgesendeten Notalarm auf einer der Kurzwellen-DSC-Not- und Sicherheitsfrequenzen empfangen hat und weder eine DSC-Bestätigung einer Küstenfunkstelle erfolgte noch ein Notverkehr mit einer Küstenfunkstelle beobachtet wird?",
+  "correct": "nach 3 Minuten ist ein DSC Distress Relay auszusenden und ein RCC zu informieren",
+  "wrong": [
+   {"t": "den Notalarm sofort selbst per DSC auf derselben Kurzwellenfrequenz bestätigen", "why": "Auf Kurzwelle bestätigt die Seefunkstelle nicht selbst; nach 3 Minuten ohne Küstenstellen-Bestätigung wird ein DSC Distress Relay ausgesendet (SRC_SB #62)."},
+   {"t": "den Notalarm auf 2182 kHz im Sprechfunk bestätigen und die Frequenz weiter abhören", "why": "Das ist das Verfahren für einen auf GRENZWELLE empfangenen DSC-Notalarm (SRC_SB #61/SB_11); auf Kurzwelle gilt das Relay-Verfahren nach 3 Minuten (SRC_SB #62)."},
+   {"t": "abwarten, da Kurzwellen-Notalarme ausschließlich von Küstenfunkstellen bearbeitet werden", "why": "Wenn keine Küstenfunkstelle reagiert, muss die Seefunkstelle nach 3 Minuten ein DSC Distress Relay aussenden und ein RCC informieren (SRC_SB #62)."}
+  ],
+  "src": "SRC_SB #62 (Z.288/292)",
+  "action": "new"
+ },
+ {
+  "id": "SB_100",
+  "q": "Wie oft wird außerhalb des GMDSS im Notanruf der Name des in Not befindlichen Schiffes genannt?",
+  "correct": "dreimal",
+  "wrong": [
+   {"t": "einmal", "why": "Im Notanruf außerhalb des GMDSS wird der Schiffsname dreimal genannt (SRC_SB #100), analog zum dreimaligen MAYDAY (SB_99)."},
+   {"t": "zweimal", "why": "Der Name wird dreimal genannt (SRC_SB #100)."},
+   {"t": "fünfmal", "why": "Der Name wird dreimal genannt (SRC_SB #100), nicht fünfmal."}
+  ],
+  "src": "SRC_SB #100 (Z.481/483); SB_99",
+  "action": "new"
+ }
+]
