@@ -1,0 +1,482 @@
+[
+ {
+  "id": "SB_86",
+  "q": "In welchem Seegebiet wird NAVTEX angewandt?",
+  "correct": "Im Küstenbereich bis etwa 400 sm vom Standort des Senders",
+  "wrong": [
+   "Weltweit über Satellit",
+   "Nur innerhalb der 12-Seemeilen-Zone",
+   "Bis etwa 150 sm vom Senderstandort"
+  ]
+ },
+ {
+  "id": "LRC_162",
+  "q": "Was ist ein EGC-Empfänger?",
+  "correct": "Ein Empfangsgerät für maritime Sicherheitsinformationen (MSI)",
+  "wrong": [
+   "Ein Empfänger für DSC-Notalarme",
+   "Ein Radartransponder für Rettungsinseln",
+   "Ein Notsender im 406-MHz-Band"
+  ]
+ },
+ {
+  "id": "LRC_125",
+  "q": "Womit werden Maritime Safety Informations via Inmarsat empfangen?",
+  "correct": "Über EGC im SafetyNET",
+  "wrong": [
+   "Über NAVTEX auf 518 kHz",
+   "Über DSC auf 2187,5 kHz",
+   "Über den Sammelanruf der Küstenfunkstelle"
+  ]
+ },
+ {
+  "id": "LRC_75",
+  "q": "Welche Art von Satellitennetz betreibt Inmarsat weltweit?",
+  "correct": "Ein Netz geostationärer Satelliten",
+  "wrong": [
+   "Ein Netz polumlaufender Satelliten",
+   "Eine Mischung aus geostationären und polumlaufenden Satelliten",
+   "Ein Netz von Satelliten in niedriger Erdumlaufbahn"
+  ]
+ },
+ {
+  "id": "LRC_80",
+  "q": "Was bedeutet die Abkürzung SES?",
+  "correct": "Ship Earth Station — Satellitenfunkanlage an Bord eines Schiffes",
+  "wrong": [
+   "Safety Emergency Signal — Not- und Sicherheitssignal",
+   "Shore Emergency Station — Notfallstation an Land",
+   "Satellite Emergency System — Satellitennotsystem"
+  ]
+ },
+ {
+  "id": "LRC_79",
+  "q": "Welche Funkstelle wird als CES bezeichnet?",
+  "correct": "Coast Earth Station — Satelliten-Bodenstation an Land",
+  "wrong": [
+   "Coast Emergency Station — Küstennotfallstation",
+   "Central Emergency Service — Zentraler Notdienst",
+   "Coast Echo Station — Küstenrelaisstelle"
+  ]
+ },
+ {
+  "id": "LRC_81",
+  "q": "Was ist das COSPAS-SARSAT-System?",
+  "correct": "Ein Satellitensystem für die Alarmierung in Notfällen",
+  "wrong": [
+   "Ein Satellitensystem für die Positionsbestimmung",
+   "Ein System von Küstenfunkstellen für DSC",
+   "Ein Netz von Radartranspondern"
+  ]
+ },
+ {
+  "id": "LRC_82",
+  "q": "Welche Arten von Satelliten gehören zum COSPAS-SARSAT-System?",
+  "correct": "Geostationäre und polumlaufende Satelliten (GEOSAR und LEOSAR)",
+  "wrong": [
+   "Ausschließlich geostationäre Satelliten",
+   "Ausschließlich polumlaufende Satelliten",
+   "Dieselben Satelliten wie das Inmarsat-System"
+  ]
+ },
+ {
+  "id": "LRC_84",
+  "q": "Welche Funkstelle wird als LUT bezeichnet?",
+  "correct": "Local User Terminal — Bodenstation im COSPAS-SARSAT-System",
+  "wrong": [
+   "Local Uplink Transmitter — Sendeanlage an Land",
+   "Land User Telephone — Landanschluss",
+   "Long Uplink Terminal — Fernverbindungsstelle"
+  ]
+ },
+ {
+  "id": "LRC_86",
+  "q": "Welche Stelle wird als RCC bezeichnet?",
+  "correct": "Rescue Coordination Center",
+  "wrong": [
+   "Radio Control Center",
+   "Regional Coast Communication",
+   "Rescue Contact Channel"
+  ]
+ },
+ {
+  "id": "LRC_73",
+  "q": "Welche Aufgabe haben die RCCs?",
+  "correct": "Rettungsoperationen zentral zu leiten",
+  "wrong": [
+   "Den öffentlichen Nachrichtenaustausch abzurechnen",
+   "NAVTEX-Meldungen auszusenden",
+   "Funkbetriebszeugnisse auszustellen"
+  ]
+ },
+ {
+  "id": "LRC_118",
+  "q": "Welche Inmarsat-Dienste ermöglichen keine Sprachübertragung?",
+  "correct": "Inmarsat-C (und Inmarsat-D)",
+  "wrong": [
+   "Inmarsat-B",
+   "Inmarsat Fleet",
+   "Inmarsat Mini-M"
+  ]
+ },
+ {
+  "id": "LRC_120",
+  "q": "Bei welcher Satellitenanlage sind Azimut und Elevation für die Inbetriebnahme nicht von Bedeutung?",
+  "correct": "Inmarsat-C",
+  "wrong": [
+   "Inmarsat-B",
+   "Inmarsat Fleet",
+   "Inmarsat-M"
+  ]
+ },
+ {
+  "id": "LRC_121",
+  "q": "Worauf muss bei der Aufstellung der Inmarsat-C-Antenne geachtet werden?",
+  "correct": "Dass sie in keine Richtung abgedeckt wird",
+  "wrong": [
+   "Dass sie genau nach Süden ausgerichtet ist",
+   "Dass sie möglichst tief montiert wird",
+   "Dass sie horizontal polarisiert montiert wird"
+  ]
+ },
+ {
+  "id": "LRC_124",
+  "q": "Wo ist ein EGC-Empfang nicht möglich?",
+  "correct": "Nördlich von 76°N und südlich von 76°S",
+  "wrong": [
+   "Nördlich von 60°N und südlich von 60°S",
+   "Innerhalb der Küstengewässer",
+   "In der Nähe des Äquators"
+  ]
+ },
+ {
+  "id": "LRC_138",
+  "q": "Was bedeutet „elevation angle“?",
+  "correct": "Die Erhebung des Satelliten über dem Horizont",
+  "wrong": [
+   "Die Richtung zum Satelliten in Grad rechtweisend",
+   "Die Höhe der Antenne über der Wasserlinie",
+   "Der Neigungswinkel der Satellitenbahn"
+  ]
+ },
+ {
+  "id": "LRC_139",
+  "q": "Über welchem Breitengrad befinden sich die Satelliten des Inmarsat-Systems?",
+  "correct": "Über dem Äquator, 0°",
+  "wrong": [
+   "Über 45° Nord",
+   "Über den Polen",
+   "Über wechselnden Breitengraden je nach Umlaufbahn"
+  ]
+ },
+ {
+  "id": "LRC_140",
+  "q": "Was bedeutet „azimuth angle“?",
+  "correct": "Die Richtung zum Satelliten, rechtweisend",
+  "wrong": [
+   "Die Höhe des Satelliten über dem Horizont",
+   "Der Winkel zwischen Antenne und Schiffslängsachse",
+   "Der Neigungswinkel der Antennenschüssel"
+  ]
+ },
+ {
+  "id": "LRC_185",
+  "q": "Wo steht der Inmarsat-Satellit mit der Bezeichnung AOR-W?",
+  "correct": "Über dem Westatlantik",
+  "wrong": [
+   "Über dem Ostatlantik",
+   "Über dem Pazifik",
+   "Über dem Indischen Ozean"
+  ]
+ },
+ {
+  "id": "LRC_186",
+  "q": "Über welchem Gebiet steht der Inmarsat-Satellit mit der Bezeichnung POR?",
+  "correct": "Über dem Pazifik",
+  "wrong": [
+   "Über dem Westatlantik",
+   "Über dem Indischen Ozean",
+   "Über dem Polarmeer"
+  ]
+ },
+ {
+  "id": "LRC_191",
+  "q": "Was muss beim Abschalten einer Inmarsat-C-Anlage nach dem Betrieb mit einer CES beachtet werden?",
+  "correct": "Dass zuerst ausgeloggt wird",
+  "wrong": [
+   "Dass die Antenne nach Norden gedreht wird",
+   "Dass vorher ein Testcall gesendet wird",
+   "Dass die Position manuell gelöscht wird"
+  ]
+ },
+ {
+  "id": "LRC_119",
+  "q": "Was versteht man unter Speicherverkehr (store and forward operation)?",
+  "correct": "Das Signal wird in der Bodenstation zwischengespeichert und später weitergeleitet",
+  "wrong": [
+   "Das Signal wird im Satelliten dauerhaft gespeichert",
+   "Der Funkverkehr wird an Bord aufgezeichnet",
+   "Nachrichten werden vor dem Senden verschlüsselt"
+  ]
+ },
+ {
+  "id": "LRC_166",
+  "q": "Wie oft dürfen Sie beim Anruf zum Herstellen einer Verbindung den Namen der gerufenen Funkstelle nennen?",
+  "correct": "Höchstens dreimal",
+  "wrong": [
+   "Höchstens zweimal",
+   "Höchstens fünfmal",
+   "Beliebig oft, bis geantwortet wird"
+  ]
+ },
+ {
+  "id": "LRC_176",
+  "q": "Wie oft sollen Sie den Namen der gerufenen Funkstelle nennen, wenn eine gute Verständigung zu erwarten ist?",
+  "correct": "Einmal",
+  "wrong": [
+   "Zweimal",
+   "Dreimal",
+   "Mindestens dreimal"
+  ]
+ },
+ {
+  "id": "LRC_179",
+  "q": "Nach welcher Zeit dürfen Sie einen unbeantworteten Anruf an eine Seefunkstelle wiederholen?",
+  "correct": "Nach 3 Minuten, wenn kein anderer Funkverkehr gestört wird",
+  "wrong": [
+   "Nach 1 Minute",
+   "Nach 5 Minuten",
+   "Sofort, ohne Wartezeit"
+  ]
+ },
+ {
+  "id": "LRC_180",
+  "q": "Wie lange darf ein Anruf und dessen Beantwortung auf Kanal 16 maximal dauern?",
+  "correct": "Eine Minute",
+  "wrong": [
+   "Drei Minuten",
+   "Fünf Minuten",
+   "30 Sekunden"
+  ]
+ },
+ {
+  "id": "LRC_181",
+  "q": "Wer bestimmt bei einer Verbindung zwischen See- und Küstenfunkstelle die zu benutzende Frequenz?",
+  "correct": "Die Küstenfunkstelle",
+  "wrong": [
+   "Die Seefunkstelle",
+   "Das zuständige RCC",
+   "Die Frequenz wird ausgehandelt"
+  ]
+ },
+ {
+  "id": "LRC_174",
+  "q": "Auf welchem UKW-Kanal rufen Sie eine Küstenfunkstelle, wenn deren Empfangskanal nicht bekannt ist?",
+  "correct": "Kanal 16",
+  "wrong": [
+   "Kanal 70",
+   "Kanal 13",
+   "Kanal 6"
+  ]
+ },
+ {
+  "id": "LRC_175",
+  "q": "Auf welchem Kanal sollen Sie eine Küstenfunkstelle rufen, die auf Kanal 16 und einem Arbeitskanal empfangsbereit ist?",
+  "correct": "Auf dem Arbeitskanal",
+  "wrong": [
+   "Auf Kanal 16",
+   "Auf Kanal 70 mittels DSC",
+   "Abwechselnd auf beiden"
+  ]
+ },
+ {
+  "id": "LRC_165",
+  "q": "Müssen Sie auch bei Versuchssendungen das Rufzeichen oder eine sonstige Kennung angeben?",
+  "correct": "Ja",
+  "wrong": [
+   "Nein, bei Versuchssendungen nicht",
+   "Nur wenn eine Küstenfunkstelle antwortet",
+   "Nur auf Grenz- und Kurzwelle"
+  ]
+ },
+ {
+  "id": "LRC_196",
+  "q": "Welche Aussendungen dürfen auf Kanal 70 erfolgen?",
+  "correct": "Ausschließlich DSC",
+  "wrong": [
+   "DSC und Sprechfunk im Notfall",
+   "Sprechfunk mit Küstenfunkstellen",
+   "Sicherheitsmeldungen im Sprechfunk"
+  ]
+ },
+ {
+  "id": "LRC_183",
+  "q": "Was ist eine „Q-Gruppe“?",
+  "correct": "Eine international einheitliche Abkürzung",
+  "wrong": [
+   "Eine Gruppe von Schiffen mit gemeinsamer MMSI",
+   "Ein Kanalbereich im UKW-Seefunk",
+   "Eine Kennung für Küstenfunkstellen"
+  ]
+ },
+ {
+  "id": "LRC_193",
+  "q": "Welche Bedeutung hat die Ankündigung „INTERCO“ im Sprechfunkverkehr?",
+  "correct": "Dass Codegruppen des Internationalen Signalbuchs folgen",
+  "wrong": [
+   "Dass eine internationale Verbindung hergestellt wird",
+   "Dass die Nachricht auf Englisch folgt",
+   "Dass ein Dolmetscher zugeschaltet wird"
+  ]
+ },
+ {
+  "id": "LRC_169",
+  "q": "Welche Form hat die Zeitangabe (Tag-Zeit-Gruppe) im Seefunkdienst?",
+  "correct": "ddhhmm UTC MMM YY, z. B. 241935 UTC OCT 12",
+  "wrong": [
+   "hhmm Bordzeit, z. B. 1935 LT",
+   "MMM dd hhmm UTC, z. B. OCT 24 1935",
+   "hhmmss UTC, z. B. 193500"
+  ]
+ },
+ {
+  "id": "LRC_163",
+  "q": "Wie nennt man die Aussendung, mit der eine Küstenfunkstelle bekannt gibt, dass Nachrichten für Schiffe vorliegen?",
+  "correct": "Sammelanruf (Traffic List)",
+  "wrong": [
+   "Gruppenanruf (EGC)",
+   "Sicherheitsmeldung (SECURITE)",
+   "Rundspruch (Broadcast)"
+  ]
+ },
+ {
+  "id": "LRC_194",
+  "q": "Dürfen Sie als Inhaber eines Schiffsfunkzeugnisses eine Amateurfunkstelle betreiben?",
+  "correct": "Nein, nur mit zusätzlichem Amateurfunkzeugnis",
+  "wrong": [
+   "Ja, das Schiffsfunkzeugnis schließt das ein",
+   "Ja, aber nur außerhalb der Hoheitsgewässer",
+   "Ja, aber nur im Notfall"
+  ]
+ },
+ {
+  "id": "LRC_132",
+  "q": "Was versteht man unter der Kapazität eines Akkumulators?",
+  "correct": "Seine Speicherfähigkeit",
+  "wrong": [
+   "Seine maximale Ladespannung",
+   "Seinen Innenwiderstand",
+   "Die maximale Stromabgabe pro Sekunde"
+  ]
+ },
+ {
+  "id": "LRC_134",
+  "q": "Wie hoch ist die Zellspannung bei einem aufgeladenen Bleiakkumulator?",
+  "correct": "Mindestens 2 V",
+  "wrong": [
+   "Mindestens 1,2 V",
+   "Mindestens 6 V",
+   "Mindestens 12 V"
+  ]
+ },
+ {
+  "id": "LRC_135",
+  "q": "Mit welcher Stromstärke sollte ein Bleiakkumulator bei einem herkömmlichen Ladegerät höchstens geladen werden?",
+  "correct": "Mit 10 % der Nennkapazität",
+  "wrong": [
+   "Mit 50 % der Nennkapazität",
+   "Mit 100 % der Nennkapazität",
+   "Mit 1 % der Nennkapazität"
+  ]
+ },
+ {
+  "id": "LRC_136",
+  "q": "Was ist beim Laden eines Akkumulators besonders zu beachten?",
+  "correct": "Es kann Knallgas entstehen, vor allem bei zu hoher Ladespannung",
+  "wrong": [
+   "Der Akku muss dabei vollständig entladen sein",
+   "Die Temperatur muss unter 0 °C liegen",
+   "Die Pole müssen kurzgeschlossen werden"
+  ]
+ },
+ {
+  "id": "SB_31",
+  "q": "Was bedeutet in englischsprachigen Dienstbehelfen die Abkürzung „RR“?",
+  "correct": "Radio Regulations — Vollzugsordnung für den Funkdienst",
+  "wrong": [
+   "Rescue Regulations — Rettungsvorschriften",
+   "Radio Range — Funkreichweite",
+   "Routine Report — Routinemeldung"
+  ]
+ },
+ {
+  "id": "SB_33",
+  "q": "Was bedeutet die Abkürzung „LRC“?",
+  "correct": "Long Range Certificate — englische Bezeichnung für das Allgemeine Betriebszeugnis II",
+  "wrong": [
+   "Local Radio Certificate — Nahbereichszeugnis",
+   "Limited Radio Certificate — Beschränktes Funkzeugnis",
+   "Long Range Communication — Weitverkehrsfunk"
+  ]
+ },
+ {
+  "id": "SB_32",
+  "q": "Welches Funkerzeugnis ist mindestens erforderlich, um weltweit im Seegebiet A3 mit GW/KW-Anlage teilzunehmen?",
+  "correct": "Das Allgemeine Betriebszeugnis II (LRC)",
+  "wrong": [
+   "Das Beschränkt Gültige Betriebszeugnis (SRC)",
+   "Ein Amateurfunkzeugnis",
+   "Kein Zeugnis, wenn die Anlage zugelassen ist"
+  ]
+ },
+ {
+  "id": "SB_37",
+  "q": "Welches Schiffspapier enthält die MMSI?",
+  "correct": "Die Bewilligungsurkunde",
+  "wrong": [
+   "Das Schiffszertifikat",
+   "Der Bordfunkverkehrskalender",
+   "Das Funktagebuch"
+  ]
+ },
+ {
+  "id": "SB_41",
+  "q": "In welcher Funkregion liegt Österreich?",
+  "correct": "Region 1",
+  "wrong": [
+   "Region 2",
+   "Region 3",
+   "Region 4"
+  ]
+ },
+ {
+  "id": "SB_42",
+  "q": "In welcher Funkregion liegt das Mittelmeer?",
+  "correct": "Region 1",
+  "wrong": [
+   "Region 2",
+   "Region 3",
+   "Region 4"
+  ]
+ },
+ {
+  "id": "SB_36",
+  "q": "Welche Aussendungen sind verboten?",
+  "correct": "Aussendungen von Zeichen, die mit internationalen Notzeichen verwechselt werden könnten",
+  "wrong": [
+   "Alle Aussendungen außerhalb der Hoheitsgewässer",
+   "Versuchssendungen jeder Art",
+   "Aussendungen in einer anderen Sprache als Englisch"
+  ]
+ },
+ {
+  "id": "SB_44",
+  "q": "Ist das Senden auf Grenz- oder Kurzwelle in ausländischen Häfen gestattet?",
+  "correct": "Das hängt von den Vorschriften des betreffenden Landes ab",
+  "wrong": [
+   "Ja, immer",
+   "Nein, niemals",
+   "Nur mit Erlaubnis der eigenen Fernmeldebehörde"
+  ]
+ }
+]

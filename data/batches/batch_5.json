@@ -1,0 +1,482 @@
+[
+ {
+  "id": "LRC_40",
+  "q": "Wo ist festgelegt, welche Dienstbehelfe und Dokumente an Bord von Seefunkstellen mitzuführen sind?",
+  "correct": "je nachdem was zur Auswahl steht: VO-Funk (Radio Regulations), SOLAS",
+  "wrong": [
+   "Auf Kanal 16",
+   "Über DSC",
+   "Im Seegebiet A1"
+  ]
+ },
+ {
+  "id": "LRC_44",
+  "q": "Worin sind die internationalen Bestimmungen für den Erwerb von Funker-Zeugnissen aufgeführt?",
+  "correct": "VO-FUNK (Radio Regulations), für die Berufsschifffahrt auch: STWC",
+  "wrong": [
+   "UKW-Sprechfunkzeugnis",
+   "SRC (Short Range Certificate)",
+   "GOC (General Operator Certificate)"
+  ]
+ },
+ {
+  "id": "LRC_45",
+  "q": "Welches Funker-Zeugnis ist mindestens erforderlich, um weltweit am GMDSS mit einer GW/KW-Funkanlage im Seegebiet A3 teilnehmen zu dürfen?",
+  "correct": "LRC (Allgemeines Betriebszeugnis II)",
+  "wrong": [
+   "Seegebiet A4",
+   "Weltweit",
+   "Seegebiet A1"
+  ]
+ },
+ {
+  "id": "LRC_46",
+  "q": "Welches Funker-Zeugnis ist mindestens erforderlich, um weltweit am GMDSS im Seegebiet A1 teilnehmen zu dürfen?",
+  "correct": "SRC (UKW-Betriebszeugnis II)",
+  "wrong": [
+   "Seegebiet A4",
+   "Inmarsat-Abdeckung",
+   "Küstennahe Gewässer"
+  ]
+ },
+ {
+  "id": "LRC_48",
+  "q": "Ist das Funker-Zeugnis an Bord mitzuführen?",
+  "correct": "ja",
+  "wrong": [
+   "nein",
+   "nur auf Verlangen der Behoerden",
+   "nur bei Fahrt ausserhalb A1"
+  ]
+ },
+ {
+  "id": "LRC_49",
+  "q": "Welche Aussendungen sind gemäß der Vollzugsordnung für den Funkdienst verboten?",
+  "correct": "Aussendungen mit falschen oder irreführenden Rufzeichen",
+  "wrong": [
+   "Nach Bestätigung",
+   "Auf Kanal 16",
+   "In allen Seegebieten"
+  ]
+ },
+ {
+  "id": "LRC_56",
+  "q": "In welchem Warndienst wird der Gruppenanruf (EGC) verwendet?",
+  "correct": "MSI (Safety-Net)",
+  "wrong": [
+   "Über DSC",
+   "Gemäß SOLAS",
+   "Nur im Notfall"
+  ]
+ },
+ {
+  "id": "LRC_59",
+  "q": "Welches internationale Regelwerk legt die betrieblichen Verfahren für das weltweite Seenotund Sicherheitsfunksystem für die Schifffahrt fest?",
+  "correct": "VO-Funk (Radio Regulations)",
+  "wrong": [
+   "Auf Kanal 16",
+   "Gemäß SOLAS",
+   "Über DSC"
+  ]
+ },
+ {
+  "id": "LRC_60",
+  "q": "In welchem Fall darf von den Bestimmungen der Vollzugsordnung für den Funkdienst abgewichen werden?",
+  "correct": "in Notfällen",
+  "wrong": [
+   "Durch die Küstenfunkstelle",
+   "Im Seegebiet A1",
+   "Nach Bestätigung"
+  ]
+ },
+ {
+  "id": "LRC_62",
+  "q": "In welcher Funkregion liegt Österreich?",
+  "correct": "Region 1",
+  "wrong": [
+   "Auf Kanal 16",
+   "In allen Seegebieten",
+   "Über DSC"
+  ]
+ },
+ {
+  "id": "LRC_64",
+  "q": "Was bedeutet die Abkürzung GMDSS?",
+  "correct": "Global Maritime Distress and Safety System – Weltweites Seenot- und Sicherheitsfunksystem",
+  "wrong": [
+   "Seegebiet A2",
+   "Inmarsat-Abdeckung",
+   "Weltweit"
+  ]
+ },
+ {
+  "id": "LRC_67",
+  "q": "Wer teilt in Österreich das Rufzeichen und die MMSI für eine Seefunkstelle zu?",
+  "correct": "Fernmeldebehörde (Fernmeldebüro)",
+  "wrong": [
+   "In allen Seegebieten",
+   "Gemäß SOLAS",
+   "Im Seegebiet A1"
+  ]
+ },
+ {
+  "id": "LRC_68",
+  "q": "Ist das Senden auf UKW in ausländischen Häfen gestattet?",
+  "correct": "das hängt von den jeweiligen Bestimmungen ab",
+  "wrong": [
+   "Durch den Kapitän",
+   "Gemäß SOLAS",
+   "Nur im Notfall"
+  ]
+ },
+ {
+  "id": "LRC_69",
+  "q": "Ist das Senden auf Grenz- oder Kurzwelle in ausländischen Häfen gestattet?",
+  "correct": "das hängt von den jeweiligen Bestimmungen ab (eher nicht)",
+  "wrong": [
+   "Über DSC",
+   "Auf Kanal 16",
+   "Gemäß SOLAS"
+  ]
+ },
+ {
+  "id": "LRC_7",
+  "q": "Wie lautet im GMDSS die Kurzbezeichnung für das nachfolgend beschriebene Seegebiet? \"Ein von der zuständigen Verwaltung festgelegtes Gebiet innerhalb der Sprechfunkreichweite mindestens einer GW-Küstenfunkstelle, die ununterbrochen für DSC-Alarmierungen zur Verfügung steht.\"",
+  "correct": "A2",
+  "wrong": [
+   "A1",
+   "A3",
+   "A4"
+  ]
+ },
+ {
+  "id": "LRC_70",
+  "q": "Wo ist die Ausrüstung österreichischer Jachten mit Funkanlagen geregelt?",
+  "correct": "Jachtzulassungsverordnung",
+  "wrong": [
+   "Nach Bestätigung",
+   "In allen Seegebieten",
+   "Durch den Kapitän"
+  ]
+ },
+ {
+  "id": "LRC_76",
+  "q": "Welche Aussendung hat im Seefunk unbedingten Vorrang?",
+  "correct": "Notverkehr",
+  "wrong": [
+   "Über DSC",
+   "In allen Seegebieten",
+   "Durch den Kapitän"
+  ]
+ },
+ {
+  "id": "LRC_77",
+  "q": "Wie lautet das Notzeichen?",
+  "correct": "Mayday",
+  "wrong": [
+   "Nach Bestätigung",
+   "Durch die Küstenfunkstelle",
+   "Auf Kanal 16"
+  ]
+ },
+ {
+  "id": "LRC_78",
+  "q": "Was bedeutet DISTRESS ALERT?",
+  "correct": "den Notalarm einer Person oder eines Fahrzeug, in unmittelbarer, schwerer Gefahr",
+  "wrong": [
+   "Über DSC",
+   "Nach Bestätigung",
+   "Gemäß SOLAS"
+  ]
+ },
+ {
+  "id": "LRC_8",
+  "q": "Wie lautet im GMDSS die Kurzbezeichnung für das nachfolgend beschriebene Seegebiet? \"Ein Gebiet innerhalb der Überdeckung eines geostationären Inmarsat-Satelliten, der ununterbrochen für Alarmierungen zur Verfügung steht.\"",
+  "correct": "A3",
+  "wrong": [
+   "A1",
+   "A2",
+   "A4"
+  ]
+ },
+ {
+  "id": "LRC_83",
+  "q": "Welche Angaben sollte ein Notalarm mindestens enthalten?",
+  "correct": "- Notzeichen - Name/Kennzeichnung der Funkstelle in Not, - Standort - Art des Notfalls, - Art der erbetenen Hilfe - jede andere Angabe, die die Hilfeleistung erleichtern könnte",
+  "wrong": [
+   "Über DSC",
+   "Nur im Notfall",
+   "Nach Bestätigung"
+  ]
+ },
+ {
+  "id": "LRC_85",
+  "q": "Welche Frequenzen sind für die DSC-Alarmierung im Kurzwellenbereich zu benützen?",
+  "correct": "4207,5 6312 8414,5 12577 16804,5",
+  "wrong": [
+   "156,8 MHz",
+   "2182 kHz",
+   "Kanal 13 (Brücke-Brücke)"
+  ]
+ },
+ {
+  "id": "LRC_88",
+  "q": "Auf welchem UKW-Kanal erfolgt die DSC-Alarmierung?",
+  "correct": "Kanal 70",
+  "wrong": [
+   "Kanal 13 (Brücke-Brücke)",
+   "Kanal 16 (Notruf und Anruf)",
+   "4125 kHz"
+  ]
+ },
+ {
+  "id": "LRC_95",
+  "q": "Muss eine Seefunkstelle den Empfang eines DSC-Notalarms auf GW einer zweifellos weit entfernten Seefunkstelle, der sie nicht helfen kann, über Sprechfunk bestätigen?",
+  "correct": "die Bestätigung erfolgt in diesem Fall nur dann, wenn die Notmeldung von anderen Funkstellen nicht bestätigt worden ist",
+  "wrong": [
+   "DSC-Anruf",
+   "Über DSC auf Kanal 70",
+   "Selektivruf"
+  ]
+ },
+ {
+  "id": "LRC_98",
+  "q": "Welche Maßnahmen soll eine Seefunkstelle ergreifen, wenn trotz ihrer Bestätigung auf der Frequenz 2182 kHz über den Empfang des DSC-Notalarms weiterhin DSC-Notalarme der zweifellos in der Nähe befindlichen Funkstelle in Not ausgesendet werden?",
+  "correct": "Eine Weiterleitung an ein RCC senden eventuell (nach Rücksprache mit einem RCC) eine DSC-Empfangsbestätigung senden",
+  "wrong": [
+   "den Notalarm auf 2182 kHz bestätigen und die Frequenz weiter abhören",
+   "nach 3 Minuten ein DSC Distress Relay aussenden und ein RCC informieren",
+   "den Empfang mittels DSC auf Kanal 70 bestätigen"
+  ]
+ },
+ {
+  "id": "LRC_99",
+  "q": "Welche Maßnahmen soll eine Seefunkstelle ergreifen, wenn trotz ihrer Bestätigung auf dem Kanal 16 über den Empfang des DSC-Notalarms weiterhin DSC-Notalarme der zweifellos in der Nähe befindlichen Funkstelle in Not ausgesendet werden?",
+  "correct": "die Seefunkstelle soll den Empfang des Notalarms mittels einer DSC-Aussendung auf Kanal 70 bestätigen",
+  "wrong": [
+   "den Notalarm auf 2182 kHz bestätigen und die Frequenz weiter abhören",
+   "nach 3 Minuten ein DSC Distress Relay aussenden und ein RCC informieren",
+   "den Empfang mittels DSC auf Kanal 70 bestätigen"
+  ]
+ },
+ {
+  "id": "SB_1",
+  "q": "Wie werden im GMDSS die für die Ausrüstung mit Funkanlagen festgelegten Seengebiete bezeichnet?",
+  "correct": "A1, A2, A3, A4",
+  "wrong": [
+   "Seegebiet A2",
+   "Küstennahe Gewässer",
+   "Seegebiet A1"
+  ]
+ },
+ {
+  "id": "SB_100",
+  "q": "Wie oft wird außerhalb des GMDSS im Notanruf der Name des in Not befindlichen Schiffes genannt?",
+  "correct": "dreimal",
+  "wrong": [
+   "einmal",
+   "zweimal",
+   "viermal"
+  ]
+ },
+ {
+  "id": "SB_101",
+  "q": "Womit wird außerhalb des GMDSS die Notmeldung eingeleitet?",
+  "correct": "mit dem Notzeichen",
+  "wrong": [
+   "mit dem Notanruf",
+   "mit der Notalarmierung",
+   "mit der Sprechfunkabwicklung auf 2182 kHz"
+  ]
+ },
+ {
+  "id": "SB_102",
+  "q": "Was folgt außerhalb des GMDSS in der Notmeldung auf den Namen oder der sonstigen Kennung der Funkstelle in Not?",
+  "correct": "der Standort des in Not befindlichen Schiffes",
+  "wrong": [
+   "die Art des Notfalls",
+   "die Art der erbetenen Hilfe",
+   "das Rufzeichen und die MMSI"
+  ]
+ },
+ {
+  "id": "SB_104",
+  "q": "Auf welcher Frequenz im GW-Bereich wird außerhalb des GMDSS im Seefunk die Notmeldung ausgesendet?",
+  "correct": "vorzugsweise auf der internationalen Not-, Sicherheits- und Anruffrequenz 2182 kHz; aber auch auf jeder anderen verfügbaren Frequenz, auf dem die Funkstelle in Not Aufmerksamkeit auf sich lenken könnte",
+  "wrong": [
+   "4125 kHz",
+   "2187,5 kHz",
+   "8414,5 kHz"
+  ]
+ },
+ {
+  "id": "SB_105",
+  "q": "Darf im Seefunk außerhalb des GMDSS die Notmeldung nur auf 2182 kHz ausgesendet werden?",
+  "correct": "nein, eine Funkstelle in Not darf die Notmeldung auch auf jeder verfügbaren Frequenz aussenden, auf dem sie die Aufmerksamkeit auf sich lenken könnte",
+  "wrong": [
+   "ja, 2182 kHz ist die einzige zulässige Notfrequenz außerhalb des GMDSS",
+   "nein, aber nur auf 2182 kHz und Kanal 16",
+   "ja, außer in unmittelbarer Küstennähe"
+  ]
+ },
+ {
+  "id": "SB_106",
+  "q": "Auf welchem UKW-Kanal wird außerhalb des GMDSS die Notmeldung ausgesendet?",
+  "correct": "vorzugsweise auf dem internationalen Not-, Sicherheits- und Anrufkanal 16; eine Funkstelle in Not darf die Notmeldung jedoch auch auf jedem verfügbaren Kanal aussenden, auf dem sie die Aufmerksamkeit auf sich lenken könnte",
+  "wrong": [
+   "Kanal 70",
+   "Kanal 13 (Brücke-Brücke)",
+   "Kanal 13"
+  ]
+ },
+ {
+  "id": "SB_107",
+  "q": "Darf im Seefunk außerhalb des GMDSS die Notmeldung ausschließlich auf Kanal 16 ausgesendet werden?",
+  "correct": "nein, eine Funkstelle in Not darf die Notmeldung auch auf jedem verfügbaren Kanal aussenden, auf dem sie die Aufmerksamkeit auf sich lenken könnte",
+  "wrong": [
+   "ja, Kanal 16 ist der einzige zulässige UKW-Notkanal",
+   "nein, aber nur auf Kanal 16 und Kanal 6",
+   "ja, außer bei Ausfall des UKW-Geräts"
+  ]
+ },
+ {
+  "id": "SB_11",
+  "q": "Wie werden im GMDSS die Not- und Sicherheitsfrequenzen überwacht?",
+  "correct": "durch Empfangsbereitschaft für DSC-Alarmierungen auf 2187,5 kHz",
+  "wrong": [
+   "durch kontinuierlichen Sprechfunk-Hördienst auf 2182 kHz",
+   "durch automatische Relaisstationen an Land",
+   "durch Satellitenüberwachung via Inmarsat"
+  ]
+ },
+ {
+  "id": "SB_13",
+  "q": "Wann müssen Schiffserdfunkstellen, die am GMDSS teilnehmen, empfangsbereit sein?",
+  "correct": "immer wenn sie auf See sind, ausgenommen, wenn sie auf einem Arbeitskanal Verkehr abwickeln",
+  "wrong": [
+   "nur während der Fahrt außerhalb der Hoheitsgewässer",
+   "rund um die Uhr, auch im Hafen",
+   "nur zu den vollen Stunden für jeweils 3 Minuten"
+  ]
+ },
+ {
+  "id": "SB_14",
+  "q": "Wer empfängt Notalarme, die mittels DSC ausgesendet werden?",
+  "correct": "Küstenfunkstellen und Seefunkstellen",
+  "wrong": [
+   "nur Küstenfunkstellen",
+   "der Kapitän oder die für das Schiff verantwortliche Person",
+   "ausschließlich Rettungsleitstellen (RCC)"
+  ]
+ },
+ {
+  "id": "SB_15",
+  "q": "Welcher UKW-Kanal sollte im GMDSS nach Möglichkeit für den Empfang von Meldungen betreffend die Sicherheit der Seeschifffahrt dauernd abgehört werden?",
+  "correct": "Kanal 13",
+  "wrong": [
+   "Kanal 70",
+   "Kanal 70 (DSC)",
+   "Kanal 6"
+  ]
+ },
+ {
+  "id": "SB_16",
+  "q": "Welche der angegebenen Funkstellen können im GMDSS nicht mittels DSC alarmiert werden?",
+  "correct": "Schiffserdfunkstellen",
+  "wrong": [
+   "Küstenfunkstellen",
+   "Luftfahrzeugfunkstellen",
+   "Seefunkstellen"
+  ]
+ },
+ {
+  "id": "SB_17",
+  "q": "Welche Aufgabe hat im GMDSS die Funktion „Durchführung von Funkverkehr vor Ort“?",
+  "correct": "Koordinierung der Maßnahmen am Unfallort zwischen den beteiligten SAR-Einheiten",
+  "wrong": [
+   "Kommunikation zwischen Schiff in Not und der Rettungsleitstelle (RCC)",
+   "Weiterleitung von Notmeldungen an Küstenfunkstellen",
+   "Alarmierung aller Schiffe in der Nähe"
+  ]
+ },
+ {
+  "id": "SB_19",
+  "q": "Welche der angeführten EPIRB‘s sendet neben einem Systemcode auch noch die Position des Havaristen aus ?",
+  "correct": "L-Band-EPIRB",
+  "wrong": [
+   "406-MHz-EPIRB",
+   "INMARSAT-E-EPIRB",
+   "UKW-DSC-EPIRB"
+  ]
+ },
+ {
+  "id": "SB_2",
+  "q": "Wie wird im GMDSS das Seegebiet A2 beschrieben?",
+  "correct": "Ein von der zuständigen Verwaltung festgelegtes Gebiet innerhalb der Sprechfunkreichweite mindestens einer GWKüstenfunkstelle, die ununterbrochen für DSC-Alarmierungen zur Verfügung steht.",
+  "wrong": [
+   "Gebiet innerhalb der UKW-DSC-Reichweite einer Küstenfunkstelle",
+   "Gebiet außerhalb jeder Küstenfunkstellenreichweite",
+   "Gebiet innerhalb der NAVTEX-Abdeckung"
+  ]
+ },
+ {
+  "id": "SB_20",
+  "q": "Wo ist die Ausrüstung mit einer UKW-DSC-EPIRB sinnvoll?",
+  "correct": "im Seegebiet A1",
+  "wrong": [
+   "im Seegebiet A2",
+   "im Seegebiet A3",
+   "im Seegebiet A4"
+  ]
+ },
+ {
+  "id": "SB_21",
+  "q": "Welches funktechnische Rettungsmittel ist für ein nicht nach SOLAS ausrüstungspflichtiges Schiff im GMDSS für die Seegebiete A1 bis A3 zu empfehlen?",
+  "correct": "eine Satelliten-EPIRB; vorzugsweise INMARSAT-E",
+  "wrong": [
+   "406-MHz-EPIRB",
+   "INMARSAT-E-EPIRB",
+   "UKW-DSC-EPIRB"
+  ]
+ },
+ {
+  "id": "SB_22",
+  "q": "Warum ist im Seegebiet A4 eine L-Band-EPIRB nutzlos?",
+  "correct": "weil das Gebiet nicht im Bedeckungsbereich der INMARSAT Satelliten liegt",
+  "wrong": [
+   "weil die Sendeleistung für die Entfernung nicht ausreicht",
+   "weil dort nur UKW-Ausrüstung vorgeschrieben ist",
+   "weil die 406-MHz-Satelliten dort nicht empfangen"
+  ]
+ },
+ {
+  "id": "SB_23",
+  "q": "Welche der genannten Vorschriften verpflichtet den Schiffseigner, sein Schiff u. U. mit einer EPIRB auszurüsten?",
+  "correct": "Jachtzulassungsverordnung",
+  "wrong": [
+   "VO Funk (Vollzugsordnung für den Funkdienst)",
+   "SOLAS Kapitel IV",
+   "Seeschifffahrtsverordnung"
+  ]
+ },
+ {
+  "id": "SB_24",
+  "q": "Welches funktechnische Rettungsmittel ist für eine Jacht im Fahrtbereich 4 vorgeschrieben?",
+  "correct": "eine EPIRB",
+  "wrong": [
+   "406-MHz-EPIRB",
+   "INMARSAT-E-EPIRB",
+   "UKW-DSC-EPIRB"
+  ]
+ },
+ {
+  "id": "SB_27",
+  "q": "Sind Versuchssendungen auf den GMDSS Not- und Sicherheitsfrequenzen erlaubt?",
+  "correct": "ja, aber sie sind auf das unbedingt nötige Ausmaß zu beschränken, auf den Anruffrequenzen sind sie zu vermeiden",
+  "wrong": [
+   "nein, Versuchssendungen sind auf Not- und Sicherheitsfrequenzen grundsätzlich verboten",
+   "ja, aber nur mit Genehmigung der Küstenfunkstelle",
+   "ja, ohne Einschränkung, sofern kein Notverkehr läuft"
+  ]
+ }
+]

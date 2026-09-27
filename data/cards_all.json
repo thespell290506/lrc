@@ -1,0 +1,2732 @@
+[
+  {
+    "id": "LRC_9",
+    "q": "Was versteht man unter Simplex-Betrieb?",
+    "a": "Wechselsprechen Das abwechselnde Sprechen auf einem Kanal (einer Frequenz) im Unterschied zu"
+  },
+  {
+    "id": "LRC_10",
+    "q": "Was versteht man unter Duplex-Betrieb?",
+    "a": "Gegensprechen Das gleichzeitige Senden und Empfangen wie am Telefon (mindestens zwei Frequenzen [Kanäle] erforderlich)"
+  },
+  {
+    "id": "LRC_11",
+    "q": "Was versteht man unter Semiduplex-Betrieb?",
+    "a": "Wechselsprechen auf zwei Frequenzen (Kanälen) Es wird zum Verkehr mit Küstenfunkstellen gebraucht; das Gerät ist für Vollduplex nicht geeignet, schaltet aber beim Senden / Empfangen die Frequenz um, so dass mit einer Küstenfunkstelle (RCC …) auf einem Duplexkanal kommuniziert werden kann"
+  },
+  {
+    "id": "LRC_12",
+    "q": "Was ist ein Selektivruf?",
+    "a": "ein Anruf, der an eine bestimmte Funkstelle oder einen bestimmten Empfängerkreis gerichtet ist und durch eine technische Einrichtung nur diese(n) erreicht"
+  },
+  {
+    "id": "LRC_13",
+    "q": "Was heißt DSC?",
+    "a": "Digital Selective Calling – Digitaler Selektivruf Die Fragen 14 – 16 gehören inhaltlich in den Bereich Sonderbestimmungen"
+  },
+  {
+    "id": "LRC_14",
+    "q": "Welche Verkehrsart hat die höchste Priorität in der Rangfolge des Verkehrs?",
+    "a": "Notverkehr"
+  },
+  {
+    "id": "LRC_15",
+    "q": "Wie lautet die richtige Rangfolge von Funkverkehr?",
+    "a": "Not-, Dringlichkeits-, Sicherheitsverkehr, öffentlicher Nachrichtenaustausch"
+  },
+  {
+    "id": "LRC_16",
+    "q": "Wie werden die Rufzeichen der Küstenfunkstellen für den öffentlichen Nachrichtenaustausch gebildet?",
+    "a": "Landeskenner + 1 Buchstabe z.B. SVO oder 9AS (immer drei Zeichen) Die Frage 17 gehört eigentlich in den Bereich Rechtskunde"
+  },
+  {
+    "id": "LRC_17",
+    "q": "In welcher Vorschrift sind die Landeskenner festgelegt?",
+    "a": "Vollzugsordnung für den Funkdienst"
+  },
+  {
+    "id": "LRC_18",
+    "q": "Wodurch wird das Land, dem eine Funkstelle zuzuordnen ist im GMDSS gekennzeichnet?",
+    "a": "Durch die MID in der MMSI"
+  },
+  {
+    "id": "LRC_19",
+    "q": "Was kennzeichnet die MID?",
+    "a": "Das Land, dem eine Funkstelle zuzuordnen ist."
+  },
+  {
+    "id": "LRC_20",
+    "q": "Wie erfolgt die Kennzeichnung einer Seefunkstelle im GMDSS?",
+    "a": "Durch die MMSI. (9-stellig, nicht 0,1 oder 9 als erste Stelle)"
+  },
+  {
+    "id": "LRC_21",
+    "q": "Wie erfolgt die Kennzeichnung einer Küstenfunkstelle im GMDSS?",
+    "a": "Durch die MMSI (9-stellig, beginnend mit „00“)"
+  },
+  {
+    "id": "LRC_22",
+    "q": "Wie ist eine Rufnummer (MMSI) einer Gruppe von Schiffen gekennzeichnet?",
+    "a": "Durch die MMSI (9-stellig, beginnend mit „0“)"
+  },
+  {
+    "id": "LRC_23",
+    "q": "Welche Beziehung besteht zwischen Frequenz und Wellenlänge?",
+    "a": "300000 / Frequenz (kHz) = Wellenlänge (m)"
+  },
+  {
+    "id": "LRC_24",
+    "q": "Welcher Frequenzbereich wird im Seefunkdienst über Satelliten benützt?",
+    "a": "1,6 GHz (vom Schiff aus)"
+  },
+  {
+    "id": "LRC_25",
+    "q": "Welche Frequenzen umfasst allgemein der Kurzwellenbereich?",
+    "a": "3000 kHz – 30 MHz (30.000kHz)"
+  },
+  {
+    "id": "LRC_26",
+    "q": "Welcher Wellenlänge entsprechen 3 MHz?",
+    "a": "100m (300.000 / 3.000)"
+  },
+  {
+    "id": "LRC_27",
+    "q": "Wie rasch breiten sich Funkwellen aus?",
+    "a": "mit Lichtgeschwindigkeit (ca. 300.000 km / sec)"
+  },
+  {
+    "id": "LRC_28",
+    "q": "Wie erfolgt die Ausbreitung grundsätzlich auf Frequenzen über 30 MHz (VHF, UHF, SHF)?",
+    "a": "quasioptisch (geradlinig, wie das Licht)"
+  },
+  {
+    "id": "LRC_29",
+    "q": "Wie erfolgt die Ausbreitung grundsätzlich auf Frequenzen im Kurzwellenbereich?",
+    "a": "durch Raumwellen (durch Brechung in Schichten der Ionosphäre)"
+  },
+  {
+    "id": "LRC_30",
+    "q": "Wann ist in der Regel die Ausbreitung im 4 MHz-Seefunkband in Bezug auf die Tageszeit besser?",
+    "a": "nachts"
+  },
+  {
+    "id": "LRC_31",
+    "q": "Wann ist in der Regel die Ausbreitung im 22 MHz-Seefunkband in Bezug auf die Tageszeit besser?",
+    "a": "tagsüber"
+  },
+  {
+    "id": "LRC_33",
+    "q": "Wie erfolgt grundsätzlich die Ausbreitung im Grenzwellenbereich?",
+    "a": "durch Bodenwellen"
+  },
+  {
+    "id": "LRC_34",
+    "q": "Was versteht man unter Raumwelle?",
+    "a": "Wellen, die an Schichten der Ionosphäre reflektiert (gebrochen) werden"
+  },
+  {
+    "id": "LRC_35",
+    "q": "In welchem Frequenzbereich spielt die Raumwelle die entscheidende Rolle bei der Ausbreitung?",
+    "a": "Kurzwelle"
+  },
+  {
+    "id": "LRC_36",
+    "q": "Was versteht man unter Bodenwelle?",
+    "a": "Wellen, die sich entlang einer Grenzschicht an der Erdoberfläche ausbreiten"
+  },
+  {
+    "id": "LRC_37",
+    "q": "Wie bezeichnet man das Gebiet, in welchem im Kurzwellenbereich weder Bodenwelle noch Raumwelle empfangen werden kann?",
+    "a": "Tote Zone"
+  },
+  {
+    "id": "LRC_38",
+    "q": "Welche ionosphärische Schicht begünstigt hauptsächlich die Kurzwellenausbreitung?",
+    "a": "F-Schicht(en)"
+  },
+  {
+    "id": "LRC_39",
+    "q": "Welche ionosphärische Schicht behindert hauptsächlich die Kurzwellenausbreitung?",
+    "a": "D-Schicht (ev. E-Schicht oder Kennelly-Heaviside Schicht)"
+  },
+  {
+    "id": "LRC_40",
+    "q": "Welche Auswirkungen beim Grenz- und Kurzwellen-Empfang haben Störungen durch elektrische Maschinen und Einrichtungen?",
+    "a": "Brummen, Pfeifen, Störung bis zur Unkenntlichkeit der Signale"
+  },
+  {
+    "id": "LRC_41",
+    "q": "Welcher Frequenzbereich ist am wenigsten durch atmosphärische Störungen beeinträchtigt?",
+    "a": "UKW, L-Band (Frequenzen über 30MHz)"
+  },
+  {
+    "id": "LRC_42",
+    "q": "Wodurch entsteht „Schwund“?",
+    "a": "Durch Interferenzerscheinungen"
+  },
+  {
+    "id": "LRC_43",
+    "q": "Welches ist die geeignetste Maßnahme gegen die Auswirkung von Schwund?",
+    "a": "Wechsel des Frequenzbandes, ev. auch AGC"
+  },
+  {
+    "id": "LRC_44",
+    "q": "Was versteht man unter Strahlungsleistung?",
+    "a": "Sendeleistung (Endstufenleistung) – Leitungsverlust (-dämpfung) + Antennengewinn = die an der Antenne abgestrahlte Leistung"
+  },
+  {
+    "id": "LRC_45",
+    "q": "Wofür gilt die Definition: „Das Verhältnis der von einer Antenne in Hauptstrahlrichtung erzeugten Strahlungsdichte zu jener der von einem Dipol bei gleicher zugeführter Leistung“?",
+    "a": "Antennengewinn"
+  },
+  {
+    "id": "LRC_46",
+    "q": "Wie erfolgt die Übertragung eines Digitalen Selektivrufes (DSC)?",
+    "a": "durch ein Funkfernschreibverfahren (NBDP, F1B)"
+  },
+  {
+    "id": "LRC_47",
+    "q": "Wie nennt man den Vorgang bei dem niederfrequente elektrische Schwingungen (z.B. Sprache) einer hochfrequenten „aufgedrückt“ werden?",
+    "a": "Modulation"
+  },
+  {
+    "id": "LRC_48",
+    "q": "Wie werden Funkaussendungen bezeichnet?",
+    "a": "durch Bandbreite, Modulationsart, Signalart, Informationsart (z.B. 2k70J3E)"
+  },
+  {
+    "id": "LRC_49",
+    "q": "Was versteht man unter der Bandbreite einer Aussendung?",
+    "a": "Der Bereich der für die Übertragung einer bestimmten Aussendung notwendig ist"
+  },
+  {
+    "id": "LRC_50",
+    "q": "Was bedeutet die Abkürzung SSB?",
+    "a": "Single Side Band, Einseitenband (-Übertragung)"
+  },
+  {
+    "id": "LRC_51",
+    "q": "Was bedeutet die Abkürzung AM?",
+    "a": "Amplitudenmodulation"
+  },
+  {
+    "id": "LRC_52",
+    "q": "Was bedeutet die Abkürzung FM?",
+    "a": "Frequenzmodulation"
+  },
+  {
+    "id": "LRC_53",
+    "q": "Welche Sendeart wird für das Funkfernschreiben verwendet?",
+    "a": "F1B"
+  },
+  {
+    "id": "LRC_54",
+    "q": "Wie wird die Sendeart „SSB mit unterdrücktem Träger“ im Sprechfunk gekennzeichnet?",
+    "a": "(2k70)J3E"
+  },
+  {
+    "id": "LRC_55",
+    "q": "Wie wird die Sendeart „SSB mit vollem Träger“ im Sprechfunk gekennzeichnet?",
+    "a": "(2k70)H3E"
+  },
+  {
+    "id": "LRC_56",
+    "q": "Was bedeutet die Abkürzung G3E?",
+    "a": "Sprechfunk phasenmoduliert"
+  },
+  {
+    "id": "LRC_57",
+    "q": "Wie wird eine Einseitenbandaussendung mit unterdrücktem Träger im Sprechfunk auf Kurzwelle vollständig und richtig bezeichnet?",
+    "a": "2k70J3E"
+  },
+  {
+    "id": "LRC_58",
+    "q": "Am Sender können verschiedene Sendearten geschaltet werden. Welche wird grundsätzlich im Grenz- und Kurzwellen-Sprechfunk verwendet?",
+    "a": "SSB, J3E"
+  },
+  {
+    "id": "LRC_59",
+    "q": "Welche Modulationsart wird für die Übertragung von Sprache im Grenzwellenbereich angewendet?",
+    "a": "J3E"
+  },
+  {
+    "id": "LRC_60",
+    "q": "Welche der genannten Frequenzen wird im Mittelwellenbereich für Aussendungen im Seefunkdienst benützt?",
+    "a": "mögliche Antworten: 2182kHz, 2187,5kHz, 2177kHz"
+  },
+  {
+    "id": "LRC_61",
+    "q": "Welche Frequenzen umfasst der Grenzwellenbereich im Seefunkdienst?",
+    "a": "ca. 1.600 – 3.800 kHz"
+  },
+  {
+    "id": "LRC_62",
+    "q": "In welchem Kurzwellen-Frequenzbereich sind Frequenzen dem Seefunkdienst zugewiesen?",
+    "a": "4, 6, 8, 12, 16 (auch 18/19, 22, 25/26 MHz) / 4 -26 MHz"
+  },
+  {
+    "id": "LRC_63",
+    "q": "Welcher Frequenzbereich ist im UKW-Bereich dem Seefunkdienst zugewiesen?",
+    "a": "ca. 156 – 162 MHz"
+  },
+  {
+    "id": "LRC_64",
+    "q": "In welchem Frequenzbereich wird im Seefunkdienst kein Sprechfunk durchgeführt?",
+    "a": "z.B. LW, MW Achtung im Englischen nicht MF, weil das auch GW einschließt!"
+  },
+  {
+    "id": "LRC_66",
+    "q": "Wo sind die Frequenzpläne und die Tabelle der Funkkanäle festgelegt?",
+    "a": "VO-Funk (Radio Regulations)"
+  },
+  {
+    "id": "LRC_67",
+    "q": "Was versteht man unter Kanalabstand?",
+    "a": "Der Abstand von Trägerfrequenz zu Trägerfrequenz benachbarter Kanäle"
+  },
+  {
+    "id": "LRC_68",
+    "q": "Was bedeutet „ITU-Kanal 804“?",
+    "a": "Kanal 4 im 8 MHz-Bereich"
+  },
+  {
+    "id": "LRC_69",
+    "q": "Wie werden gepaarte Frequenzen normalerweise verwendet?",
+    "a": "für den Verkehr mit Küstenfunkstellen (ev. auch Duplex oder Semiduplex-Betrieb)"
+  },
+  {
+    "id": "LRC_70",
+    "q": "Was versteht man unter zugeteilter Frequenz?",
+    "a": "Der Frequenzbereich (die Frequenz, die), der für die Signalübertragung genutzt wird auch: die Frequenzpaarung, die einem (ITU-)Kanal zugewiesen ist"
+  },
+  {
+    "id": "LRC_71",
+    "q": "Wie lautet die Notfrequenz des Flugfunkdienstes im UKW-Bereich?",
+    "a": "121,5 MHz"
+  },
+  {
+    "id": "LRC_72",
+    "q": "In welchem Frequenzbereich arbeiten Radaranlagen auf Schiffen?",
+    "a": "3GHz und 9GHz bzw. S-Band und X-Band"
+  },
+  {
+    "id": "LRC_74",
+    "q": "In welchem Frequenzbereich arbeiten SARTs?",
+    "a": "9GHz (X-Band)"
+  },
+  {
+    "id": "LRC_75",
+    "q": "Welche Art von Satellitennetz betreibt INMARSAT weltweit?",
+    "a": "ein Netz geostationärer Satelliten"
+  },
+  {
+    "id": "LRC_76",
+    "q": "Was ist eine Schiffserdfunkstelle?",
+    "a": "ein Satellitenfunkgerät an Bord eines Schiffes"
+  },
+  {
+    "id": "LRC_77",
+    "q": "Wie werden Seefunkstellen im mobilen Seefunkdienst über Satelliten identifiziert?",
+    "a": "z.B. durch die Inmarsat-Id (MMSI)"
+  },
+  {
+    "id": "LRC_78",
+    "q": "Welche INMARSAT Einrichtungen sind nicht Bestandteil im GMDSS?",
+    "a": "Inmarsat M, Mini-M, D"
+  },
+  {
+    "id": "LRC_79",
+    "q": "Welche Funkstelle wird als CES bezeichnet?",
+    "a": "Coast Earth Station, Satelliten Bodenstation"
+  },
+  {
+    "id": "LRC_80",
+    "q": "Was bedeutet die Abkürzung SES?",
+    "a": "Ship Earth Station, Satellitenfunkgerät an Bord eines Schiffes"
+  },
+  {
+    "id": "LRC_81",
+    "q": "Was ist das COSPAS-SARSAT-System?",
+    "a": "Ein System von Satelliten, die für die Alarmierung in Notfällen zur Verfügung stehen"
+  },
+  {
+    "id": "LRC_82",
+    "q": "Welche Arten von Satelliten gehören zum COSPAS-SARSAT-System?",
+    "a": "geostationäre und polumlaufende (GEOSAR und LEOSAR)"
+  },
+  {
+    "id": "LRC_83",
+    "q": "Welche Seefunkanlagen werden im COSPAS-SARSAT-System verwendet?",
+    "a": "EPIRBs (positionsgebende Notfunkbaken)"
+  },
+  {
+    "id": "LRC_84",
+    "q": "Welche Funkstelle wird als LUT bezeichnet?",
+    "a": "Bodenstation im COSPAS-SARSAT-System (Local User Terminal)"
+  },
+  {
+    "id": "LRC_85",
+    "q": "Welche Stelle wird als MCC bezeichnet?",
+    "a": "Mission Control Center (koordinierende Stelle im Inmarsat System)"
+  },
+  {
+    "id": "LRC_86",
+    "q": "Welche Stelle wird als RCC bezeichnet?",
+    "a": "Rescue Coordination Center"
+  },
+  {
+    "id": "LRC_87",
+    "q": "Wozu dient der DSC-Wachempfänger?",
+    "a": "zur Überwachung von (einer) DSC-Notfrequenz(en)"
+  },
+  {
+    "id": "LRC_88",
+    "q": "Wozu dient der scannende DSC-Wachempfänger auf Kurzwelle?",
+    "a": "um alle KW-Notfrequenzen zu überwachen"
+  },
+  {
+    "id": "LRC_89",
+    "q": "Auf welcher Grenzwellenfrequenz ist der DSC-Wachempfänger empfangsbereit?",
+    "a": "2187,5 kHz"
+  },
+  {
+    "id": "LRC_90",
+    "q": "Auf welchem UKW-Kanal empfängt der DSC-Wachempfänger?",
+    "a": "Kanal 70"
+  },
+  {
+    "id": "LRC_91",
+    "q": "Welche maximale Sendeleistung darf eine mobile fest eingebaute UKW-Seefunkanlage haben?",
+    "a": "25W"
+  },
+  {
+    "id": "LRC_92",
+    "q": "Auf welchen minimalen Wert muss die Sendeleistung einer fest eingebauten UKWSeefunkanlage schaltbar sein?",
+    "a": "1W"
+  },
+  {
+    "id": "LRC_93",
+    "q": "Wozu dient der Squelch bei UKW-Funkanlagen?",
+    "a": "zur Unterdrückung des (Grund-)Rauschens"
+  },
+  {
+    "id": "LRC_94",
+    "q": "Was bezeichnet man mit Dual-Watch?",
+    "a": "Die Zweikanalüberwachung auf UKW (Kanal 16 und ein beliebiger Arbeitskanal)"
+  },
+  {
+    "id": "LRC_95",
+    "q": "Warum ist der Grenz- bzw. Kurzwellenbereich für den Seefunkdienst von besonderer Bedeutung?",
+    "a": "annähernd gleiche Bedingung bei Tag und Nach bei relativ großer Reichweite (min. 150nm)"
+  },
+  {
+    "id": "LRC_96",
+    "q": "Welchen Zweck hat die Schwundregelung?",
+    "a": "Sie soll bei Schwund (Fading) helfen, eine gleichmäßige Hörlautstärke (NF-Signal) zu erreichen"
+  },
+  {
+    "id": "LRC_97",
+    "q": "Wozu dient der Clarifier?",
+    "a": "Zur Feinregelung der Frequenz des empfangenen Signals bei Frequenzschwankungen, dadurch ev. Verbesserung der Verständlichkeit"
+  },
+  {
+    "id": "LRC_98",
+    "q": "Mit welcher der nachstehend angeführten Einrichtungen im GMDSS ist eine Alarmierung über das Raumsegment möglich?",
+    "a": "EPIRB (ev. auch INMARSAT-B, -C, Fleet)"
+  },
+  {
+    "id": "LRC_99",
+    "q": "Welche Einrichtung alarmiert im terrestrischen Segment des GMDSS?",
+    "a": "mögliche Antworten: DSC, VHF-DSC-EPIRB"
+  },
+  {
+    "id": "LRC_100",
+    "q": "Wozu dient eine EPIRB?",
+    "a": "zur Seenot-Alarmierung (im Raumsegment)"
+  },
+  {
+    "id": "LRC_101",
+    "q": "Wie muss die Aussendung einer EPIRB ausgelöst werden können?",
+    "a": "händisch (auf SOLAS-Schiffen zusätzlich durch Wasserdruck-Schalter)"
+  },
+  {
+    "id": "LRC_103",
+    "q": "Welche Informationen werden durch eine COSPAS-SARSAT- EPIRB ausgesendet?",
+    "a": "die Kennung und ev. die Position"
+  },
+  {
+    "id": "LRC_104",
+    "q": "Wozu dient ein Radartransponder?",
+    "a": "Achtung: hier sind vermutlich nicht SARTs gemeint! Mögliche Antworten: zur Aussendung von Ortungssignalen, zur besseren Identifizierung von Seezeichen und Leuchtfeuern um kleine Fahrzeuge am Radar besser sichtbar zu machen"
+  },
+  {
+    "id": "LRC_105",
+    "q": "Wie erfolgt die Funktionskontrolle von SARTs im Einsatz?",
+    "a": "optisch und akustisch"
+  },
+  {
+    "id": "LRC_106",
+    "q": "Was ist für eine größtmögliche Reichweite eines SART wichtig?",
+    "a": "möglichst hohe Anbringung"
+  },
+  {
+    "id": "LRC_107",
+    "q": "Welche Aussendung erfolgt durch eine SART Anlage?",
+    "a": "ein Signal im 9Ghz-Bereich"
+  },
+  {
+    "id": "LRC_108",
+    "q": "Was versteht man unter GMDSS Handsprechfunkgeräten?",
+    "a": "Handsprechfunkgeräte mit besonderen Spezifikationen für den Gebrauch auf Überlebensfahrzeugen"
+  },
+  {
+    "id": "LRC_109",
+    "q": "Wozu dient der DSC-Controller?",
+    "a": "zum Kodieren bzw. Dekodieren von DSC-Signalen"
+  },
+  {
+    "id": "LRC_110",
+    "q": "Kann der DSC-Controller der Klasse E auch für Routineanrufe verwendet werden?",
+    "a": "ja"
+  },
+  {
+    "id": "LRC_111",
+    "q": "Wie lange etwa dauert ein UKW-DSC Anruf, der kein Notalarm ist?",
+    "a": "etwas weniger als 1 Sekunde"
+  },
+  {
+    "id": "LRC_112",
+    "q": "Wie lange etwa dauert ein DSC Anruf auf Grenz- oder Kurzwelle, der kein Notalarm ist?",
+    "a": "ca. 6 Sekunden"
+  },
+  {
+    "id": "LRC_113",
+    "q": "Welcher UKW-DSC-Controller müsste mindestens auf einer Jacht vorhanden sein, um auch die Kategorie „Routine“ durchführen zu können?",
+    "a": "Klasse D (UKW), Klasse E (GW/KW)"
+  },
+  {
+    "id": "LRC_114",
+    "q": "Wie überprüft man die UKW-Anlage inklusive DSC-Controller, ob sie für den Not- und Sicherheitsfall funktioniert?",
+    "a": "bei Klasse D durch einen Routine-Anruf an ein Schiff, oder eine Küstenfunkstelle, bei Klasse A eventuell durch eine Testroutine"
+  },
+  {
+    "id": "LRC_115",
+    "q": "Wie überprüft man die allgemeine Funktion des DSC-Controllers?",
+    "a": "bei Klasse D durch einen Routine-Anruf an ein Schiff, oder eine Küstenfunkstelle, bei Klasse A eventuell durch eine Testroutine, auf KW ev. auch durch einen Testcall"
+  },
+  {
+    "id": "LRC_116",
+    "q": "Welcher DSC-Controller hat mehr Möglichkeiten verschiedene Eingaben zu tätigen und Geräte zu steuern?",
+    "a": "vermutlich ist Klasse A als richtige Antwort vorgegeben"
+  },
+  {
+    "id": "LRC_117",
+    "q": "Mit welchen INMARSAT-Diensten ist ein Echtzeitverkehr möglich?",
+    "a": "(im GMDSS:) Inmarsat-B, Fleet (außerhalb auch:) M, Mini-M"
+  },
+  {
+    "id": "LRC_118",
+    "q": "Welche INMARSAT-Dienste ermöglichen keine Sprachübertragung?",
+    "a": "Inmarsat-C (aber auch:) D"
+  },
+  {
+    "id": "LRC_119",
+    "q": "Was versteht man unter Speicherverkehr (store and forward operation)?",
+    "a": "Das Signal wir in der Bodenstation zwischengespeichert (um die Satellitenzeit bei Übertragungsproblemen an Land kurz zu halten)"
+  },
+  {
+    "id": "LRC_120",
+    "q": "Bei welcher Satellitenanlage ist „Azimut“ und „Elevation“ für die Inbetriebnahme nicht von Bedeutung?",
+    "a": "Inmarsat-C"
+  },
+  {
+    "id": "LRC_121",
+    "q": "Worauf muss bei der Aufstellung der INMARSAT-C-Antenne geachtet werden?",
+    "a": "dass sie in keine Richtung abgedeckt wird"
+  },
+  {
+    "id": "LRC_122",
+    "q": "Welche Funktion hat ein EGC-Empfänger?",
+    "a": "den Empfang im Safety-Net oder Fleet-Net zu ermöglichen den Empfang von MSI über das Safety-Net zu ermöglichen"
+  },
+  {
+    "id": "LRC_123",
+    "q": "Welche INMARSAT-C-Anlage ist für den EGC-Empfang nicht geeignet?",
+    "a": "eine landmobile, eine der Klasse 1"
+  },
+  {
+    "id": "LRC_124",
+    "q": "Wo ist ein EGC-Empfang nicht möglich?",
+    "a": "nördlich von 76°N und südlich von 76°S"
+  },
+  {
+    "id": "LRC_125",
+    "q": "Womit werden „Maritime Safety Informations“ via INMARSAT empfangen?",
+    "a": "über EGC im Safety-Net"
+  },
+  {
+    "id": "LRC_126",
+    "q": "Welche Frequenz wird für den nationalen NAVTEX-Dienst benützt?",
+    "a": "490Khz"
+  },
+  {
+    "id": "LRC_127",
+    "q": "Welche Informationen beinhaltet grundsätzliche jede NAVTEX-Aussendung?",
+    "a": "Kennbuchstabe für Station und Art der Meldung, laufende Nummer, (Name) Identifikation der sendenden Station"
+  },
+  {
+    "id": "LRC_128",
+    "q": "Welche Einstellungen sollte man beim NAVTEX-Empfänger vornehmen?",
+    "a": "Vorauswahl von Station und Art der Meldung"
+  },
+  {
+    "id": "LRC_129",
+    "q": "Welche Arten von Antennen werden im UKW-Seefunk verwendet?",
+    "a": "vertikal polarisierte Stabantennen"
+  },
+  {
+    "id": "LRC_130",
+    "q": "Welchen Einfluss hat der Ort der Aufstellung der UKW-Antennen an Bord?",
+    "a": "Hohe Position erhöht die Reichweite (quasi-optische Ausbreitung)"
+  },
+  {
+    "id": "LRC_131",
+    "q": "Welche Arten von Sendeantennen werden auf Grenz- und Kurzwelle im Seefunk nicht verwendet?",
+    "a": "Richtantennen"
+  },
+  {
+    "id": "LRC_132",
+    "q": "Was versteht man unter der Kapazität eines Akkumulators?",
+    "a": "Seine Speicherfähigkeit"
+  },
+  {
+    "id": "LRC_133",
+    "q": "Wie wird der Ladezustand eines Akkumulators festgestellt?",
+    "a": "durch Messung der Säuredichte mit dem Säureheber, oder Messung mit dem Voltmeter unter Last, aber auch Messung mit dem Voltmeter ohne Lastwiderstand"
+  },
+  {
+    "id": "LRC_134",
+    "q": "Wie hoch ist die Zellspannung bei einem aufgeladenen Bleiakkumulator?",
+    "a": "(mindestens) 2V"
+  },
+  {
+    "id": "LRC_135",
+    "q": "Mit welcher Stromstärke sollte ein Bleiakkumulator höchstens geladen werden?",
+    "a": "bei einem herkömmlichen Ladegerät mit 10% der Nenn-Kapazität"
+  },
+  {
+    "id": "LRC_136",
+    "q": "Was ist beim Laden eines Akkumulators gefährlich und daher besonders zu beachten?",
+    "a": "es kann (vor allem bei zu hoher Ladespannung) Knallgas entstehen"
+  },
+  {
+    "id": "LRC_137",
+    "q": "Wie sind die Satelliten des Inmarsat-Systems stationiert?",
+    "a": "Atlantik Ost (AOR-E), Atlantik West (AOR-W), Pazifik (POR), Indischer Ozean (IOR)"
+  },
+  {
+    "id": "LRC_138",
+    "q": "Was bedeutet „elevation angle“?",
+    "a": "die Erhebung (des Satelliten) über der Kimm (Horizont)"
+  },
+  {
+    "id": "LRC_139",
+    "q": "Über welchem Breitengrad befinden sich die Satelliten des Inmarsat-Systems?",
+    "a": "Über dem Äquator (Breitengrad 0)"
+  },
+  {
+    "id": "LRC_140",
+    "q": "Was bedeutet „azimuth angle“?",
+    "a": "die Richtung zum Satelliten (rw)"
+  },
+  {
+    "id": "LRC_141",
+    "q": "Welchem Inmarsat-Dienst ist die Identifikation (ID) 420329510 zugeordnet?",
+    "a": "Inmarsat-C"
+  },
+  {
+    "id": "LRC_142",
+    "q": "Welcher Dienst verwendet den erweiterten Gruppenanruf (EGC)?",
+    "a": "MSI (Maritime Safety Information) über das Safety-Net"
+  },
+  {
+    "id": "LRC_1",
+    "q": "Wie werden die für die Ausrüstung mit Funkanlagen festgelegten Seegebiete im GMDSS bezeichnet?",
+    "a": "A1, A2, A3, A4"
+  },
+  {
+    "id": "LRC_2",
+    "q": "Wie wird das Seegebiet A1 beschrieben?",
+    "a": "„Ein von der zuständigen Verwaltung festgelegtes Gebiet innerhalb der Sprechfunkreichweite mindestens einer UKW-Küstenfunkstelle, die ununterbrochen für DSC-Alarmierungen zur Verfügung steht.“"
+  },
+  {
+    "id": "LRC_3",
+    "q": "Wie wird das Seegebiet A2 beschrieben?",
+    "a": "„Ein von der zuständigen Verwaltung festgelegtes Gebiet innerhalb der Sprechfunkreichweite mindestens einer Küstenfunkstelle, die ununterbrochen für DSC-Alarmierungen auf Grenzwelle zur Verfügung steht.“"
+  },
+  {
+    "id": "LRC_4",
+    "q": "Wie wird das Seegebiet A3 beschrieben?",
+    "a": "„Ein Gebiet innerhalb der Überdeckung eines geostationären Inmarsat-Satelliten, der ununterbrochen für Alarmierungen zur Verfügung steht.“"
+  },
+  {
+    "id": "LRC_5",
+    "q": "Welchen geografischen Bereich etwa umfasst das Seegebiet A4?",
+    "a": "76°N – 76°S"
+  },
+  {
+    "id": "LRC_7",
+    "q": "Wie lautet im GMDSS die Kurzbezeichnung für das nachfolgend beschriebene Seegebiet? \"Ein",
+    "a": "von der zuständigen Verwaltung festgelegtes Gebiet innerhalb der Sprechfunkreichweite mindestens einer GW-Küstenfunkstelle, die ununterbrochen für DSC-Alarmierungen zur Verfügung steht.\" A2"
+  },
+  {
+    "id": "LRC_8",
+    "q": "Wie lautet im GMDSS die Kurzbezeichnung für das nachfolgend beschriebene Seegebiet? \"Ein",
+    "a": "Gebiet innerhalb der Überdeckung eines geostationären Inmarsat-Satelliten, der ununterbrochen für Alarmierungen zur Verfügung steht.\" A3"
+  },
+  {
+    "id": "LRC_9",
+    "q": "Was ist aus dem GMDSS-Masterplan zu entnehmen?",
+    "a": "detaillierte Informationen über die Dienste und Funkeinrichtungen des GMDSS"
+  },
+  {
+    "id": "LRC_10",
+    "q": "Wer gibt den GMDSS-Master Plan heraus?",
+    "a": "die IMO (in Zusammenarbeit mit der ITU)"
+  },
+  {
+    "id": "LRC_11",
+    "q": "Auf welchem UKW-Kanal müssen Seefunkstellen, die Einrichtungen des GMDSS benützen, eine Empfangsbereitschaft für DSC sicherstellen, wenn sie auf See sind?",
+    "a": "Kanal 70 - 156,525 MHz"
+  },
+  {
+    "id": "LRC_12",
+    "q": "Auf welcher Frequenz im Grenzwellenbereich müssen Seefunkstellen, die Einrichtungen des GMDSS benützen, eine Empfangsbereitschaft für DSC sicherstellen, wenn sie auf See sind?",
+    "a": "2187,5 kHz"
+  },
+  {
+    "id": "LRC_13",
+    "q": "Auf welcher Frequenz ist im GMDSS ein Grenzwellen-DSC-Wachempfänger empfangsbereit?",
+    "a": "2187,5 kHz"
+  },
+  {
+    "id": "LRC_14",
+    "q": "Auf welcher der angeführten Frequenzen ist ein Kurzwellen-DSC-Scanner-Wachempfänger empfangsbereit?",
+    "a": "(2187,5 kHz) 8414,5"
+  },
+  {
+    "id": "LRC_15",
+    "q": "Auf welcher Frequenz ist ein UKW-DSC-Wachempfänger empfangsbereit?",
+    "a": "156,525MHz (Kanal 70)"
+  },
+  {
+    "id": "LRC_16",
+    "q": "Durch welche Maßnahme werden im GMDSS die Not- und Sicherheitsfrequenzen überwacht?",
+    "a": "Durch Empfangsbereitschaft auf den Not- und Sicherheitsfrequenzen (Wachempfänger)"
+  },
+  {
+    "id": "LRC_17",
+    "q": "Wann müssen Schiffserdfunkstellen, die am GMDSS teilnehmen, empfangsbereit sein?",
+    "a": "Sobald sie in Fahrt sind"
+  },
+  {
+    "id": "LRC_18",
+    "q": "Wer empfängt Notalarme, die mittels DSC ausgesendet werden?",
+    "a": "alle, die mit DSC ausgestattet sind - Schiffe und Küstenfunkstellen"
+  },
+  {
+    "id": "LRC_19",
+    "q": "Besteht eine Verpflichtung zur Hörwache auf dem K16?",
+    "a": "ja, wenn es möglich ist"
+  },
+  {
+    "id": "LRC_20",
+    "q": "Welcher UKW-Kanal sollte nach Möglichkeit für den Empfang von Meldungen betreffend die Sicherheit der Seeschifffahrt dauernd abgehört werden?",
+    "a": "Kanal 16"
+  },
+  {
+    "id": "LRC_21",
+    "q": "Wen betreffen die drei Funktionen des GMDSS für Notalarmierungen?",
+    "a": "Schiffe und Küstenfunkstellen (ship - ship, ship - shore, shore - ship)"
+  },
+  {
+    "id": "LRC_22",
+    "q": "Welche Funkstellen können nicht mittels DSC alarmiert werden?",
+    "a": "(Schiffs-)Erdfunkstellen (Funkstellen im Raumsegment)"
+  },
+  {
+    "id": "LRC_24",
+    "q": "Welche Aufgabe hat die Funktion „Durchführung von Funkverkehr vor Ort“?",
+    "a": "die Abwicklung von Funkverkehr in Notfällen, direkt am Unfallort"
+  },
+  {
+    "id": "LRC_25",
+    "q": "Was bedeutet die Abkürzung EPIRB?",
+    "a": "Positionsgebende Notfunkbake (Emergency Position Indicating Radio Beacon)"
+  },
+  {
+    "id": "LRC_26",
+    "q": "Worin besteht der Hauptzweck einer Seenotfunkbake?",
+    "a": "In Seenotfällen eine Alarmierung auszulösen"
+  },
+  {
+    "id": "LRC_27",
+    "q": "Welches funktechnische Rettungsmittel ist für ein nicht nach SOLAS ausrüstungspflichtiges Schiff im GMDSS für die Seegebiete A1 bis A3 zu empfehlen?",
+    "a": "mögliche Antworten: EPIRB, Inmarsat-C"
+  },
+  {
+    "id": "LRC_28",
+    "q": "Welches funktechnische Rettungsmittel benützt polumlaufende Satelliten?",
+    "a": "COSPAS/SARSAT-EPIRB (Standard-Version)"
+  },
+  {
+    "id": "LRC_29",
+    "q": "Welche Vorschrift verpflichtet den Schiffseigner, sein Schiff u. U. mit einer EPIRB auszurüsten?",
+    "a": "mehrere mögliche Antworten: Jachtzulassungsverordnung, SOLAS"
+  },
+  {
+    "id": "LRC_30",
+    "q": "Welches funktechnische Rettungsmittel ist für eine Jacht im Fahrtbereich 4 vorgeschrieben?",
+    "a": "EPIRB (nach österr. Bestimmungen - Jachtzulassungsverordnung)"
+  },
+  {
+    "id": "LRC_31",
+    "q": "Was bedeutet die Abkürzung SART?",
+    "a": "Search And Rescue Radar Transponder"
+  },
+  {
+    "id": "LRC_32",
+    "q": "Welche Funktion innerhalb des GMDSS hat der Radartransponder?",
+    "a": "das Auffinden in Notfällen zu erleichtern (wenn SART gemeint ist – ein einfacher Transponder hat im GMDSS keine Funktion)"
+  },
+  {
+    "id": "LRC_33",
+    "q": "Wofür dient die Bestimmung „Bevor eine Funkstelle, die nicht in Not ist, auf einer der für Notund Sicherheitsverkehr bestimmten Frequenz zu senden beginnt, muss sie diese so lange abhören, bis sie sich vergewissert hat, dass kein Notverkehr stattfindet“?",
+    "a": "Um Funkstellen in Not den Vorrang zu sichern"
+  },
+  {
+    "id": "LRC_34",
+    "q": "Sind Versuchssendungen auf den Not- und Sicherheitsfrequenzen erlaubt?",
+    "a": "ja unter bestimmten Voraussetzungen (aufpassen was zur Auswahl steht!)"
+  },
+  {
+    "id": "LRC_35",
+    "q": "Welche Kanäle umfasst der Schutzbereich für Kanal 16?",
+    "a": "Kanäle 75 und 76"
+  },
+  {
+    "id": "LRC_36",
+    "q": "Wo ist international die Führung von Aufzeichnungen im Funkverkehr geregelt?",
+    "a": "in der VO-Funk (Radio Regulations)"
+  },
+  {
+    "id": "LRC_37",
+    "q": "Muss auf einer österreichischen Jacht ein Funktagebuch geführt werden?",
+    "a": "unter bestimmten Umständen (nicht auf einer seegehenden Yacht nach österreichischem Recht)"
+  },
+  {
+    "id": "LRC_38",
+    "q": "In welcher Zeitangabe erfolgen Aufzeichnungen im Seefunk?",
+    "a": "in UTC"
+  },
+  {
+    "id": "LRC_39",
+    "q": "Welche Aufzeichnungen sollten immer möglichst wörtlich vorgenommen werden?",
+    "a": "Aufzeichnung zu Notverkehr"
+  },
+  {
+    "id": "LRC_40",
+    "q": "Wo ist festgelegt, welche Dienstbehelfe und Dokumente an Bord von Seefunkstellen mitzuführen sind?",
+    "a": "je nachdem was zur Auswahl steht: VO-Funk (Radio Regulations), SOLAS"
+  },
+  {
+    "id": "LRC_41",
+    "q": "Wer gibt das „Verzeichnis der Küstenfunkstellen (List of Coast Stations)“ heraus?",
+    "a": "ITU"
+  },
+  {
+    "id": "LRC_42",
+    "q": "Wo sind die Betriebsverfahren, die im Seefunkdienst anzuwenden sind, beschrieben?",
+    "a": "VO-Funk (Radio Regulations)"
+  },
+  {
+    "id": "LRC_43",
+    "q": "Was bedeutet in englischsprachigen Dienstbehelfen die Abkürzung \"RR\"?",
+    "a": "Radio Regulations (VO-Funk)"
+  },
+  {
+    "id": "LRC_44",
+    "q": "Worin sind die internationalen Bestimmungen für den Erwerb von Funker-Zeugnissen aufgeführt?",
+    "a": "VO-FUNK (Radio Regulations), für die Berufsschifffahrt auch: STWC"
+  },
+  {
+    "id": "LRC_45",
+    "q": "Welches Funker-Zeugnis ist mindestens erforderlich, um weltweit am GMDSS mit einer GW/KW-Funkanlage im Seegebiet A3 teilnehmen zu dürfen?",
+    "a": "LRC (Allgemeines Betriebszeugnis II)"
+  },
+  {
+    "id": "LRC_46",
+    "q": "Welches Funker-Zeugnis ist mindestens erforderlich, um weltweit am GMDSS im Seegebiet A1 teilnehmen zu dürfen?",
+    "a": "SRC (UKW-Betriebszeugnis II)"
+  },
+  {
+    "id": "LRC_47",
+    "q": "Was bedeutet die Abkürzung \"LRC\"?",
+    "a": "Long Range Certificate"
+  },
+  {
+    "id": "LRC_48",
+    "q": "Ist das Funker-Zeugnis an Bord mitzuführen?",
+    "a": "ja"
+  },
+  {
+    "id": "LRC_49",
+    "q": "Welche Aussendungen sind gemäß der Vollzugsordnung für den Funkdienst verboten?",
+    "a": "Aussendungen mit falschen oder irreführenden Rufzeichen"
+  },
+  {
+    "id": "LRC_50",
+    "q": "Dürfen Sie Aussendungen tätigen, ohne das Rufzeichen oder eine sonstige Kennung anzugeben?",
+    "a": "nein"
+  },
+  {
+    "id": "LRC_51",
+    "q": "Muss die Betriebsbewilligung an Bord mitgeführt werden?",
+    "a": "ja"
+  },
+  {
+    "id": "LRC_52",
+    "q": "Muss die Bewilligungsurkunde für eine Seefunkstelle auch auf einem Sportfahrzeug mitgeführt werden?",
+    "a": "ja"
+  },
+  {
+    "id": "LRC_53",
+    "q": "Darf der Prüfbeamte einer zuständigen ausländischen Verwaltung die Funkanlagen an Bord überprüfen, wenn die Bewilligungsurkunde nicht vorgezeigt werden kann oder offenkundige Unregelmäßigkeiten festgestellt worden sind?",
+    "a": "ja"
+  },
+  {
+    "id": "LRC_54",
+    "q": "Durch welchen speziellen Dienst wird die Sicherheit der Seefahrt erhöht?",
+    "a": "Durch Aussendung von Schifffahrts-Sicherheitsinformationen (MSI)"
+  },
+  {
+    "id": "LRC_55",
+    "q": "Welches Dokument enthält die MMSI Ihres Schiffes?",
+    "a": "Bewilligungsurkunde (Betriebsbewilligung, Ship station licence)"
+  },
+  {
+    "id": "LRC_56",
+    "q": "In welchem Warndienst wird der Gruppenanruf (EGC) verwendet?",
+    "a": "MSI (Safety-Net)"
+  },
+  {
+    "id": "LRC_57",
+    "q": "Welcher Dienst übermittelt Nachrichten zur Sicherung der Seefahrt (MSI) auf terrestrischen Frequenzen?",
+    "a": "NAVTEX"
+  },
+  {
+    "id": "LRC_58",
+    "q": "Welcher Dienst übermittelt MSI über das Raumsegment des GMDSS?",
+    "a": "mögliche Antworten: EGC, Safety-Net, Inmarsat-C"
+  },
+  {
+    "id": "LRC_59",
+    "q": "Welches internationale Regelwerk legt die betrieblichen Verfahren für das weltweite Seenotund Sicherheitsfunksystem für die Schifffahrt fest?",
+    "a": "VO-Funk (Radio Regulations)"
+  },
+  {
+    "id": "LRC_60",
+    "q": "In welchem Fall darf von den Bestimmungen der Vollzugsordnung für den Funkdienst abgewichen werden?",
+    "a": "in Notfällen"
+  },
+  {
+    "id": "LRC_61",
+    "q": "In welcher internationalen Vorschrift sind die Frequenzbereiche für die einzelnen Funkdienste festgelegt?",
+    "a": "VO-Funk (Radio Regulations)"
+  },
+  {
+    "id": "LRC_62",
+    "q": "In welcher Funkregion liegt Österreich?",
+    "a": "Region 1"
+  },
+  {
+    "id": "LRC_63",
+    "q": "In welcher Funkregion liegt das Mittelmeer?",
+    "a": "Region 1"
+  },
+  {
+    "id": "LRC_64",
+    "q": "Was bedeutet die Abkürzung GMDSS?",
+    "a": "Global Maritime Distress and Safety System – Weltweites Seenot- und Sicherheitsfunksystem"
+  },
+  {
+    "id": "LRC_66",
+    "q": "Darf das bisherige Verfahren betreffend den Not- und Sicherheitsverkehr („non-GMDSS“) weiter angewendet werden?",
+    "a": "ja"
+  },
+  {
+    "id": "LRC_67",
+    "q": "Wer teilt in Österreich das Rufzeichen und die MMSI für eine Seefunkstelle zu?",
+    "a": "Fernmeldebehörde (Fernmeldebüro)"
+  },
+  {
+    "id": "LRC_68",
+    "q": "Ist das Senden auf UKW in ausländischen Häfen gestattet?",
+    "a": "das hängt von den jeweiligen Bestimmungen ab"
+  },
+  {
+    "id": "LRC_69",
+    "q": "Ist das Senden auf Grenz- oder Kurzwelle in ausländischen Häfen gestattet?",
+    "a": "das hängt von den jeweiligen Bestimmungen ab (eher nicht)"
+  },
+  {
+    "id": "LRC_70",
+    "q": "Wo ist die Ausrüstung österreichischer Jachten mit Funkanlagen geregelt?",
+    "a": "Jachtzulassungsverordnung"
+  },
+  {
+    "id": "LRC_71",
+    "q": "In welchem Fahrtbereich muss eine Jacht mit österreichischer Seezulassung mit einer UKWSprechfunkanlage ausgerüstet sein?",
+    "a": "FB2"
+  },
+  {
+    "id": "LRC_72",
+    "q": "Was bedeutet die Abkürzung RCC?",
+    "a": "Rescue Coordination Center"
+  },
+  {
+    "id": "LRC_73",
+    "q": "Welche Aufgaben haben die RCC`s?",
+    "a": "Rettungsoperationen zentral zu leiten"
+  },
+  {
+    "id": "LRC_74",
+    "q": "Wo können Sie sich informieren, welches RCC für ein bestimmtes Gebiet zuständig ist?",
+    "a": "List of Coast Stations, Admirality List of Radio Signals"
+  },
+  {
+    "id": "LRC_75",
+    "q": "Was bedeutet die Abkürzung SAR?",
+    "a": "Search And Rescue"
+  },
+  {
+    "id": "LRC_76",
+    "q": "Welche Aussendung hat im Seefunk unbedingten Vorrang?",
+    "a": "Notverkehr"
+  },
+  {
+    "id": "LRC_77",
+    "q": "Wie lautet das Notzeichen?",
+    "a": "Mayday"
+  },
+  {
+    "id": "LRC_78",
+    "q": "Was bedeutet DISTRESS ALERT?",
+    "a": "den Notalarm einer Person oder eines Fahrzeug, in unmittelbarer, schwerer Gefahr"
+  },
+  {
+    "id": "LRC_79",
+    "q": "Wie lautet der englische Ausdruck für NOTALARM?",
+    "a": "DISTRESS ALERT"
+  },
+  {
+    "id": "LRC_80",
+    "q": "Womit wird im GMDSS auf 2187,5 kHz ein Seenotverkehr eingeleitet?",
+    "a": "mit einem (DSC) Distress Alert"
+  },
+  {
+    "id": "LRC_81",
+    "q": "Wer an Bord eines Schiffes kann das Aussenden eines Notalarms anordnen?",
+    "a": "der Schiffsführer"
+  },
+  {
+    "id": "LRC_82",
+    "q": "Was zeigt der Notalarm an?",
+    "a": "dass sich eine Person oder ein Fahrzeug in unmittelbarer, schwerer Gefahr befindet"
+  },
+  {
+    "id": "LRC_83",
+    "q": "Welche Angaben sollte ein Notalarm mindestens enthalten?",
+    "a": "- Notzeichen - Name/Kennzeichnung der Funkstelle in Not, - Standort - Art des Notfalls, - Art der erbetenen Hilfe - jede andere Angabe, die die Hilfeleistung erleichtern könnte"
+  },
+  {
+    "id": "LRC_84",
+    "q": "Auf welcher Grenzwellen-Frequenz erfolgt die DSC-Alarmierung?",
+    "a": "2187,5 kHz"
+  },
+  {
+    "id": "LRC_85",
+    "q": "Welche Frequenzen sind für die DSC-Alarmierung im Kurzwellenbereich zu benützen?",
+    "a": "4207,5 6312 8414,5 12577 16804,5"
+  },
+  {
+    "id": "LRC_86",
+    "q": "In welchem Frequenzbereich soll die DSC-Alarmierung Schiff-Land aus den Seegebieten A3 und A4 erfolgen?",
+    "a": "bevorzugt auf 8 MHz"
+  },
+  {
+    "id": "LRC_87",
+    "q": "In welchem Frequenzbereich soll die DSC-Alarmierung von Schiffen in der Nähe in den Seegebieten A3 und A4 erfolgen?",
+    "a": "auf VHF Kanal 16 bzw. 2187,5kHz"
+  },
+  {
+    "id": "LRC_88",
+    "q": "Auf welchem UKW-Kanal erfolgt die DSC-Alarmierung?",
+    "a": "Kanal 70"
+  },
+  {
+    "id": "LRC_89",
+    "q": "Bei welchem Gerät kann man durch Drücken einer Taste einen Notalarm auslösen?",
+    "a": "DSC-Controller"
+  },
+  {
+    "id": "LRC_90",
+    "q": "Auf welchem Gerät kann man einen Notalarm über das Raumsegment des GMDSS auslösen?",
+    "a": "EPIRB, Inmarsat-C"
+  },
+  {
+    "id": "LRC_91",
+    "q": "Wer ist bei Seefunkstellen oder Schiffserdfunkstellen über den Empfang eines Notalarms und dessen Inhalt umgehend zu informieren?",
+    "a": "der Schiffsführer (Kapitän)"
+  },
+  {
+    "id": "LRC_92",
+    "q": "Welche Maßnahmen sind von einer Seefunkstelle zu ergreifen, wenn sie auf GW einen mittels DSC ausgesendeten Notalarm empfangen hat?",
+    "a": "die Frequenz 2182 kHz abhören kann Hilfe geleistet werden, dort eine Empfangsbestätigung per Sprechfunk senden"
+  },
+  {
+    "id": "LRC_93",
+    "q": "Welche Maßnahmen sind von einer Seefunkstelle zu ergreifen, wenn sie einen mittels DSC ausgesendeten Notalarm einer Seefunkstelle auf einer der Kurzwellen DSC-Not- und Sicherheitsfrequenzen empfangen hat und weder eine DSC-Bestätigung einer Küstenfunkstelle erfolgte noch ein Notverkehr mit einer Küstenfunkstelle beobachtet wird?",
+    "a": "eine Weiterleitung (Mayday Relay) an eine Küstenfunkstelle (RCC) senden"
+  },
+  {
+    "id": "LRC_94",
+    "q": "Muss eine Seefunkstelle, die auf GW oder UKW einen DSC-Notalarm einer in ihrer Nähe befindlichen anderen Seefunkstelle empfangen hat, den Empfang über Sprechfunk bestätigen?",
+    "a": "ja, wenn Hilfe geleistet werden kann"
+  },
+  {
+    "id": "LRC_95",
+    "q": "Muss eine Seefunkstelle den Empfang eines DSC-Notalarms auf GW einer zweifellos weit entfernten Seefunkstelle, der sie nicht helfen kann, über Sprechfunk bestätigen?",
+    "a": "die Bestätigung erfolgt in diesem Fall nur dann, wenn die Notmeldung von anderen Funkstellen nicht bestätigt worden ist"
+  },
+  {
+    "id": "LRC_96",
+    "q": "Wann wird der mit einem DSC-Decoder aufgenommene Notalarm gespeichert?",
+    "a": "immer"
+  },
+  {
+    "id": "LRC_97",
+    "q": "Wie muss die Bestätigung des Empfangs eines DSC-Notalarms einer Seefunkstelle im Sprechfunk lauten?",
+    "a": "„Received Mayday“ oder „Romeo Romeo Romeo Mayday“"
+  },
+  {
+    "id": "LRC_98",
+    "q": "Welche Maßnahmen soll eine Seefunkstelle ergreifen, wenn trotz ihrer Bestätigung auf der Frequenz 2182 kHz über den Empfang des DSC-Notalarms weiterhin DSC-Notalarme der zweifellos in der Nähe befindlichen Funkstelle in Not ausgesendet werden?",
+    "a": "Eine Weiterleitung an ein RCC senden eventuell (nach Rücksprache mit einem RCC) eine DSC-Empfangsbestätigung senden"
+  },
+  {
+    "id": "LRC_99",
+    "q": "Welche Maßnahmen soll eine Seefunkstelle ergreifen, wenn trotz ihrer Bestätigung auf dem Kanal 16 über den Empfang des DSC-Notalarms weiterhin DSC-Notalarme der zweifellos in der Nähe befindlichen Funkstelle in Not ausgesendet werden?",
+    "a": "die Seefunkstelle soll den Empfang des Notalarms mittels einer DSC-Aussendung auf Kanal 70 bestätigen"
+  },
+  {
+    "id": "LRC_100",
+    "q": "Wie erfolgt die Bestätigung eines DSC-Notalarms einer Seefunkstelle durch eine Küstenfunkstelle mittels DSC?",
+    "a": "durch ein DSC-Distress Acknowledgement"
+  },
+  {
+    "id": "LRC_101",
+    "q": "Womit beginnt die Meldung, mit der im GMDSS der Notverkehr im Sprechfunk eingeleitet wird?",
+    "a": "MAYDAY"
+  },
+  {
+    "id": "LRC_102",
+    "q": "Was folgt in der Meldung, mit welcher der Notverkehr im Sprechfunk eingeleitet wird, nach der MMSI und dem Rufzeichen oder anderer Angaben zur Kennzeichnung des Schiffes in Not?",
+    "a": "- MAYDAY Name/Kennzeichnung der Funkstelle in Not, - Standort - Art des Notfalls, - Art der erbetenen Hilfe"
+  },
+  {
+    "id": "LRC_103",
+    "q": "Auf welcher Frequenz im GW-Bereich wird die Meldung, mit der im GMDSS der Notverkehr im Sprechfunk eingeleitet wird, ausgesendet?",
+    "a": "2182 kHz"
+  },
+  {
+    "id": "LRC_104",
+    "q": "Auf welchem UKW-Kanal wird die Meldung, mit der im GMDSS der Notverkehr eingeleitet wird, ausgesendet?",
+    "a": "Kanal 16"
+  },
+  {
+    "id": "LRC_105",
+    "q": "Auf welcher Frequenz wird der Notverkehr im Sprechfunk auf Grenzwelle im GMDSS abgewickelt?",
+    "a": "2182 kHz"
+  },
+  {
+    "id": "LRC_106",
+    "q": "Auf welchem UKW-Kanal wird der Notverkehr abgewickelt?",
+    "a": "Kanal 16"
+  },
+  {
+    "id": "LRC_107",
+    "q": "Für welche Zwecke wird die Frequenz 2182 kHz im GMDSS benutzt?",
+    "a": "Not-, Dringlichkeits- und Sicherheitsverkehr im Sprechfunk"
+  },
+  {
+    "id": "LRC_108",
+    "q": "Darf die Frequenz 2187,5 kHz für Sprechfunkverkehr benutzt werden?",
+    "a": "nein"
+  },
+  {
+    "id": "LRC_109",
+    "q": "Für welche Zwecke wird die Frequenz 156,800 MHz benutzt?",
+    "a": "Not- und Anruf im Sprechfunk"
+  },
+  {
+    "id": "LRC_110",
+    "q": "Für welchen Zweck darf die Frequenz 121,5 MHz benutzt werden?",
+    "a": "für Not- und Dringlichkeitszwecke im Sprechfunk durch Funkstellen des mobilen Flugfunkdienstes, für Rettungsgerätefunkstellen und zum „Homeing“ von EPIRB’s"
+  },
+  {
+    "id": "LRC_111",
+    "q": "Wird im Seefunkdienst vor einem Anruf im Notverkehr das Notzeichen MAYDAY ausgesendet?",
+    "a": "ja"
+  },
+  {
+    "id": "LRC_112",
+    "q": "Darf ein Schiff, das selbst nicht in Not ist, für ein anderes Schiff einen Notalarm aussenden?",
+    "a": "ja (Mayday Relay)"
+  },
+  {
+    "id": "LRC_113",
+    "q": "Eine Funkstelle sendet einen „DSC distress relay alert“ aus, was bedeutet das?",
+    "a": "dass sich eine andere Stelle in Not (unmittelbarer, schwerer Gefahr) befindet"
+  },
+  {
+    "id": "LRC_114",
+    "q": "Wann wird „SILENCE MAYDAY“ ausgesendet?",
+    "a": "wenn die Funkstelle in Not oder die Funkstelle, die den Notverkehr leitet, einer oder mehreren Funkstellen das Senden untersagt (Funkstille auferlegt)"
+  },
+  {
+    "id": "LRC_115",
+    "q": "Mit welchen Zeichen dürfen RCC´s, die den Notverkehr, oder Einheiten, die Such- und Rettungsarbeiten koordinieren, Funkstellen, die einen Notverkehr im GMDSS stören, im Sprechfunk Funkstille auferlegen?",
+    "a": "SILENCE MAYDAY"
+  },
+  {
+    "id": "LRC_116",
+    "q": "Wer fordert in einem Seenotfall eine störende Funkstelle mit den Wörtern „SILENCE MAYDAY“ zur Einhaltung der Funkstille auf?",
+    "a": "die Funkstelle in Not oder die Funkstelle, die den Notverkehr leitet"
+  },
+  {
+    "id": "LRC_117",
+    "q": "Was besagt die Meldung, an deren Ende „SILENCE FINI“ steht?",
+    "a": "dass der Notverkehr beendet und die Funkstille aufgehoben ist"
+  },
+  {
+    "id": "LRC_118",
+    "q": "Mit welchen Worten wird eine Meldung abgeschlossen, die ein Beenden des Notverkehrs beinhaltet?",
+    "a": "SILENCE FINI"
+  },
+  {
+    "id": "LRC_119",
+    "q": "Wer ist für die Wahl und Bezeichnung der für den Verkehr vor Ort zu benutzenden Frequenzen verantwortlich?",
+    "a": "die Station, die den Notverkehr leitet (in Absprache mit dem OSC)"
+  },
+  {
+    "id": "LRC_120",
+    "q": "Welche UKW-Kanäle werden für Search and Rescue (SAR) beim „Funkverkehr vor Ort“ benutzt?",
+    "a": "6, 13 (ev. 13)"
+  },
+  {
+    "id": "LRC_121",
+    "q": "Welche GW-Frequenzen werden für Search and Rescue (SAR) „vor Ort“ benutzt?",
+    "a": "2182 kHZ (3023 kHz comm. with aircraft)"
+  },
+  {
+    "id": "LRC_122",
+    "q": "Wem obliegt in der Regel das Koordinieren des Notverkehrs im GMDSS?",
+    "a": "einem RCC (MRCC)"
+  },
+  {
+    "id": "LRC_123",
+    "q": "Welcher Kanal im UKW-Seefunkbereich ist vorzugsweise für den Verkehr und koordinierte SAR-Einsätze vorgesehen?",
+    "a": "Kanal 6"
+  },
+  {
+    "id": "LRC_124",
+    "q": "Welche GW/KW-Frequenzen sind für den koordinierten Such- und Rettungsfunkverkehr (SAR) vorgesehen?",
+    "a": "GW: 2182 kHz, 3023 kHz KW: 4125 kHz, (5680 kHz Flugfunkfrequenz)"
+  },
+  {
+    "id": "LRC_125",
+    "q": "Sie sehen ein Luftfahrzeug ins Meer stürzen. Die zuständige SAR-Stelle ist sofort zu benachrichtigen. Welche Art von Funkverkehr ist im GMDSS einzuleiten?",
+    "a": "Distress Es wird hier nach der Art (category) gefragt! Gesendet wird natürlich „Distress Relay“ bzw. in der Folge „Mayday Relay“"
+  },
+  {
+    "id": "LRC_126",
+    "q": "Wann muss eine Notalarmierung zurückgenommen werden?",
+    "a": "wenn versehentlich ein Notalarm ausgesendet wurde"
+  },
+  {
+    "id": "LRC_127",
+    "q": "Was müssen Sie tun, wenn Sie eine Seenotfunkbake unabsichtlich ausgelöst haben?",
+    "a": "Verbindungsaufnahme mit der nächsten Küsten-, Küsten-Erdfunkstelle oder einem RCC und den Alarm widerrufen"
+  },
+  {
+    "id": "LRC_128",
+    "q": "Wie lautet auf Grenzwelle das Verfahren zur Rücknahme von Fehlalarmen über DSC?",
+    "a": "auf 2182 kHz im Sprechfunk: ALL STATONS ALL STATIONS ALL STATIONS THIS IS (Schiffsname)/ (Rufzeichen)/ (MMSI) CANCEL MY DISTRESS ALERT OF (Zeit des Fehlalarms )UTC"
+  },
+  {
+    "id": "LRC_129",
+    "q": "Was müssen Sie tun, wenn Sie mit Ihrer Inmarsat-C-Anlage unabsichtlich einen Notalarm ausgesendet haben?",
+    "a": "Verbindungsaufnahme mit der nächsten (Küsten-,) Küsten-Erdfunkstelle oder einem RCC und den Alarm widerrufen"
+  },
+  {
+    "id": "LRC_130",
+    "q": "Dürfen Sie mit Luftfahrzeugfunkstellen Funkverkehr abwickeln?",
+    "a": "ja, zu Sicherheitszwecken"
+  },
+  {
+    "id": "LRC_131",
+    "q": "Welches Betriebsverfahren muss im Verkehr mit Luftfahrzeugfunkstellen angewendet werden?",
+    "a": "das des Schiffsfunkdienstes"
+  },
+  {
+    "id": "LRC_132",
+    "q": "Dürfen im GMDSS Funkstellen, die nicht in Not sind, während eines Notverkehrs, an dem sie nicht teilnehmen, auf der Frequenz, auf der der Notverkehr stattfindet, senden?",
+    "a": "nein"
+  },
+  {
+    "id": "LRC_133",
+    "q": "Wie wird die Wortgruppe „PAN PAN“ genannt?",
+    "a": "Dringlichkeitszeichen"
+  },
+  {
+    "id": "LRC_134",
+    "q": "Wie lautet das Dringlichkeitszeichen?",
+    "a": "PAN PAN"
+  },
+  {
+    "id": "LRC_135",
+    "q": "Was kündigen der DSC-Dringlichkeitsanruf und das Dringlichkeitszeichen an?",
+    "a": "sie zeigen an, dass die rufende Funkstelle eine sehr dringende Meldung auszusenden hat, welche die Sicherheit einer beweglichen Funkstelle oder einer Person betrifft"
+  },
+  {
+    "id": "LRC_136",
+    "q": "An wen darf der DSC-Dringlichkeitsanruf auf GW und UKW gerichtet werden?",
+    "a": "„an alle“, oder eine Küstenfunkstelle, oder ein RCC"
+  },
+  {
+    "id": "LRC_137",
+    "q": "An wen wird der DSC-Dringlichkeitsanruf auf Kurzwelle im Regelfall gerichtet?",
+    "a": "an alle Fahrzeuge in einem definierten Gebiet (area call), oder CS oder RCC"
+  },
+  {
+    "id": "LRC_138",
+    "q": "Was ist bei der Ankündigung einer Dringlichkeitsmeldung auf UKW zu beachten?",
+    "a": "die Dringlichkeitsmeldung muss mittels des digitalen Selektivrufs (DSC) auf Kanal 70 angekündigt werden"
+  },
+  {
+    "id": "LRC_139",
+    "q": "Auf welcher GW-Frequenz soll eine Seefunkstelle im Sprechfunk die Dringlichkeitsmeldung aussenden?",
+    "a": "2182 kHz"
+  },
+  {
+    "id": "LRC_140",
+    "q": "Auf welchem UKW-Kanal soll eine Seefunkstelle im Sprechfunk die Dringlichkeitsmeldung aussenden?",
+    "a": "Kanal 16 (soferne er nicht durch Notverkehr belegt ist)"
+  },
+  {
+    "id": "LRC_141",
+    "q": "Wie wird im Sprechfunk die Dringlichkeitsmeldung eingeleitet?",
+    "a": "durch das Dringlichkeitszeichen, das 3-malige „PAN PAN“"
+  },
+  {
+    "id": "LRC_142",
+    "q": "Muss eine \"An alle Funkstellen\" ausgesendete Dringlichkeitsmeldung aufgehoben werden?",
+    "a": "ja, wenn die veranlassten Maßnahmen nicht mehr erforderlich sind"
+  },
+  {
+    "id": "LRC_143",
+    "q": "Wie wird das Wort „SECURITE“ genannt?",
+    "a": "Sicherheitszeichen"
+  },
+  {
+    "id": "LRC_144",
+    "q": "Wie lautet das Sicherheitszeichen?",
+    "a": "„SECURITE“"
+  },
+  {
+    "id": "LRC_145",
+    "q": "An wen darf der DSC-Sicherheitsanruf auf GW und UKW gerichtet werden?",
+    "a": "an alle"
+  },
+  {
+    "id": "LRC_146",
+    "q": "An wen wird der DSC-Sicherheitsanruf auf Kurzwelle im Regelfall gerichtet?",
+    "a": "an ein definiertes Gebiet (area call), oder eine CS oder ein RCC"
+  },
+  {
+    "id": "LRC_147",
+    "q": "Was ist bei der Ankündigung einer Sicherheitsmeldung auf UKW zu beachten?",
+    "a": "die Sicherheitsmeldung muss mittels des digitalen Selektivrufs (DSC) auf Kanal 70 angekündigt werden dass kein höherrangiger Verkehr gestört wird"
+  },
+  {
+    "id": "LRC_148",
+    "q": "Auf welcher GW-Frequenz soll eine Seefunkstelle im Sprechfunk die Sicherheitsmeldung im Regelfall aussenden?",
+    "a": "2182 kHz (wenn nicht durch höherrangigen Verkehr belegt)"
+  },
+  {
+    "id": "LRC_149",
+    "q": "Auf welchem UKW-Kanal soll eine Seefunkstelle im Sprechfunk die Sicherheitsmeldung im Regelfall aussenden?",
+    "a": "Kanal 16 (wenn nicht durch höherrangigen Verkehr belegt)"
+  },
+  {
+    "id": "LRC_150",
+    "q": "Wie muss im Sprechfunk die Sicherheitsmeldung eingeleitet werden?",
+    "a": "durch das Sicherheitszeichen (3-maliges SECURITE)"
+  },
+  {
+    "id": "LRC_151",
+    "q": "Was muss oder darf eine Seefunkstelle tun, die einen DSC-Sicherheitsanruf empfängt, der eine Sicherheitsmeldung an alle Schiffe ankündigt?",
+    "a": "niederrangigen Funkverkehr einstellen"
+  },
+  {
+    "id": "LRC_152",
+    "q": "Wie können im Küstenbereich automatisch Warnnachrichten empfangen werden?",
+    "a": "mittels NAVTEX"
+  },
+  {
+    "id": "LRC_153",
+    "q": "Welcher Dienst wird auf 518 kHz ausgesendet?",
+    "a": "NAVTEX"
+  },
+  {
+    "id": "LRC_154",
+    "q": "Was sind NAVAREAS?",
+    "a": "Unterteilung der Erdoberfläche in bestimmte Seegebiete zum Empfang von Warnungen"
+  },
+  {
+    "id": "LRC_155",
+    "q": "In welchem Seegebiet wird NAVTEX angewandt?",
+    "a": "im Regelfall A1 + A2"
+  },
+  {
+    "id": "LRC_156",
+    "q": "Welche Auswahlmöglichkeiten bestehen für den Empfang von NAVTEX-Sendungen?",
+    "a": "Sendestation und Art der Meldung"
+  },
+  {
+    "id": "LRC_158",
+    "q": "Welche Sprache wird bei NAVTEX-Aussendungen (auf 518kHz) grundsätzlich benutzt?",
+    "a": "Englisch"
+  },
+  {
+    "id": "LRC_160",
+    "q": "In welchem Dienst wird der Gruppenanruf (EGC) verwendet?",
+    "a": "MSI (Maritime Safety Information) auf Inmarsat-C"
+  },
+  {
+    "id": "LRC_161",
+    "q": "Mit welcher Einrichtung können Sie MSI über Satelliten empfangen?",
+    "a": "Inmarsat-C, EGC-Empfänger, Safety-Net"
+  },
+  {
+    "id": "LRC_162",
+    "q": "Was ist ein EGC-Empfänger?",
+    "a": "ein Empfangsgerät für Sicherheitsinformationen (MSI)"
+  },
+  {
+    "id": "LRC_163",
+    "q": "Wenn bei einer Küstenfunkstelle Funktelegramme oder Funkgespräche für Seefunkstellen vorliegen, benachrichtigt sie diese zu bestimmten Zeiten. Wie nennt man diese Aussendungen?",
+    "a": "Sammelanruf (Traffic List)"
+  },
+  {
+    "id": "LRC_164",
+    "q": "Wie können Sie feststellen, ob bei einer Küstenfunkstelle Nachrichten für Sie vorliegen, ohne dass Sie dort anrufen?",
+    "a": "durch das Abhören des Sammelanrufes (Traffic List)"
+  },
+  {
+    "id": "LRC_165",
+    "q": "Müssen Sie auch bei Versuchssendungen das Rufzeichen oder eine sonstige Kennung angeben?",
+    "a": "ja"
+  },
+  {
+    "id": "LRC_166",
+    "q": "Wie oft dürfen Sie beim Anruf zum Herstellen einer Verbindung den Namen der gerufenen Funkstelle nennen?",
+    "a": "höchstens dreimal"
+  },
+  {
+    "id": "LRC_167",
+    "q": "Darf der Kanal 70 für Sprechfunkverkehr benutzt werden?",
+    "a": "nein, Kanal 16 ist ausschließlich für DSC-Anrufe vorbehalten"
+  },
+  {
+    "id": "LRC_168",
+    "q": "Darf eine Seefunkstelle auch dann gerufen werden, wenn der Schiffsname unbekannt ist?",
+    "a": "ja"
+  },
+  {
+    "id": "LRC_169",
+    "q": "Welche Form hat die Zeitangabe (Tag-Zeit-Gruppe) im Seefunkdienst?",
+    "a": "z.B. 241935 UTC OCT 12 (ddhhmm UTC MMM YY)"
+  },
+  {
+    "id": "LRC_170",
+    "q": "Welche Form hat die Positionsangabe im Seefunkdienst?",
+    "a": "z.B. 32-17.5 S 065-02.8 E"
+  },
+  {
+    "id": "LRC_171",
+    "q": "Sie haben gehört, dass Sie von einer Funkstelle gerufen wurden, konnten aber wegen Störungen nicht verstehen, wer Sie gerufen hat. Was müssen Sie tun?",
+    "a": "ich sende folgenden Anruf: wer hat mich gerufen station calling hier ist this is Schiffsname mit Rufzeichen shipsname and callsign"
+  },
+  {
+    "id": "LRC_172",
+    "q": "Was ist vor dem Anruf auf einem Arbeitskanal zu beachten?",
+    "a": "es muss sichergestellt werden, dass laufender Funkverkehr nicht gestört wird"
+  },
+  {
+    "id": "LRC_173",
+    "q": "Wie heißt das Verfahren zur Verkehrsaufnahme auf Kanal 70 bzw. der Frequenz 2187,5 kHz?",
+    "a": "DSC"
+  },
+  {
+    "id": "LRC_174",
+    "q": "Auf welchem Kanal rufen Sie im UKW-Bereich eine Küstenfunkstelle, wenn nicht bekannt ist, auf welchem Kanal die Küstenfunkstelle empfangsbereit ist?",
+    "a": "Kanal 16"
+  },
+  {
+    "id": "LRC_175",
+    "q": "Auf welchem Kanal sollen Sie eine Küstenfunkstelle rufen, die sowohl auf Kanal 16 als auch auf einem Arbeitskanal empfangsbereit ist?",
+    "a": "auf einem Arbeitskanal (dem Haupt-Arbeitskanal)"
+  },
+  {
+    "id": "LRC_176",
+    "q": "Wie oft sollen Sie beim Anruf zum Herstellen einer Funkverbindung den Namen der gerufenen Funkstelle nennen, wenn eine gute Verständigung zu erwarten ist?",
+    "a": "einmal"
+  },
+  {
+    "id": "LRC_177",
+    "q": "Sie befinden sich in einem Gebiet, in dem es möglich ist, mit einer Küstenfunkstelle auf ihrem Arbeitskanal eine sichere UKW-Verbindung herzustellen. Wann dürfen Sie einen unbeantworteten Anruf an die betreffende Küstenfunkstelle wiederholen?",
+    "a": "sobald sichergestellt ist, dass der Sprechfunkverkehr bei der Küstenfunkstelle nicht gestört wird"
+  },
+  {
+    "id": "LRC_179",
+    "q": "Nach welcher Zeit dürfen Sie einen unbeantworteten Anruf an eine Seefunkstelle wiederholen?",
+    "a": "nach 3 Minuten, wenn kein anderer Funkverkehr dadurch gestört wird"
+  },
+  {
+    "id": "LRC_180",
+    "q": "Wie lange darf ein Anruf und dessen Beantwortung auf Kanal 16 maximal dauern?",
+    "a": "eine Minute"
+  },
+  {
+    "id": "LRC_181",
+    "q": "Wer bestimmt bei einer Verbindung zwischen einer See- und einer Küstenfunkstelle die zu benutzende Frequenz?",
+    "a": "die Küstenfunkstelle"
+  },
+  {
+    "id": "LRC_182",
+    "q": "Welche Nachrichten dürfen im Seefunkdienst auf den Kanälen des Hafenfunkdienstes übermittelt werden?",
+    "a": "Nachrichten zur Abwicklung von Vorgängen mit Schleppern, Lotsen und Hafenbehörden"
+  },
+  {
+    "id": "LRC_183",
+    "q": "Was ist eine „ Q-Gruppe“?",
+    "a": "eine international einheitliche Abkürzung"
+  },
+  {
+    "id": "LRC_184",
+    "q": "Über welches Verfahren können ausgewählte Seefunkstellen im Raumsegment des GMDSS gerufen werden?",
+    "a": "EGC Fleet-Net"
+  },
+  {
+    "id": "LRC_185",
+    "q": "Wo steht der Inmarsat-Satellit mit der Bezeichnung AOR-W?",
+    "a": "über dem Westatlantik"
+  },
+  {
+    "id": "LRC_186",
+    "q": "Über welchem Gebiet steht der Inmarsat-Satellit mit der Bezeichnung POR?",
+    "a": "über dem Pazifik"
+  },
+  {
+    "id": "LRC_187",
+    "q": "Wie wird der Winkel zwischen Horizont und Satellit vom Schiff aus gesehen in der englischen Sprache genannt?",
+    "a": "Elevation"
+  },
+  {
+    "id": "LRC_189",
+    "q": "Welche Institution muss vor Inbetriebnahme einer (Inmarsat-) SATCOM-Anlage ihre Zustimmung geben?",
+    "a": "Inmarsat"
+  },
+  {
+    "id": "LRC_190",
+    "q": "Welche Dienste bietet Inmarsat-C?",
+    "a": "MSI über EGC / Safety-Net"
+  },
+  {
+    "id": "LRC_191",
+    "q": "Was muss beim Abschalten einer INMARSAT-C-Anlage, nach dem Betrieb mit einer CES beachtet werden?",
+    "a": "dass zuerst ausgeloggt wird"
+  },
+  {
+    "id": "LRC_192",
+    "q": "Was müssen Sie beachten, wenn Sie eine Küstenfunkstelle im Sprechfunk auf Kurzwelle rufen wollen?",
+    "a": "??? Ausbreitungsbedingungen"
+  },
+  {
+    "id": "LRC_193",
+    "q": "Welche Bedeutung hat die Ankündigung \"INTERCO\" im Sprechfunkverkehr?",
+    "a": "dass Codegruppen des Internationalen Signalbuches folgen (International Code of Signals)"
+  },
+  {
+    "id": "LRC_194",
+    "q": "Dürfen Sie als Inhaber eines Schiffsfunkerzeugnises eine Amateurfunkstelle betreiben?",
+    "a": "nein, nur wenn Sie auch ein Amateurfunkzeugnis besitzen"
+  },
+  {
+    "id": "LRC_195",
+    "q": "Auf welchem UKW-Kanal wird ein DSC-Routine-Anruf ausgesendet?",
+    "a": "Kanal 70 (156,525MHz)"
+  },
+  {
+    "id": "LRC_196",
+    "q": "Welche Aussendungen dürfen auf Kanal 70 erfolgen?",
+    "a": "DSC"
+  },
+  {
+    "id": "LRC_197",
+    "q": "Welche Grenzwellen-Frequenz wird zum DSC-Anruf zwischen Schiffen international benutzt?",
+    "a": "2177 kHz"
+  },
+  {
+    "id": "LRC_198",
+    "q": "Wer setzt bei Funkgesprächen von und nach See die Verbindungszeit zur Gebührenberechnung fest?",
+    "a": "die Küstenfunkstelle"
+  },
+  {
+    "id": "LRC_199",
+    "q": "Welche Voraussetzung ist für die Teilnahme am öffentlichen Nachrichtenaustausch erforderlich?",
+    "a": "ein Vertrag mit einer Abrechnungsgesellschaft"
+  },
+  {
+    "id": "LRC_200",
+    "q": "In welcher Verrechnungseinheit erfolgt die Internationale Abrechnung des Funkverkehrs?",
+    "a": "Sonderziehungsrechte oder Goldfranken"
+  },
+  {
+    "id": "LRC_201",
+    "q": "In Ihrer Funk-Betriebsbewilligung steht der Ausdruck „DP02“. Was bedeutet das?",
+    "a": "Es ist die Kennung (AAIC) einer Abrechnungsgesellschaft"
+  },
+  {
+    "id": "LRC_202",
+    "q": "Was ist eine Schiffserdfunkstelle?",
+    "a": "eine Satellitenfunkanlage an Bord eines Schiffes"
+  },
+  {
+    "id": "SB_1",
+    "q": "Wie werden im GMDSS die für die Ausrüstung mit Funkanlagen festgelegten Seengebiete bezeichnet?",
+    "a": "A1, A2, A3, A4"
+  },
+  {
+    "id": "SB_2",
+    "q": "Wie wird im GMDSS das Seegebiet A2 beschrieben?",
+    "a": "Ein von der zuständigen Verwaltung festgelegtes Gebiet innerhalb der Sprechfunkreichweite mindestens einer GWKüstenfunkstelle, die ununterbrochen für DSC-Alarmierungen zur Verfügung steht."
+  },
+  {
+    "id": "SB_3",
+    "q": "Wie wird im GMDSS das Seegebiet A3 beschrieben?",
+    "a": "Gebiete außerhalb von A1 und A2 .Ein Gebiet innerhalb der Überdeckung eines geostationären INMARSAT-Satelliten, der ununterbrochen für Alarmierungen zur Verfügung steht."
+  },
+  {
+    "id": "SB_4",
+    "q": "Welchen geografischen Bereich etwa umfaßt im GMDSS das Seegebiet A4 ?",
+    "a": "Gewässer jeweils nördlich und südlich von 70° Breite nicht mit Inmarsat versorgt ( Polkappen)"
+  },
+  {
+    "id": "SB_5",
+    "q": "Wie lautet im GMDSS die Kurzbezeichnung für das nachfolgend beschriebene Seegebiet? \"Ein von der zuständigen",
+    "a": "Verwaltung festgelegtes Gebiet innerhalb der Sprechfunkreichweite mindestens einer GW-Küstenfunkstelle, die ununterbrochen für DSC-Alarmierungen zur Verfügung steht.\" A2"
+  },
+  {
+    "id": "SB_6",
+    "q": "Wie lautet im GMDSS die Kurzbezeichnung für das nachfolgend beschriebene Seegebiet? \"Ein Gebiet innerhalb der",
+    "a": "Überdeckung eines geostationären Inmarsat-Satelliten, der ununterbrochen für Alarmierungen zur Verfügung steht.\" A3"
+  },
+  {
+    "id": "SB_7",
+    "q": "Wer gibt den GMDSS Master Plan heraus?",
+    "a": "IMO"
+  },
+  {
+    "id": "SB_8",
+    "q": "Auf welcher Frequenz im Grenzwellenbereich müssen Seefunkstellen, die Einrichtungen des GMDSS benützen, eine Empfangsbereitschaft für DSC sicherstellen, wenn sie auf See sind?",
+    "a": "2187,5 kHz"
+  },
+  {
+    "id": "SB_9",
+    "q": "Auf welcher Frequenz ist im GMDSS ein Grenzwellen-DSC-Wachempfänger empfangsbereit ?",
+    "a": "2187,5 kHz"
+  },
+  {
+    "id": "SB_10",
+    "q": "Auf welcher der angeführten Frequenzen ist im GMDSS ein Kurzwellen-DSC-Scanner-Wachempfänger empfangsbereit ?",
+    "a": "8414,5 kHz"
+  },
+  {
+    "id": "SB_11",
+    "q": "Wie werden im GMDSS die Not- und Sicherheitsfrequenzen überwacht?",
+    "a": "durch Empfangsbereitschaft für DSC-Alarmierungen auf 2187,5 kHz"
+  },
+  {
+    "id": "SB_13",
+    "q": "Wann müssen Schiffserdfunkstellen, die am GMDSS teilnehmen, empfangsbereit sein?",
+    "a": "immer wenn sie auf See sind, ausgenommen, wenn sie auf einem Arbeitskanal Verkehr abwickeln"
+  },
+  {
+    "id": "SB_14",
+    "q": "Wer empfängt Notalarme, die mittels DSC ausgesendet werden?",
+    "a": "Küstenfunkstellen und Seefunkstellen"
+  },
+  {
+    "id": "SB_15",
+    "q": "Welcher UKW-Kanal sollte im GMDSS nach Möglichkeit für den Empfang von Meldungen betreffend die Sicherheit der Seeschifffahrt dauernd abgehört werden?",
+    "a": "Kanal 13"
+  },
+  {
+    "id": "SB_16",
+    "q": "Welche der angegebenen Funkstellen können im GMDSS nicht mittels DSC alarmiert werden?",
+    "a": "Schiffserdfunkstellen"
+  },
+  {
+    "id": "SB_17",
+    "q": "Welche Aufgabe hat im GMDSS die Funktion „Durchführung von Funkverkehr vor Ort“?",
+    "a": "Koordinierung der Maßnahmen am Unfallort zwischen den beteiligten SAR-Einheiten"
+  },
+  {
+    "id": "SB_18",
+    "q": "Worin besteht der Hauptzweck einer Seenotfunkbake?",
+    "a": "sie soll die Ortung von Schiffbrüchigen erleichtern"
+  },
+  {
+    "id": "SB_19",
+    "q": "Welche der angeführten EPIRB‘s sendet neben einem Systemcode auch noch die Position des Havaristen aus ?",
+    "a": "L-Band-EPIRB"
+  },
+  {
+    "id": "SB_20",
+    "q": "Wo ist die Ausrüstung mit einer UKW-DSC-EPIRB sinnvoll?",
+    "a": "im Seegebiet A1"
+  },
+  {
+    "id": "SB_21",
+    "q": "Welches funktechnische Rettungsmittel ist für ein nicht nach SOLAS ausrüstungspflichtiges Schiff im GMDSS für die Seegebiete A1 bis A3 zu empfehlen?",
+    "a": "eine Satelliten-EPIRB; vorzugsweise INMARSAT-E"
+  },
+  {
+    "id": "SB_22",
+    "q": "Warum ist im Seegebiet A4 eine L-Band-EPIRB nutzlos?",
+    "a": "weil das Gebiet nicht im Bedeckungsbereich der INMARSAT Satelliten liegt"
+  },
+  {
+    "id": "SB_23",
+    "q": "Welche der genannten Vorschriften verpflichtet den Schiffseigner, sein Schiff u. U. mit einer EPIRB auszurüsten?",
+    "a": "Jachtzulassungsverordnung"
+  },
+  {
+    "id": "SB_24",
+    "q": "Welches funktechnische Rettungsmittel ist für eine Jacht im Fahrtbereich 4 vorgeschrieben?",
+    "a": "eine EPIRB"
+  },
+  {
+    "id": "SB_25",
+    "q": "Was verstehen Sie unter der Abkürzung \"ELT\"?",
+    "a": "Emergency Locator Transmitter"
+  },
+  {
+    "id": "SB_27",
+    "q": "Sind Versuchssendungen auf den GMDSS Not- und Sicherheitsfrequenzen erlaubt?",
+    "a": "ja, aber sie sind auf das unbedingt nötige Ausmaß zu beschränken, auf den Anruffrequenzen sind sie zu vermeiden"
+  },
+  {
+    "id": "SB_29",
+    "q": "Wo ist international die Führung von Aufzeichnungen im Funkverkehr geregelt?",
+    "a": "VO Funk"
+  },
+  {
+    "id": "SB_30",
+    "q": "Wo sind die Betriebsverfahren, die im Seefunkdienst anzuwenden sind, beschrieben?",
+    "a": "Seeschiffahrtsverordnung"
+  },
+  {
+    "id": "SB_31",
+    "q": "Was bedeutet in englischsprachigen Dienstbehelfen die Abkürzung \"RR\"?",
+    "a": "Vollzugsordnung für den Funkdienst (VO-Funk)"
+  },
+  {
+    "id": "SB_32",
+    "q": "Welches Funker-Zeugnis ist mindestens erforderlich, um weltweit am GMDSS mit einer GW-/KWFunkanlage im Seegebiet A3 teilnehmen zu dürfen?",
+    "a": "Allgemeines Betriebszeugnis II"
+  },
+  {
+    "id": "SB_33",
+    "q": "Was bedeutet die Abkürzung \"LRC\"?",
+    "a": "die englische Bezeichnung für das Allgemeine Betriebszeugnis II"
+  },
+  {
+    "id": "SB_34",
+    "q": "Welche Aussendungen sind gemäß der Vollzugsordnung für den Funkdienst verboten?",
+    "a": "Jede Aussendung, die einen Notverkehr auf einer der internationalen Notfrequenzen stören könnte"
+  },
+  {
+    "id": "SB_35",
+    "q": "Welche Aussendungen sind gemäß der Vollzugsordnung für den Funkdienst verboten?",
+    "a": "Jede Aussendung, die einen Notverkehr auf einer der internationalen Notfrequenzen stören könnte"
+  },
+  {
+    "id": "SB_36",
+    "q": "Welche Aussendungen sind verboten?",
+    "a": "Aussendungen von Zeichen, die mit internationalen Notzeichen verwechselt werden könnten"
+  },
+  {
+    "id": "SB_37",
+    "q": "Welches Schiffspapier enthält die MMSI?",
+    "a": "die Bewilligungsurkunde"
+  },
+  {
+    "id": "SB_38",
+    "q": "In welchem Warndienst wird der Gruppenanruf (EGC) verwendet ?",
+    "a": "Satelliten-Warndienst"
+  },
+  {
+    "id": "SB_39",
+    "q": "Welcher Dienst übermittelt MSI über Satelliten?",
+    "a": "SafetyNET Service im EGC System"
+  },
+  {
+    "id": "SB_40",
+    "q": "In welcher internationalen Vorschrift sind die Frequenzbereiche für die einzelnen Funkdienste festgelegt?",
+    "a": "VO Funk Vollzugsordnung für den Funkdienst"
+  },
+  {
+    "id": "SB_41",
+    "q": "In welcher Funkregion liegt Österreich?",
+    "a": "Region 1"
+  },
+  {
+    "id": "SB_42",
+    "q": "In welcher Funkregion liegt das Mittelmeer?",
+    "a": "Region 1"
+  },
+  {
+    "id": "SB_43",
+    "q": "Darf das bisherige Verfahren betreffend den Not- und Sicherheitsverkehr („non-GMDSS“) weiter angewendet werden?",
+    "a": "das Verfahren darf weiterhin von jenen Schiffen angewendet werden, die nicht mit GMDSS ausgerüstet sind"
+  },
+  {
+    "id": "SB_44",
+    "q": "Ist das Senden auf Grenz- oder Kurzwelle in ausländischen Häfen gestattet?",
+    "a": "das hängt von den Vorschriften des betreffenden Landes ab"
+  },
+  {
+    "id": "SB_45",
+    "q": "In welchem Fahrtbereich muß eine Jacht mit österreichischer Seezulassung mit einer UKW- Sprechfunkanlage ausgerüstet sein?",
+    "a": "in den Fahrtbereichen 3 und 4"
+  },
+  {
+    "id": "SB_46",
+    "q": "Sie haben ein Funktelegramm aufgenommen, das für ein Besatzungsmitglied bestimmt war. Dürfen Sie über die Tatsache des Einlangens bzw. über den Inhalt einem anderen Besatzungsmitglied Auskunft geben?",
+    "a": "nein"
+  },
+  {
+    "id": "SB_47",
+    "q": "Wo können sie sich informieren, welches RCC für ein bestimmtes Gebiet zuständig ist ?",
+    "a": "im GMDSS Master Plan der IMO"
+  },
+  {
+    "id": "SB_49",
+    "q": "Welche Aussendung hat im Seefunk unbedingten Vorrang?",
+    "a": "Notverkehr"
+  },
+  {
+    "id": "SB_50",
+    "q": "Womit wird im GMDSS auf 2187,5 kHz ein Seenotverkehr eingeleitet?",
+    "a": "mit der Notalarmierung"
+  },
+  {
+    "id": "SB_51",
+    "q": "Was zeigt der Notalarm an?",
+    "a": "dass ein Schiff oder eine Person von ernster und unmittelbar bevorstehender Gefahr bedroht ist und um sofortige Hilfe ersucht"
+  },
+  {
+    "id": "SB_52",
+    "q": "Auf dem Display eines DSC-Controllers erscheint die Meldung “undesignated distress”. Was heißt das ?",
+    "a": "Notalarm ohne zusätzliche Information"
+  },
+  {
+    "id": "SB_53",
+    "q": "Auf dem Display eines DSC-Controllers erscheint die Meldung “danger of capsizing“. Was heißt das ?",
+    "a": "Gefahr des Kenterns"
+  },
+  {
+    "id": "SB_54",
+    "q": "Auf dem Display eines DSC-Controllers erscheint die Meldung “abandoning“. Was heißt das ?",
+    "a": "gehen von Bord"
+  },
+  {
+    "id": "SB_55",
+    "q": "Auf welcher Grenzwellen-Frequenz erfolgt die DSC-Alarmierung?",
+    "a": "auf 2187,5 kHz"
+  },
+  {
+    "id": "SB_56",
+    "q": "Welche der genannten Frequenzen ist u.a. für die DSC-Alarmierung im Kurzwellenbereich zu benützen?",
+    "a": "8414,5 kHz"
+  },
+  {
+    "id": "SB_57",
+    "q": "In welchem Frequenzbereich soll die DSC-Alarmierung Schiff – Land aus den Seegebieten A3 und A4 erfolgen?",
+    "a": "auf einer der Kurzwellen Not- und Sicherheitsfrequenzen, vorzugsweise 8414,5 kHz"
+  },
+  {
+    "id": "SB_58",
+    "q": "In welchem Frequenzbereich soll die DSC-Alarmierung von Schiffen in der Nähe in den Seegebieten A3 und A4 erfolgen?",
+    "a": "auf 2187,5 kHz und/oder auf dem UKW-Kanal 70"
+  },
+  {
+    "id": "SB_59",
+    "q": "Auf welchem Gerät kann man durch drücken einer Taste einen Notalarm über das Raumsegment des GMDSS auslösen?",
+    "a": "INMARSAT-C-Terminal"
+  },
+  {
+    "id": "SB_60",
+    "q": "Wer ist bei Seefunkstellen oder Schiffserdfunkstellen über den Empfang eines Notalarms und dessen Inhalt umgehend zu informieren?",
+    "a": "der Kapitän oder die für das Schiff verantwortliche Person"
+  },
+  {
+    "id": "SB_61",
+    "q": "Welche Maßnahmen sind von einer Seefunkstelle zu ergreifen, wenn sie auf GW einen mittels DSC ausgesendeten Notalarm empfangen hat?",
+    "a": "die Seefunkstelle muss den Notalarm, den sie empfangen hat, auf 2182 kHz bestätigen und diese Frequenz weiterhin abhören"
+  },
+  {
+    "id": "SB_63",
+    "q": "Muss eine Seefunkstelle, die auf GW oder UKW einen DSC-Notalarm einer in ihrer Nähe befindlichen anderen Seefunkstelle empfangen hat, den Empfang über Sprechfunk bestätigen?",
+    "a": "ja"
+  },
+  {
+    "id": "SB_64",
+    "q": "Muss eine Seefunkstelle den Empfang eines DSC-Notalarms auf GW einer zweifellos weit entfernten Seefunkstelle, der sie nicht helfen kann, über Sprechfunk bestätigen?",
+    "a": "die Bestätigung erfolgt in diesem Fall nur dann, wenn keine andere Funkstelle den Notalarm bestätigt"
+  },
+  {
+    "id": "SB_65",
+    "q": "Welche Maßnahmen soll eine Seefunkstelle ergreifen, wenn trotz ihrer Bestätigung auf der Frequenz 2182 kHz über den Empfang des DSC-Notalarms weiterhin DSC-Notalarme der zweifellos in der Nähe befindlichen Funkstelle in Not ausgesendet werden?",
+    "a": "MRCC oder CS sollen entsprechend informiert werden. Kann nach Abstimmung mit MRCC oder CS der Ruf bestätigt werden."
+  },
+  {
+    "id": "SB_66",
+    "q": "Auf welcher Frequenz im GW-Bereich wird die Meldung, mit der im GMDSS der Notverkehr im Sprechfunk eingeleitet wird, ausgesendet?",
+    "a": "auf der internationalen Not- und Sicherheitsfrequenz 2182 kHz"
+  },
+  {
+    "id": "SB_67",
+    "q": "Auf welcher Frequenz wird der Notverkehr im Sprechfunk auf Grenzwelle im GMDSS abgewickelt?",
+    "a": "auf 2182 kHz"
+  },
+  {
+    "id": "SB_68",
+    "q": "Für welche Zwecke wird die Frequenz 2182 kHz im GMDSS benutzt?",
+    "a": "für Not- und Sicherheitsverkehr im Sprechfunk"
+  },
+  {
+    "id": "SB_69",
+    "q": "Darf die Frequenz 2187,5 kHz für Sprechfunkverkehr benutzt werden?",
+    "a": "nein, diese Frequenz ist ausschließlich für DSC-Anrufe bestimmt"
+  },
+  {
+    "id": "SB_70",
+    "q": "Darf ein Schiff, das selbst nicht in Not ist, für ein anderes Schiff auf 2187,5 kHz einen Notalarm aussenden?",
+    "a": "ja, wenn das Schiff in Not nicht selbst in der Lage ist, den Notalarm auszusenden"
+  },
+  {
+    "id": "SB_71",
+    "q": "Welche der angeführten GW-Frequenzen werden für Search and Rescue (SAR) „vor Ort“ benutzt?",
+    "a": "3023 und 2182 kHz"
+  },
+  {
+    "id": "SB_72",
+    "q": "Welche der angeführten GW/KW-Frequenzen ist für den koordinierten Such- und Rettungsfunkverkehr (SAR) vorgesehen?",
+    "a": "3023 kHz"
+  },
+  {
+    "id": "SB_73",
+    "q": "Wie lautet auf Grenzwelle das Verfahren zur Rücknahme von Fehlalarmen über DSC?",
+    "a": "Nach sofortiger Deaktivierung des Notalarmes Auf 2182 kHz: ALL STATONS ALL STATIONS ALL STATIONS THIS IS (Schiffsname)/ (Rufzeichen)/ (MMSI) Position (Breite, Länge) CANCEL MY DISTRESS ALERT OF (Datum/Zeit des Fehlalarms )UTC MASTER (Schiffsname)/(Rufzeichen)/(MMSI) (Datum/Zeit) UTC"
+  },
+  {
+    "id": "SB_74",
+    "q": "Was müssen Sie tun, wenn Sie mit Ihrer Inmarsat-C-Anlage unabsichtlich einen Notalarm ausgesendet haben?",
+    "a": "die zuständige RCC mittels einer Distress Priority Meldung über dieselbe CES(Coast earth Station), über die die Notalarmierung erfolgte, über den Widerruf der Notalarmierung wie folgt informieren: Name, Rufzeichen, IMN Position Cancel my Inmarsat-C distress alert of DATE, TIME (UTC) =Master+"
+  },
+  {
+    "id": "SB_75",
+    "q": "Dürfen Funkstellen, die nicht in Not sind, im GMDSS während eines Notverkehrs, an dem sie nicht teilnehmen, auf den Frequenzen, auf denen der Notverkehr stattfindet, senden?",
+    "a": "solange die Meldung SILENCE FINI nicht gesendet wurde, nein"
+  },
+  {
+    "id": "SB_76",
+    "q": "An wen darf der DSC-Dringlichkeitsanruf auf GW gerichtet werden?",
+    "a": "an alle Funkstellen oder an eine bestimmte Funkstelle"
+  },
+  {
+    "id": "SB_77",
+    "q": "An wen wird der DSC-Dringlichkeitsanruf auf Kurzwelle im Regelfall gerichtet?",
+    "a": "an alle Schiffe in einem definierten geografischen Gebiet oder an eine bestimmte Küstenfunkstelle"
+  },
+  {
+    "id": "SB_78",
+    "q": "Auf welcher GW-Frequenz soll eine Seefunkstelle im Sprechfunk die Dringlichkeitsmeldung im GMDSS aussenden?",
+    "a": "2182 kHz"
+  },
+  {
+    "id": "SB_80",
+    "q": "An wen darf der DSC-Sicherheitsanruf auf GW gerichtet werden?",
+    "a": "an alle Schiffe, an alle Schiffe in einem definierten geografischen Gebiet oder an eine bestimmte Funkstelle"
+  },
+  {
+    "id": "SB_81",
+    "q": "An wen wird der DSC-Sicherheitsanruf auf Kurzwelle im Regelfall gerichtet?",
+    "a": "an alle Schiffe in einem definierten geografischen Gebiet oder an eine bestimmte Küstenfunkstelle"
+  },
+  {
+    "id": "SB_82",
+    "q": "Auf welcher GW-Frequenz soll eine Seefunkstelle im Sprechfunk die Sicherheitsmeldung im GMDSS im Regelfall aussenden?",
+    "a": "2182 kHz"
+  },
+  {
+    "id": "SB_84",
+    "q": "Wie können im Küstenbereich automatisch Warnnachrichten empfangen werden ?",
+    "a": "über NAVTEX"
+  },
+  {
+    "id": "SB_85",
+    "q": "Welcher Dienst wird auf 518 kHz ausgesendet ?",
+    "a": "NAVTEX"
+  },
+  {
+    "id": "SB_86",
+    "q": "In welchem Seegebiet wird NAVTEX angewandt?",
+    "a": "im Küstenbereich bis zu 400 sm vom Standort des Senders"
+  },
+  {
+    "id": "SB_87",
+    "q": "Welche Auswahlmöglichkeiten bestehen für den Empfang von NAVTEX - Sendungen?",
+    "a": "es müssen die NAVTEX-Stationen und die Art der gewünschten Meldungen am Gerät eingegeben werden"
+  },
+  {
+    "id": "SB_88",
+    "q": "Welche Reichweite hat der NAVTEX-Dienst auf 518 kHz ?",
+    "a": "ca. 400 sm vom Senderstandort aus"
+  },
+  {
+    "id": "SB_89",
+    "q": "Worauf muss beim Einstellen eines NAVTEX-Empfängers geachtet werden?",
+    "a": "Wahl der Küstenfunkstelle und Art der Aussendungen"
+  },
+  {
+    "id": "SB_91",
+    "q": "Mit welcher der genannten Einrichtungen können sie MSI über Satelliten empfangen?",
+    "a": "INMARSAT-C Klasse 2"
+  },
+  {
+    "id": "SB_92",
+    "q": "Was ist ein EGC-Empfänger ?",
+    "a": "INMARSAT-C Klasse 2"
+  },
+  {
+    "id": "SB_94",
+    "q": "Wie lautet außerhalb des GMDSS das Notzeichen im Sprechfunk?",
+    "a": "MAYDAY"
+  },
+  {
+    "id": "SB_95",
+    "q": "Was zeigt das Notzeichen außerhalb des GMDSS im Sprechfunk an?",
+    "a": "dass ein Schiff von ernster und unmittelbar bevorstehender Gefahr bedroht ist und um sofortige Hilfe bittet"
+  },
+  {
+    "id": "SB_96",
+    "q": "Wer an Bord eines Schiffes darf das Aussenden einer Notmeldung außerhalb des GMDSS anordnen?",
+    "a": "der Kapitän oder die für das Schiff verantwortliche Person"
+  },
+  {
+    "id": "SB_97",
+    "q": "Was ist im Seefunkdienst außerhalb des GMDSS vor dem Aussenden eines Notanrufs auf Kanal 16 zu beachten?",
+    "a": "es darf sofort mit dem Senden begonnen werden"
+  },
+  {
+    "id": "SB_98",
+    "q": "Womit wird außerhalb des GMDSS ein Seenotverkehr eingeleitet?",
+    "a": "mit dem Notanruf"
+  },
+  {
+    "id": "SB_99",
+    "q": "Wie oft wird außerhalb des GMDSS im Notanruf das Wort MAYDAY gesprochen?",
+    "a": "dreimal"
+  },
+  {
+    "id": "SB_100",
+    "q": "Wie oft wird außerhalb des GMDSS im Notanruf der Name des in Not befindlichen Schiffes genannt?",
+    "a": "dreimal"
+  },
+  {
+    "id": "SB_101",
+    "q": "Womit wird außerhalb des GMDSS die Notmeldung eingeleitet?",
+    "a": "mit dem Notzeichen"
+  },
+  {
+    "id": "SB_102",
+    "q": "Was folgt außerhalb des GMDSS in der Notmeldung auf den Namen oder der sonstigen Kennung der Funkstelle in Not?",
+    "a": "der Standort des in Not befindlichen Schiffes"
+  },
+  {
+    "id": "SB_103",
+    "q": "Wie ist außerhalb des GMDSS die richtige Reihenfolge für die Abfassung der Notmeldung ?",
+    "a": "Notzeichen, Kennzeichnung der Funkstelle in Not, Standort Art des Notfalls, Art der erbetenen Hilfe jede andere Angabe, die die Hilfeleistung erleichtern könnte"
+  },
+  {
+    "id": "SB_104",
+    "q": "Auf welcher Frequenz im GW-Bereich wird außerhalb des GMDSS im Seefunk die Notmeldung ausgesendet?",
+    "a": "vorzugsweise auf der internationalen Not-, Sicherheits- und Anruffrequenz 2182 kHz; aber auch auf jeder anderen verfügbaren Frequenz, auf dem die Funkstelle in Not Aufmerksamkeit auf sich lenken könnte"
+  },
+  {
+    "id": "SB_105",
+    "q": "Darf im Seefunk außerhalb des GMDSS die Notmeldung nur auf 2182 kHz ausgesendet werden?",
+    "a": "nein, eine Funkstelle in Not darf die Notmeldung auch auf jeder verfügbaren Frequenz aussenden, auf dem sie die Aufmerksamkeit auf sich lenken könnte"
+  },
+  {
+    "id": "SB_106",
+    "q": "Auf welchem UKW-Kanal wird außerhalb des GMDSS die Notmeldung ausgesendet?",
+    "a": "vorzugsweise auf dem internationalen Not-, Sicherheits- und Anrufkanal 16; eine Funkstelle in Not darf die Notmeldung jedoch auch auf jedem verfügbaren Kanal aussenden, auf dem sie die Aufmerksamkeit auf sich lenken könnte"
+  },
+  {
+    "id": "SB_107",
+    "q": "Darf im Seefunk außerhalb des GMDSS die Notmeldung ausschließlich auf Kanal 16 ausgesendet werden?",
+    "a": "nein, eine Funkstelle in Not darf die Notmeldung auch auf jedem verfügbaren Kanal aussenden, auf dem sie die Aufmerksamkeit auf sich lenken könnte"
+  },
+  {
+    "id": "SB_108",
+    "q": "Darf im Seefunk außerhalb des GMDSS eine Notmeldung auf der Notfrequenz wiederholt werden?",
+    "a": "ja"
+  },
+  {
+    "id": "SB_109",
+    "q": "Wann wird außerhalb des GMDSS eine Notmeldung wiederholt?",
+    "a": "eine Notmeldung wird wiederholt, wenn die Seefunkstelle in Not keine Bestätigung auf ihre Notmeldung erhalten hat oder wenn sie es aus anderen Gründen für notwendig hält"
+  },
+  {
+    "id": "SB_110",
+    "q": "Muss außerhalb des GMDSS eine Notmeldung von jeder Seefunkstelle bestätigt werden, die diese Meldung empfangen hat?",
+    "a": "grundsätzlich ja, die Bestätigung kann aber unterbleiben, wenn die empfangende Seefunkstelle nicht für eine Hilfeleistung in Frage kommt und andere Funkstellen die Notmeldung schon bestätigt haben"
+  },
+  {
+    "id": "SB_111",
+    "q": "Wird außerhalb des GMDSS die Bestätigung des Empfangs einer Notmeldung im Sprechfunk mit MAYDAY eingeleitet?",
+    "a": "ja"
+  },
+  {
+    "id": "SB_112",
+    "q": "Ist außerhalb des GMDSS die Form der Bestätigung des Empfangs einer Notmeldung festgelegt?",
+    "a": "ja, nach einem mit dem Notzeichen eingeleiteten Anruf folgt \"Received MAYDAY\" oder \"ROMEO ROMEO ROMEO MAYDAY\""
+  },
+  {
+    "id": "SB_113",
+    "q": "Muss außerhalb des GMDSS eine Seefunkstelle, die eine Notmeldung einer in ihrer Nähe befindlichen anderen Seefunkstelle empfangen hat, den Empfang der Notmeldung bestätigen?",
+    "a": "ja"
+  },
+  {
+    "id": "SB_115",
+    "q": "Darf außerhalb des GMDSS eine Funkstelle, die selbst nicht in Not ist, eine Notmeldung aussenden?",
+    "a": "ja"
+  },
+  {
+    "id": "SB_116",
+    "q": "Mit welchen Worten beginnt außerhalb des GMDSS der Notanruf einer Seefunkstelle, die sich selbst nicht in Not befindet ?",
+    "a": "mit MAYDAY RELAY"
+  },
+  {
+    "id": "SB_117",
+    "q": "Welche Anrufe beginnen außerhalb des GMDSS mit den Worten „MAYDAY RELAY“?",
+    "a": "Notanrufe, die durch eine Funkstelle ausgesendet werden, die sich selbst nicht in Not befindet"
+  },
+  {
+    "id": "SB_118",
+    "q": "Eine Funkstelle verbreitet außerhalb des GMDSS eine Notmeldung unter Verwendung der Wörter MAYDAY RELAY. Was bedeutet das?",
+    "a": "die Funkstelle verbreitet eine Notmeldung für eine andere Funkstelle, die sich in Not befindet"
+  },
+  {
+    "id": "SB_119",
+    "q": "Wann wird außerhalb des GMDSS im Seefunkdienst „SILENCE MAYDAY“ ausgesendet?",
+    "a": "wenn die Funkstelle in Not oder die Funkstelle, die den Notverkehr leitet, einer oder mehreren Funkstellen das Senden untersagt (Funkstille auferlegt)"
+  },
+  {
+    "id": "SB_120",
+    "q": "Wann wird außerhalb des GMDSS im Seefunkdienst „SILENCE DETRESSE“ ausgesendet?",
+    "a": "wenn eine Funkstelle in der Nähe des Schiffes in Not es für unerläßlich hält, anderen Funkstellen das Senden zu untersagen (Funkstille auferlegt)"
+  },
+  {
+    "id": "SB_121",
+    "q": "Wann wird außerhalb des GMDSS im Seefunkdienst „PRUDENCE“ ausgesendet?",
+    "a": "wenn es nicht mehr nötig ist, völlige Funkstille auf einer für den Notverkehr benutzten Frequenz aufrechtzuerhalten"
+  },
+  {
+    "id": "SB_122",
+    "q": "Welcher Begriff steht außerhalb des GMDSS am Ende der Meldung, wenn die völlige Funkstille nicht mehr nötig ist?",
+    "a": "PRUDENCE"
+  },
+  {
+    "id": "SB_123",
+    "q": "Was besagt außerhalb des GMDSS die Meldung, an deren Ende „SILENCE FINI“ steht?",
+    "a": "der Notverkehr ist beendet"
+  },
+  {
+    "id": "SB_125",
+    "q": "Welche ist außerhalb des GMDSS die internationale Notfrequenz für den Sprechfunkverkehr auf Grenzwellen?",
+    "a": "2182 kHz"
+  },
+  {
+    "id": "SB_126",
+    "q": "Wann sind außerhalb des GMDSS die Zeiten der Funkstille auf der Frequenz 2182 kHz?",
+    "a": "x Uhr 00 bis 03 und von x Uhr 30 bis 33"
+  },
+  {
+    "id": "SB_128",
+    "q": "Wie lautet im Seefunkdienst außerhalb des GMDSS das Dringlichkeitszeichen?",
+    "a": "PAN PAN"
+  },
+  {
+    "id": "SB_129",
+    "q": "Was kündigt außerhalb des GMDSS das Dringlichkeitszeichen im Seefunkdienst an?",
+    "a": "dass die rufende Funkstelle eine sehr dringende Meldung auszusenden hat, welche die Sicherheit eines Schiffes oder einer Person betrifft"
+  },
+  {
+    "id": "SB_130",
+    "q": "Welche Meldungen dürfen im Seefunkdienst außerhalb des GMDSS auf der Frequenz 156,8 MHz (Kanal 16) übermittelt werden?",
+    "a": "Notmeldungen und unter Einhaltung bestimmter Bedingungen Dringlichkeitsmeldungen"
+  },
+  {
+    "id": "SB_131",
+    "q": "Dürfen Funkstellen außerhalb des GMDSS während eines Notverkehrs, an dem sie nicht teilnehmen, auf der Frequenz, auf der der Notverkehr stattfindet, senden?",
+    "a": "ja, in außergewöhnlichen Fällen und unter bestimmten Bedingungen dürfen Dringlichkeits und Sicherheitsmeldungen während einer Pause im Notverkehr angekündigt werden"
+  },
+  {
+    "id": "SB_132",
+    "q": "Auf welcher Frequenz im Grenzwellenbereich sollte außerhalb des GMDSS die erste Aussendung einer an \"Alle Funkstellen\" gerichteten Dringlichkeitsmeldung erfolgen?",
+    "a": "2182 kHz"
+  },
+  {
+    "id": "SB_133",
+    "q": "Für welche Zwecke darf außerhalb des GMDSS die Frequenz 2182 kHz nicht benutzt werden?",
+    "a": "für die Wiederholung einer Dringlichkeitsmeldung"
+  },
+  {
+    "id": "SB_134",
+    "q": "Darf außerhalb des GMDSS eine Dringlichkeitsmeldung auf der Frequenz 2182 kHz angekündigt werden, wenn diese durch Notverkehr belegt ist?",
+    "a": "ja, jedoch nur während einer Pause im Notverkehr"
+  },
+  {
+    "id": "SB_135",
+    "q": "Wie lautet im Seefunkdienst außerhalb des GMDSS das Sicherheitszeichen?",
+    "a": "SECURITE"
+  },
+  {
+    "id": "SB_136",
+    "q": "Was kündigt außerhalb des GMDSS das Sicherheitszeichen im Seefunkdienst an?",
+    "a": "dass eine nautische Warnnachricht ausgesendet werden soll"
+  },
+  {
+    "id": "SB_137",
+    "q": "Auf welcher Frequenz sollen Sicherheitsmeldungen außerhalb des GMDSS nach Ankündigung auf der Notfrequenz ausgesendet werden?",
+    "a": "auf einer Arbeitsfrequenz"
+  },
+  {
+    "id": "SB_138",
+    "q": "Welche Meldungen dürfen außerhalb des GMDSS unter bestimmten Voraussetzungen während eines Notverkehrs auf der Frequenz, auf der Notverkehr stattfindet, angekündigt werden?",
+    "a": "Dringlichkeits- und Sicherheitsmeldungen"
+  },
+  {
+    "id": "SB_139",
+    "q": "Wie heißt das Verfahren zur Verkehrsaufnahme auf. der Frequenz 2187,5 kHz?",
+    "a": "DSC"
+  },
+  {
+    "id": "SB_140",
+    "q": "In welchem Abstand darf ein nicht beantworteter Anruf an eine Seefunkstelle auf Kanal 16 oder 2182 kHz wiederholt werden?",
+    "a": "der Abstand muss mindestens drei Minuten betragen"
+  },
+  {
+    "id": "SB_141",
+    "q": "Über welches Verfahren können ausgewählte Seefunkstellen im Raumsegment des GMDSS gerufen werden?",
+    "a": "EGC-Verfahren"
+  },
+  {
+    "id": "SB_142",
+    "q": "Wo steht der Inmarsat-Satelliten mit der Bezeichnung AOR-W?",
+    "a": "westlicher Atlantik"
+  },
+  {
+    "id": "SB_143",
+    "q": "Über welchem Gebiet steht der Inmarsat-Satellit mit der Bezeichnung POR?",
+    "a": "Pazifik"
+  },
+  {
+    "id": "SB_144",
+    "q": "Wie wird der Winkel zwischen Horizont und Satellit vom Schiff aus gesehen in der englischen Sprache genannt?",
+    "a": "Elevation-angle"
+  },
+  {
+    "id": "SB_145",
+    "q": "Wie bezeichnet man den Antennenwinkel zwischen Meridian und Satellit vom Schiff aus gesehen in der englischen Sprache?",
+    "a": "Azimut-angle"
+  },
+  {
+    "id": "SB_146",
+    "q": "Für den Aufbau welcher Verbindung wird die dreistellige Satelliten-Kennummer bei Inmarsat benötigt?",
+    "a": "Schiff - Schiff"
+  },
+  {
+    "id": "SB_147",
+    "q": "Welche Institution muß vor Inbetriebnahme eine SATCOM-Anlage ihre Zustimmung geben ?",
+    "a": "Inmarsat London"
+  },
+  {
+    "id": "SB_148",
+    "q": "Welche der genannten Dienste bietet Inmarsat C ?",
+    "a": "Telex und Datenübertragung"
+  },
+  {
+    "id": "SB_149",
+    "q": "Was muß beim Abschalten einer SATCOM-C-Anlage , nach dem Betrieb mit einer CES beachtet werden ?",
+    "a": "Es muss die Anlage ausgeloggt werden"
+  },
+  {
+    "id": "SB_150",
+    "q": "Was müssen Sie beachten, wenn Sie eine Küstenfunkstelle im Sprechfunk auf Kurzwellen rufen wollen?",
+    "a": "den Hörbereitschaftsplan"
+  },
+  {
+    "id": "SB_151",
+    "q": "Welche Bedeutung hat die Ankündigung \"INTERCO\" im Sprechfunkverkehr ?",
+    "a": "die Funkstelle beabsichtigt, Abkürzungen aus dem Internationalen Signalbuch zu verwenden"
+  },
+  {
+    "id": "SB_152",
+    "q": "Ist für den Betrieb einer Amateurfunkstelle auf einem österreichischen Seeschiff eine besondere Bewilligung erforderlich?",
+    "a": "es genügt, wenn der Kapitän zustimmt"
+  },
+  {
+    "id": "SB_153",
+    "q": "Welche Grenzwellen-Frequenz wird zum DSC-Anruf zwischen Schiffen international benutzt ?",
+    "a": "2177 kHz"
+  },
+  {
+    "id": "SB_154",
+    "q": "Auf dem Display eines DSC-Controllers erscheint die Abkürzung “ackn”. Wie lautet die deutsche Bezeichnung?",
+    "a": "Bestätigung einer Meldung"
+  },
+  {
+    "id": "SB_155",
+    "q": "Auf dem Display eines DSC-Controllers erscheint die Abkürzung “polling”. Was heißt das?",
+    "a": "Sendeabruf"
+  },
+  {
+    "id": "SB_156",
+    "q": "Auf dem Display eines DSC-Controllers erscheint die Abkürzung “unable, no reason”. Was heißt das?",
+    "a": "der Aufforderung kann nicht gefolgt werden; ohne Begründung"
+  },
+  {
+    "id": "SB_157",
+    "q": "Welche Angaben stehen im Kopf eines Seefunktelegramms?",
+    "a": "Aufgabe - Seefunkstelle , Nummer, Wortzahl, Tag, Uhrzeit und AAIC"
+  },
+  {
+    "id": "SB_158",
+    "q": "Bis zu wie viel Schriftzeichen werden alle Wörter, Ausdrücke und Gruppen in einem Telegramm als ein Wort berechnet?",
+    "a": "bis 10 Zeichen"
+  },
+  {
+    "id": "SB_159",
+    "q": "In welcher Reihenfolge müssen die einzelnen Teile eines Telegramms im Seefunkdienst aufgegeben werden?",
+    "a": "Kopf, (Dienstvermerk), Anschrift, Text, Unterschrift"
+  },
+  {
+    "id": "TK_1",
+    "q": "Welcher Frequenzbereich wird im Seefunkdienst über Satelliten im GMDSS benützt ?",
+    "a": "1,5 bis 1,6 GHz"
+  },
+  {
+    "id": "TK_4",
+    "q": "Wie erfolgt die Ausbreitung grundsätzlich auf Frequenzen über 30 MHz (VHF, UHF, SHF) ?",
+    "a": "quasioptisch"
+  },
+  {
+    "id": "TK_5",
+    "q": "Wie erfolgt die Ausbreitung grundsätzlich auf Frequenzen im Kurzwellenbereich ?",
+    "a": "mittels Raumwellen"
+  },
+  {
+    "id": "TK_6",
+    "q": "Wann ist in der Regel die Ausbreitung auf dem 4 MHz -Seefunkband in Bezug auf die Tageszeit besser ?",
+    "a": "in der Dunkelheit"
+  },
+  {
+    "id": "TK_7",
+    "q": "Wann ist in der Regel die Ausbreitung auf dem 22 MHz-Seefunkband in Bezug auf die Tageszeit besser ?",
+    "a": "tagsüber"
+  },
+  {
+    "id": "TK_8",
+    "q": "Welcher Sprechfunk-Frequenzbereich deckt den Bereich bis mindestens 150 sm am Tag ab ?",
+    "a": "Grenzwelle"
+  },
+  {
+    "id": "TK_9",
+    "q": "Wie erfolgt die Ausbreitung grundsätzlich im Grenzwellenbereich ?",
+    "a": "Bodenwelle, nachts zusätzlich Raumwelle"
+  },
+  {
+    "id": "TK_10",
+    "q": "Was versteht man unter Raumwelle?",
+    "a": "Reflexion der Welle in der Ionosphäre"
+  },
+  {
+    "id": "TK_11",
+    "q": "In welchem Frequenzbereich spielt die Raumwelle die entscheidende Rolle bei der Ausbreitung ?",
+    "a": "Kurzwellenbereich"
+  },
+  {
+    "id": "TK_12",
+    "q": "Was versteht man unter Bodenwelle ?",
+    "a": "Ausbreitung entlang der Erdoberfläche"
+  },
+  {
+    "id": "TK_13",
+    "q": "Wie bezeichnet man das Gebiet, in welchem im Kurzwellenbereich weder Bodenwelle noch Raumwelle empfangen werden kann ?",
+    "a": "tote Zone"
+  },
+  {
+    "id": "TK_14",
+    "q": "Welche ionosphärische Schicht begünstigt hauptsächlich die Kurzwellenausbreitung ?",
+    "a": "F2"
+  },
+  {
+    "id": "TK_15",
+    "q": "Welche ionosphärische Schicht behindert hauptsächlich die Kurzwellenausbreitung ?",
+    "a": "D"
+  },
+  {
+    "id": "TK_17",
+    "q": "Was ist die Störursache, wenn beim Sprechfunk-Empfang Pfeifen oder Heulen auftritt ?",
+    "a": "es werden zwei oder mehrere Aussendungen anderer Funkanlagen gleichzeitig empfangen"
+  },
+  {
+    "id": "TK_18",
+    "q": "Wodurch entsteht „ Schwund“?",
+    "a": "(Fading) durch Laufzeitunterschiede bei unterschiedlichen Wellen-Ausbreitungswegen"
+  },
+  {
+    "id": "TK_19",
+    "q": "Welches ist die geeignetste Maßnahme gegen die Auswirkung von Schwund ?",
+    "a": "Einschalten der Schwundregelung"
+  },
+  {
+    "id": "TK_20",
+    "q": "Wie erfolgt die Übertragung eines Digitalen Selektivrufes (DSC) ?",
+    "a": "die Nachrichten werden in Binärzeichen umgesetzt; die Elemente werden in Form zweier Tonfrequenzen in einem FEC-Verfahren übertragen."
+  },
+  {
+    "id": "TK_21",
+    "q": "Wie nennt man den Vorgang bei dem niederfrequente elektrische Schwingungen (z.B. Sprache) einer hochfrequenten „aufgedrückt“ werden?",
+    "a": "Modulation"
+  },
+  {
+    "id": "TK_22",
+    "q": "Warum werden Funkaussendungen bezeichnet ?",
+    "a": "zur Kennzeichnung der erforderlichen Bandbreite sowie der Sendeart"
+  },
+  {
+    "id": "TK_23",
+    "q": "Was bedeutet die Abkürzung SSB ?",
+    "a": "Einseitenband"
+  },
+  {
+    "id": "TK_24",
+    "q": "Was bedeutet die Abkürzung AM ?",
+    "a": "Amplitudenmodulation"
+  },
+  {
+    "id": "TK_25",
+    "q": "Was bedeutet die Abkürzung FM ?",
+    "a": "Frequenzmodulation"
+  },
+  {
+    "id": "TK_26",
+    "q": "Welche Sendeart wird für das Funkfernschreiben verwendet ?",
+    "a": "F1B"
+  },
+  {
+    "id": "TK_27",
+    "q": "Wie wird die Sendeart „SSB mit unterdrücktem Träger“ im Sprechfunk gekennzeichnet ?",
+    "a": "J3E"
+  },
+  {
+    "id": "TK_28",
+    "q": "Wie wird die Sendeart „SSB mit vollem Träger“ im Sprechfunk gekennzeichnet ?",
+    "a": "H3E"
+  },
+  {
+    "id": "TK_29",
+    "q": "Am Sender können verschiedene Sendearten geschaltet werden. Welche wird grundsätzlich im Grenz- und KurzwellenSprechfunk verwendet ?",
+    "a": "J3E"
+  },
+  {
+    "id": "TK_30",
+    "q": "Wie wird eine Einseitenbandaussendung mit unterdrücktem Träger im Sprechfunk auf Kurzwelle vollständig und richtig bezeichnet ?",
+    "a": "2k70J3E"
+  },
+  {
+    "id": "TK_31",
+    "q": "Welche Modulationsart für die Übertragung von Sprache wird im Grenzwellenbereich angewendet ?",
+    "a": "Amplitudenmodulation"
+  },
+  {
+    "id": "TK_32",
+    "q": "Welche der genannten Frequenzen wird im Mittelwellenbereich für Aussendungen im Seefunkdienst benützt ?",
+    "a": "518 kHz"
+  },
+  {
+    "id": "TK_33",
+    "q": "Welche Frequenzen umfaßt der Grenzwellenbereich im Seefunkdienst ?",
+    "a": "1605 bis 3800 kHz"
+  },
+  {
+    "id": "TK_35",
+    "q": "Was heißt „ITU-Kanal 804“ ?",
+    "a": "Kanal 4 im 8 MHz Band"
+  },
+  {
+    "id": "TK_37",
+    "q": "Was versteht man unter zugeteilter Frequenz ?",
+    "a": "die Mitte des Frequenzbandes, das einer Funkstelle zugeteilt ist"
+  },
+  {
+    "id": "TK_38",
+    "q": "Welche Art von Satellitennetz betreibt INMARSAT weltweit ?",
+    "a": "ein Satellitennetz mit geostationären Satelliten"
+  },
+  {
+    "id": "TK_39",
+    "q": "Was ist eine Schiffserdfunkstelle ?",
+    "a": "Mobile Erdfunkstelle des Seefunkdienstes über Satelliten- an Bord eines Schiffes"
+  },
+  {
+    "id": "TK_40",
+    "q": "Wie werden Seefunkstellen im mobilen Seefunkdienst über Satelliten identifiziert ?",
+    "a": "durch die Inmarsat Mobile Number"
+  },
+  {
+    "id": "TK_41",
+    "q": "Welche INMARSAT Dienste sind im GMDSS nicht zugelassen ?",
+    "a": "Inmarsat M"
+  },
+  {
+    "id": "TK_42",
+    "q": "Welche Funkstelle wird als CES bezeichnet ?",
+    "a": "Küstenerdfunkstelle"
+  },
+  {
+    "id": "TK_43",
+    "q": "Was bedeutet die Abkürzung SES ?",
+    "a": "Schiffserdfunkstelle"
+  },
+  {
+    "id": "TK_44",
+    "q": "Was wird im Zusammenhang mit INMARSAT-Anlagen als \"Commissioning\" bezeichnet?",
+    "a": "Einmessen der Anlage"
+  },
+  {
+    "id": "TK_46",
+    "q": "Welche Art von Satelliten gehören zum COSPAS-SARSAT-System ?",
+    "a": "polumlaufende Satelliten"
+  },
+  {
+    "id": "TK_47",
+    "q": "Welcher Organisation im GMDSS gehören polumlaufende Seenotsatelliten ?",
+    "a": "COSPAS/SARSAT"
+  },
+  {
+    "id": "TK_49",
+    "q": "Welche Funkstelle wird als LUT bezeichnet ?",
+    "a": "Erdfunkstelle im COSPAS-SARSAT-System Local User Terminal"
+  },
+  {
+    "id": "TK_50",
+    "q": "Welche Stelle wird als MCC bezeichnet ?",
+    "a": "Kontroll- und Empfangsstelle im COSPAS-SARSAT System Mission Control Center"
+  },
+  {
+    "id": "TK_51",
+    "q": "Welche Stelle wird als RCC bezeichnet ?",
+    "a": "Rettungsleitstelle Rescue Coordination Center"
+  },
+  {
+    "id": "TK_52",
+    "q": "Wozu dient der DSC Wachempfänger ?",
+    "a": "zur dauernden Überwachung einer DSC-Notfrequenz"
+  },
+  {
+    "id": "TK_53",
+    "q": "Wozu dient der scannende DSC-Wachempfänger auf Kurzwelle ?",
+    "a": "zur dauernden Überwachung aller KW-DSC-Notfrequenzen"
+  },
+  {
+    "id": "TK_54",
+    "q": "Auf welcher Grenzwellenfrequenz ist der DSC-Wachempfänger empfangsbereit ?",
+    "a": "2187,5 kHz"
+  },
+  {
+    "id": "TK_55",
+    "q": "Wodurch wird bei einem DSC-Wachempfänger die Signalisierung ausgelöst ?",
+    "a": "durch den Empfang des richtigen DSC-Signales"
+  },
+  {
+    "id": "TK_56",
+    "q": "Warum ist der Grenz- bzw. Kurzwellenbereich für den Seefunkdienst von besonderer Bedeutung ?",
+    "a": "wegen der großen Reichweite der Aussendungen in diesen Bereichen"
+  },
+  {
+    "id": "TK_57",
+    "q": "Warum müssen manche, vor allem ältere Grenz- bzw. Kurzwellensender noch abgestimmt werden ?",
+    "a": "zur Anpassung an die Antenne und wegen des großen zu überdeckenden Frequenzbereiches"
+  },
+  {
+    "id": "TK_58",
+    "q": "Was ist bei der allfälligen Abstimmung eines Grenz- bzw. Kurzwellensenders zu beachten ?",
+    "a": "dass kein Funkverkehr durch diesen Vorgang gestört wird"
+  },
+  {
+    "id": "TK_59",
+    "q": "Welchen Zweck hat die Schwundregelung ?",
+    "a": "um die Schwankungen der Signalstärke beim Empfang möglichst auszugleichen"
+  },
+  {
+    "id": "TK_60",
+    "q": "Wozu dient der Clarifier ?",
+    "a": "um bei SSB-Empfang geringe Frequenzabweichungen korrigieren zu können"
+  },
+  {
+    "id": "TK_61",
+    "q": "Wozu dient eine EPIRB im GMDSS?",
+    "a": "als Alarmierungsmöglichkeit"
+  },
+  {
+    "id": "TK_62",
+    "q": "Welche Informationen werden durch eine COSPAS-SARSAT EPIRB ausgesendet ?",
+    "a": "immer mindestens die Identität (Anmerkung: nicht bei 121,5)"
+  },
+  {
+    "id": "TK_63",
+    "q": "Über welches Satellitensystem werden L-Band EPIRB‘s empfangen ?",
+    "a": "INMARSAT"
+  },
+  {
+    "id": "TK_64",
+    "q": "Welche Aussendung erfolgt durch eine SART Anlage ?",
+    "a": "ein Signal, das auf Such-Radarschirmen als 12 Striche zu erkennen ist"
+  },
+  {
+    "id": "TK_65",
+    "q": "Kann der DSC-Controller der Klasse A auch für Routineanrufe verwendet werden ?",
+    "a": "ja"
+  },
+  {
+    "id": "TK_66",
+    "q": "Wie lange etwa dauert ein DSC Ruf auf Grenz-oder Kurzwelle?",
+    "a": "ca. 7 Sekunden"
+  },
+  {
+    "id": "TK_67",
+    "q": "Wie überprüft man die allgemeine Funktion des DSC-Controllers?",
+    "a": "mittels der eingebauten Testroutine"
+  },
+  {
+    "id": "TK_68",
+    "q": "Welcher DSC-Controller hat mehr Möglichkeiten verschiedene Eingaben zu tätigen und Geräte zu steuern ?",
+    "a": "der GW-/KW-DSC-Controller"
+  },
+  {
+    "id": "TK_69",
+    "q": "Mit welchen INMARSAT Diensten ist ein Echtzeitverkehr möglich ?",
+    "a": "A, B, M"
+  },
+  {
+    "id": "TK_70",
+    "q": "Welche INMARSAT-Anlagen verwenden analoge Modulation ?",
+    "a": "A"
+  },
+  {
+    "id": "TK_71",
+    "q": "Welche INMARSAT-Anlagen verwenden digitale Modulation ?",
+    "a": "B und M"
+  },
+  {
+    "id": "TK_72",
+    "q": "Welche INMARSAT Dienste ermöglichen keine Sprachübertragung ?",
+    "a": "C"
+  },
+  {
+    "id": "TK_73",
+    "q": "Was versteht man unter Speicherverkehr (store and forward operation) ?",
+    "a": "Text wird im Zuge der Übermittlung zwischengespeichert und gegebenenfalls nicht sofort übermittelt"
+  },
+  {
+    "id": "TK_74",
+    "q": "Bei welcher Satellitenanlage ist „Azimut“ und „Elevation“ für die Inbetriebnahme nicht von Bedeutung ?",
+    "a": "C"
+  },
+  {
+    "id": "TK_75",
+    "q": "Worauf muß bei der Aufstellung der INMARSAT-C-Antenne geachtet werden ?",
+    "a": "auf eine möglichst hindernisfreie Sicht nach allen Richtungen"
+  },
+  {
+    "id": "TK_76",
+    "q": "Welche Funktion hat ein EGC-Empfänger ?",
+    "a": "Empfang des erweiterten Gruppenrufes über das Raumsegment des GMDSS"
+  },
+  {
+    "id": "TK_77",
+    "q": "Welche INMARSAT-C-Anlage ist für den EGC-Empfang nicht geeignet ?",
+    "a": "INMARSAT-C Klasse 1"
+  },
+  {
+    "id": "TK_78",
+    "q": "Wo ist ein EGC-Empfang nicht möglich ?",
+    "a": "Seegebiet A4"
+  },
+  {
+    "id": "TK_79",
+    "q": "Womit werden „Maritime Safety Informations“ via INMARSAT empfangen ?",
+    "a": "EGC-Empfänger"
+  },
+  {
+    "id": "TK_80",
+    "q": "Welche Arten von Antennen werden auf Grenz- und Kurzwelle im Seefunk nicht verwendet ?",
+    "a": "Ferritstabantennen"
+  },
+  {
+    "id": "TK_81",
+    "q": "Welche Arbeiten dienen nicht der Wartung und Instandhaltung der Antennenanlage ?",
+    "a": "Überprüfen der mechanischen Nachführeinrichtung der INMARSAT-C-Antenne"
+  }
+]

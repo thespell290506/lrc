@@ -1,0 +1,482 @@
+[
+ {
+  "id": "LRC_1",
+  "q": "Wie werden die für die Ausrüstung mit Funkanlagen festgelegten Seegebiete im GMDSS bezeichnet?",
+  "correct": "A1, A2, A3, A4",
+  "wrong": [
+   "Zone 1, Zone 2, Zone 3, Zone 4",
+   "Gebiet I, Gebiet II, Gebiet III, Gebiet IV",
+   "SOLAS 1 bis SOLAS 4"
+  ]
+ },
+ {
+  "id": "LRC_2",
+  "q": "Wie wird das Seegebiet A1 beschrieben?",
+  "correct": "Ein festgelegtes Gebiet innerhalb der Sprechfunkreichweite mindestens einer UKW-Küstenfunkstelle mit ununterbrochener DSC-Alarmierung",
+  "wrong": [
+   "Ein festgelegtes Gebiet innerhalb der Reichweite mindestens einer Grenzwellen-Küstenfunkstelle mit DSC-Alarmierung",
+   "Ein Gebiet innerhalb der Überdeckung eines geostationären Inmarsat-Satelliten",
+   "Das Gebiet bis 400 Seemeilen vor der Küste"
+  ]
+ },
+ {
+  "id": "LRC_3",
+  "q": "Wie wird das Seegebiet A2 beschrieben?",
+  "correct": "Ein festgelegtes Gebiet innerhalb der Sprechfunkreichweite mindestens einer Küstenfunkstelle mit ununterbrochener DSC-Alarmierung auf Grenzwelle",
+  "wrong": [
+   "Ein festgelegtes Gebiet innerhalb der UKW-Reichweite einer Küstenfunkstelle",
+   "Ein Gebiet innerhalb der Kurzwellen-Reichweite einer Küstenfunkstelle",
+   "Ein Gebiet mit NAVTEX-Empfang auf 518 kHz"
+  ]
+ },
+ {
+  "id": "LRC_4",
+  "q": "Wie wird das Seegebiet A3 beschrieben?",
+  "correct": "Ein Gebiet innerhalb der Überdeckung eines geostationären Inmarsat-Satelliten, der ununterbrochen für Alarmierungen zur Verfügung steht",
+  "wrong": [
+   "Ein Gebiet außerhalb jeder Grenzwellen-Reichweite",
+   "Das Gebiet nördlich von 70° Nord und südlich von 70° Süd",
+   "Ein Gebiet mit ununterbrochener Kurzwellen-DSC-Überwachung"
+  ]
+ },
+ {
+  "id": "LRC_5",
+  "q": "Welchen geografischen Bereich etwa umfasst das Seegebiet A4?",
+  "correct": "Die Gebiete außerhalb der Überdeckung eines geostationären Inmarsat-Satelliten, also nördlich von 76°N und südlich von 76°S (Polkappen)",
+  "wrong": [
+   "Die Gebiete zwischen 40°N und 40°S",
+   "Den gesamten Bereich außerhalb der UKW-Reichweite",
+   "Alle Gewässer außerhalb der 12-Seemeilen-Zone"
+  ]
+ },
+ {
+  "id": "SB_7",
+  "q": "Wer gibt den GMDSS Master Plan heraus?",
+  "correct": "Die IMO",
+  "wrong": [
+   "Die IALA (Internationale Vereinigung für Seezeichen)",
+   "Die nationale Fernmeldebehörde",
+   "Die Internationale Seeschifffahrts-Organisation (ISO)"
+  ]
+ },
+ {
+  "id": "LRC_9",
+  "q": "Was versteht man unter Simplex-Betrieb?",
+  "correct": "Wechselsprechen — abwechselndes Senden und Empfangen auf einer Frequenz",
+  "wrong": [
+   "Gleichzeitiges Senden und Empfangen auf zwei Frequenzen",
+   "Wechselsprechen auf zwei getrennten Frequenzen",
+   "Automatischer Wechsel zwischen mehreren Kanälen"
+  ]
+ },
+ {
+  "id": "LRC_10",
+  "q": "Was versteht man unter Duplex-Betrieb?",
+  "correct": "Gegensprechen — gleichzeitiges Senden und Empfangen wie am Telefon, mindestens zwei Frequenzen erforderlich",
+  "wrong": [
+   "Abwechselndes Sprechen auf einer einzigen Frequenz",
+   "Wechselsprechen auf zwei Frequenzen, ohne gleichzeitig senden zu können",
+   "Gleichzeitiges Senden auf einer Frequenz durch zwei Stationen"
+  ]
+ },
+ {
+  "id": "LRC_11",
+  "q": "Was versteht man unter Semiduplex-Betrieb?",
+  "correct": "Wechselsprechen auf zwei Frequenzen — das Gerät schaltet beim Senden/Empfangen die Frequenz um",
+  "wrong": [
+   "Gleichzeitiges Senden und Empfangen auf zwei Frequenzen",
+   "Abwechselndes Sprechen auf einer einzigen Frequenz",
+   "Gleichzeitiges Senden und Empfangen auf einer einzigen Frequenz"
+  ]
+ },
+ {
+  "id": "LRC_12",
+  "q": "Was ist ein Selektivruf?",
+  "correct": "Ein Anruf, der an eine bestimmte Funkstelle oder einen bestimmten Empfängerkreis gerichtet ist und technisch nur diese erreicht",
+  "wrong": [
+   "Ein Anruf, der immer an alle Funkstellen im Empfangsbereich geht",
+   "Ein Anruf, der ausschließlich für Notfälle zulässig ist",
+   "Ein Anruf, bei dem der Empfänger die Frequenz selbst auswählt"
+  ]
+ },
+ {
+  "id": "LRC_13",
+  "q": "Was heißt DSC?",
+  "correct": "Digital Selective Calling — Digitaler Selektivruf",
+  "wrong": [
+   "Distress Safety Call — Not- und Sicherheitsruf",
+   "Direct Ship Communication — Direkte Schiffskommunikation",
+   "Digital Signal Control — Digitale Signalsteuerung"
+  ]
+ },
+ {
+  "id": "LRC_14",
+  "q": "Welche Verkehrsart hat die höchste Priorität in der Rangfolge des Verkehrs?",
+  "correct": "Notverkehr",
+  "wrong": [
+   "Dringlichkeitsverkehr",
+   "Sicherheitsverkehr",
+   "Öffentlicher Nachrichtenaustausch"
+  ]
+ },
+ {
+  "id": "LRC_15",
+  "q": "Wie lautet die richtige Rangfolge von Funkverkehr?",
+  "correct": "Not-, Dringlichkeits-, Sicherheitsverkehr, öffentlicher Nachrichtenaustausch",
+  "wrong": [
+   "Not-, Sicherheits-, Dringlichkeitsverkehr, öffentlicher Nachrichtenaustausch",
+   "Sicherheits-, Not-, Dringlichkeitsverkehr, öffentlicher Nachrichtenaustausch",
+   "Dringlichkeits-, Not-, Sicherheitsverkehr, öffentlicher Nachrichtenaustausch"
+  ]
+ },
+ {
+  "id": "LRC_16",
+  "q": "Wie werden die Rufzeichen der Küstenfunkstellen für den öffentlichen Nachrichtenaustausch gebildet?",
+  "correct": "Landeskenner + 1 Buchstabe, immer drei Zeichen (z. B. SVO oder 9AS)",
+  "wrong": [
+   "Landeskenner + 2 Ziffern, immer vier Zeichen",
+   "Immer neun Ziffern wie bei der MMSI",
+   "Zwei Buchstaben für den Hafen + laufende Nummer"
+  ]
+ },
+ {
+  "id": "LRC_17",
+  "q": "In welcher Vorschrift sind die Landeskenner festgelegt?",
+  "correct": "In der Vollzugsordnung für den Funkdienst (VO-Funk)",
+  "wrong": [
+   "Im SOLAS-Übereinkommen",
+   "Im GMDSS Master Plan der IMO",
+   "In der nationalen Seeschifffahrtsverordnung"
+  ]
+ },
+ {
+  "id": "LRC_18",
+  "q": "Wodurch wird im GMDSS das Land gekennzeichnet, dem eine Funkstelle zuzuordnen ist?",
+  "correct": "Durch die MID in der MMSI",
+  "wrong": [
+   "Durch die ersten beiden Buchstaben des Rufzeichens",
+   "Durch die Inmarsat-Nummer",
+   "Durch den NAVTEX-Kennbuchstaben"
+  ]
+ },
+ {
+  "id": "LRC_20",
+  "q": "Wie erfolgt die Kennzeichnung einer Seefunkstelle im GMDSS?",
+  "correct": "Durch die MMSI — neunstellig, erste Stelle nicht 0, 1 oder 9",
+  "wrong": [
+   "Durch die MMSI — neunstellig, beginnend mit 9 (für bestimmte Zusatzanwendungen)",
+   "Durch die MMSI — neunstellig, beginnend mit einer einzelnen 0",
+   "Durch das dreistellige Rufzeichen der Küstenfunkstelle"
+  ]
+ },
+ {
+  "id": "LRC_21",
+  "q": "Wie erfolgt die Kennzeichnung einer Küstenfunkstelle im GMDSS?",
+  "correct": "Durch die MMSI — neunstellig, beginnend mit „00“",
+  "wrong": [
+   "Durch die MMSI — neunstellig, beginnend mit einer einzelnen „0“",
+   "Durch die MMSI — neunstellig, ohne führende Null",
+   "Durch die MID allein"
+  ]
+ },
+ {
+  "id": "LRC_22",
+  "q": "Wie ist die Rufnummer (MMSI) einer Gruppe von Schiffen gekennzeichnet?",
+  "correct": "Durch die MMSI — neunstellig, beginnend mit einer einzelnen „0“",
+  "wrong": [
+   "Durch die MMSI — neunstellig, beginnend mit „00“",
+   "Durch die MMSI — neunstellig, beginnend mit „9“",
+   "Durch eine achtstellige Gruppenkennung"
+  ]
+ },
+ {
+  "id": "LRC_23",
+  "q": "Welche Beziehung besteht zwischen Frequenz und Wellenlänge?",
+  "correct": "300.000 geteilt durch die Frequenz in kHz ergibt die Wellenlänge in Metern",
+  "wrong": [
+   "Frequenz in kHz mal 300.000 ergibt die Wellenlänge in Metern",
+   "300.000 geteilt durch die Wellenlänge in Metern ergibt die Frequenz in MHz",
+   "Frequenz und Wellenlänge sind zueinander direkt proportional"
+  ]
+ },
+ {
+  "id": "LRC_25",
+  "q": "Welche Frequenzen umfasst allgemein der Kurzwellenbereich?",
+  "correct": "3.000 kHz bis 30 MHz",
+  "wrong": [
+   "300 kHz bis 3.000 kHz",
+   "30 MHz bis 300 MHz",
+   "1.600 kHz bis 3.800 kHz"
+  ]
+ },
+ {
+  "id": "LRC_26",
+  "q": "Welcher Wellenlänge entsprechen 3 MHz?",
+  "correct": "100 m",
+  "wrong": [
+   "30 m",
+   "300 m",
+   "10 m"
+  ]
+ },
+ {
+  "id": "LRC_27",
+  "q": "Wie rasch breiten sich Funkwellen aus?",
+  "correct": "Mit Lichtgeschwindigkeit, ca. 300.000 km/s",
+  "wrong": [
+   "Mit Schallgeschwindigkeit, ca. 340 m/s",
+   "Mit ca. 30.000 km/s",
+   "Abhängig von der Frequenz zwischen 100.000 und 300.000 km/s"
+  ]
+ },
+ {
+  "id": "LRC_28",
+  "q": "Wie erfolgt die Ausbreitung grundsätzlich auf Frequenzen über 30 MHz (VHF, UHF, SHF)?",
+  "correct": "Quasioptisch — geradlinig wie das Licht",
+  "wrong": [
+   "Durch Raumwellen über Reflexion an der Ionosphäre",
+   "Durch Bodenwellen entlang der Erdoberfläche",
+   "Durch Beugung um die Erdkrümmung herum"
+  ]
+ },
+ {
+  "id": "LRC_29",
+  "q": "Wie erfolgt die Ausbreitung grundsätzlich im Kurzwellenbereich?",
+  "correct": "Durch Raumwellen — Brechung an Schichten der Ionosphäre",
+  "wrong": [
+   "Quasioptisch, geradlinig wie das Licht",
+   "Ausschließlich durch Bodenwellen",
+   "Durch Reflexion an der Meeresoberfläche"
+  ]
+ },
+ {
+  "id": "LRC_30",
+  "q": "Wann ist in der Regel die Ausbreitung im 4-MHz-Seefunkband in Bezug auf die Tageszeit besser?",
+  "correct": "Nachts",
+  "wrong": [
+   "Tagsüber",
+   "In den Mittagsstunden",
+   "Tag und Nacht gleich gut"
+  ]
+ },
+ {
+  "id": "LRC_31",
+  "q": "Wann ist in der Regel die Ausbreitung im 22-MHz-Seefunkband in Bezug auf die Tageszeit besser?",
+  "correct": "Tagsüber",
+  "wrong": [
+   "Nachts",
+   "In den Nachtstunden nach Mitternacht",
+   "Tag und Nacht gleich gut"
+  ]
+ },
+ {
+  "id": "LRC_33",
+  "q": "Wie erfolgt grundsätzlich die Ausbreitung im Grenzwellenbereich?",
+  "correct": "Durch Bodenwellen",
+  "wrong": [
+   "Durch Raumwellen über die Ionosphäre",
+   "Quasioptisch wie im UKW-Bereich",
+   "Über geostationäre Satelliten"
+  ]
+ },
+ {
+  "id": "LRC_34",
+  "q": "Was versteht man unter Raumwelle?",
+  "correct": "Wellen, die an Schichten der Ionosphäre reflektiert bzw. gebrochen werden",
+  "wrong": [
+   "Wellen, die sich entlang der Erdoberfläche ausbreiten",
+   "Wellen, die geradlinig bis zum Horizont laufen",
+   "Wellen, die über einen Satelliten umgesetzt werden"
+  ]
+ },
+ {
+  "id": "LRC_36",
+  "q": "Was versteht man unter Bodenwelle?",
+  "correct": "Wellen, die sich entlang einer Grenzschicht an der Erdoberfläche ausbreiten",
+  "wrong": [
+   "Wellen, die an der Ionosphäre gebrochen werden",
+   "Wellen, die vom Meeresboden reflektiert werden",
+   "Wellen, die nur bis zum optischen Horizont reichen"
+  ]
+ },
+ {
+  "id": "LRC_37",
+  "q": "Wie bezeichnet man das Gebiet, in dem im Kurzwellenbereich weder Bodenwelle noch Raumwelle empfangen werden kann?",
+  "correct": "Tote Zone",
+  "wrong": [
+   "Schattenzone",
+   "Schwundzone",
+   "Sperrbereich"
+  ]
+ },
+ {
+  "id": "LRC_38",
+  "q": "Welche ionosphärische Schicht begünstigt hauptsächlich die Kurzwellenausbreitung?",
+  "correct": "Die F-Schicht(en)",
+  "wrong": [
+   "Die D-Schicht",
+   "Die Troposphäre",
+   "Die Ozonschicht"
+  ]
+ },
+ {
+  "id": "LRC_39",
+  "q": "Welche ionosphärische Schicht behindert hauptsächlich die Kurzwellenausbreitung?",
+  "correct": "Die D-Schicht",
+  "wrong": [
+   "Die F2-Schicht",
+   "Die Stratosphäre",
+   "Die Exosphäre"
+  ]
+ },
+ {
+  "id": "LRC_41",
+  "q": "Welcher Frequenzbereich ist am wenigsten durch atmosphärische Störungen beeinträchtigt?",
+  "correct": "UKW und L-Band, also Frequenzen über 30 MHz",
+  "wrong": [
+   "Der Grenzwellenbereich",
+   "Der Langwellenbereich",
+   "Der 4-MHz-Kurzwellenbereich"
+  ]
+ },
+ {
+  "id": "LRC_42",
+  "q": "Wodurch entsteht „Schwund“?",
+  "correct": "Durch Interferenzerscheinungen",
+  "wrong": [
+   "Durch zu geringe Sendeleistung",
+   "Durch eine defekte Antennenzuleitung",
+   "Durch falsch eingestellten Squelch"
+  ]
+ },
+ {
+  "id": "LRC_43",
+  "q": "Welches ist die geeignetste Maßnahme gegen die Auswirkung von Schwund?",
+  "correct": "Wechsel des Frequenzbandes, gegebenenfalls AGC einsetzen",
+  "wrong": [
+   "Sendeleistung auf 1 W reduzieren",
+   "Squelch ganz aufdrehen",
+   "Auf eine Richtantenne umschalten"
+  ]
+ },
+ {
+  "id": "LRC_47",
+  "q": "Wie nennt man den Vorgang, bei dem niederfrequente Schwingungen einer hochfrequenten „aufgedrückt“ werden?",
+  "correct": "Modulation",
+  "wrong": [
+   "Demodulation",
+   "Interferenz",
+   "Selektion"
+  ]
+ },
+ {
+  "id": "LRC_50",
+  "q": "Was bedeutet die Abkürzung SSB?",
+  "correct": "Single Side Band — Einseitenbandübertragung",
+  "wrong": [
+   "Ship Safety Broadcast — Schiffssicherheitsaussendung",
+   "Standard Signal Bandwidth — Standardbandbreite",
+   "Short Sea Band — Nahbereichsband"
+  ]
+ },
+ {
+  "id": "LRC_51",
+  "q": "Was bedeutet die Abkürzung AM?",
+  "correct": "Amplitudenmodulation",
+  "wrong": [
+   "Antennenmodulation",
+   "Automatische Modulation",
+   "Anrufmodus"
+  ]
+ },
+ {
+  "id": "LRC_52",
+  "q": "Was bedeutet die Abkürzung FM?",
+  "correct": "Frequenzmodulation",
+  "wrong": [
+   "Funkmeldung",
+   "Frequenzmessung",
+   "Feldstärkemodulation"
+  ]
+ },
+ {
+  "id": "LRC_53",
+  "q": "Welche Sendeart wird für das Funkfernschreiben verwendet?",
+  "correct": "F1B",
+  "wrong": [
+   "J3E",
+   "H3E",
+   "G3E"
+  ]
+ },
+ {
+  "id": "LRC_54",
+  "q": "Wie wird die Sendeart „SSB mit unterdrücktem Träger“ im Sprechfunk gekennzeichnet?",
+  "correct": "J3E",
+  "wrong": [
+   "H3E",
+   "F1B",
+   "G3E"
+  ]
+ },
+ {
+  "id": "LRC_55",
+  "q": "Wie wird die Sendeart „SSB mit vollem Träger“ im Sprechfunk gekennzeichnet?",
+  "correct": "H3E",
+  "wrong": [
+   "J3E",
+   "F1B",
+   "A3E"
+  ]
+ },
+ {
+  "id": "LRC_57",
+  "q": "Wie wird eine Einseitenbandaussendung mit unterdrücktem Träger im Sprechfunk auf Kurzwelle vollständig bezeichnet?",
+  "correct": "2k70J3E",
+  "wrong": [
+   "2k70H3E",
+   "2k70F1B",
+   "16K0G3E"
+  ]
+ },
+ {
+  "id": "LRC_58",
+  "q": "Welche Sendeart wird grundsätzlich im Grenz- und Kurzwellen-Sprechfunk verwendet?",
+  "correct": "SSB mit unterdrücktem Träger, J3E",
+  "wrong": [
+   "SSB mit vollem Träger, H3E",
+   "Frequenzmodulation, G3E",
+   "Funkfernschreiben, F1B"
+  ]
+ },
+ {
+  "id": "LRC_61",
+  "q": "Welche Frequenzen umfasst der Grenzwellenbereich im Seefunkdienst?",
+  "correct": "Etwa 1.600 bis 3.800 kHz",
+  "wrong": [
+   "Etwa 300 bis 1.600 kHz",
+   "Etwa 4 bis 26 MHz",
+   "Etwa 156 bis 162 MHz"
+  ]
+ },
+ {
+  "id": "LRC_63",
+  "q": "Welcher Frequenzbereich ist im UKW-Bereich dem Seefunkdienst zugewiesen?",
+  "correct": "Etwa 156 bis 162 MHz",
+  "wrong": [
+   "Etwa 118 bis 137 MHz",
+   "Etwa 26 bis 30 MHz",
+   "Etwa 1,6 GHz"
+  ]
+ },
+ {
+  "id": "LRC_71",
+  "q": "Wie lautet die Notfrequenz des Flugfunkdienstes im UKW-Bereich?",
+  "correct": "121,5 MHz",
+  "wrong": [
+   "156,8 MHz",
+   "243,0 MHz",
+   "406 MHz"
+  ]
+ }
+]

@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LRC / SRC Lerntool</title>
+<style>
+:root{
+  --surface-0:#05070C; --surface-2:#0F131C; --surface-3:#161D2B; --surface-4:#1E2636;
+  --accent:#38BDF8; --text:#E2E8F0; --text-dim:#94A3B8; --success:#6EE7B7; --danger:#F87171;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--surface-0); color:var(--text);
+  padding:clamp(.6rem,2vw,1.5rem); min-height:100vh; line-height:1.5;
+  font-size:clamp(.82rem,2.6vw,1rem);
+}
+.container{max-width:46rem;margin:0 auto}
+h1{font-size:clamp(1.05rem,3.4vw,1.6rem);font-weight:700;margin:0 0 .5rem;letter-spacing:-.02em;text-align:center}
+.sub{text-align:center;color:var(--text-dim);font-size:.75em;margin-bottom:1rem}
+
+/* ---------- Startscreen ---------- */
+.modes{display:flex;flex-direction:column;gap:.75rem;margin:1.25rem 0}
+.mode-btn{
+  background:var(--surface-2);border:2px solid var(--surface-4);border-radius:1rem;
+  padding:1rem 1.25rem;cursor:pointer;text-align:left;color:var(--text);transition:.15s;
+}
+.mode-btn:hover,.mode-btn:focus{border-color:var(--accent);background:var(--surface-3)}
+.mode-btn b{display:block;font-size:1.05em;margin-bottom:.2rem}
+.mode-btn span{color:var(--text-dim);font-size:.85em}
+
+/* ---------- Header / Progress ---------- */
+.progress-track{background:var(--surface-2);border-radius:999px;height:.4rem;overflow:hidden;margin-bottom:.6rem}
+.progress-fill{background:linear-gradient(90deg,var(--accent),var(--success));height:100%;width:0%;transition:width .35s ease}
+.stats{display:flex;justify-content:space-between;gap:.5rem;flex-wrap:wrap;color:var(--text-dim);font-size:.8em;margin-bottom:.9rem}
+.stats b{color:var(--text);font-weight:600}
+
+/* ---------- Card ---------- */
+.card{background:var(--surface-2);border-radius:1rem;padding:clamp(.9rem,3vw,1.6rem);box-shadow:0 .6rem 2rem rgba(0,0,0,.4)}
+.qmeta{display:flex;justify-content:space-between;align-items:center;font-size:.72em;color:var(--text-dim);margin-bottom:.5rem}
+.badge{background:var(--surface-4);border-radius:999px;padding:.12rem .6rem}
+.badge.repeat{background:rgba(248,113,113,.18);color:var(--danger)}
+.question{font-size:1.06em;font-weight:600;margin-bottom:.9rem;letter-spacing:-.01em}
+.options{display:flex;flex-direction:column;gap:.5rem}
+.option{
+  background:var(--surface-3);padding:.7rem .9rem;border-radius:.8rem;cursor:pointer;
+  border:2px solid transparent;transition:.15s;
+}
+.option:hover{background:var(--surface-4)}
+.option.selected{border-color:var(--accent);background:var(--surface-4)}
+.option.correct{border-color:var(--success);background:rgba(110,231,183,.12)}
+.option.wrong{border-color:var(--danger);background:rgba(248,113,113,.12)}
+.option.locked{pointer-events:none}
+.option.dim{opacity:.55}
+
+.controls{margin-top:1rem;display:flex;gap:.5rem}
+button{
+  padding:.7rem 1rem;font-size:1em;font-weight:600;border:none;border-radius:999px;
+  cursor:pointer;flex:1;transition:.15s;font-family:inherit;
+}
+#btn-check{background:var(--accent);color:var(--surface-0)}
+#btn-next{background:var(--success);color:var(--surface-0);display:none}
+button:disabled{opacity:.45;cursor:not-allowed}
+.linkbtn{
+  background:transparent;border:1px solid var(--surface-4);color:var(--text-dim);
+  padding:.45rem .9rem;font-size:.8em;border-radius:999px;cursor:pointer;flex:0 0 auto;
+}
+.toolbar{display:flex;gap:.5rem;justify-content:center;margin-top:1.1rem;flex-wrap:wrap}
+
+/* ---------- Ergebnis ---------- */
+.result{display:none;background:var(--surface-2);border-radius:1rem;padding:1.4rem;text-align:center}
+.result h2{font-size:1.3em;color:var(--success);margin-bottom:.9rem}
+.rrow{display:flex;justify-content:space-between;padding:.45rem 0;border-bottom:1px dashed var(--surface-4);text-align:left}
+.rrow:last-of-type{border-bottom:none}
+.wronglist{margin-top:1rem;text-align:left;font-size:.85em;color:var(--text-dim);max-height:16rem;overflow-y:auto}
+.wronglist div{padding:.35rem 0;border-bottom:1px dashed var(--surface-4)}
+
+/* ---------- Editor ---------- */
+.editor{display:none;background:var(--surface-2);border-radius:1rem;padding:1rem}
+.editor label{display:block;font-size:.78em;color:var(--text-dim);margin:.6rem 0 .2rem}
+.editor input,.editor textarea{
+  width:100%;background:var(--surface-0);border:1px solid var(--surface-4);color:var(--text);
+  border-radius:.6rem;padding:.55rem .7rem;font-family:inherit;font-size:.92em;
+}
+.editor textarea{min-height:4.2rem;resize:vertical}
+.editor .row{display:flex;gap:.5rem;align-items:center}
+.hint{font-size:.75em;color:var(--text-dim);margin-top:.5rem;line-height:1.5}
+.correctmark{color:var(--success);font-size:.75em;white-space:nowrap}
+
+/* ---------- Footer ---------- */
+footer{margin-top:1.6rem;padding-top:1rem;border-top:1px solid var(--surface-4);
+  font-size:.7em;color:var(--text-dim);line-height:1.6;text-align:center}
+footer b{color:var(--text-dim)}
+.disclaimer{background:var(--surface-2);border-left:3px solid var(--danger);
+  border-radius:.5rem;padding:.7rem .85rem;margin-top:.8rem;text-align:left}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>LRC &amp; SRC Lerntool</h1>
+  <div class="sub" id="subline">Seefunk-Prüfungsvorbereitung · <span id="qcount">0</span> Fragen</div>
+
+  <!-- START -->
+  <section id="screen-start">
+    <div style="text-align:center; margin-bottom:1.5rem; color:#94a3b8; font-size:0.95rem;">
+      <span id="qcount">286</span> Fragen insgesamt · <span id="mastered-count" style="color:#6ee7b7; font-weight:600;">0</span> sitzen
+    </div>
+    <div class="modes">
+      <button class="mode-btn" onclick="startMode('learn')">
+        <b>📚 Lernmodus</b>
+        <span>Alle Fragen der Reihe nach. Falsch beantwortete Fragen kommen nach 30 weiteren Fragen automatisch erneut — bis sie sitzen.</span>
+      </button>
+      <button class="mode-btn" onclick="startMode('test')">
+        <b>📝 Testmodus</b>
+        <span>50 zufällige Fragen, jede nur einmal. Auswertung mit Prozentergebnis am Ende.</span>
+      </button>
+      <button class="mode-btn" onclick="openEditor()">
+        <b>✏️ Fragen bearbeiten</b>
+        <span>Fragen, richtige Antwort und Distraktoren direkt hier ändern. Wird im Browser gespeichert und kann als Datei exportiert werden.</span>
+      </button>
+    </div>
+    <div class="toolbar">
+      <button class="linkbtn" onclick="resetProgress()">Lernfortschritt zurücksetzen</button>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="screen-quiz" style="display:none">
+    <div class="progress-track"><div class="progress-fill" id="progress"></div></div>
+    <div class="stats">
+      <span id="st-pos">Frage 1</span>
+      <span id="st-right">Richtig <b>0</b></span>
+      <span id="st-wrong">Falsch <b>0</b></span>
+      <span id="st-pct">0%</span>
+    </div>
+    <div class="card">
+      <div class="qmeta">
+        <span class="badge" id="q-id">—</span>
+        <span class="badge" id="q-mode">—</span>
+      </div>
+      <div class="question" id="q-text">…</div>
+      <div class="options" id="options"></div>
+      <div class="controls">
+        <button id="btn-check" disabled>Antwort prüfen</button>
+        <button id="btn-next">Weiter</button>
+      </div>
+    </div>
+    <div class="toolbar">
+      <button class="linkbtn" onclick="quitToStart()">Abbrechen</button>
+    </div>
+  </section>
+
+  <!-- ERGEBNIS -->
+  <section id="screen-result" class="result"></section>
+
+  <!-- EDITOR -->
+  <section id="screen-editor" class="editor">
+    <div class="row" style="gap:.5rem">
+      <button class="linkbtn" onclick="editorPrev()">‹ Zurück</button>
+      <input id="ed-jump" type="number" min="1" style="max-width:5.5rem" placeholder="Nr.">
+      <button class="linkbtn" onclick="editorJump()">Gehe zu</button>
+      <button class="linkbtn" onclick="editorNext()">Weiter ›</button>
+    </div>
+    <div style="margin-top:.6rem;font-size:.78em;color:var(--text-dim)">
+      Frage <b id="ed-pos">1</b> von <b id="ed-total">0</b> · ID <b id="ed-id">—</b>
+    </div>
+
+    <label>Frage</label>
+    <textarea id="ed-q"></textarea>
+
+    <label>Richtige Antwort</label>
+    <textarea id="ed-correct"></textarea>
+
+    <label>Falsche Antwort 1</label>
+    <textarea id="ed-w1"></textarea>
+    <label>Falsche Antwort 2</label>
+    <textarea id="ed-w2"></textarea>
+    <label>Falsche Antwort 3</label>
+    <textarea id="ed-w3"></textarea>
+
+    <div class="toolbar" style="justify-content:flex-start">
+      <button class="linkbtn" onclick="editorSave()">💾 Änderung speichern</button>
+      <button class="linkbtn" onclick="exportJSON()">⬇️ Alle Fragen exportieren</button>
+      <button class="linkbtn" onclick="importJSON()">⬆️ Fragen importieren</button>
+      <button class="linkbtn" onclick="editorRevert()">↺ Auf Original zurücksetzen</button>
+      <button class="linkbtn" onclick="closeEditor()">Fertig</button>
+    </div>
+    <input type="file" id="fileinput" accept=".json" style="display:none">
+    <div class="hint">
+      Änderungen werden im Browser (localStorage) gespeichert und bleiben erhalten.
+      Mit <b>Exportieren</b> bekommst du eine JSON-Datei zum Sichern oder Weitergeben —
+      diese kannst du auf einem anderen Gerät wieder <b>importieren</b>.
+    </div>
+  </section>
+
+  <footer id="legal">
+    © 2026 Peter Eisenkolb · Private Lernhilfe, nicht für Weitergabe oder Verkauf bestimmt.
+    <div class="disclaimer">
+      <b>⚠️ Haftungsausschluss — bitte lesen:</b><br>
+      Dieses Tool ist ausschließlich eine <b>private Lernhilfe</b> und <b>kein amtlicher Prüfungsbehelf</b>.<br><br>
+      • Die <b>falschen Antwortmöglichkeiten (Distraktoren)</b> sind <b>frei erfunden</b> und stammen <b>nicht</b> von der Prüfungsbehörde. Sie wurden von uns aus dem Lernmaterial abgeleitet, um das Format Multiple Choice zu ermöglichen.<br>
+      • Der <b>Fragenkatalog ist unvollständig</b> und entspricht in Umfang, Formulierung und Antwortvorgaben <b>nicht</b> der behördlichen Prüfung beim <b>Fernmeldebüro / Fernmeldeamt</b>.<br>
+      • Die angezeigten „richtigen“ Antworten stammen aus privaten Lernunterlagen und können <b>fehlerhaft oder veraltet</b> sein.<br>
+      • Maßgeblich sind allein die <b>Vollzugsordnung für den Funkdienst (VO-Funk)</b>, die einschlägigen nationalen Vorschriften und die Angaben der Prüfungsbehörde.<br><br>
+      <b>Keine Gewähr für Richtigkeit, Vollständigkeit oder Prüfungserfolg. Nutzung auf eigene Verantwortung.</b>
+    </div>
+  </footer>
+</div>
+
+<script>
+/* ================================================================
+   LRC / SRC LERNTOOL
+   ----------------------------------------------------------------
+   FRAGEN BEARBEITEN:
+   Entweder im Editor ("Fragen bearbeiten" am Startbildschirm),
+   oder direkt hier unten im Array QUESTIONS.
+
+   Format pro Frage:
+   { id:"LRC_1", q:"Fragetext?", correct:"Richtige Antwort",
+     wrong:["Falsch 1","Falsch 2","Falsch 3"] }
+
+   - id      : freie Kennung, erscheint oben links auf der Karte
+   - q       : Fragetext
+   - correct : die richtige Antwort
+   - wrong   : genau 3 falsche Antworten (Distraktoren)
+
+   Die Reihenfolge der 4 Antworten wird bei jeder Anzeige neu gemischt.
+   ================================================================ */
+
+const QUESTIONS = [
+/* ---------- GMDSS Seegebiete ---------- */
+{id:"LRC_1",q:"Wie werden die für die Ausrüstung mit Funkanlagen festgelegten Seegebiete im GMDSS bezeichnet?",
+ correct:"A1, A2, A3, A4",
+ wrong:["Zone 1, Zone 2, Zone 3, Zone 4","Gebiet I, Gebiet II, Gebiet III, Gebiet IV","SOLAS 1 bis SOLAS 4"]},
+
+{id:"LRC_2",q:"Wie wird das Seegebiet A1 beschrieben?",
+ correct:"Ein festgelegtes Gebiet innerhalb der Sprechfunkreichweite mindestens einer UKW-Küstenfunkstelle mit ununterbrochener DSC-Alarmierung",
+ wrong:["Ein festgelegtes Gebiet innerhalb der Reichweite mindestens einer Grenzwellen-Küstenfunkstelle mit DSC-Alarmierung","Ein Gebiet innerhalb der Überdeckung eines geostationären Inmarsat-Satelliten","Das Gebiet bis 400 Seemeilen vor der Küste"]},
+
+{id:"LRC_3",q:"Wie wird das Seegebiet A2 beschrieben?",
+ correct:"Ein festgelegtes Gebiet innerhalb der Sprechfunkreichweite mindestens einer Küstenfunkstelle mit ununterbrochener DSC-Alarmierung auf Grenzwelle",
+ wrong:["Ein festgelegtes Gebiet innerhalb der UKW-Reichweite einer Küstenfunkstelle","Ein Gebiet innerhalb der Kurzwellen-Reichweite einer Küstenfunkstelle","Ein Gebiet mit NAVTEX-Empfang auf 518 kHz"]},
+
+{id:"LRC_4",q:"Wie wird das Seegebiet A3 beschrieben?",
+ correct:"Ein Gebiet innerhalb der Überdeckung eines geostationären Inmarsat-Satelliten, der ununterbrochen für Alarmierungen zur Verfügung steht",
+ wrong:["Ein Gebiet außerhalb jeder Grenzwellen-Reichweite","Das Gebiet nördlich von 70° Nord und südlich von 70° Süd","Ein Gebiet mit ununterbrochener Kurzwellen-DSC-Überwachung"]},
+
+{id:"LRC_5",q:"Welchen geografischen Bereich etwa umfasst das Seegebiet A4?",
+ correct:"Die Polargebiete außerhalb 76°N – 76°S",
+ wrong:["Die Gebiete zwischen 40°N und 40°S","Den gesamten Bereich außerhalb der UKW-Reichweite","Alle Gewässer außerhalb der 12-Seemeilen-Zone"]},
+
+{id:"SB_7",q:"Wer gibt den GMDSS Master Plan heraus?",
+ correct:"Die IMO",
+ wrong:["Die ITU","Inmarsat","Die nationale Fernmeldebehörde"]},
+
+/* ---------- Betriebsarten / Grundbegriffe ---------- */
+{id:"LRC_9",q:"Was versteht man unter Simplex-Betrieb?",
+ correct:"Wechselsprechen — abwechselndes Senden und Empfangen auf einer Frequenz",
+ wrong:["Gleichzeitiges Senden und Empfangen auf zwei Frequenzen","Wechselsprechen auf zwei getrennten Frequenzen","Automatischer Wechsel zwischen mehreren Kanälen"]},
+
+{id:"LRC_10",q:"Was versteht man unter Duplex-Betrieb?",
+ correct:"Gegensprechen — gleichzeitiges Senden und Empfangen wie am Telefon, mindestens zwei Frequenzen erforderlich",
+ wrong:["Abwechselndes Sprechen auf einer einzigen Frequenz","Wechselsprechen auf zwei Frequenzen, ohne gleichzeitig senden zu können","Gleichzeitiges Senden auf einer Frequenz durch zwei Stationen"]},
+
+{id:"LRC_11",q:"Was versteht man unter Semiduplex-Betrieb?",
+ correct:"Wechselsprechen auf zwei Frequenzen — das Gerät schaltet beim Senden/Empfangen die Frequenz um",
+ wrong:["Gleichzeitiges Senden und Empfangen auf zwei Frequenzen","Abwechselndes Sprechen auf einer einzigen Frequenz","Gleichzeitiges Senden und Empfangen auf einer einzigen Frequenz"]},
+
+{id:"LRC_12",q:"Was ist ein Selektivruf?",
+ correct:"Ein Anruf, der an eine bestimmte Funkstelle oder einen bestimmten Empfängerkreis gerichtet ist und technisch nur diese erreicht",
+ wrong:["Ein Anruf, der immer an alle Funkstellen im Empfangsbereich geht","Ein Anruf, der ausschließlich für Notfälle zulässig ist","Ein Anruf, bei dem der Empfänger die Frequenz selbst auswählt"]},
+
+{id:"LRC_13",q:"Was heißt DSC?",
+ correct:"Digital Selective Calling — Digitaler Selektivruf",
+ wrong:["Distress Safety Call — Not- und Sicherheitsruf","Direct Ship Communication — Direkte Schiffskommunikation","Digital Signal Control — Digitale Signalsteuerung"]},
+
+/* ---------- Rangfolge / Kennung ---------- */
+{id:"LRC_14",q:"Welche Verkehrsart hat die höchste Priorität in der Rangfolge des Verkehrs?",
+ correct:"Notverkehr",
+ wrong:["Dringlichkeitsverkehr","Sicherheitsverkehr","Öffentlicher Nachrichtenaustausch"]},
+
+{id:"LRC_15",q:"Wie lautet die richtige Rangfolge von Funkverkehr?",
+ correct:"Not-, Dringlichkeits-, Sicherheitsverkehr, öffentlicher Nachrichtenaustausch",
+ wrong:["Not-, Sicherheits-, Dringlichkeitsverkehr, öffentlicher Nachrichtenaustausch","Sicherheits-, Not-, Dringlichkeitsverkehr, öffentlicher Nachrichtenaustausch","Dringlichkeits-, Not-, Sicherheitsverkehr, öffentlicher Nachrichtenaustausch"]},
+
+{id:"LRC_16",q:"Wie werden die Rufzeichen der Küstenfunkstellen für den öffentlichen Nachrichtenaustausch gebildet?",
+ correct:"Landeskenner + 1 Buchstabe, immer drei Zeichen (z. B. SVO oder 9AS)",
+ wrong:["Landeskenner + 2 Ziffern, immer vier Zeichen","Immer neun Ziffern wie bei der MMSI","Zwei Buchstaben für den Hafen + laufende Nummer"]},
+
+{id:"LRC_17",q:"In welcher Vorschrift sind die Landeskenner festgelegt?",
+ correct:"In der Vollzugsordnung für den Funkdienst (VO-Funk)",
+ wrong:["Im SOLAS-Übereinkommen","Im GMDSS Master Plan der IMO","In der nationalen Seeschifffahrtsverordnung"]},
+
+{id:"LRC_18",q:"Wodurch wird im GMDSS das Land gekennzeichnet, dem eine Funkstelle zuzuordnen ist?",
+ correct:"Durch die MID in der MMSI",
+ wrong:["Durch die ersten beiden Buchstaben des Rufzeichens","Durch die Inmarsat-Nummer","Durch den NAVTEX-Kennbuchstaben"]},
+
+{id:"LRC_20",q:"Wie erfolgt die Kennzeichnung einer Seefunkstelle im GMDSS?",
+ correct:"Durch die MMSI — neunstellig, erste Stelle nicht 0",
+ wrong:["Durch die MMSI — neunstellig, beginnend mit 00","Durch die MMSI — neunstellig, beginnend mit einer einzelnen 0","Durch das dreistellige Rufzeichen der Küstenfunkstelle"]},
+
+{id:"LRC_21",q:"Wie erfolgt die Kennzeichnung einer Küstenfunkstelle im GMDSS?",
+ correct:"Durch die MMSI — neunstellig, beginnend mit „00“",
+ wrong:["Durch die MMSI — neunstellig, beginnend mit einer einzelnen „0“","Durch die MMSI — neunstellig, ohne führende Null","Durch die MID allein"]},
+
+{id:"LRC_22",q:"Wie ist die Rufnummer (MMSI) einer Gruppe von Schiffen gekennzeichnet?",
+ correct:"Durch die MMSI — neunstellig, beginnend mit einer einzelnen „0“",
+ wrong:["Durch die MMSI — neunstellig, beginnend mit „00“","Durch die MMSI — neunstellig, beginnend mit „9“","Durch eine achtstellige Gruppenkennung"]},
+
+/* ---------- Wellenausbreitung ---------- */
+{id:"LRC_23",q:"Welche Beziehung besteht zwischen Frequenz und Wellenlänge?",
+ correct:"300.000 geteilt durch die Frequenz in kHz ergibt die Wellenlänge in Metern",
+ wrong:["Frequenz in kHz mal 300.000 ergibt die Wellenlänge in Metern","300.000 geteilt durch die Wellenlänge in Metern ergibt die Frequenz in MHz","Frequenz und Wellenlänge sind zueinander direkt proportional"]},
+
+{id:"LRC_25",q:"Welche Frequenzen umfasst allgemein der Kurzwellenbereich?",
+ correct:"3.000 kHz bis 30 MHz",
+ wrong:["300 kHz bis 3.000 kHz","30 MHz bis 300 MHz","1.600 kHz bis 3.800 kHz"]},
+
+{id:"LRC_26",q:"Welcher Wellenlänge entsprechen 3 MHz?",
+ correct:"100 m",
+ wrong:["30 m","300 m","10 m"]},
+
+{id:"LRC_27",q:"Wie rasch breiten sich Funkwellen aus?",
+ correct:"Mit Lichtgeschwindigkeit, ca. 300.000 km/s",
+ wrong:["Mit Schallgeschwindigkeit, ca. 340 m/s","Mit ca. 30.000 km/s","Abhängig von der Frequenz zwischen 100.000 und 300.000 km/s"]},
+
+{id:"LRC_28",q:"Wie erfolgt die Ausbreitung grundsätzlich auf Frequenzen über 30 MHz (VHF, UHF, SHF)?",
+ correct:"Quasioptisch — geradlinig wie das Licht",
+ wrong:["Durch Raumwellen über Reflexion an der Ionosphäre","Durch Bodenwellen entlang der Erdoberfläche","Durch Beugung um die Erdkrümmung herum"]},
+
+{id:"LRC_29",q:"Wie erfolgt die Ausbreitung grundsätzlich im Kurzwellenbereich?",
+ correct:"Durch Raumwellen — Brechung an Schichten der Ionosphäre",
+ wrong:["Quasioptisch, geradlinig wie das Licht","Ausschließlich durch Bodenwellen","Durch Reflexion an der Meeresoberfläche"]},
+
+{id:"LRC_30",q:"Wann ist in der Regel die Ausbreitung im 4-MHz-Seefunkband in Bezug auf die Tageszeit besser?",
+ correct:"Nachts",
+ wrong:["Tagsüber","In den Mittagsstunden","Tag und Nacht gleich gut"]},
+
+{id:"LRC_31",q:"Wann ist in der Regel die Ausbreitung im 22-MHz-Seefunkband in Bezug auf die Tageszeit besser?",
+ correct:"Tagsüber",
+ wrong:["Nachts","In den Nachtstunden nach Mitternacht","Tag und Nacht gleich gut"]},
+
+{id:"LRC_33",q:"Wie erfolgt grundsätzlich die Ausbreitung im Grenzwellenbereich?",
+ correct:"Durch Bodenwellen",
+ wrong:["Durch Raumwellen über die Ionosphäre","Quasioptisch wie im UKW-Bereich","Über geostationäre Satelliten"]},
+
+{id:"LRC_34",q:"Was versteht man unter Raumwelle?",
+ correct:"Wellen, die an Schichten der Ionosphäre reflektiert bzw. gebrochen werden",
+ wrong:["Wellen, die sich entlang der Erdoberfläche ausbreiten","Wellen, die geradlinig bis zum Horizont laufen","Wellen, die über einen Satelliten umgesetzt werden"]},
+
+{id:"LRC_36",q:"Was versteht man unter Bodenwelle?",
+ correct:"Wellen, die sich entlang einer Grenzschicht an der Erdoberfläche ausbreiten",
+ wrong:["Wellen, die an der Ionosphäre gebrochen werden","Wellen, die vom Meeresboden reflektiert werden","Wellen, die nur bis zum optischen Horizont reichen"]},
+
+{id:"LRC_37",q:"Wie bezeichnet man das Gebiet, in dem im Kurzwellenbereich weder Bodenwelle noch Raumwelle empfangen werden kann?",
+ correct:"Tote Zone",
+ wrong:["Schattenzone","Schwundzone","Sperrbereich"]},
+
+{id:"LRC_38",q:"Welche ionosphärische Schicht begünstigt hauptsächlich die Kurzwellenausbreitung?",
+ correct:"Die F-Schicht(en)",
+ wrong:["Die D-Schicht","Die Troposphäre","Die Ozonschicht"]},
+
+{id:"LRC_39",q:"Welche ionosphärische Schicht behindert hauptsächlich die Kurzwellenausbreitung?",
+ correct:"Die D-Schicht",
+ wrong:["Die F2-Schicht","Die Stratosphäre","Die Exosphäre"]},
+
+{id:"LRC_41",q:"Welcher Frequenzbereich ist am wenigsten durch atmosphärische Störungen beeinträchtigt?",
+ correct:"UKW und L-Band, also Frequenzen über 30 MHz",
+ wrong:["Der Grenzwellenbereich","Der Langwellenbereich","Der 4-MHz-Kurzwellenbereich"]},
+
+{id:"LRC_42",q:"Wodurch entsteht „Schwund“?",
+ correct:"Durch Interferenzerscheinungen",
+ wrong:["Durch zu geringe Sendeleistung","Durch eine defekte Antennenzuleitung","Durch falsch eingestellten Squelch"]},
+
+{id:"LRC_43",q:"Welches ist die geeignetste Maßnahme gegen die Auswirkung von Schwund?",
+ correct:"Wechsel des Frequenzbandes, gegebenenfalls AGC einsetzen",
+ wrong:["Sendeleistung auf 1 W reduzieren","Squelch ganz aufdrehen","Auf eine Richtantenne umschalten"]},
+
+/* ---------- Sendearten ---------- */
+{id:"LRC_47",q:"Wie nennt man den Vorgang, bei dem niederfrequente Schwingungen einer hochfrequenten „aufgedrückt“ werden?",
+ correct:"Modulation",
+ wrong:["Demodulation","Interferenz","Selektion"]},
+
+{id:"LRC_50",q:"Was bedeutet die Abkürzung SSB?",
+ correct:"Single Side Band — Einseitenbandübertragung",
+ wrong:["Ship Safety Broadcast — Schiffssicherheitsaussendung","Standard Signal Bandwidth — Standardbandbreite","Short Sea Band — Nahbereichsband"]},
+
+{id:"LRC_51",q:"Was bedeutet die Abkürzung AM?",
+ correct:"Amplitudenmodulation",
+ wrong:["Antennenmodulation","Automatische Modulation","Anrufmodus"]},
+
+{id:"LRC_52",q:"Was bedeutet die Abkürzung FM?",
+ correct:"Frequenzmodulation",
+ wrong:["Funkmeldung","Frequenzmessung","Feldstärkemodulation"]},
+
+{id:"LRC_53",q:"Welche Sendeart wird für das Funkfernschreiben verwendet?",
+ correct:"F1B",
+ wrong:["J3E","H3E","G3E"]},
+
+{id:"LRC_54",q:"Wie wird die Sendeart „SSB mit unterdrücktem Träger“ im Sprechfunk gekennzeichnet?",
+ correct:"J3E",
+ wrong:["H3E","F1B","G3E"]},
+
+{id:"LRC_55",q:"Wie wird die Sendeart „SSB mit vollem Träger“ im Sprechfunk gekennzeichnet?",
+ correct:"H3E",
+ wrong:["J3E","F1B","A3E"]},
+
+{id:"LRC_57",q:"Wie wird eine Einseitenbandaussendung mit unterdrücktem Träger im Sprechfunk auf Kurzwelle vollständig bezeichnet?",
+ correct:"2k70J3E",
+ wrong:["2k70H3E","2k70F1B","16K0G3E"]},
+
+{id:"LRC_58",q:"Welche Sendeart wird grundsätzlich im Grenz- und Kurzwellen-Sprechfunk verwendet?",
+ correct:"SSB mit unterdrücktem Träger, J3E",
+ wrong:["SSB mit vollem Träger, H3E","Frequenzmodulation, G3E","Funkfernschreiben, F1B"]},
+
+/* ---------- Frequenzen ---------- */
+{id:"LRC_61",q:"Welche Frequenzen umfasst der Grenzwellenbereich im Seefunkdienst?",
+ correct:"Etwa 1.600 bis 3.800 kHz",
+ wrong:["Etwa 300 bis 1.600 kHz","Etwa 4 bis 26 MHz","Etwa 156 bis 162 MHz"]},
+
+{id:"LRC_63",q:"Welcher Frequenzbereich ist im UKW-Bereich dem Seefunkdienst zugewiesen?",
+ correct:"Etwa 156 bis 162 MHz",
+ wrong:["Etwa 118 bis 137 MHz","Etwa 26 bis 30 MHz","Etwa 1,6 GHz"]},
+
+{id:"LRC_71",q:"Wie lautet die Notfrequenz des Flugfunkdienstes im UKW-Bereich?",
+ correct:"121,5 MHz",
+ wrong:["156,8 MHz","243,0 MHz","406 MHz"]},
+
+{id:"LRC_72",q:"In welchem Frequenzbereich arbeiten Radaranlagen auf Schiffen?",
+ correct:"3 GHz und 9 GHz — S-Band und X-Band",
+ wrong:["1,6 GHz und 3 GHz — L-Band und S-Band","406 MHz und 121,5 MHz","156 bis 162 MHz"]},
+
+{id:"LRC_74",q:"In welchem Frequenzbereich arbeiten SARTs?",
+ correct:"9 GHz — X-Band",
+ wrong:["3 GHz — S-Band","1,6 GHz — L-Band","406 MHz"]},
+
+{id:"LRC_89",q:"Auf welcher Grenzwellenfrequenz ist der DSC-Wachempfänger empfangsbereit?",
+ correct:"2187,5 kHz",
+ wrong:["2182 kHz","2177 kHz","518 kHz"]},
+
+{id:"LRC_90",q:"Auf welchem UKW-Kanal empfängt der DSC-Wachempfänger?",
+ correct:"Kanal 70",
+ wrong:["Kanal 16","Kanal 13","Kanal 6"]},
+
+{id:"LRC_197",q:"Welche Grenzwellen-Frequenz wird zum DSC-Anruf zwischen Schiffen international benutzt?",
+ correct:"2177 kHz",
+ wrong:["2187,5 kHz","2182 kHz","3023 kHz"]},
+
+{id:"SB_10",q:"Auf welcher Frequenz ist im GMDSS ein Kurzwellen-DSC-Scanner-Wachempfänger empfangsbereit?",
+ correct:"8414,5 kHz",
+ wrong:["8291 kHz","2187,5 kHz","4125 kHz"]},
+
+{id:"SB_68",q:"Für welche Zwecke wird die Frequenz 2182 kHz im GMDSS benutzt?",
+ correct:"Für Not- und Sicherheitsverkehr im Sprechfunk",
+ wrong:["Für die DSC-Alarmierung auf Grenzwelle","Für NAVTEX-Aussendungen","Für den öffentlichen Nachrichtenaustausch mit Küstenfunkstellen"]},
+
+{id:"SB_69",q:"Darf die Frequenz 2187,5 kHz für Sprechfunkverkehr benutzt werden?",
+ correct:"Nein, diese Frequenz ist ausschließlich für DSC bestimmt",
+ wrong:["Ja, aber nur im Notfall","Ja, wenn 2182 kHz belegt ist","Ja, für Sicherheitsmeldungen an alle"]},
+
+{id:"SB_72",q:"Welche GW/KW-Frequenz ist für den koordinierten Such- und Rettungsfunkverkehr (SAR) vorgesehen?",
+ correct:"3023 kHz",
+ wrong:["2182 kHz","2187,5 kHz","8414,5 kHz"]},
+
+/* ---------- Geräte / Anlagen ---------- */
+{id:"LRC_87",q:"Wozu dient der DSC-Wachempfänger?",
+ correct:"Zur Überwachung der DSC-Notfrequenz(en)",
+ wrong:["Zur Überwachung des Sprechfunkkanals 16","Zum Empfang von NAVTEX-Meldungen","Zur Aussendung des Notalarms"]},
+
+{id:"LRC_91",q:"Welche maximale Sendeleistung darf eine fest eingebaute UKW-Seefunkanlage haben?",
+ correct:"25 W",
+ wrong:["50 W","10 W","1 W"]},
+
+{id:"LRC_92",q:"Auf welchen minimalen Wert muss die Sendeleistung einer fest eingebauten UKW-Seefunkanlage schaltbar sein?",
+ correct:"1 W",
+ wrong:["5 W","0,5 W","10 W"]},
+
+{id:"LRC_93",q:"Wozu dient der Squelch bei UKW-Funkanlagen?",
+ correct:"Zur Unterdrückung des Grundrauschens",
+ wrong:["Zur Feinabstimmung der Empfangsfrequenz","Zur Erhöhung der Sendeleistung","Zum Ausgleich von Schwund"]},
+
+{id:"LRC_94",q:"Was bezeichnet man mit Dual-Watch?",
+ correct:"Die Zweikanalüberwachung von Kanal 16 und einem Arbeitskanal",
+ wrong:["Die gleichzeitige Überwachung von Kanal 16 und Kanal 70","Das Abhören zweier Küstenfunkstellen","Die doppelte Aufzeichnung des Funkverkehrs"]},
+
+{id:"LRC_96",q:"Welchen Zweck hat die Schwundregelung?",
+ correct:"Bei Schwund eine möglichst gleichmäßige Hörlautstärke zu erreichen",
+ wrong:["Das Grundrauschen zu unterdrücken","Die Sendefrequenz stabil zu halten","Die Sendeleistung automatisch anzupassen"]},
+
+{id:"LRC_97",q:"Wozu dient der Clarifier?",
+ correct:"Zur Feinregelung der Empfangsfrequenz bei Frequenzschwankungen",
+ wrong:["Zur Unterdrückung des Rauschens","Zur Anpassung der Antenne","Zur Umschaltung zwischen Simplex und Duplex"]},
+
+{id:"LRC_109",q:"Wozu dient der DSC-Controller?",
+ correct:"Zum Kodieren und Dekodieren von DSC-Signalen",
+ wrong:["Zur Überwachung von Kanal 16 im Sprechfunk","Zur Steuerung der Antennenanpassung","Zum Empfang von NAVTEX-Meldungen"]},
+
+{id:"LRC_129",q:"Welche Arten von Antennen werden im UKW-Seefunk verwendet?",
+ correct:"Vertikal polarisierte Stabantennen",
+ wrong:["Horizontal polarisierte Dipolantennen","Drehbare Richtantennen","Rahmenantennen"]},
+
+{id:"LRC_130",q:"Welchen Einfluss hat der Ort der Aufstellung der UKW-Antenne an Bord?",
+ correct:"Eine hohe Position erhöht die Reichweite, da die Ausbreitung quasioptisch ist",
+ wrong:["Die Höhe hat keinen Einfluss, nur die Sendeleistung zählt","Eine tiefe Position verbessert die Bodenwellenausbreitung","Die Position beeinflusst nur die Empfangs-, nicht die Sendereichweite"]},
+
+/* ---------- Seenot / EPIRB / SART ---------- */
+{id:"LRC_100",q:"Wozu dient eine EPIRB?",
+ correct:"Zur Seenot-Alarmierung über das Raumsegment",
+ wrong:["Zur Ortung durch Radar anderer Schiffe","Zum Empfang von Sicherheitsmeldungen","Zur Sprechfunkverbindung mit dem RCC"]},
+
+{id:"LRC_101",q:"Wie muss die Aussendung einer EPIRB ausgelöst werden können?",
+ correct:"Händisch, auf SOLAS-Schiffen zusätzlich automatisch durch Wasserdruckschalter",
+ wrong:["Ausschließlich automatisch durch den Wasserdruckschalter","Ausschließlich händisch, eine automatische Auslösung ist unzulässig","Über einen Befehl der Küstenfunkstelle"]},
+
+{id:"LRC_103",q:"Welche Informationen werden durch eine COSPAS-SARSAT-EPIRB ausgesendet?",
+ correct:"Die Kennung und gegebenenfalls die Position",
+ wrong:["Nur ein unmoduliertes Dauersignal","Kennung, Position und Art des Notfalls im Klartext","Die MMSI und eine Sprachnachricht"]},
+
+{id:"LRC_105",q:"Wie erfolgt die Funktionskontrolle von SARTs im Einsatz?",
+ correct:"Optisch und akustisch",
+ wrong:["Durch einen Testanruf über DSC","Durch Messung der Batteriespannung","Durch eine Rückmeldung des RCC"]},
+
+{id:"LRC_106",q:"Was ist für eine größtmögliche Reichweite eines SART wichtig?",
+ correct:"Eine möglichst hohe Anbringung",
+ wrong:["Eine möglichst tiefe Anbringung nahe der Wasserlinie","Die Ausrichtung nach Norden","Ein möglichst großer Abstand zur Rettungsinsel"]},
+
+{id:"LRC_107",q:"Welche Aussendung erfolgt durch eine SART-Anlage?",
+ correct:"Ein Signal im 9-GHz-Bereich",
+ wrong:["Ein Signal im 3-GHz-Bereich","Ein Signal auf 406 MHz","Ein DSC-Alarm auf Kanal 70"]},
+
+{id:"SB_18",q:"Worin besteht der Hauptzweck einer Seenotfunkbake?",
+ correct:"Sie soll die Ortung von Schiffbrüchigen erleichtern",
+ wrong:["Sie soll Sprechfunkverbindung zum RCC herstellen","Sie soll Sicherheitsmeldungen empfangen","Sie soll die Position laufend an alle Schiffe senden"]},
+
+{id:"SB_25",q:"Was verstehen Sie unter der Abkürzung „ELT“?",
+ correct:"Emergency Locator Transmitter",
+ wrong:["Emergency Life Terminal","Electronic Location Tracker","Emergency Light Transponder"]},
+
+{id:"SB_51",q:"Was zeigt der Notalarm an?",
+ correct:"Dass ein Schiff oder eine Person von ernster und unmittelbar bevorstehender Gefahr bedroht ist und sofortige Hilfe braucht",
+ wrong:["Dass ein Schiff manövrierunfähig ist, aber keine unmittelbare Gefahr besteht","Dass eine wichtige Sicherheitsmeldung folgt","Dass ein Schiff Hilfe bei technischen Problemen wünscht"]},
+
+{id:"SB_52",q:"Auf dem Display eines DSC-Controllers erscheint „undesignated distress“. Was heißt das?",
+ correct:"Notalarm ohne zusätzliche Angabe der Notfallart",
+ wrong:["Notalarm ohne Positionsangabe","Ein versehentlich ausgelöster Fehlalarm","Ein Notalarm einer unbekannten Funkstelle"]},
+
+{id:"SB_53",q:"Auf dem Display eines DSC-Controllers erscheint „danger of capsizing“. Was heißt das?",
+ correct:"Gefahr des Kenterns",
+ wrong:["Gefahr des Sinkens","Feuer an Bord","Manövrierunfähig"]},
+
+{id:"SB_54",q:"Auf dem Display eines DSC-Controllers erscheint „abandoning“. Was heißt das?",
+ correct:"Die Besatzung geht von Bord",
+ wrong:["Das Schiff sinkt","Der Funkverkehr wird eingestellt","Der Notalarm wird zurückgenommen"]},
+
+{id:"SB_60",q:"Wer ist über den Empfang eines Notalarms und dessen Inhalt umgehend zu informieren?",
+ correct:"Der Kapitän oder die für das Schiff verantwortliche Person",
+ wrong:["Die nächstgelegene Küstenfunkstelle","Alle Schiffe im Umkreis von 10 Seemeilen","Die Reederei"]},
+
+{id:"SB_61",q:"Welche Maßnahme ist zu ergreifen, wenn auf Grenzwelle ein DSC-Notalarm empfangen wurde?",
+ correct:"Den Notalarm auf 2182 kHz bestätigen und diese Frequenz weiter abhören",
+ wrong:["Den Notalarm auf 2187,5 kHz mit DSC bestätigen","Sofort den eigenen Notalarm auslösen","Den Funkverkehr einstellen und nichts weiter tun"]},
+
+{id:"SB_75",q:"Dürfen Funkstellen, die nicht am Notverkehr teilnehmen, auf dessen Frequenzen senden?",
+ correct:"Nein, solange die Meldung SILENCE FINI nicht gesendet wurde",
+ wrong:["Ja, wenn die Aussendung kurz gehalten wird","Ja, sobald der Notalarm bestätigt wurde","Ja, mit Erlaubnis einer beliebigen Küstenfunkstelle"]},
+
+{id:"SB_94",q:"Wie lautet außerhalb des GMDSS das Notzeichen im Sprechfunk?",
+ correct:"MAYDAY",
+ wrong:["PAN PAN","SECURITE","SOS"]},
+
+{id:"SB_96",q:"Wer an Bord darf das Aussenden einer Notmeldung außerhalb des GMDSS anordnen?",
+ correct:"Der Kapitän oder die für das Schiff verantwortliche Person",
+ wrong:["Jedes Besatzungsmitglied mit Funkzeugnis","Der Funkverantwortliche allein","Nur der Eigentümer des Schiffes"]},
+
+{id:"SB_99",q:"Wie oft wird außerhalb des GMDSS im Notanruf das Wort MAYDAY gesprochen?",
+ correct:"Dreimal",
+ wrong:["Einmal","Zweimal","Fünfmal"]},
+
+{id:"SB_103",q:"Wie ist außerhalb des GMDSS die richtige Reihenfolge der Notmeldung?",
+ correct:"Notzeichen, Kennzeichnung der Funkstelle, Standort, Art des Notfalls, Art der erbetenen Hilfe",
+ wrong:["Kennzeichnung der Funkstelle, Notzeichen, Art des Notfalls, Standort","Notzeichen, Standort, Kennzeichnung der Funkstelle, Art der erbetenen Hilfe","Notzeichen, Art des Notfalls, Art der erbetenen Hilfe, Standort"]},
+
+/* ---------- Sicherheit / Dringlichkeit ---------- */
+{id:"LRC_143",q:"Wie wird das Wort „SECURITE“ genannt?",
+ correct:"Sicherheitszeichen",
+ wrong:["Dringlichkeitszeichen","Notzeichen","Verkehrszeichen"]},
+
+{id:"LRC_148",q:"Auf welcher GW-Frequenz soll die Sicherheitsmeldung im Sprechfunk im Regelfall ausgesendet werden?",
+ correct:"2182 kHz",
+ wrong:["2187,5 kHz","2177 kHz","518 kHz"]},
+
+{id:"LRC_149",q:"Auf welchem UKW-Kanal soll die Sicherheitsmeldung im Sprechfunk im Regelfall ausgesendet werden?",
+ correct:"Kanal 16",
+ wrong:["Kanal 70","Kanal 13","Kanal 6"]},
+
+{id:"LRC_150",q:"Wie muss im Sprechfunk die Sicherheitsmeldung eingeleitet werden?",
+ correct:"Durch das dreimalige Sicherheitszeichen SECURITE",
+ wrong:["Durch das einmalige Sicherheitszeichen SECURITE","Durch dreimaliges PAN PAN","Durch einen DSC-Notalarm"]},
+
+{id:"SB_76",q:"An wen darf der DSC-Dringlichkeitsanruf auf Grenzwelle gerichtet werden?",
+ correct:"An alle Funkstellen oder an eine bestimmte Funkstelle",
+ wrong:["Ausschließlich an alle Funkstellen","Ausschließlich an eine Küstenfunkstelle","Nur an das zuständige RCC"]},
+
+/* ---------- NAVTEX / MSI ---------- */
+{id:"LRC_126",q:"Welche Frequenz wird für den nationalen NAVTEX-Dienst benützt?",
+ correct:"490 kHz",
+ wrong:["518 kHz","4209,5 kHz","2187,5 kHz"]},
+
+{id:"LRC_153",q:"Welcher Dienst wird auf 518 kHz ausgesendet?",
+ correct:"NAVTEX",
+ wrong:["DSC","EGC / SafetyNET","Der Sammelanruf der Küstenfunkstellen"]},
+
+{id:"LRC_154",q:"Was sind NAVAREAS?",
+ correct:"Eine Unterteilung der Erdoberfläche in Seegebiete für die Verbreitung von Warnungen",
+ wrong:["Die vier GMDSS-Seegebiete A1 bis A4","Die Abdeckungsbereiche der Inmarsat-Satelliten","Die nationalen Hoheitsgewässer"]},
+
+{id:"LRC_156",q:"Welche Auswahlmöglichkeiten bestehen für den Empfang von NAVTEX-Sendungen?",
+ correct:"Sendestation und Art der Meldung",
+ wrong:["Sendeleistung und Frequenz","Sprache und Uhrzeit","Nur die Frequenz 490 oder 518 kHz"]},
+
+{id:"LRC_158",q:"Welche Sprache wird bei NAVTEX-Aussendungen auf 518 kHz grundsätzlich benutzt?",
+ correct:"Englisch",
+ wrong:["Die jeweilige Landessprache","Französisch","Wahlweise Englisch oder die Landessprache"]},
+
+{id:"SB_86",q:"In welchem Seegebiet wird NAVTEX angewandt?",
+ correct:"Im Küstenbereich bis etwa 400 sm vom Standort des Senders",
+ wrong:["Weltweit über Satellit","Nur innerhalb der 12-Seemeilen-Zone","Bis etwa 150 sm vom Senderstandort"]},
+
+{id:"LRC_162",q:"Was ist ein EGC-Empfänger?",
+ correct:"Ein Empfangsgerät für maritime Sicherheitsinformationen (MSI)",
+ wrong:["Ein Empfänger für DSC-Notalarme","Ein Radartransponder für Rettungsinseln","Ein Notsender im 406-MHz-Band"]},
+
+{id:"LRC_125",q:"Womit werden Maritime Safety Informations via Inmarsat empfangen?",
+ correct:"Über EGC im SafetyNET",
+ wrong:["Über NAVTEX auf 518 kHz","Über DSC auf 2187,5 kHz","Über den Sammelanruf der Küstenfunkstelle"]},
+
+/* ---------- Inmarsat / Satelliten ---------- */
+{id:"LRC_75",q:"Welche Art von Satellitennetz betreibt Inmarsat weltweit?",
+ correct:"Ein Netz geostationärer Satelliten",
+ wrong:["Ein Netz polumlaufender Satelliten","Eine Mischung aus geostationären und polumlaufenden Satelliten","Ein Netz von Satelliten in niedriger Erdumlaufbahn"]},
+
+{id:"LRC_80",q:"Was bedeutet die Abkürzung SES?",
+ correct:"Ship Earth Station — Satellitenfunkanlage an Bord eines Schiffes",
+ wrong:["Safety Emergency Signal — Not- und Sicherheitssignal","Shore Emergency Station — Notfallstation an Land","Satellite Emergency System — Satellitennotsystem"]},
+
+{id:"LRC_79",q:"Welche Funkstelle wird als CES bezeichnet?",
+ correct:"Coast Earth Station — Satelliten-Bodenstation an Land",
+ wrong:["Coast Emergency Station — Küstennotfallstation","Central Emergency Service — Zentraler Notdienst","Coast Echo Station — Küstenrelaisstelle"]},
+
+{id:"LRC_81",q:"Was ist das COSPAS-SARSAT-System?",
+ correct:"Ein Satellitensystem für die Alarmierung in Notfällen",
+ wrong:["Ein Satellitensystem für die Positionsbestimmung","Ein System von Küstenfunkstellen für DSC","Ein Netz von Radartranspondern"]},
+
+{id:"LRC_82",q:"Welche Arten von Satelliten gehören zum COSPAS-SARSAT-System?",
+ correct:"Geostationäre und polumlaufende Satelliten (GEOSAR und LEOSAR)",
+ wrong:["Ausschließlich geostationäre Satelliten","Ausschließlich polumlaufende Satelliten","Dieselben Satelliten wie das Inmarsat-System"]},
+
+{id:"LRC_84",q:"Welche Funkstelle wird als LUT bezeichnet?",
+ correct:"Local User Terminal — Bodenstation im COSPAS-SARSAT-System",
+ wrong:["Local Uplink Transmitter — Sendeanlage an Land","Land User Telephone — Landanschluss","Long Uplink Terminal — Fernverbindungsstelle"]},
+
+{id:"LRC_86",q:"Welche Stelle wird als RCC bezeichnet?",
+ correct:"Rescue Coordination Center",
+ wrong:["Radio Control Center","Regional Coast Communication","Rescue Contact Channel"]},
+
+{id:"LRC_73",q:"Welche Aufgabe haben die RCCs?",
+ correct:"Rettungsoperationen zentral zu leiten",
+ wrong:["Den öffentlichen Nachrichtenaustausch abzurechnen","NAVTEX-Meldungen auszusenden","Funkbetriebszeugnisse auszustellen"]},
+
+{id:"LRC_118",q:"Welche Inmarsat-Dienste ermöglichen keine Sprachübertragung?",
+ correct:"Inmarsat-C (und Inmarsat-D)",
+ wrong:["Inmarsat-B","Inmarsat Fleet","Inmarsat Mini-M"]},
+
+{id:"LRC_120",q:"Bei welcher Satellitenanlage sind Azimut und Elevation für die Inbetriebnahme nicht von Bedeutung?",
+ correct:"Inmarsat-C",
+ wrong:["Inmarsat-B","Inmarsat Fleet","Inmarsat-M"]},
+
+{id:"LRC_121",q:"Worauf muss bei der Aufstellung der Inmarsat-C-Antenne geachtet werden?",
+ correct:"Dass sie in keine Richtung abgedeckt wird",
+ wrong:["Dass sie genau nach Süden ausgerichtet ist","Dass sie möglichst tief montiert wird","Dass sie horizontal polarisiert montiert wird"]},
+
+{id:"LRC_124",q:"Wo ist ein EGC-Empfang nicht möglich?",
+ correct:"Nördlich von 76°N und südlich von 76°S",
+ wrong:["Nördlich von 60°N und südlich von 60°S","Innerhalb der Küstengewässer","In der Nähe des Äquators"]},
+
+{id:"LRC_138",q:"Was bedeutet „elevation angle“?",
+ correct:"Die Erhebung des Satelliten über dem Horizont",
+ wrong:["Die Richtung zum Satelliten in Grad rechtweisend","Die Höhe der Antenne über der Wasserlinie","Der Neigungswinkel der Satellitenbahn"]},
+
+{id:"LRC_139",q:"Über welchem Breitengrad befinden sich die Satelliten des Inmarsat-Systems?",
+ correct:"Über dem Äquator, 0°",
+ wrong:["Über 45° Nord","Über den Polen","Über wechselnden Breitengraden je nach Umlaufbahn"]},
+
+{id:"LRC_140",q:"Was bedeutet „azimuth angle“?",
+ correct:"Die Richtung zum Satelliten, rechtweisend",
+ wrong:["Die Höhe des Satelliten über dem Horizont","Der Winkel zwischen Antenne und Schiffslängsachse","Der Neigungswinkel der Antennenschüssel"]},
+
+{id:"LRC_185",q:"Wo steht der Inmarsat-Satellit mit der Bezeichnung AOR-W?",
+ correct:"Über dem Westatlantik",
+ wrong:["Über dem Ostatlantik","Über dem Pazifik","Über dem Indischen Ozean"]},
+
+{id:"LRC_186",q:"Über welchem Gebiet steht der Inmarsat-Satellit mit der Bezeichnung POR?",
+ correct:"Über dem Pazifik",
+ wrong:["Über dem Westatlantik","Über dem Indischen Ozean","Über dem Polarmeer"]},
+
+{id:"LRC_191",q:"Was muss beim Abschalten einer Inmarsat-C-Anlage nach dem Betrieb mit einer CES beachtet werden?",
+ correct:"Dass zuerst ausgeloggt wird",
+ wrong:["Dass die Antenne nach Norden gedreht wird","Dass vorher ein Testcall gesendet wird","Dass die Position manuell gelöscht wird"]},
+
+{id:"LRC_119",q:"Was versteht man unter Speicherverkehr (store and forward operation)?",
+ correct:"Das Signal wird in der Bodenstation zwischengespeichert und später weitergeleitet",
+ wrong:["Das Signal wird im Satelliten dauerhaft gespeichert","Der Funkverkehr wird an Bord aufgezeichnet","Nachrichten werden vor dem Senden verschlüsselt"]},
+
+/* ---------- Betriebsverfahren ---------- */
+{id:"LRC_166",q:"Wie oft dürfen Sie beim Anruf zum Herstellen einer Verbindung den Namen der gerufenen Funkstelle nennen?",
+ correct:"Höchstens dreimal",
+ wrong:["Höchstens zweimal","Höchstens fünfmal","Beliebig oft, bis geantwortet wird"]},
+
+{id:"LRC_176",q:"Wie oft sollen Sie den Namen der gerufenen Funkstelle nennen, wenn eine gute Verständigung zu erwarten ist?",
+ correct:"Einmal",
+ wrong:["Zweimal","Dreimal","Mindestens dreimal"]},
+
+{id:"LRC_179",q:"Nach welcher Zeit dürfen Sie einen unbeantworteten Anruf an eine Seefunkstelle wiederholen?",
+ correct:"Nach 3 Minuten, wenn kein anderer Funkverkehr gestört wird",
+ wrong:["Nach 1 Minute","Nach 5 Minuten","Sofort, ohne Wartezeit"]},
+
+{id:"LRC_180",q:"Wie lange darf ein Anruf und dessen Beantwortung auf Kanal 16 maximal dauern?",
+ correct:"Eine Minute",
+ wrong:["Drei Minuten","Fünf Minuten","30 Sekunden"]},
+
+{id:"LRC_181",q:"Wer bestimmt bei einer Verbindung zwischen See- und Küstenfunkstelle die zu benutzende Frequenz?",
+ correct:"Die Küstenfunkstelle",
+ wrong:["Die Seefunkstelle","Das zuständige RCC","Die Frequenz wird ausgehandelt"]},
+
+{id:"LRC_174",q:"Auf welchem UKW-Kanal rufen Sie eine Küstenfunkstelle, wenn deren Empfangskanal nicht bekannt ist?",
+ correct:"Kanal 16",
+ wrong:["Kanal 70","Kanal 13","Kanal 6"]},
+
+{id:"LRC_175",q:"Auf welchem Kanal sollen Sie eine Küstenfunkstelle rufen, die auf Kanal 16 und einem Arbeitskanal empfangsbereit ist?",
+ correct:"Auf dem Arbeitskanal",
+ wrong:["Auf Kanal 16","Auf Kanal 70 mittels DSC","Abwechselnd auf beiden"]},
+
+{id:"LRC_165",q:"Müssen Sie auch bei Versuchssendungen das Rufzeichen oder eine sonstige Kennung angeben?",
+ correct:"Ja",
+ wrong:["Nein, bei Versuchssendungen nicht","Nur wenn eine Küstenfunkstelle antwortet","Nur auf Grenz- und Kurzwelle"]},
+
+{id:"LRC_196",q:"Welche Aussendungen dürfen auf Kanal 70 erfolgen?",
+ correct:"Ausschließlich DSC",
+ wrong:["DSC und Sprechfunk im Notfall","Sprechfunk mit Küstenfunkstellen","Sicherheitsmeldungen im Sprechfunk"]},
+
+{id:"LRC_183",q:"Was ist eine „Q-Gruppe“?",
+ correct:"Eine international einheitliche Abkürzung",
+ wrong:["Eine Gruppe von Schiffen mit gemeinsamer MMSI","Ein Kanalbereich im UKW-Seefunk","Eine Kennung für Küstenfunkstellen"]},
+
+{id:"LRC_193",q:"Welche Bedeutung hat die Ankündigung „INTERCO“ im Sprechfunkverkehr?",
+ correct:"Dass Codegruppen des Internationalen Signalbuchs folgen",
+ wrong:["Dass eine internationale Verbindung hergestellt wird","Dass die Nachricht auf Englisch folgt","Dass ein Dolmetscher zugeschaltet wird"]},
+
+{id:"LRC_169",q:"Welche Form hat die Zeitangabe (Tag-Zeit-Gruppe) im Seefunkdienst?",
+ correct:"ddhhmm UTC MMM YY, z. B. 241935 UTC OCT 12",
+ wrong:["hhmm Bordzeit, z. B. 1935 LT","MMM dd hhmm UTC, z. B. OCT 24 1935","hhmmss UTC, z. B. 193500"]},
+
+{id:"LRC_163",q:"Wie nennt man die Aussendung, mit der eine Küstenfunkstelle bekannt gibt, dass Nachrichten für Schiffe vorliegen?",
+ correct:"Sammelanruf (Traffic List)",
+ wrong:["Gruppenanruf (EGC)","Sicherheitsmeldung (SECURITE)","Rundspruch (Broadcast)"]},
+
+{id:"LRC_194",q:"Dürfen Sie als Inhaber eines Schiffsfunkzeugnisses eine Amateurfunkstelle betreiben?",
+ correct:"Nein, nur mit zusätzlichem Amateurfunkzeugnis",
+ wrong:["Ja, das Schiffsfunkzeugnis schließt das ein","Ja, aber nur außerhalb der Hoheitsgewässer","Ja, aber nur im Notfall"]},
+
+/* ---------- Akkumulator ---------- */
+{id:"LRC_132",q:"Was versteht man unter der Kapazität eines Akkumulators?",
+ correct:"Seine Speicherfähigkeit",
+ wrong:["Seine maximale Ladespannung","Seinen Innenwiderstand","Die maximale Stromabgabe pro Sekunde"]},
+
+{id:"LRC_134",q:"Wie hoch ist die Zellspannung bei einem aufgeladenen Bleiakkumulator?",
+ correct:"Mindestens 2 V",
+ wrong:["Mindestens 1,2 V","Mindestens 6 V","Mindestens 12 V"]},
+
+{id:"LRC_135",q:"Mit welcher Stromstärke sollte ein Bleiakkumulator bei einem herkömmlichen Ladegerät höchstens geladen werden?",
+ correct:"Mit 10 % der Nennkapazität",
+ wrong:["Mit 50 % der Nennkapazität","Mit 100 % der Nennkapazität","Mit 1 % der Nennkapazität"]},
+
+{id:"LRC_136",q:"Was ist beim Laden eines Akkumulators besonders zu beachten?",
+ correct:"Es kann Knallgas entstehen, vor allem bei zu hoher Ladespannung",
+ wrong:["Der Akku muss dabei vollständig entladen sein","Die Temperatur muss unter 0 °C liegen","Die Pole müssen kurzgeschlossen werden"]},
+
+/* ---------- Vorschriften / Zeugnisse ---------- */
+{id:"SB_31",q:"Was bedeutet in englischsprachigen Dienstbehelfen die Abkürzung „RR“?",
+ correct:"Radio Regulations — Vollzugsordnung für den Funkdienst",
+ wrong:["Rescue Regulations — Rettungsvorschriften","Radio Range — Funkreichweite","Routine Report — Routinemeldung"]},
+
+{id:"SB_33",q:"Was bedeutet die Abkürzung „LRC“?",
+ correct:"Long Range Certificate — englische Bezeichnung für das Allgemeine Betriebszeugnis II",
+ wrong:["Local Radio Certificate — Nahbereichszeugnis","Limited Radio Certificate — Beschränktes Funkzeugnis","Long Range Communication — Weitverkehrsfunk"]},
+
+{id:"SB_32",q:"Welches Funkerzeugnis ist mindestens erforderlich, um weltweit im Seegebiet A3 mit GW/KW-Anlage teilzunehmen?",
+ correct:"Das Allgemeine Betriebszeugnis II (LRC)",
+ wrong:["Das Beschränkt Gültige Betriebszeugnis (SRC)","Ein Amateurfunkzeugnis","Kein Zeugnis, wenn die Anlage zugelassen ist"]},
+
+{id:"SB_37",q:"Welches Schiffspapier enthält die MMSI?",
+ correct:"Die Bewilligungsurkunde",
+ wrong:["Das Schiffszertifikat","Der Bordfunkverkehrskalender","Das Funktagebuch"]},
+
+{id:"SB_41",q:"In welcher Funkregion liegt Österreich?",
+ correct:"Region 1",
+ wrong:["Region 2","Region 3","Region 4"]},
+
+{id:"SB_42",q:"In welcher Funkregion liegt das Mittelmeer?",
+ correct:"Region 1",
+ wrong:["Region 2","Region 3","Region 4"]},
+
+{id:"SB_36",q:"Welche Aussendungen sind verboten?",
+ correct:"Aussendungen von Zeichen, die mit internationalen Notzeichen verwechselt werden könnten",
+ wrong:["Alle Aussendungen außerhalb der Hoheitsgewässer","Versuchssendungen jeder Art","Aussendungen in einer anderen Sprache als Englisch"]},
+
+{id:"SB_44",q:"Ist das Senden auf Grenz- oder Kurzwelle in ausländischen Häfen gestattet?",
+ correct:"Das hängt von den Vorschriften des betreffenden Landes ab",
+ wrong:["Ja, immer","Nein, niemals","Nur mit Erlaubnis der eigenen Fernmeldebehörde"]},
+
+{id:"SB_46",q:"Sie haben ein Funktelegramm für ein Besatzungsmitglied aufgenommen. Dürfen Sie einem anderen Besatzungsmitglied davon berichten?",
+ correct:"Nein",
+ wrong:["Ja, innerhalb der Besatzung ist das zulässig","Ja, wenn der Kapitän zustimmt","Ja, sofern es nicht privater Natur ist"]},
+
+{id:"SB_49",q:"Welche Aussendung hat im Seefunk unbedingten Vorrang?",
+ correct:"Notverkehr",
+ wrong:["Dringlichkeitsverkehr","Sicherheitsverkehr","Verkehr mit der Hafenbehörde"]},
+
+{id:"LRC_108",q:"Darf die Frequenz 2187,5 kHz für Sprechfunkverkehr benutzt werden?",
+ correct:"nein",
+ wrong:["Kanal 16 (Notruf und Anruf)","2182 kHz","Kanal 70 (DSC)"]},
+{id:"LRC_110",q:"Für welchen Zweck darf die Frequenz 121,5 MHz benutzt werden?",
+ correct:"für Not- und Dringlichkeitszwecke im Sprechfunk durch Funkstellen des mobilen Flugfunkdienstes, für Rettungsgerätefunkstellen und zum „Homeing“ von EPIRB’s",
+ wrong:["Kanal 13 (Brücke-Brücke)","2182 kHz","156,8 MHz"]},
+{id:"LRC_111",q:"Wird im Seefunkdienst vor einem Anruf im Notverkehr das Notzeichen MAYDAY ausgesendet?",
+ correct:"ja",
+ wrong:["Durch den Kapitän","Nur im Notfall","Auf Kanal 16"]},
+{id:"LRC_112",q:"Darf ein Schiff, das selbst nicht in Not ist, für ein anderes Schiff einen Notalarm aussenden?",
+ correct:"ja (Mayday Relay)",
+ wrong:["Im Seegebiet A1","Nach Bestätigung","Nur im Notfall"]},
+{id:"LRC_113",q:"Eine Funkstelle sendet einen „DSC distress relay alert“ aus, was bedeutet das?",
+ correct:"dass sich eine andere Stelle in Not (unmittelbarer, schwerer Gefahr) befindet",
+ wrong:["Gruppenruf","DSC-Controller","DSC-Anruf"]},
+{id:"LRC_114",q:"Wann wird „SILENCE MAYDAY“ ausgesendet?",
+ correct:"wenn die Funkstelle in Not oder die Funkstelle, die den Notverkehr leitet, einer oder mehreren Funkstellen das Senden untersagt (Funkstille auferlegt)",
+ wrong:["Im Seegebiet A1","Über DSC","In allen Seegebieten"]},
+{id:"LRC_115",q:"Mit welchen Zeichen dürfen RCC´s, die den Notverkehr, oder Einheiten, die Such- und Rettungsarbeiten koordinieren, Funkstellen, die einen Notverkehr im GMDSS stören, im Sprechfunk Funkstille auferlegen?",
+ correct:"SILENCE MAYDAY",
+ wrong:["Seegebiet A3","Weltweit","Seegebiet A4"]},
+{id:"LRC_117",q:"Was besagt die Meldung, an deren Ende „SILENCE FINI“ steht?",
+ correct:"dass der Notverkehr beendet und die Funkstille aufgehoben ist",
+ wrong:["Durch den Kapitän","Im Seegebiet A1","Durch die Küstenfunkstelle"]},
+{id:"LRC_122",q:"Wem obliegt in der Regel das Koordinieren des Notverkehrs im GMDSS?",
+ correct:"einem RCC (MRCC)",
+ wrong:["Seegebiet A2","Seegebiet A1","Seegebiet A4"]},
+{id:"LRC_123",q:"Welcher Kanal im UKW-Seefunkbereich ist vorzugsweise für den Verkehr und koordinierte SAR-Einsätze vorgesehen?",
+ correct:"Kanal 6",
+ wrong:["Kanal 70 (DSC)","156,8 MHz","Kanal 16 (Notruf und Anruf)"]},
+{id:"LRC_127",q:"Was müssen Sie tun, wenn Sie eine Seenotfunkbake unabsichtlich ausgelöst haben?",
+ correct:"Verbindungsaufnahme mit der nächsten Küsten-, Küsten-Erdfunkstelle oder einem RCC und den Alarm widerrufen",
+ wrong:["Im Seegebiet A1","Auf Kanal 16","Durch den Kapitän"]},
+{id:"LRC_128",q:"Wie lautet auf Grenzwelle das Verfahren zur Rücknahme von Fehlalarmen über DSC?",
+ correct:"auf 2182 kHz im Sprechfunk: ALL STATONS ALL STATIONS ALL STATIONS THIS IS (Schiffsname)/ (Rufzeichen)/ (MMSI) CANCEL MY DISTRESS ALERT OF (Zeit des Fehlalarms )UTC",
+ wrong:["DSC-Anruf","DSC-Controller","Gruppenruf"]},
+{id:"LRC_131",q:"Welches Betriebsverfahren muss im Verkehr mit Luftfahrzeugfunkstellen angewendet werden?",
+ correct:"das des Schiffsfunkdienstes",
+ wrong:["Im Seegebiet A1","Durch die Küstenfunkstelle","Nur im Notfall"]},
+{id:"LRC_133",q:"Wie wird die Wortgruppe „PAN PAN“ genannt?",
+ correct:"Dringlichkeitszeichen",
+ wrong:["Durch den Kapitän","Über DSC","Auf Kanal 16"]},
+{id:"LRC_137",q:"An wen wird der DSC-Dringlichkeitsanruf auf Kurzwelle im Regelfall gerichtet?",
+ correct:"an alle Fahrzeuge in einem definierten Gebiet (area call), oder CS oder RCC",
+ wrong:["Gruppenruf","DSC-Controller","DSC-Anruf"]},
+{id:"LRC_141",q:"Wie wird im Sprechfunk die Dringlichkeitsmeldung eingeleitet?",
+ correct:"durch das Dringlichkeitszeichen, das 3-malige „PAN PAN“",
+ wrong:["Auf Kanal 16","Durch die Küstenfunkstelle","Nur im Notfall"]},
+{id:"LRC_142",q:"Muss eine \"An alle Funkstellen\" ausgesendete Dringlichkeitsmeldung aufgehoben werden?",
+ correct:"ja, wenn die veranlassten Maßnahmen nicht mehr erforderlich sind",
+ wrong:["Gemäß SOLAS","Nach Bestätigung","Über DSC"]},
+{id:"LRC_144",q:"Wie lautet das Sicherheitszeichen?",
+ correct:"„SECURITE“",
+ wrong:["Nach Bestätigung","In allen Seegebieten","Auf Kanal 16"]},
+{id:"LRC_145",q:"An wen darf der DSC-Sicherheitsanruf auf GW und UKW gerichtet werden?",
+ correct:"an alle",
+ wrong:["DSC-Controller","Automatische Alarmierung","DSC-Anruf"]},
+{id:"LRC_146",q:"An wen wird der DSC-Sicherheitsanruf auf Kurzwelle im Regelfall gerichtet?",
+ correct:"an ein definiertes Gebiet (area call), oder eine CS oder ein RCC",
+ wrong:["Gruppenruf","Selektivruf","Automatische Alarmierung"]},
+{id:"LRC_147",q:"Was ist bei der Ankündigung einer Sicherheitsmeldung auf UKW zu beachten?",
+ correct:"die Sicherheitsmeldung muss mittels des digitalen Selektivrufs (DSC) auf Kanal 70 angekündigt werden dass kein höherrangiger Verkehr gestört wird",
+ wrong:["Durch die Küstenfunkstelle","Durch den Kapitän","In allen Seegebieten"]},
+{id:"LRC_151",q:"Was muss oder darf eine Seefunkstelle tun, die einen DSC-Sicherheitsanruf empfängt, der eine Sicherheitsmeldung an alle Schiffe ankündigt?",
+ correct:"niederrangigen Funkverkehr einstellen",
+ wrong:["Über DSC auf Kanal 70","Selektivruf","DSC-Controller"]},
+{id:"LRC_152",q:"Wie können im Küstenbereich automatisch Warnnachrichten empfangen werden?",
+ correct:"mittels NAVTEX",
+ wrong:["Über DSC","Nach Bestätigung","Durch den Kapitän"]},
+{id:"LRC_155",q:"In welchem Seegebiet wird NAVTEX angewandt?",
+ correct:"im Regelfall A1 + A2",
+ wrong:["Weltweit","Inmarsat-Abdeckung","Seegebiet A3"]},
+{id:"LRC_160",q:"In welchem Dienst wird der Gruppenanruf (EGC) verwendet?",
+ correct:"MSI (Maritime Safety Information) auf Inmarsat-C",
+ wrong:["Auf Kanal 16","Durch den Kapitän","Über DSC"]},
+{id:"LRC_161",q:"Mit welcher Einrichtung können Sie MSI über Satelliten empfangen?",
+ correct:"Inmarsat-C, EGC-Empfänger, Safety-Net",
+ wrong:["Im Seegebiet A1","Durch den Kapitän","Über DSC"]},
+{id:"LRC_164",q:"Wie können Sie feststellen, ob bei einer Küstenfunkstelle Nachrichten für Sie vorliegen, ohne dass Sie dort anrufen?",
+ correct:"durch das Abhören des Sammelanrufes (Traffic List)",
+ wrong:["Im Seegebiet A1","Auf Kanal 16","Nach Bestätigung"]},
+{id:"LRC_168",q:"Darf eine Seefunkstelle auch dann gerufen werden, wenn der Schiffsname unbekannt ist?",
+ correct:"ja",
+ wrong:["In allen Seegebieten","Auf Kanal 16","Nur im Notfall"]},
+{id:"LRC_170",q:"Welche Form hat die Positionsangabe im Seefunkdienst?",
+ correct:"z.B. 32-17.5 S 065-02.8 E",
+ wrong:["Gemäß SOLAS","Durch den Kapitän","Auf Kanal 16"]},
+{id:"LRC_171",q:"Sie haben gehört, dass Sie von einer Funkstelle gerufen wurden, konnten aber wegen Störungen nicht verstehen, wer Sie gerufen hat. Was müssen Sie tun?",
+ correct:"ich sende folgenden Anruf: wer hat mich gerufen station calling hier ist this is Schiffsname mit Rufzeichen shipsname and callsign",
+ wrong:["Durch den Kapitän","Auf Kanal 16","Im Seegebiet A1"]},
+{id:"LRC_172",q:"Was ist vor dem Anruf auf einem Arbeitskanal zu beachten?",
+ correct:"es muss sichergestellt werden, dass laufender Funkverkehr nicht gestört wird",
+ wrong:["Kanal 16 (Notruf und Anruf)","4125 kHz","2182 kHz"]},
+{id:"LRC_173",q:"Wie heißt das Verfahren zur Verkehrsaufnahme auf Kanal 70 bzw. der Frequenz 2187,5 kHz?",
+ correct:"DSC",
+ wrong:["Kanal 13 (Brücke-Brücke)","2182 kHz","4125 kHz"]},
+{id:"LRC_177",q:"Sie befinden sich in einem Gebiet, in dem es möglich ist, mit einer Küstenfunkstelle auf ihrem Arbeitskanal eine sichere UKW-Verbindung herzustellen. Wann dürfen Sie einen unbeantworteten Anruf an die betreffende Küstenfunkstelle wiederholen?",
+ correct:"sobald sichergestellt ist, dass der Sprechfunkverkehr bei der Küstenfunkstelle nicht gestört wird",
+ wrong:["156,8 MHz","4125 kHz","Kanal 13 (Brücke-Brücke)"]},
+{id:"LRC_182",q:"Welche Nachrichten dürfen im Seefunkdienst auf den Kanälen des Hafenfunkdienstes übermittelt werden?",
+ correct:"Nachrichten zur Abwicklung von Vorgängen mit Schleppern, Lotsen und Hafenbehörden",
+ wrong:["Auf Kanal 16","Im Seegebiet A1","Über DSC"]},
+{id:"LRC_184",q:"Über welches Verfahren können ausgewählte Seefunkstellen im Raumsegment des GMDSS gerufen werden?",
+ correct:"EGC Fleet-Net",
+ wrong:["Seegebiet A4","Seegebiet A1","Seegebiet A3"]},
+{id:"LRC_187",q:"Wie wird der Winkel zwischen Horizont und Satellit vom Schiff aus gesehen in der englischen Sprache genannt?",
+ correct:"Elevation",
+ wrong:["In allen Seegebieten","Durch die Küstenfunkstelle","Nach Bestätigung"]},
+{id:"LRC_189",q:"Welche Institution muss vor Inbetriebnahme einer (Inmarsat-) SATCOM-Anlage ihre Zustimmung geben?",
+ correct:"Inmarsat",
+ wrong:["Auf Kanal 16","In allen Seegebieten","Nach Bestätigung"]},
+{id:"LRC_19",q:"Besteht eine Verpflichtung zur Hörwache auf dem K16?",
+ correct:"ja, wenn es möglich ist",
+ wrong:["Auf Kanal 16","Durch den Kapitän","Gemäß SOLAS"]},
+{id:"LRC_190",q:"Welche Dienste bietet Inmarsat-C?",
+ correct:"MSI über EGC / Safety-Net",
+ wrong:["Im Seegebiet A1","In allen Seegebieten","Nach Bestätigung"]},
+{id:"LRC_198",q:"Wer setzt bei Funkgesprächen von und nach See die Verbindungszeit zur Gebührenberechnung fest?",
+ correct:"die Küstenfunkstelle",
+ wrong:["Durch die Küstenfunkstelle","Nur im Notfall","Über DSC"]},
+{id:"LRC_199",q:"Welche Voraussetzung ist für die Teilnahme am öffentlichen Nachrichtenaustausch erforderlich?",
+ correct:"ein Vertrag mit einer Abrechnungsgesellschaft",
+ wrong:["Nach Bestätigung","Durch die Küstenfunkstelle","Nur im Notfall"]},
+{id:"LRC_200",q:"In welcher Verrechnungseinheit erfolgt die Internationale Abrechnung des Funkverkehrs?",
+ correct:"Sonderziehungsrechte oder Goldfranken",
+ wrong:["Gemäß SOLAS","Auf Kanal 16","Nur im Notfall"]},
+{id:"LRC_201",q:"In Ihrer Funk-Betriebsbewilligung steht der Ausdruck „DP02“. Was bedeutet das?",
+ correct:"Es ist die Kennung (AAIC) einer Abrechnungsgesellschaft",
+ wrong:["Auf Kanal 16","Durch den Kapitän","Im Seegebiet A1"]},
+{id:"LRC_202",q:"Was ist eine Schiffserdfunkstelle?",
+ correct:"eine Satellitenfunkanlage an Bord eines Schiffes",
+ wrong:["Auf Kanal 16","In allen Seegebieten","Nach Bestätigung"]},
+{id:"LRC_24",q:"Welche Aufgabe hat die Funktion „Durchführung von Funkverkehr vor Ort“?",
+ correct:"die Abwicklung von Funkverkehr in Notfällen, direkt am Unfallort",
+ wrong:["Durch den Kapitän","Gemäß SOLAS","Nach Bestätigung"]},
+{id:"LRC_35",q:"Welche Kanäle umfasst der Schutzbereich für Kanal 16?",
+ correct:"Kanäle 75 und 76",
+ wrong:["4125 kHz","Kanal 6 (Koordination)","Kanal 13 (Brücke-Brücke)"]},
+{id:"LRC_40",q:"Wo ist festgelegt, welche Dienstbehelfe und Dokumente an Bord von Seefunkstellen mitzuführen sind?",
+ correct:"je nachdem was zur Auswahl steht: VO-Funk (Radio Regulations), SOLAS",
+ wrong:["Auf Kanal 16","Über DSC","Im Seegebiet A1"]},
+{id:"LRC_44",q:"Worin sind die internationalen Bestimmungen für den Erwerb von Funker-Zeugnissen aufgeführt?",
+ correct:"VO-FUNK (Radio Regulations), für die Berufsschifffahrt auch: STWC",
+ wrong:["UKW-Sprechfunkzeugnis","SRC (Short Range Certificate)","GOC (General Operator Certificate)"]},
+{id:"LRC_45",q:"Welches Funker-Zeugnis ist mindestens erforderlich, um weltweit am GMDSS mit einer GW/KW-Funkanlage im Seegebiet A3 teilnehmen zu dürfen?",
+ correct:"LRC (Allgemeines Betriebszeugnis II)",
+ wrong:["Seegebiet A4","Weltweit","Seegebiet A1"]},
+{id:"LRC_46",q:"Welches Funker-Zeugnis ist mindestens erforderlich, um weltweit am GMDSS im Seegebiet A1 teilnehmen zu dürfen?",
+ correct:"SRC (UKW-Betriebszeugnis II)",
+ wrong:["Seegebiet A4","Inmarsat-Abdeckung","Küstennahe Gewässer"]},
+{id:"LRC_48",q:"Ist das Funker-Zeugnis an Bord mitzuführen?",
+ correct:"ja",
+ wrong:["GOC (General Operator Certificate)","Allgemeines Betriebszeugnis","UKW-Sprechfunkzeugnis"]},
+{id:"LRC_49",q:"Welche Aussendungen sind gemäß der Vollzugsordnung für den Funkdienst verboten?",
+ correct:"Aussendungen mit falschen oder irreführenden Rufzeichen",
+ wrong:["Nach Bestätigung","Auf Kanal 16","In allen Seegebieten"]},
+{id:"LRC_56",q:"In welchem Warndienst wird der Gruppenanruf (EGC) verwendet?",
+ correct:"MSI (Safety-Net)",
+ wrong:["Über DSC","Gemäß SOLAS","Nur im Notfall"]},
+{id:"LRC_59",q:"Welches internationale Regelwerk legt die betrieblichen Verfahren für das weltweite Seenotund Sicherheitsfunksystem für die Schifffahrt fest?",
+ correct:"VO-Funk (Radio Regulations)",
+ wrong:["Auf Kanal 16","Gemäß SOLAS","Über DSC"]},
+{id:"LRC_60",q:"In welchem Fall darf von den Bestimmungen der Vollzugsordnung für den Funkdienst abgewichen werden?",
+ correct:"in Notfällen",
+ wrong:["Durch die Küstenfunkstelle","Im Seegebiet A1","Nach Bestätigung"]},
+{id:"LRC_62",q:"In welcher Funkregion liegt Österreich?",
+ correct:"Region 1",
+ wrong:["Auf Kanal 16","In allen Seegebieten","Über DSC"]},
+{id:"LRC_64",q:"Was bedeutet die Abkürzung GMDSS?",
+ correct:"Global Maritime Distress and Safety System – Weltweites Seenot- und Sicherheitsfunksystem",
+ wrong:["Seegebiet A2","Inmarsat-Abdeckung","Weltweit"]},
+{id:"LRC_67",q:"Wer teilt in Österreich das Rufzeichen und die MMSI für eine Seefunkstelle zu?",
+ correct:"Fernmeldebehörde (Fernmeldebüro)",
+ wrong:["In allen Seegebieten","Gemäß SOLAS","Im Seegebiet A1"]},
+{id:"LRC_68",q:"Ist das Senden auf UKW in ausländischen Häfen gestattet?",
+ correct:"das hängt von den jeweiligen Bestimmungen ab",
+ wrong:["Durch den Kapitän","Gemäß SOLAS","Nur im Notfall"]},
+{id:"LRC_69",q:"Ist das Senden auf Grenz- oder Kurzwelle in ausländischen Häfen gestattet?",
+ correct:"das hängt von den jeweiligen Bestimmungen ab (eher nicht)",
+ wrong:["Über DSC","Auf Kanal 16","Gemäß SOLAS"]},
+{id:"LRC_7",q:"Wie lautet im GMDSS die Kurzbezeichnung für das nachfolgend beschriebene Seegebiet? \"Ein von der zuständigen Verwaltung festgelegtes Gebiet innerhalb der Sprechfunkreichweite mindestens einer GW-Küstenfunkstelle, die ununterbrochen für DSC-Alarmierungen zur Verfügung steht.\"",
+ correct:"A2",
+ wrong:["A1","A3","A4"]},
+{id:"LRC_70",q:"Wo ist die Ausrüstung österreichischer Jachten mit Funkanlagen geregelt?",
+ correct:"Jachtzulassungsverordnung",
+ wrong:["Nach Bestätigung","In allen Seegebieten","Durch den Kapitän"]},
+{id:"LRC_76",q:"Welche Aussendung hat im Seefunk unbedingten Vorrang?",
+ correct:"Notverkehr",
+ wrong:["Über DSC","In allen Seegebieten","Durch den Kapitän"]},
+{id:"LRC_77",q:"Wie lautet das Notzeichen?",
+ correct:"Mayday",
+ wrong:["Nach Bestätigung","Durch die Küstenfunkstelle","Auf Kanal 16"]},
+{id:"LRC_78",q:"Was bedeutet DISTRESS ALERT?",
+ correct:"den Notalarm einer Person oder eines Fahrzeug, in unmittelbarer, schwerer Gefahr",
+ wrong:["Über DSC","Nach Bestätigung","Gemäß SOLAS"]},
+{id:"LRC_8",q:"Wie lautet im GMDSS die Kurzbezeichnung für das nachfolgend beschriebene Seegebiet? \"Ein Gebiet innerhalb der Überdeckung eines geostationären Inmarsat-Satelliten, der ununterbrochen für Alarmierungen zur Verfügung steht.\"",
+ correct:"A3",
+ wrong:["A1","A2","A4"]},
+{id:"LRC_83",q:"Welche Angaben sollte ein Notalarm mindestens enthalten?",
+ correct:"- Notzeichen - Name/Kennzeichnung der Funkstelle in Not, - Standort - Art des Notfalls, - Art der erbetenen Hilfe - jede andere Angabe, die die Hilfeleistung erleichtern könnte",
+ wrong:["Über DSC","Nur im Notfall","Nach Bestätigung"]},
+{id:"LRC_85",q:"Welche Frequenzen sind für die DSC-Alarmierung im Kurzwellenbereich zu benützen?",
+ correct:"4207,5 6312 8414,5 12577 16804,5",
+ wrong:["156,8 MHz","2182 kHz","Kanal 13 (Brücke-Brücke)"]},
+{id:"LRC_88",q:"Auf welchem UKW-Kanal erfolgt die DSC-Alarmierung?",
+ correct:"Kanal 70",
+ wrong:["Kanal 13 (Brücke-Brücke)","Kanal 16 (Notruf und Anruf)","4125 kHz"]},
+{id:"LRC_95",q:"Muss eine Seefunkstelle den Empfang eines DSC-Notalarms auf GW einer zweifellos weit entfernten Seefunkstelle, der sie nicht helfen kann, über Sprechfunk bestätigen?",
+ correct:"die Bestätigung erfolgt in diesem Fall nur dann, wenn die Notmeldung von anderen Funkstellen nicht bestätigt worden ist",
+ wrong:["DSC-Anruf","Über DSC auf Kanal 70","Selektivruf"]},
+{id:"LRC_98",q:"Welche Maßnahmen soll eine Seefunkstelle ergreifen, wenn trotz ihrer Bestätigung auf der Frequenz 2182 kHz über den Empfang des DSC-Notalarms weiterhin DSC-Notalarme der zweifellos in der Nähe befindlichen Funkstelle in Not ausgesendet werden?",
+ correct:"Eine Weiterleitung an ein RCC senden eventuell (nach Rücksprache mit einem RCC) eine DSC-Empfangsbestätigung senden",
+ wrong:["2182 kHz","Kanal 70 (DSC)","Kanal 16 (Notruf und Anruf)"]},
+{id:"LRC_99",q:"Welche Maßnahmen soll eine Seefunkstelle ergreifen, wenn trotz ihrer Bestätigung auf dem Kanal 16 über den Empfang des DSC-Notalarms weiterhin DSC-Notalarme der zweifellos in der Nähe befindlichen Funkstelle in Not ausgesendet werden?",
+ correct:"die Seefunkstelle soll den Empfang des Notalarms mittels einer DSC-Aussendung auf Kanal 70 bestätigen",
+ wrong:["Kanal 13 (Brücke-Brücke)","Kanal 6 (Koordination)","Kanal 16 (Notruf und Anruf)"]},
+{id:"SB_1",q:"Wie werden im GMDSS die für die Ausrüstung mit Funkanlagen festgelegten Seengebiete bezeichnet?",
+ correct:"A1, A2, A3, A4",
+ wrong:["Seegebiet A2","Küstennahe Gewässer","Seegebiet A1"]},
+{id:"SB_100",q:"Wie oft wird außerhalb des GMDSS im Notanruf der Name des in Not befindlichen Schiffes genannt?",
+ correct:"dreimal",
+ wrong:["Seegebiet A1","Seegebiet A4","Seegebiet A2"]},
+{id:"SB_101",q:"Womit wird außerhalb des GMDSS die Notmeldung eingeleitet?",
+ correct:"mit dem Notzeichen",
+ wrong:["Seegebiet A2","Weltweit","Seegebiet A1"]},
+{id:"SB_102",q:"Was folgt außerhalb des GMDSS in der Notmeldung auf den Namen oder der sonstigen Kennung der Funkstelle in Not?",
+ correct:"der Standort des in Not befindlichen Schiffes",
+ wrong:["Seegebiet A1","Seegebiet A2","Küstennahe Gewässer"]},
+{id:"SB_104",q:"Auf welcher Frequenz im GW-Bereich wird außerhalb des GMDSS im Seefunk die Notmeldung ausgesendet?",
+ correct:"vorzugsweise auf der internationalen Not-, Sicherheits- und Anruffrequenz 2182 kHz; aber auch auf jeder anderen verfügbaren Frequenz, auf dem die Funkstelle in Not Aufmerksamkeit auf sich lenken könnte",
+ wrong:["4125 kHz","Kanal 70 (DSC)","Kanal 13 (Brücke-Brücke)"]},
+{id:"SB_105",q:"Darf im Seefunk außerhalb des GMDSS die Notmeldung nur auf 2182 kHz ausgesendet werden?",
+ correct:"nein, eine Funkstelle in Not darf die Notmeldung auch auf jeder verfügbaren Frequenz aussenden, auf dem sie die Aufmerksamkeit auf sich lenken könnte",
+ wrong:["Seegebiet A2","Seegebiet A3","Weltweit"]},
+{id:"SB_106",q:"Auf welchem UKW-Kanal wird außerhalb des GMDSS die Notmeldung ausgesendet?",
+ correct:"vorzugsweise auf dem internationalen Not-, Sicherheits- und Anrufkanal 16; eine Funkstelle in Not darf die Notmeldung jedoch auch auf jedem verfügbaren Kanal aussenden, auf dem sie die Aufmerksamkeit auf sich lenken könnte",
+ wrong:["156,8 MHz","Kanal 13 (Brücke-Brücke)","Kanal 16 (Notruf und Anruf)"]},
+{id:"SB_107",q:"Darf im Seefunk außerhalb des GMDSS die Notmeldung ausschließlich auf Kanal 16 ausgesendet werden?",
+ correct:"nein, eine Funkstelle in Not darf die Notmeldung auch auf jedem verfügbaren Kanal aussenden, auf dem sie die Aufmerksamkeit auf sich lenken könnte",
+ wrong:["2182 kHz","Kanal 16 (Notruf und Anruf)","4125 kHz"]},
+{id:"SB_11",q:"Wie werden im GMDSS die Not- und Sicherheitsfrequenzen überwacht?",
+ correct:"durch Empfangsbereitschaft für DSC-Alarmierungen auf 2187,5 kHz",
+ wrong:["156,8 MHz","Kanal 6 (Koordination)","4125 kHz"]},
+{id:"SB_13",q:"Wann müssen Schiffserdfunkstellen, die am GMDSS teilnehmen, empfangsbereit sein?",
+ correct:"immer wenn sie auf See sind, ausgenommen, wenn sie auf einem Arbeitskanal Verkehr abwickeln",
+ wrong:["Seegebiet A4","Inmarsat-Abdeckung","Küstennahe Gewässer"]},
+{id:"SB_14",q:"Wer empfängt Notalarme, die mittels DSC ausgesendet werden?",
+ correct:"Küstenfunkstellen und Seefunkstellen",
+ wrong:["DSC-Controller","Gruppenruf","Automatische Alarmierung"]},
+{id:"SB_15",q:"Welcher UKW-Kanal sollte im GMDSS nach Möglichkeit für den Empfang von Meldungen betreffend die Sicherheit der Seeschifffahrt dauernd abgehört werden?",
+ correct:"Kanal 13",
+ wrong:["4125 kHz","Kanal 70 (DSC)","Kanal 13 (Brücke-Brücke)"]},
+{id:"SB_16",q:"Welche der angegebenen Funkstellen können im GMDSS nicht mittels DSC alarmiert werden?",
+ correct:"Schiffserdfunkstellen",
+ wrong:["Seegebiet A3","Seegebiet A2","Weltweit"]},
+{id:"SB_17",q:"Welche Aufgabe hat im GMDSS die Funktion „Durchführung von Funkverkehr vor Ort“?",
+ correct:"Koordinierung der Maßnahmen am Unfallort zwischen den beteiligten SAR-Einheiten",
+ wrong:["Inmarsat-Abdeckung","Seegebiet A3","Küstennahe Gewässer"]},
+{id:"SB_19",q:"Welche der angeführten EPIRB‘s sendet neben einem Systemcode auch noch die Position des Havaristen aus ?",
+ correct:"L-Band-EPIRB",
+ wrong:["Auf Kanal 16","Über DSC","Im Seegebiet A1"]},
+{id:"SB_2",q:"Wie wird im GMDSS das Seegebiet A2 beschrieben?",
+ correct:"Ein von der zuständigen Verwaltung festgelegtes Gebiet innerhalb der Sprechfunkreichweite mindestens einer GWKüstenfunkstelle, die ununterbrochen für DSC-Alarmierungen zur Verfügung steht.",
+ wrong:["Weltweit","Seegebiet A2","Seegebiet A3"]},
+{id:"SB_20",q:"Wo ist die Ausrüstung mit einer UKW-DSC-EPIRB sinnvoll?",
+ correct:"im Seegebiet A1",
+ wrong:["DSC-Controller","DSC-Anruf","Über DSC auf Kanal 70"]},
+{id:"SB_21",q:"Welches funktechnische Rettungsmittel ist für ein nicht nach SOLAS ausrüstungspflichtiges Schiff im GMDSS für die Seegebiete A1 bis A3 zu empfehlen?",
+ correct:"eine Satelliten-EPIRB; vorzugsweise INMARSAT-E",
+ wrong:["Seegebiet A1","Seegebiet A3","Inmarsat-Abdeckung"]},
+{id:"SB_22",q:"Warum ist im Seegebiet A4 eine L-Band-EPIRB nutzlos?",
+ correct:"weil das Gebiet nicht im Bedeckungsbereich der INMARSAT Satelliten liegt",
+ wrong:["Weltweit","Seegebiet A1","Seegebiet A4"]},
+{id:"SB_23",q:"Welche der genannten Vorschriften verpflichtet den Schiffseigner, sein Schiff u. U. mit einer EPIRB auszurüsten?",
+ correct:"Jachtzulassungsverordnung",
+ wrong:["Gemäß SOLAS","Nach Bestätigung","Auf Kanal 16"]},
+{id:"SB_24",q:"Welches funktechnische Rettungsmittel ist für eine Jacht im Fahrtbereich 4 vorgeschrieben?",
+ correct:"eine EPIRB",
+ wrong:["Nur im Notfall","Nach Bestätigung","Auf Kanal 16"]},
+{id:"SB_27",q:"Sind Versuchssendungen auf den GMDSS Not- und Sicherheitsfrequenzen erlaubt?",
+ correct:"ja, aber sie sind auf das unbedingt nötige Ausmaß zu beschränken, auf den Anruffrequenzen sind sie zu vermeiden",
+ wrong:["Kanal 6 (Koordination)","156,8 MHz","Kanal 70 (DSC)"]},
+{id:"SB_29",q:"Wo ist international die Führung von Aufzeichnungen im Funkverkehr geregelt?",
+ correct:"VO Funk",
+ wrong:["Nur im Notfall","Nach Bestätigung","Über DSC"]},
+{id:"SB_3",q:"Wie wird im GMDSS das Seegebiet A3 beschrieben?",
+ correct:"Gebiete außerhalb von A1 und A2 .Ein Gebiet innerhalb der Überdeckung eines geostationären INMARSAT-Satelliten, der ununterbrochen für Alarmierungen zur Verfügung steht.",
+ wrong:["Küstennahe Gewässer","Weltweit","Seegebiet A2"]},
+{id:"SB_30",q:"Wo sind die Betriebsverfahren, die im Seefunkdienst anzuwenden sind, beschrieben?",
+ correct:"Seeschiffahrtsverordnung",
+ wrong:["Nach Bestätigung","Auf Kanal 16","Nur im Notfall"]},
+{id:"SB_34",q:"Welche Aussendungen sind gemäß der Vollzugsordnung für den Funkdienst verboten?",
+ correct:"Jede Aussendung, die einen Notverkehr auf einer der internationalen Notfrequenzen stören könnte",
+ wrong:["Über DSC","Nur im Notfall","Gemäß SOLAS"]},
+{id:"SB_35",q:"Welche Aussendungen sind gemäß der Vollzugsordnung für den Funkdienst verboten?",
+ correct:"Jede Aussendung, die einen Notverkehr auf einer der internationalen Notfrequenzen stören könnte",
+ wrong:["Nur im Notfall","Über DSC","Nach Bestätigung"]},
+{id:"SB_38",q:"In welchem Warndienst wird der Gruppenanruf (EGC) verwendet ?",
+ correct:"Satelliten-Warndienst",
+ wrong:["Nach Bestätigung","Gemäß SOLAS","Im Seegebiet A1"]},
+{id:"SB_39",q:"Welcher Dienst übermittelt MSI über Satelliten?",
+ correct:"SafetyNET Service im EGC System",
+ wrong:["Gemäß SOLAS","Über DSC","Durch den Kapitän"]},
+{id:"SB_4",q:"Welchen geografischen Bereich etwa umfaßt im GMDSS das Seegebiet A4 ?",
+ correct:"Gewässer jeweils nördlich und südlich von 70° Breite nicht mit Inmarsat versorgt ( Polkappen)",
+ wrong:["Inmarsat-Abdeckung","Seegebiet A4","Seegebiet A3"]},
+{id:"SB_40",q:"In welcher internationalen Vorschrift sind die Frequenzbereiche für die einzelnen Funkdienste festgelegt?",
+ correct:"VO Funk Vollzugsordnung für den Funkdienst",
+ wrong:["2182 kHz","Kanal 70 (DSC)","Kanal 6 (Koordination)"]},
+{id:"SB_43",q:"Darf das bisherige Verfahren betreffend den Not- und Sicherheitsverkehr („non-GMDSS“) weiter angewendet werden?",
+ correct:"das Verfahren darf weiterhin von jenen Schiffen angewendet werden, die nicht mit GMDSS ausgerüstet sind",
+ wrong:["Inmarsat-Abdeckung","Weltweit","Seegebiet A2"]},
+{id:"SB_45",q:"In welchem Fahrtbereich muß eine Jacht mit österreichischer Seezulassung mit einer UKW- Sprechfunkanlage ausgerüstet sein?",
+ correct:"in den Fahrtbereichen 3 und 4",
+ wrong:["Durch die Küstenfunkstelle","Nur im Notfall","In allen Seegebieten"]},
+{id:"SB_47",q:"Wo können sie sich informieren, welches RCC für ein bestimmtes Gebiet zuständig ist ?",
+ correct:"im GMDSS Master Plan der IMO",
+ wrong:["Im Seegebiet A1","Nur im Notfall","Auf Kanal 16"]},
+{id:"SB_5",q:"Wie lautet im GMDSS die Kurzbezeichnung für das nachfolgend beschriebene Seegebiet? \"Ein von der zuständigen Verwaltung festgelegtes Gebiet innerhalb der Sprechfunkreichweite mindestens einer GW-Küstenfunkstelle, die ununterbrochen für DSC-Alarmierungen zur Verfügung steht.\"",
+ correct:"A2",
+ wrong:["A1","A3","A4"]},
+{id:"SB_50",q:"Womit wird im GMDSS auf 2187,5 kHz ein Seenotverkehr eingeleitet?",
+ correct:"mit der Notalarmierung",
+ wrong:["Küstennahe Gewässer","Seegebiet A2","Weltweit"]},
+{id:"SB_55",q:"Auf welcher Grenzwellen-Frequenz erfolgt die DSC-Alarmierung?",
+ correct:"auf 2187,5 kHz",
+ wrong:["Kanal 70 (DSC)","2182 kHz","Kanal 13 (Brücke-Brücke)"]},
+{id:"SB_56",q:"Welche der genannten Frequenzen ist u.a. für die DSC-Alarmierung im Kurzwellenbereich zu benützen?",
+ correct:"8414,5 kHz",
+ wrong:["Kanal 6 (Koordination)","Kanal 70 (DSC)","Kanal 13 (Brücke-Brücke)"]},
+{id:"SB_57",q:"In welchem Frequenzbereich soll die DSC-Alarmierung Schiff – Land aus den Seegebieten A3 und A4 erfolgen?",
+ correct:"auf einer der Kurzwellen Not- und Sicherheitsfrequenzen, vorzugsweise 8414,5 kHz",
+ wrong:["2182 kHz","Kanal 70 (DSC)","Kanal 13 (Brücke-Brücke)"]},
+{id:"SB_58",q:"In welchem Frequenzbereich soll die DSC-Alarmierung von Schiffen in der Nähe in den Seegebieten A3 und A4 erfolgen?",
+ correct:"auf 2187,5 kHz und/oder auf dem UKW-Kanal 70",
+ wrong:["4125 kHz","Kanal 16 (Notruf und Anruf)","Kanal 6 (Koordination)"]},
+{id:"SB_59",q:"Auf welchem Gerät kann man durch drücken einer Taste einen Notalarm über das Raumsegment des GMDSS auslösen?",
+ correct:"INMARSAT-C-Terminal",
+ wrong:["Seegebiet A1","Seegebiet A2","Inmarsat-Abdeckung"]},
+{id:"SB_6",q:"Wie lautet im GMDSS die Kurzbezeichnung für das nachfolgend beschriebene Seegebiet? \"Ein Gebiet innerhalb der Überdeckung eines geostationären Inmarsat-Satelliten, der ununterbrochen für Alarmierungen zur Verfügung steht.\"",
+ correct:"A3",
+ wrong:["A1","A2","A4"]},
+{id:"SB_63",q:"Muss eine Seefunkstelle, die auf GW oder UKW einen DSC-Notalarm einer in ihrer Nähe befindlichen anderen Seefunkstelle empfangen hat, den Empfang über Sprechfunk bestätigen?",
+ correct:"ja",
+ wrong:["Gruppenruf","Über DSC auf Kanal 70","DSC-Anruf"]},
+{id:"SB_64",q:"Muss eine Seefunkstelle den Empfang eines DSC-Notalarms auf GW einer zweifellos weit entfernten Seefunkstelle, der sie nicht helfen kann, über Sprechfunk bestätigen?",
+ correct:"die Bestätigung erfolgt in diesem Fall nur dann, wenn keine andere Funkstelle den Notalarm bestätigt",
+ wrong:["Automatische Alarmierung","Selektivruf","DSC-Controller"]},
+{id:"SB_65",q:"Welche Maßnahmen soll eine Seefunkstelle ergreifen, wenn trotz ihrer Bestätigung auf der Frequenz 2182 kHz über den Empfang des DSC-Notalarms weiterhin DSC-Notalarme der zweifellos in der Nähe befindlichen Funkstelle in Not ausgesendet werden?",
+ correct:"MRCC oder CS sollen entsprechend informiert werden. Kann nach Abstimmung mit MRCC oder CS der Ruf bestätigt werden.",
+ wrong:["4125 kHz","Kanal 16 (Notruf und Anruf)","2182 kHz"]},
+{id:"SB_66",q:"Auf welcher Frequenz im GW-Bereich wird die Meldung, mit der im GMDSS der Notverkehr im Sprechfunk eingeleitet wird, ausgesendet?",
+ correct:"auf der internationalen Not- und Sicherheitsfrequenz 2182 kHz",
+ wrong:["2182 kHz","4125 kHz","Kanal 13 (Brücke-Brücke)"]},
+{id:"SB_67",q:"Auf welcher Frequenz wird der Notverkehr im Sprechfunk auf Grenzwelle im GMDSS abgewickelt?",
+ correct:"auf 2182 kHz",
+ wrong:["4125 kHz","156,8 MHz","Kanal 70 (DSC)"]},
+{id:"SB_70",q:"Darf ein Schiff, das selbst nicht in Not ist, für ein anderes Schiff auf 2187,5 kHz einen Notalarm aussenden?",
+ correct:"ja, wenn das Schiff in Not nicht selbst in der Lage ist, den Notalarm auszusenden",
+ wrong:["In allen Seegebieten","Über DSC","Durch die Küstenfunkstelle"]},
+{id:"SB_71",q:"Welche der angeführten GW-Frequenzen werden für Search and Rescue (SAR) „vor Ort“ benutzt?",
+ correct:"3023 und 2182 kHz",
+ wrong:["Kanal 13 (Brücke-Brücke)","2182 kHz","4125 kHz"]},
+{id:"SB_73",q:"Wie lautet auf Grenzwelle das Verfahren zur Rücknahme von Fehlalarmen über DSC?",
+ correct:"Nach sofortiger Deaktivierung des Notalarmes Auf 2182 kHz: ALL STATONS ALL STATIONS ALL STATIONS THIS IS (Schiffsname)/ (Rufzeichen)/ (MMSI) Position (Breite, Länge) CANCEL MY DISTRESS ALERT OF (Datum/Zeit des Fehlalarms )UTC MASTER (Schiffsname)/(Rufzeichen)/(MMSI) (Datum/Zeit) UTC",
+ wrong:["Gruppenruf","Automatische Alarmierung","DSC-Controller"]},
+{id:"SB_74",q:"Was müssen Sie tun, wenn Sie mit Ihrer Inmarsat-C-Anlage unabsichtlich einen Notalarm ausgesendet haben?",
+ correct:"die zuständige RCC mittels einer Distress Priority Meldung über dieselbe CES(Coast earth Station), über die die Notalarmierung erfolgte, über den Widerruf der Notalarmierung wie folgt informieren: Name, Rufzeichen, IMN Position Cancel my Inmarsat-C distress alert of DATE, TIME (UTC) =Master+",
+ wrong:["Nach Bestätigung","Durch den Kapitän","Über DSC"]},
+{id:"SB_77",q:"An wen wird der DSC-Dringlichkeitsanruf auf Kurzwelle im Regelfall gerichtet?",
+ correct:"an alle Schiffe in einem definierten geografischen Gebiet oder an eine bestimmte Küstenfunkstelle",
+ wrong:["Gruppenruf","DSC-Anruf","Über DSC auf Kanal 70"]},
+{id:"SB_78",q:"Auf welcher GW-Frequenz soll eine Seefunkstelle im Sprechfunk die Dringlichkeitsmeldung im GMDSS aussenden?",
+ correct:"2182 kHz",
+ wrong:["Kanal 13 (Brücke-Brücke)","Kanal 6 (Koordination)","Kanal 70 (DSC)"]},
+{id:"SB_8",q:"Auf welcher Frequenz im Grenzwellenbereich müssen Seefunkstellen, die Einrichtungen des GMDSS benützen, eine Empfangsbereitschaft für DSC sicherstellen, wenn sie auf See sind?",
+ correct:"2187,5 kHz",
+ wrong:["4125 kHz","2182 kHz","156,8 MHz"]},
+{id:"SB_80",q:"An wen darf der DSC-Sicherheitsanruf auf GW gerichtet werden?",
+ correct:"an alle Schiffe, an alle Schiffe in einem definierten geografischen Gebiet oder an eine bestimmte Funkstelle",
+ wrong:["Selektivruf","Gruppenruf","Über DSC auf Kanal 70"]},
+{id:"SB_81",q:"An wen wird der DSC-Sicherheitsanruf auf Kurzwelle im Regelfall gerichtet?",
+ correct:"an alle Schiffe in einem definierten geografischen Gebiet oder an eine bestimmte Küstenfunkstelle",
+ wrong:["Selektivruf","DSC-Anruf","Gruppenruf"]},
+{id:"SB_82",q:"Auf welcher GW-Frequenz soll eine Seefunkstelle im Sprechfunk die Sicherheitsmeldung im GMDSS im Regelfall aussenden?",
+ correct:"2182 kHz",
+ wrong:["156,8 MHz","Kanal 70 (DSC)","Kanal 6 (Koordination)"]},
+{id:"SB_84",q:"Wie können im Küstenbereich automatisch Warnnachrichten empfangen werden ?",
+ correct:"über NAVTEX",
+ wrong:["Auf Kanal 16","In allen Seegebieten","Im Seegebiet A1"]},
+{id:"SB_85",q:"Welcher Dienst wird auf 518 kHz ausgesendet ?",
+ correct:"NAVTEX",
+ wrong:["Durch die Küstenfunkstelle","Gemäß SOLAS","Durch den Kapitän"]},
+{id:"SB_87",q:"Welche Auswahlmöglichkeiten bestehen für den Empfang von NAVTEX - Sendungen?",
+ correct:"es müssen die NAVTEX-Stationen und die Art der gewünschten Meldungen am Gerät eingegeben werden",
+ wrong:["Durch die Küstenfunkstelle","Durch den Kapitän","Nur im Notfall"]},
+{id:"SB_88",q:"Welche Reichweite hat der NAVTEX-Dienst auf 518 kHz ?",
+ correct:"ca. 400 sm vom Senderstandort aus",
+ wrong:["Nur im Notfall","Auf Kanal 16","In allen Seegebieten"]},
+{id:"SB_89",q:"Worauf muss beim Einstellen eines NAVTEX-Empfängers geachtet werden?",
+ correct:"Wahl der Küstenfunkstelle und Art der Aussendungen",
+ wrong:["Durch die Küstenfunkstelle","Nur im Notfall","Auf Kanal 16"]},
+{id:"SB_9",q:"Auf welcher Frequenz ist im GMDSS ein Grenzwellen-DSC-Wachempfänger empfangsbereit ?",
+ correct:"2187,5 kHz",
+ wrong:["Kanal 6 (Koordination)","Kanal 16 (Notruf und Anruf)","4125 kHz"]},
+{id:"SB_91",q:"Mit welcher der genannten Einrichtungen können sie MSI über Satelliten empfangen?",
+ correct:"INMARSAT-C Klasse 2",
+ wrong:["Über DSC","Durch die Küstenfunkstelle","Gemäß SOLAS"]},
+{id:"SB_92",q:"Was ist ein EGC-Empfänger ?",
+ correct:"INMARSAT-C Klasse 2",
+ wrong:["Nur im Notfall","In allen Seegebieten","Über DSC"]},
+{id:"SB_95",q:"Was zeigt das Notzeichen außerhalb des GMDSS im Sprechfunk an?",
+ correct:"dass ein Schiff von ernster und unmittelbar bevorstehender Gefahr bedroht ist und um sofortige Hilfe bittet",
+ wrong:["Seegebiet A4","Weltweit","Inmarsat-Abdeckung"]},
+{id:"SB_97",q:"Was ist im Seefunkdienst außerhalb des GMDSS vor dem Aussenden eines Notanrufs auf Kanal 16 zu beachten?",
+ correct:"es darf sofort mit dem Senden begonnen werden",
+ wrong:["4125 kHz","2182 kHz","Kanal 16 (Notruf und Anruf)"]},
+{id:"SB_98",q:"Womit wird außerhalb des GMDSS ein Seenotverkehr eingeleitet?",
+ correct:"mit dem Notanruf",
+ wrong:["Weltweit","Seegebiet A1","Seegebiet A2"]},
+
+];
+
+/* ================================================================
+   Ab hier: Programmlogik — normalerweise nicht ändern
+   ================================================================ */
+const LS_DATA='lrc_questions_v1', LS_PROG='lrc_progress_v1', LS_MASTERED='lrc_mastered_v1';
+const REPEAT_AFTER=30;      // Lernmodus: falsche Frage nach N Fragen erneut
+const TEST_SIZE=50;         // Testmodus: Anzahl Fragen
+
+let data = loadData();
+let mastered = loadMastered();
+let mode='learn', queue=[], pos=0, right=0, wrong=0, sel=null, answered=false, wrongLog=[], rightLog=[];
+let edIdx=0;
+
+updateStartScreen();
+
+function loadData(){
+  try{const s=localStorage.getItem(LS_DATA); if(s){const p=JSON.parse(s); if(Array.isArray(p)&&p.length) return p;}}catch(e){}
+  return JSON.parse(JSON.stringify(QUESTIONS));
+}
+function saveData(){ try{localStorage.setItem(LS_DATA,JSON.stringify(data));}catch(e){} }
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function show(id){
+  ['screen-start','screen-quiz','screen-result','screen-editor'].forEach(s=>{
+    document.getElementById(s).style.display = (s===id)?'block':'none';});
+  // Copyright + Haftungsausschluss nur am Startbildschirm, waehrend der Fragen ausgeblendet
+  document.getElementById('legal').style.display = (id==='screen-start')?'block':'none';
+}
+
+/* ---------- Quiz ---------- */
+function startMode(m){
+  mode=m;
+  // Fortschritt aus Cookie laden, falls vorhanden
+  const saved = loadProgress();
+  if(saved && saved.mode===m){
+    // Fortschritt wiederherstellen
+    queue=saved.queue; pos=saved.pos; right=saved.right; wrong=saved.wrong; wrongLog=saved.wrongLog||[]; rightLog=saved.rightLog||[];
+  } else {
+    // Neu starten
+    right=0; wrong=0; pos=0; wrongLog=[]; rightLog=[];
+    const pool=data.map((q,i)=>i);
+    // Shuffle für beide Modi
+    queue = (m==='test') ? shuffle(pool).slice(0,Math.min(TEST_SIZE,pool.length)).map(i=>({i,rep:false}))
+                         : shuffle(pool).map(i=>({i,rep:false}));
+  }
+  document.getElementById('q-mode').textContent = (m==='test')?'Testmodus':'Lernmodus';
+  show('screen-quiz'); render();
+}
+function render(){
+  if(pos>=queue.length){ finish(); return; }
+  const item=queue[pos], q=data[item.i];
+  answered=false; sel=null;
+  // Fortschritt speichern
+  saveProgress();
+  document.getElementById('q-id').textContent=q.id||('#'+(item.i+1));
+  const mb=document.getElementById('q-mode');
+  mb.textContent = item.rep ? 'Wiederholung' : ((mode==='test')?'Testmodus':'Lernmodus');
+  mb.className = 'badge'+(item.rep?' repeat':'');
+  document.getElementById('q-text').textContent=q.q;
+
+  const box=document.getElementById('options'); box.innerHTML='';
+  shuffle([q.correct,...q.wrong]).forEach(t=>{
+    const d=document.createElement('div'); d.className='option'; d.textContent=t; d.dataset.a=t;
+    d.onclick=()=>{ if(answered) return;
+      document.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));
+      d.classList.add('selected'); sel=d; document.getElementById('btn-check').disabled=false; };
+    box.appendChild(d);
+  });
+  document.getElementById('btn-check').style.display='block';
+  document.getElementById('btn-check').disabled=true;
+  document.getElementById('btn-next').style.display='none';
+  stats();
+}
+function check(){
+  if(!sel||answered) return; answered=true;
+  const item=queue[pos], q=data[item.i], ok = sel.dataset.a===q.correct;
+  document.querySelectorAll('.option').forEach(o=>{
+    o.classList.add('locked');
+    if(o.dataset.a===q.correct) o.classList.add('correct'); else o.classList.add('dim');
+  });
+  if(ok){
+    right++;
+    rightLog.push({id:q.id});
+    if(!mastered.has(q.id)){ mastered.add(q.id); saveMastered(); }
+  }
+  else{
+    wrong++; sel.classList.remove('dim'); sel.classList.add('wrong');
+    if(mastered.has(q.id)){ mastered.delete(q.id); saveMastered(); }
+    wrongLog.push({id:q.id,q:q.q,correct:q.correct});
+    if(mode==='learn'){
+      const ins=Math.min(pos+1+REPEAT_AFTER, queue.length);
+      queue.splice(ins,0,{i:item.i,rep:true});
+    }
+  }
+  document.getElementById('btn-check').style.display='none';
+  document.getElementById('btn-next').style.display='block';
+  stats();
+}
+function next(){ pos++; render(); }
+function stats(){
+  document.getElementById('st-pos').textContent=`Frage ${Math.min(pos+1,queue.length)} / ${queue.length}`;
+  document.querySelector('#st-right b').textContent=right;
+  document.querySelector('#st-wrong b').textContent=wrong;
+  const t=right+wrong;
+  document.getElementById('st-pct').textContent=(t?Math.round(right/t*100):0)+'%';
+  document.getElementById('progress').style.width=(queue.length?(pos/queue.length*100):0)+'%';
+}
+function finish(){
+  const t=right+wrong, pct=t?Math.round(right/t*100):0;
+  const seen={}, list=wrongLog.filter(w=>{if(seen[w.id])return false;seen[w.id]=1;return true;});
+  document.getElementById('screen-result').innerHTML=`
+    <h2>${pct>=75?'🎉 Geschafft!':'📘 Weiter üben'}</h2>
+    <div class="rrow"><span>Beantwortet</span><span>${t}</span></div>
+    <div class="rrow"><span>Richtig</span><span style="color:var(--success)">${right}</span></div>
+    <div class="rrow"><span>Falsch</span><span style="color:var(--danger)">${wrong}</span></div>
+    <div class="rrow"><span>Ergebnis</span><span>${pct}%</span></div>
+    ${list.length?`<div class="wronglist"><b>Diese Fragen saßen noch nicht:</b>${
+      list.map(w=>`<div><b>${w.id}</b> — ${w.q}<br><span style="color:var(--success)">${w.correct}</span></div>`).join('')
+    }</div>`:''}
+    <div class="toolbar">
+      <button class="linkbtn" onclick="startMode('${mode}')">Nochmal</button>
+      <button class="linkbtn" onclick="quitToStart()">Zum Start</button>
+    </div>`;
+  show('screen-result');
+}
+function quitToStart(){ show('screen-start'); }
+function loadProgress(){
+  try{
+    const s=localStorage.getItem(LS_PROG);
+    if(s){ const p=JSON.parse(s); if(p.mode && p.queue) return p; }
+  }catch(e){}
+  return null;
+}
+function saveProgress(){
+  try{
+    localStorage.setItem(LS_PROG, JSON.stringify({mode,queue,pos,right,wrong,wrongLog,rightLog}));
+  }catch(e){}
+}
+function resetProgress(){
+  if(!confirm('Lernfortschritt und alle gemerkten Fragen zurücksetzen?')) return;
+  try{localStorage.removeItem(LS_PROG);}catch(e){}
+  try{localStorage.removeItem(LS_MASTERED);}catch(e){}
+  mastered = new Set();
+  updateStartScreen();
+  alert('Lernfortschritt zurückgesetzt.');
+  quitToStart();
+}
+function loadMastered(){
+  try{
+    const s=localStorage.getItem(LS_MASTERED);
+    if(s){ const a=JSON.parse(s); if(Array.isArray(a)) return new Set(a); }
+  }catch(e){}
+  return new Set();
+}
+function saveMastered(){
+  try{ localStorage.setItem(LS_MASTERED, JSON.stringify([...mastered])); }catch(e){}
+  updateStartScreen();
+}
+function updateStartScreen(){
+  const qc=document.getElementById('qcount');
+  if(qc) qc.textContent=data.length;
+  const mc=document.getElementById('mastered-count');
+  if(mc) mc.textContent=mastered.size;
+}
+
+/* ---------- Editor ---------- */
+function openEditor(){ edIdx=0; show('screen-editor'); edLoad(); }
+function closeEditor(){ show('screen-start'); document.getElementById('qcount').textContent=data.length; }
+function edLoad(){
+  const q=data[edIdx];
+  document.getElementById('ed-pos').textContent=edIdx+1;
+  document.getElementById('ed-total').textContent=data.length;
+  document.getElementById('ed-id').textContent=q.id||'—';
+  document.getElementById('ed-q').value=q.q;
+  document.getElementById('ed-correct').value=q.correct;
+  document.getElementById('ed-w1').value=q.wrong[0]||'';
+  document.getElementById('ed-w2').value=q.wrong[1]||'';
+  document.getElementById('ed-w3').value=q.wrong[2]||'';
+}
+function editorSave(){
+  const q=data[edIdx];
+  q.q=document.getElementById('ed-q').value.trim();
+  q.correct=document.getElementById('ed-correct').value.trim();
+  q.wrong=[document.getElementById('ed-w1').value.trim(),
+           document.getElementById('ed-w2').value.trim(),
+           document.getElementById('ed-w3').value.trim()].filter(x=>x);
+  saveData(); alert('Gespeichert.');
+}
+function editorNext(){ if(edIdx<data.length-1){edIdx++; edLoad();} }
+function editorPrev(){ if(edIdx>0){edIdx--; edLoad();} }
+function editorJump(){ const v=parseInt(document.getElementById('ed-jump').value,10);
+  if(v>=1&&v<=data.length){ edIdx=v-1; edLoad(); } }
+function editorRevert(){
+  if(!confirm('Alle eigenen Änderungen verwerfen und Originalfragen wiederherstellen?')) return;
+  data=JSON.parse(JSON.stringify(QUESTIONS)); saveData(); edIdx=0; edLoad();
+  document.getElementById('qcount').textContent=data.length;
+}
+function exportJSON(){
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='lrc_fragen.json'; a.click();
+}
+function importJSON(){ document.getElementById('fileinput').click(); }
+document.getElementById('fileinput').addEventListener('change',e=>{
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=()=>{ try{
+      const p=JSON.parse(r.result);
+      if(!Array.isArray(p)||!p.length) throw 0;
+      data=p; saveData(); edIdx=0; edLoad();
+      document.getElementById('qcount').textContent=data.length;
+      alert('Importiert: '+data.length+' Fragen.');
+    }catch(err){ alert('Datei konnte nicht gelesen werden.'); } };
+  r.readAsText(f);
+});
+
+document.getElementById('btn-check').onclick=check;
+document.getElementById('btn-next').onclick=next;
+</script>
+</body>
+</html>

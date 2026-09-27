@@ -1,0 +1,482 @@
+[
+ {
+  "id": "SB_46",
+  "q": "Sie haben ein Funktelegramm für ein Besatzungsmitglied aufgenommen. Dürfen Sie einem anderen Besatzungsmitglied davon berichten?",
+  "correct": "Nein",
+  "wrong": [
+   "Ja, innerhalb der Besatzung ist das zulässig",
+   "Ja, wenn der Kapitän zustimmt",
+   "Ja, sofern es nicht privater Natur ist"
+  ]
+ },
+ {
+  "id": "SB_49",
+  "q": "Welche Aussendung hat im Seefunk unbedingten Vorrang?",
+  "correct": "Notverkehr",
+  "wrong": [
+   "Dringlichkeitsverkehr",
+   "Sicherheitsverkehr",
+   "Verkehr mit der Hafenbehörde"
+  ]
+ },
+ {
+  "id": "LRC_108",
+  "q": "Darf die Frequenz 2187,5 kHz für Sprechfunkverkehr benutzt werden?",
+  "correct": "nein",
+  "wrong": [
+   "ja, aber nur im Notfall",
+   "ja, fuer DSC-Anrufe",
+   "ja, mit Genehmigung der Kuestenfunkstelle"
+  ]
+ },
+ {
+  "id": "LRC_110",
+  "q": "Für welchen Zweck darf die Frequenz 121,5 MHz benutzt werden?",
+  "correct": "für Not- und Dringlichkeitszwecke im Sprechfunk durch Funkstellen des mobilen Flugfunkdienstes, für Rettungsgerätefunkstellen und zum „Homeing“ von EPIRB’s",
+  "wrong": [
+   "Kanal 13 (Brücke-Brücke)",
+   "2182 kHz",
+   "156,8 MHz"
+  ]
+ },
+ {
+  "id": "LRC_111",
+  "q": "Wird im Seefunkdienst vor einem Anruf im Notverkehr das Notzeichen MAYDAY ausgesendet?",
+  "correct": "ja",
+  "wrong": [
+   "nein, MAYDAY wird erst nach dem Anruf ausgesendet",
+   "nur im GMDSS, außerhalb nicht",
+   "nein, MAYDAY ist nur für Sprechfunk vorgesehen, nicht für DSC"
+  ]
+ },
+ {
+  "id": "LRC_112",
+  "q": "Darf ein Schiff, das selbst nicht in Not ist, für ein anderes Schiff einen Notalarm aussenden?",
+  "correct": "ja (Mayday Relay)",
+  "wrong": [
+   "nein, nur das Schiff in Not darf den Notalarm selbst aussenden",
+   "ja, aber nur mit ausdrücklicher Genehmigung der Küstenfunkstelle",
+   "nur wenn das Schiff in Not außer Sicht ist"
+  ]
+ },
+ {
+  "id": "LRC_113",
+  "q": "Eine Funkstelle sendet einen „DSC distress relay alert“ aus, was bedeutet das?",
+  "correct": "dass sich eine andere Stelle in Not (unmittelbarer, schwerer Gefahr) befindet",
+  "wrong": [
+   "Gruppenruf",
+   "DSC-Controller",
+   "DSC-Anruf"
+  ]
+ },
+ {
+  "id": "LRC_114",
+  "q": "Wann wird „SILENCE MAYDAY“ ausgesendet?",
+  "correct": "wenn die Funkstelle in Not oder die Funkstelle, die den Notverkehr leitet, einer oder mehreren Funkstellen das Senden untersagt (Funkstille auferlegt)",
+  "wrong": [
+   "Im Seegebiet A1",
+   "Über DSC",
+   "In allen Seegebieten"
+  ]
+ },
+ {
+  "id": "LRC_115",
+  "q": "Mit welchen Zeichen dürfen RCC´s, die den Notverkehr, oder Einheiten, die Such- und Rettungsarbeiten koordinieren, Funkstellen, die einen Notverkehr im GMDSS stören, im Sprechfunk Funkstille auferlegen?",
+  "correct": "SILENCE MAYDAY",
+  "wrong": [
+   "Seegebiet A3",
+   "Weltweit",
+   "Seegebiet A4"
+  ]
+ },
+ {
+  "id": "LRC_117",
+  "q": "Was besagt die Meldung, an deren Ende „SILENCE FINI“ steht?",
+  "correct": "dass der Notverkehr beendet und die Funkstille aufgehoben ist",
+  "wrong": [
+   "Durch den Kapitän",
+   "Im Seegebiet A1",
+   "Durch die Küstenfunkstelle"
+  ]
+ },
+ {
+  "id": "LRC_122",
+  "q": "Wem obliegt in der Regel das Koordinieren des Notverkehrs im GMDSS?",
+  "correct": "einem RCC (MRCC)",
+  "wrong": [
+   "Seegebiet A2",
+   "Seegebiet A1",
+   "Seegebiet A4"
+  ]
+ },
+ {
+  "id": "LRC_123",
+  "q": "Welcher Kanal im UKW-Seefunkbereich ist vorzugsweise für den Verkehr und koordinierte SAR-Einsätze vorgesehen?",
+  "correct": "Kanal 6",
+  "wrong": [
+   "Kanal 70 (DSC)",
+   "156,8 MHz",
+   "Kanal 16 (Notruf und Anruf)"
+  ]
+ },
+ {
+  "id": "LRC_127",
+  "q": "Was müssen Sie tun, wenn Sie eine Seenotfunkbake unabsichtlich ausgelöst haben?",
+  "correct": "Verbindungsaufnahme mit der nächsten Küsten-, Küsten-Erdfunkstelle oder einem RCC und den Alarm widerrufen",
+  "wrong": [
+   "Im Seegebiet A1",
+   "Auf Kanal 16",
+   "Durch den Kapitän"
+  ]
+ },
+ {
+  "id": "LRC_128",
+  "q": "Wie lautet auf Grenzwelle das Verfahren zur Rücknahme von Fehlalarmen über DSC?",
+  "correct": "auf 2182 kHz im Sprechfunk: ALL STATONS ALL STATIONS ALL STATIONS THIS IS (Schiffsname)/ (Rufzeichen)/ (MMSI) CANCEL MY DISTRESS ALERT OF (Zeit des Fehlalarms )UTC",
+  "wrong": [
+   "DSC-Anruf",
+   "DSC-Controller",
+   "Gruppenruf"
+  ]
+ },
+ {
+  "id": "LRC_131",
+  "q": "Welches Betriebsverfahren muss im Verkehr mit Luftfahrzeugfunkstellen angewendet werden?",
+  "correct": "das des Schiffsfunkdienstes",
+  "wrong": [
+   "Im Seegebiet A1",
+   "Durch die Küstenfunkstelle",
+   "Nur im Notfall"
+  ]
+ },
+ {
+  "id": "LRC_133",
+  "q": "Wie wird die Wortgruppe „PAN PAN“ genannt?",
+  "correct": "Dringlichkeitszeichen",
+  "wrong": [
+   "Durch den Kapitän",
+   "Über DSC",
+   "Auf Kanal 16"
+  ]
+ },
+ {
+  "id": "LRC_137",
+  "q": "An wen wird der DSC-Dringlichkeitsanruf auf Kurzwelle im Regelfall gerichtet?",
+  "correct": "an alle Fahrzeuge in einem definierten Gebiet (area call), oder CS oder RCC",
+  "wrong": [
+   "Gruppenruf",
+   "DSC-Controller",
+   "DSC-Anruf"
+  ]
+ },
+ {
+  "id": "LRC_141",
+  "q": "Wie wird im Sprechfunk die Dringlichkeitsmeldung eingeleitet?",
+  "correct": "durch das Dringlichkeitszeichen, das 3-malige „PAN PAN“",
+  "wrong": [
+   "Auf Kanal 16",
+   "Durch die Küstenfunkstelle",
+   "Nur im Notfall"
+  ]
+ },
+ {
+  "id": "LRC_142",
+  "q": "Muss eine \"An alle Funkstellen\" ausgesendete Dringlichkeitsmeldung aufgehoben werden?",
+  "correct": "ja, wenn die veranlassten Maßnahmen nicht mehr erforderlich sind",
+  "wrong": [
+   "nein, Dringlichkeitsmeldungen werden automatisch nach 24 Stunden gelöscht",
+   "nur wenn die Küstenfunkstelle dazu auffordert",
+   "nein, Dringlichkeitsmeldungen bleiben bis zum Ende der Reise gültig"
+  ]
+ },
+ {
+  "id": "LRC_144",
+  "q": "Wie lautet das Sicherheitszeichen?",
+  "correct": "„SECURITE“",
+  "wrong": [
+   "Nach Bestätigung",
+   "In allen Seegebieten",
+   "Auf Kanal 16"
+  ]
+ },
+ {
+  "id": "LRC_145",
+  "q": "An wen darf der DSC-Sicherheitsanruf auf GW und UKW gerichtet werden?",
+  "correct": "an alle",
+  "wrong": [
+   "DSC-Controller",
+   "Automatische Alarmierung",
+   "DSC-Anruf"
+  ]
+ },
+ {
+  "id": "LRC_146",
+  "q": "An wen wird der DSC-Sicherheitsanruf auf Kurzwelle im Regelfall gerichtet?",
+  "correct": "an ein definiertes Gebiet (area call), oder eine CS oder ein RCC",
+  "wrong": [
+   "Gruppenruf",
+   "Selektivruf",
+   "Automatische Alarmierung"
+  ]
+ },
+ {
+  "id": "LRC_147",
+  "q": "Was ist bei der Ankündigung einer Sicherheitsmeldung auf UKW zu beachten?",
+  "correct": "die Sicherheitsmeldung muss mittels des digitalen Selektivrufs (DSC) auf Kanal 70 angekündigt werden dass kein höherrangiger Verkehr gestört wird",
+  "wrong": [
+   "Durch die Küstenfunkstelle",
+   "Durch den Kapitän",
+   "In allen Seegebieten"
+  ]
+ },
+ {
+  "id": "LRC_151",
+  "q": "Was muss oder darf eine Seefunkstelle tun, die einen DSC-Sicherheitsanruf empfängt, der eine Sicherheitsmeldung an alle Schiffe ankündigt?",
+  "correct": "niederrangigen Funkverkehr einstellen",
+  "wrong": [
+   "Über DSC auf Kanal 70",
+   "Selektivruf",
+   "DSC-Controller"
+  ]
+ },
+ {
+  "id": "LRC_152",
+  "q": "Wie können im Küstenbereich automatisch Warnnachrichten empfangen werden?",
+  "correct": "mittels NAVTEX",
+  "wrong": [
+   "Über DSC",
+   "Nach Bestätigung",
+   "Durch den Kapitän"
+  ]
+ },
+ {
+  "id": "LRC_155",
+  "q": "In welchem Seegebiet wird NAVTEX angewandt?",
+  "correct": "im Regelfall A1 + A2",
+  "wrong": [
+   "Weltweit",
+   "Inmarsat-Abdeckung",
+   "Seegebiet A3"
+  ]
+ },
+ {
+  "id": "LRC_160",
+  "q": "In welchem Dienst wird der Gruppenanruf (EGC) verwendet?",
+  "correct": "MSI (Maritime Safety Information) auf Inmarsat-C",
+  "wrong": [
+   "Auf Kanal 16",
+   "Durch den Kapitän",
+   "Über DSC"
+  ]
+ },
+ {
+  "id": "LRC_161",
+  "q": "Mit welcher Einrichtung können Sie MSI über Satelliten empfangen?",
+  "correct": "Inmarsat-C, EGC-Empfänger, Safety-Net",
+  "wrong": [
+   "Im Seegebiet A1",
+   "Durch den Kapitän",
+   "Über DSC"
+  ]
+ },
+ {
+  "id": "LRC_164",
+  "q": "Wie können Sie feststellen, ob bei einer Küstenfunkstelle Nachrichten für Sie vorliegen, ohne dass Sie dort anrufen?",
+  "correct": "durch das Abhören des Sammelanrufes (Traffic List)",
+  "wrong": [
+   "Im Seegebiet A1",
+   "Auf Kanal 16",
+   "Nach Bestätigung"
+  ]
+ },
+ {
+  "id": "LRC_168",
+  "q": "Darf eine Seefunkstelle auch dann gerufen werden, wenn der Schiffsname unbekannt ist?",
+  "correct": "ja",
+  "wrong": [
+   "nein",
+   "nur mit MMSI",
+   "nur ueber DSC"
+  ]
+ },
+ {
+  "id": "LRC_170",
+  "q": "Welche Form hat die Positionsangabe im Seefunkdienst?",
+  "correct": "z.B. 32-17.5 S 065-02.8 E",
+  "wrong": [
+   "Gemäß SOLAS",
+   "Durch den Kapitän",
+   "Auf Kanal 16"
+  ]
+ },
+ {
+  "id": "LRC_171",
+  "q": "Sie haben gehört, dass Sie von einer Funkstelle gerufen wurden, konnten aber wegen Störungen nicht verstehen, wer Sie gerufen hat. Was müssen Sie tun?",
+  "correct": "ich sende folgenden Anruf: wer hat mich gerufen station calling hier ist this is Schiffsname mit Rufzeichen shipsname and callsign",
+  "wrong": [
+   "Durch den Kapitän",
+   "Auf Kanal 16",
+   "Im Seegebiet A1"
+  ]
+ },
+ {
+  "id": "LRC_172",
+  "q": "Was ist vor dem Anruf auf einem Arbeitskanal zu beachten?",
+  "correct": "es muss sichergestellt werden, dass laufender Funkverkehr nicht gestört wird",
+  "wrong": [
+   "Kanal 16 (Notruf und Anruf)",
+   "4125 kHz",
+   "2182 kHz"
+  ]
+ },
+ {
+  "id": "LRC_173",
+  "q": "Wie heißt das Verfahren zur Verkehrsaufnahme auf Kanal 70 bzw. der Frequenz 2187,5 kHz?",
+  "correct": "DSC",
+  "wrong": [
+   "Kanal 13 (Brücke-Brücke)",
+   "2182 kHz",
+   "4125 kHz"
+  ]
+ },
+ {
+  "id": "LRC_177",
+  "q": "Sie befinden sich in einem Gebiet, in dem es möglich ist, mit einer Küstenfunkstelle auf ihrem Arbeitskanal eine sichere UKW-Verbindung herzustellen. Wann dürfen Sie einen unbeantworteten Anruf an die betreffende Küstenfunkstelle wiederholen?",
+  "correct": "sobald sichergestellt ist, dass der Sprechfunkverkehr bei der Küstenfunkstelle nicht gestört wird",
+  "wrong": [
+   "156,8 MHz",
+   "4125 kHz",
+   "Kanal 13 (Brücke-Brücke)"
+  ]
+ },
+ {
+  "id": "LRC_182",
+  "q": "Welche Nachrichten dürfen im Seefunkdienst auf den Kanälen des Hafenfunkdienstes übermittelt werden?",
+  "correct": "Nachrichten zur Abwicklung von Vorgängen mit Schleppern, Lotsen und Hafenbehörden",
+  "wrong": [
+   "Auf Kanal 16",
+   "Im Seegebiet A1",
+   "Über DSC"
+  ]
+ },
+ {
+  "id": "LRC_184",
+  "q": "Über welches Verfahren können ausgewählte Seefunkstellen im Raumsegment des GMDSS gerufen werden?",
+  "correct": "EGC Fleet-Net",
+  "wrong": [
+   "Seegebiet A4",
+   "Seegebiet A1",
+   "Seegebiet A3"
+  ]
+ },
+ {
+  "id": "LRC_187",
+  "q": "Wie wird der Winkel zwischen Horizont und Satellit vom Schiff aus gesehen in der englischen Sprache genannt?",
+  "correct": "Elevation",
+  "wrong": [
+   "In allen Seegebieten",
+   "Durch die Küstenfunkstelle",
+   "Nach Bestätigung"
+  ]
+ },
+ {
+  "id": "LRC_189",
+  "q": "Welche Institution muss vor Inbetriebnahme einer (Inmarsat-) SATCOM-Anlage ihre Zustimmung geben?",
+  "correct": "Inmarsat",
+  "wrong": [
+   "Auf Kanal 16",
+   "In allen Seegebieten",
+   "Nach Bestätigung"
+  ]
+ },
+ {
+  "id": "LRC_19",
+  "q": "Besteht eine Verpflichtung zur Hörwache auf dem K16?",
+  "correct": "ja, wenn es möglich ist",
+  "wrong": [
+   "nein, Hörwache ist freiwillig",
+   "ja, ohne Ausnahme für alle Seefunkstellen",
+   "nur in Seegebiet A1"
+  ]
+ },
+ {
+  "id": "LRC_190",
+  "q": "Welche Dienste bietet Inmarsat-C?",
+  "correct": "MSI über EGC / Safety-Net",
+  "wrong": [
+   "Im Seegebiet A1",
+   "In allen Seegebieten",
+   "Nach Bestätigung"
+  ]
+ },
+ {
+  "id": "LRC_198",
+  "q": "Wer setzt bei Funkgesprächen von und nach See die Verbindungszeit zur Gebührenberechnung fest?",
+  "correct": "die Küstenfunkstelle",
+  "wrong": [
+   "Nach internationalem Übereinkommen",
+   "Nur im Notfall",
+   "Über DSC"
+  ]
+ },
+ {
+  "id": "LRC_199",
+  "q": "Welche Voraussetzung ist für die Teilnahme am öffentlichen Nachrichtenaustausch erforderlich?",
+  "correct": "ein Vertrag mit einer Abrechnungsgesellschaft",
+  "wrong": [
+   "Nach Bestätigung",
+   "Durch die Küstenfunkstelle",
+   "Nur im Notfall"
+  ]
+ },
+ {
+  "id": "LRC_200",
+  "q": "In welcher Verrechnungseinheit erfolgt die Internationale Abrechnung des Funkverkehrs?",
+  "correct": "Sonderziehungsrechte oder Goldfranken",
+  "wrong": [
+   "Gemäß SOLAS",
+   "Auf Kanal 16",
+   "Nur im Notfall"
+  ]
+ },
+ {
+  "id": "LRC_201",
+  "q": "In Ihrer Funk-Betriebsbewilligung steht der Ausdruck „DP02“. Was bedeutet das?",
+  "correct": "Es ist die Kennung (AAIC) einer Abrechnungsgesellschaft",
+  "wrong": [
+   "Auf Kanal 16",
+   "Durch den Kapitän",
+   "Im Seegebiet A1"
+  ]
+ },
+ {
+  "id": "LRC_202",
+  "q": "Was ist eine Schiffserdfunkstelle?",
+  "correct": "eine Satellitenfunkanlage an Bord eines Schiffes",
+  "wrong": [
+   "Auf Kanal 16",
+   "In allen Seegebieten",
+   "Nach Bestätigung"
+  ]
+ },
+ {
+  "id": "LRC_24",
+  "q": "Welche Aufgabe hat die Funktion „Durchführung von Funkverkehr vor Ort“?",
+  "correct": "die Abwicklung von Funkverkehr in Notfällen, direkt am Unfallort",
+  "wrong": [
+   "Durch den Kapitän",
+   "Gemäß SOLAS",
+   "Nach Bestätigung"
+  ]
+ },
+ {
+  "id": "LRC_35",
+  "q": "Welche Kanäle umfasst der Schutzbereich für Kanal 16?",
+  "correct": "Kanäle 75 und 76",
+  "wrong": [
+   "4125 kHz",
+   "Kanal 6 (Koordination)",
+   "Kanal 13 (Brücke-Brücke)"
+  ]
+ }
+]

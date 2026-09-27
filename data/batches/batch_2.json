@@ -1,0 +1,482 @@
+[
+ {
+  "id": "LRC_72",
+  "q": "In welchem Frequenzbereich arbeiten Radaranlagen auf Schiffen?",
+  "correct": "3 GHz und 9 GHz — S-Band und X-Band",
+  "wrong": [
+   "1,6 GHz und 3 GHz — L-Band und S-Band",
+   "406 MHz und 121,5 MHz",
+   "156 bis 162 MHz"
+  ]
+ },
+ {
+  "id": "LRC_74",
+  "q": "In welchem Frequenzbereich arbeiten SARTs?",
+  "correct": "9 GHz — X-Band",
+  "wrong": [
+   "3 GHz — S-Band",
+   "1,6 GHz — L-Band",
+   "406 MHz"
+  ]
+ },
+ {
+  "id": "LRC_89",
+  "q": "Auf welcher Grenzwellenfrequenz ist der DSC-Wachempfänger empfangsbereit?",
+  "correct": "2187,5 kHz",
+  "wrong": [
+   "2182 kHz",
+   "2177 kHz",
+   "518 kHz"
+  ]
+ },
+ {
+  "id": "LRC_90",
+  "q": "Auf welchem UKW-Kanal empfängt der DSC-Wachempfänger?",
+  "correct": "Kanal 70",
+  "wrong": [
+   "Kanal 16",
+   "Kanal 13",
+   "Kanal 6"
+  ]
+ },
+ {
+  "id": "LRC_197",
+  "q": "Welche Grenzwellen-Frequenz wird zum DSC-Anruf zwischen Schiffen international benutzt?",
+  "correct": "2177 kHz",
+  "wrong": [
+   "2187,5 kHz",
+   "2182 kHz",
+   "3023 kHz"
+  ]
+ },
+ {
+  "id": "SB_10",
+  "q": "Auf welcher Frequenz ist im GMDSS ein Kurzwellen-DSC-Scanner-Wachempfänger empfangsbereit?",
+  "correct": "8414,5 kHz",
+  "wrong": [
+   "8291 kHz",
+   "2187,5 kHz",
+   "4125 kHz"
+  ]
+ },
+ {
+  "id": "SB_68",
+  "q": "Für welche Zwecke wird die Frequenz 2182 kHz im GMDSS benutzt?",
+  "correct": "Für Not-, Dringlichkeits- und Sicherheitsverkehr im Sprechfunk",
+  "wrong": [
+   "Für die DSC-Alarmierung auf Grenzwelle",
+   "Für NAVTEX-Aussendungen",
+   "Für den öffentlichen Nachrichtenaustausch mit Küstenfunkstellen"
+  ]
+ },
+ {
+  "id": "SB_69",
+  "q": "Darf die Frequenz 2187,5 kHz für Sprechfunkverkehr benutzt werden?",
+  "correct": "Nein, diese Frequenz ist ausschließlich für DSC bestimmt",
+  "wrong": [
+   "Ja, aber nur im Notfall",
+   "Ja, wenn 2182 kHz belegt ist",
+   "Ja, für Sicherheitsmeldungen an alle"
+  ]
+ },
+ {
+  "id": "SB_72",
+  "q": "Welche GW/KW-Frequenz ist für den koordinierten Such- und Rettungsfunkverkehr (SAR) vorgesehen?",
+  "correct": "3023 kHz",
+  "wrong": [
+   "2182 kHz",
+   "2187,5 kHz",
+   "8414,5 kHz"
+  ]
+ },
+ {
+  "id": "LRC_87",
+  "q": "Wozu dient der DSC-Wachempfänger?",
+  "correct": "Zur Überwachung der DSC-Notfrequenz(en)",
+  "wrong": [
+   "Zur Überwachung des Sprechfunkkanals 16",
+   "Zum Empfang von NAVTEX-Meldungen",
+   "Zur Aussendung des Notalarms"
+  ]
+ },
+ {
+  "id": "LRC_91",
+  "q": "Welche maximale Sendeleistung darf eine fest eingebaute UKW-Seefunkanlage haben?",
+  "correct": "25 W",
+  "wrong": [
+   "50 W",
+   "10 W",
+   "1 W"
+  ]
+ },
+ {
+  "id": "LRC_92",
+  "q": "Auf welchen minimalen Wert muss die Sendeleistung einer fest eingebauten UKW-Seefunkanlage schaltbar sein?",
+  "correct": "1 W",
+  "wrong": [
+   "5 W",
+   "0,5 W",
+   "10 W"
+  ]
+ },
+ {
+  "id": "LRC_93",
+  "q": "Wozu dient der Squelch bei UKW-Funkanlagen?",
+  "correct": "Zur Unterdrückung des Grundrauschens",
+  "wrong": [
+   "Zur Feinabstimmung der Empfangsfrequenz",
+   "Zur Erhöhung der Sendeleistung",
+   "Zum Ausgleich von Schwund"
+  ]
+ },
+ {
+  "id": "LRC_94",
+  "q": "Was bezeichnet man mit Dual-Watch?",
+  "correct": "Die Zweikanalüberwachung von Kanal 16 und einem Arbeitskanal",
+  "wrong": [
+   "Die gleichzeitige Überwachung von Kanal 16 und Kanal 70",
+   "Das Abhören zweier Küstenfunkstellen",
+   "Die doppelte Aufzeichnung des Funkverkehrs"
+  ]
+ },
+ {
+  "id": "LRC_96",
+  "q": "Welchen Zweck hat die Schwundregelung?",
+  "correct": "Bei Schwund eine möglichst gleichmäßige Hörlautstärke zu erreichen",
+  "wrong": [
+   "Das Grundrauschen zu unterdrücken",
+   "Die Sendefrequenz stabil zu halten",
+   "Die Sendeleistung automatisch anzupassen"
+  ]
+ },
+ {
+  "id": "LRC_97",
+  "q": "Wozu dient der Clarifier?",
+  "correct": "Zur Feinregelung der Empfangsfrequenz bei Frequenzschwankungen",
+  "wrong": [
+   "Zur Unterdrückung des Rauschens",
+   "Zur Anpassung der Antenne",
+   "Zur Umschaltung zwischen Simplex und Duplex"
+  ]
+ },
+ {
+  "id": "LRC_109",
+  "q": "Wozu dient der DSC-Controller?",
+  "correct": "Zum Kodieren und Dekodieren von DSC-Signalen",
+  "wrong": [
+   "Zur Überwachung von Kanal 16 im Sprechfunk",
+   "Zur Steuerung der Antennenanpassung",
+   "Zum Empfang von NAVTEX-Meldungen"
+  ]
+ },
+ {
+  "id": "LRC_129",
+  "q": "Welche Arten von Antennen werden im UKW-Seefunk verwendet?",
+  "correct": "Vertikal polarisierte Stabantennen",
+  "wrong": [
+   "Horizontal polarisierte Dipolantennen",
+   "Drehbare Richtantennen",
+   "Rahmenantennen"
+  ]
+ },
+ {
+  "id": "LRC_130",
+  "q": "Welchen Einfluss hat der Ort der Aufstellung der UKW-Antenne an Bord?",
+  "correct": "Eine hohe Position erhöht die Reichweite, da die Ausbreitung quasioptisch ist",
+  "wrong": [
+   "Die Höhe hat keinen Einfluss, nur die Sendeleistung zählt",
+   "Eine tiefe Position verbessert die Bodenwellenausbreitung",
+   "Die Position beeinflusst nur die Empfangs-, nicht die Sendereichweite"
+  ]
+ },
+ {
+  "id": "LRC_100",
+  "q": "Wozu dient eine EPIRB?",
+  "correct": "Zur Seenot-Alarmierung über das Raumsegment",
+  "wrong": [
+   "Zur Ortung durch Radar anderer Schiffe",
+   "Zum Empfang von Sicherheitsmeldungen",
+   "Zur Sprechfunkverbindung mit dem RCC"
+  ]
+ },
+ {
+  "id": "LRC_101",
+  "q": "Wie muss die Aussendung einer EPIRB ausgelöst werden können?",
+  "correct": "Händisch, auf SOLAS-Schiffen zusätzlich automatisch durch Wasserdruckschalter",
+  "wrong": [
+   "Ausschließlich automatisch durch den Wasserdruckschalter",
+   "Ausschließlich händisch, eine automatische Auslösung ist unzulässig",
+   "Über einen Befehl der Küstenfunkstelle"
+  ]
+ },
+ {
+  "id": "LRC_103",
+  "q": "Welche Informationen werden durch eine COSPAS-SARSAT-EPIRB ausgesendet?",
+  "correct": "Die Kennung und gegebenenfalls die Position",
+  "wrong": [
+   "Nur ein unmoduliertes Dauersignal",
+   "Kennung, Position und Art des Notfalls im Klartext",
+   "Die MMSI und eine Sprachnachricht"
+  ]
+ },
+ {
+  "id": "LRC_105",
+  "q": "Wie erfolgt die Funktionskontrolle von SARTs im Einsatz?",
+  "correct": "Optisch und akustisch",
+  "wrong": [
+   "Durch einen Testanruf über DSC",
+   "Durch Messung der Batteriespannung",
+   "Durch eine Rückmeldung des RCC"
+  ]
+ },
+ {
+  "id": "LRC_106",
+  "q": "Was ist für eine größtmögliche Reichweite eines SART wichtig?",
+  "correct": "Eine möglichst hohe Anbringung",
+  "wrong": [
+   "Eine möglichst tiefe Anbringung nahe der Wasserlinie",
+   "Die Ausrichtung nach Norden",
+   "Ein möglichst großer Abstand zur Rettungsinsel"
+  ]
+ },
+ {
+  "id": "LRC_107",
+  "q": "Welche Aussendung erfolgt durch eine SART-Anlage?",
+  "correct": "Ein Signal im 9-GHz-Bereich",
+  "wrong": [
+   "Ein Signal im 3-GHz-Bereich",
+   "Ein Signal auf 406 MHz",
+   "Ein DSC-Alarm auf Kanal 70"
+  ]
+ },
+ {
+  "id": "SB_18",
+  "q": "Worin besteht der Hauptzweck einer Seenotfunkbake?",
+  "correct": "Sie soll die Ortung von Schiffbrüchigen erleichtern",
+  "wrong": [
+   "Sie soll Sprechfunkverbindung zum RCC herstellen",
+   "Sie soll Sicherheitsmeldungen empfangen",
+   "Sie soll die Position laufend an alle Schiffe senden"
+  ]
+ },
+ {
+  "id": "SB_25",
+  "q": "Was verstehen Sie unter der Abkürzung „ELT“?",
+  "correct": "Emergency Locator Transmitter",
+  "wrong": [
+   "Emergency Life Terminal",
+   "Electronic Location Tracker",
+   "Emergency Light Transponder"
+  ]
+ },
+ {
+  "id": "SB_51",
+  "q": "Was zeigt der Notalarm an?",
+  "correct": "Dass ein Schiff oder eine Person von ernster und unmittelbar bevorstehender Gefahr bedroht ist und sofortige Hilfe braucht",
+  "wrong": [
+   "Dass ein Schiff manövrierunfähig ist, aber keine unmittelbare Gefahr besteht",
+   "Dass eine wichtige Sicherheitsmeldung folgt",
+   "Dass ein Schiff Hilfe bei technischen Problemen wünscht"
+  ]
+ },
+ {
+  "id": "SB_52",
+  "q": "Auf dem Display eines DSC-Controllers erscheint „undesignated distress“. Was heißt das?",
+  "correct": "Notalarm ohne zusätzliche Angabe der Notfallart",
+  "wrong": [
+   "Notalarm ohne Positionsangabe",
+   "Ein versehentlich ausgelöster Fehlalarm",
+   "Ein Notalarm einer unbekannten Funkstelle"
+  ]
+ },
+ {
+  "id": "SB_53",
+  "q": "Auf dem Display eines DSC-Controllers erscheint „danger of capsizing“. Was heißt das?",
+  "correct": "Gefahr des Kenterns",
+  "wrong": [
+   "Gefahr des Sinkens",
+   "Feuer an Bord",
+   "Manövrierunfähig"
+  ]
+ },
+ {
+  "id": "SB_54",
+  "q": "Auf dem Display eines DSC-Controllers erscheint „abandoning“. Was heißt das?",
+  "correct": "Die Besatzung geht von Bord",
+  "wrong": [
+   "Das Schiff sinkt",
+   "Der Funkverkehr wird eingestellt",
+   "Manövrierunfähig"
+  ]
+ },
+ {
+  "id": "SB_60",
+  "q": "Wer ist über den Empfang eines Notalarms und dessen Inhalt umgehend zu informieren?",
+  "correct": "Der Kapitän oder die für das Schiff verantwortliche Person",
+  "wrong": [
+   "Die nächstgelegene Küstenfunkstelle",
+   "Alle Schiffe im Umkreis von 10 Seemeilen",
+   "Die Reederei"
+  ]
+ },
+ {
+  "id": "SB_61",
+  "q": "Welche Maßnahme ist zu ergreifen, wenn auf Grenzwelle ein DSC-Notalarm empfangen wurde?",
+  "correct": "Den Notalarm auf 2182 kHz bestätigen und diese Frequenz weiter abhören",
+  "wrong": [
+   "Den Notalarm auf 2187,5 kHz mit DSC bestätigen",
+   "Sofort den eigenen Notalarm auslösen",
+   "Den Funkverkehr einstellen und nichts weiter tun"
+  ]
+ },
+ {
+  "id": "SB_75",
+  "q": "Dürfen Funkstellen, die nicht am Notverkehr teilnehmen, auf dessen Frequenzen senden?",
+  "correct": "Nein, solange die Meldung SILENCE FINI nicht gesendet wurde",
+  "wrong": [
+   "Ja, wenn die Aussendung kurz gehalten wird",
+   "Ja, sobald der Notalarm bestätigt wurde",
+   "Ja, mit Erlaubnis einer beliebigen Küstenfunkstelle"
+  ]
+ },
+ {
+  "id": "SB_94",
+  "q": "Wie lautet außerhalb des GMDSS das Notzeichen im Sprechfunk?",
+  "correct": "MAYDAY",
+  "wrong": [
+   "PAN PAN",
+   "SECURITE",
+   "SOS"
+  ]
+ },
+ {
+  "id": "SB_96",
+  "q": "Wer an Bord darf das Aussenden einer Notmeldung außerhalb des GMDSS anordnen?",
+  "correct": "Der Kapitän oder die für das Schiff verantwortliche Person",
+  "wrong": [
+   "Jedes Besatzungsmitglied mit Funkzeugnis",
+   "Der Funkverantwortliche allein",
+   "Nur der Eigentümer des Schiffes"
+  ]
+ },
+ {
+  "id": "SB_99",
+  "q": "Wie oft wird außerhalb des GMDSS im Notanruf das Wort MAYDAY gesprochen?",
+  "correct": "Dreimal",
+  "wrong": [
+   "Einmal",
+   "Zweimal",
+   "Fünfmal"
+  ]
+ },
+ {
+  "id": "SB_103",
+  "q": "Wie ist außerhalb des GMDSS die richtige Reihenfolge der Notmeldung?",
+  "correct": "Notzeichen, Kennzeichnung der Funkstelle, Standort, Art des Notfalls, Art der erbetenen Hilfe",
+  "wrong": [
+   "Kennzeichnung der Funkstelle, Notzeichen, Art des Notfalls, Standort",
+   "Notzeichen, Standort, Kennzeichnung der Funkstelle, Art der erbetenen Hilfe",
+   "Notzeichen, Art des Notfalls, Art der erbetenen Hilfe, Standort"
+  ]
+ },
+ {
+  "id": "LRC_143",
+  "q": "Wie wird das Wort „SECURITE“ genannt?",
+  "correct": "Sicherheitszeichen",
+  "wrong": [
+   "Dringlichkeitszeichen",
+   "Notzeichen",
+   "Verkehrszeichen"
+  ]
+ },
+ {
+  "id": "LRC_148",
+  "q": "Auf welcher GW-Frequenz soll die Sicherheitsmeldung im Sprechfunk im Regelfall ausgesendet werden?",
+  "correct": "2182 kHz",
+  "wrong": [
+   "2187,5 kHz",
+   "2177 kHz",
+   "518 kHz"
+  ]
+ },
+ {
+  "id": "LRC_149",
+  "q": "Auf welchem UKW-Kanal soll die Sicherheitsmeldung im Sprechfunk im Regelfall ausgesendet werden?",
+  "correct": "Kanal 16",
+  "wrong": [
+   "Kanal 70",
+   "Kanal 13",
+   "Kanal 6"
+  ]
+ },
+ {
+  "id": "LRC_150",
+  "q": "Wie muss im Sprechfunk die Sicherheitsmeldung eingeleitet werden?",
+  "correct": "Durch das dreimalige Sicherheitszeichen SECURITE",
+  "wrong": [
+   "Durch das einmalige Sicherheitszeichen SECURITE",
+   "Durch dreimaliges PAN PAN",
+   "Durch einen DSC-Notalarm"
+  ]
+ },
+ {
+  "id": "SB_76",
+  "q": "An wen darf der DSC-Dringlichkeitsanruf auf Grenzwelle gerichtet werden?",
+  "correct": "An alle Funkstellen oder an eine bestimmte Funkstelle",
+  "wrong": [
+   "Ausschließlich an alle Funkstellen",
+   "Ausschließlich an eine Küstenfunkstelle",
+   "Nur an das zuständige RCC"
+  ]
+ },
+ {
+  "id": "LRC_126",
+  "q": "Welche Frequenz wird für den nationalen NAVTEX-Dienst benützt?",
+  "correct": "490 kHz",
+  "wrong": [
+   "518 kHz",
+   "4209,5 kHz",
+   "2187,5 kHz"
+  ]
+ },
+ {
+  "id": "LRC_153",
+  "q": "Welcher Dienst wird auf 518 kHz ausgesendet?",
+  "correct": "NAVTEX",
+  "wrong": [
+   "DSC",
+   "EGC / SafetyNET",
+   "Der Sammelanruf der Küstenfunkstellen"
+  ]
+ },
+ {
+  "id": "LRC_154",
+  "q": "Was sind NAVAREAS?",
+  "correct": "Eine Unterteilung der Erdoberfläche in Seegebiete für die Verbreitung von Warnungen",
+  "wrong": [
+   "Die vier GMDSS-Seegebiete A1 bis A4",
+   "Die Abdeckungsbereiche der Inmarsat-Satelliten",
+   "Die nationalen Hoheitsgewässer"
+  ]
+ },
+ {
+  "id": "LRC_156",
+  "q": "Welche Auswahlmöglichkeiten bestehen für den Empfang von NAVTEX-Sendungen?",
+  "correct": "Sendestation und Art der Meldung",
+  "wrong": [
+   "Sendeleistung und Frequenz",
+   "Sprache und Uhrzeit",
+   "Nur die Frequenz 490 oder 518 kHz"
+  ]
+ },
+ {
+  "id": "LRC_158",
+  "q": "Welche Sprache wird bei NAVTEX-Aussendungen auf 518 kHz grundsätzlich benutzt?",
+  "correct": "Englisch",
+  "wrong": [
+   "Die jeweilige Landessprache",
+   "Französisch",
+   "Wahlweise Englisch oder die Landessprache"
+  ]
+ }
+]
