@@ -1,0 +1,502 @@
+[
+  {
+    "id": "SB_22",
+    "q": "Warum ist im Seegebiet A4 eine L-Band-EPIRB nutzlos?",
+    "correct": "weil das Gebiet nicht im Bedeckungsbereich der INMARSAT Satelliten liegt",
+    "wrong": [
+      "Weltweit",
+      "Seegebiet A1",
+      "Seegebiet A4"
+    ]
+  },
+  {
+    "id": "SB_23",
+    "q": "Welche der genannten Vorschriften verpflichtet den Schiffseigner, sein Schiff u. U. mit einer EPIRB auszurüsten?",
+    "correct": "Jachtzulassungsverordnung",
+    "wrong": [
+      "Gemäß SOLAS",
+      "Nach Bestätigung",
+      "Auf Kanal 16"
+    ]
+  },
+  {
+    "id": "SB_24",
+    "q": "Welches funktechnische Rettungsmittel ist für eine Jacht im Fahrtbereich 4 vorgeschrieben?",
+    "correct": "eine EPIRB",
+    "wrong": [
+      "Nur im Notfall",
+      "Nach Bestätigung",
+      "Auf Kanal 16"
+    ]
+  },
+  {
+    "id": "SB_27",
+    "q": "Sind Versuchssendungen auf den GMDSS Not- und Sicherheitsfrequenzen erlaubt?",
+    "correct": "ja, aber sie sind auf das unbedingt nötige Ausmaß zu beschränken, auf den Anruffrequenzen sind sie zu vermeiden",
+    "wrong": [
+      "Kanal 6 (Koordination)",
+      "156,8 MHz",
+      "Kanal 70 (DSC)"
+    ]
+  },
+  {
+    "id": "SB_29",
+    "q": "Wo ist international die Führung von Aufzeichnungen im Funkverkehr geregelt?",
+    "correct": "VO Funk",
+    "wrong": [
+      "Nur im Notfall",
+      "Nach Bestätigung",
+      "Über DSC"
+    ]
+  },
+  {
+    "id": "SB_3",
+    "q": "Wie wird im GMDSS das Seegebiet A3 beschrieben?",
+    "correct": "Gebiete außerhalb von A1 und A2 .Ein Gebiet innerhalb der Überdeckung eines geostationären INMARSAT-Satelliten, der ununterbrochen für Alarmierungen zur Verfügung steht.",
+    "wrong": [
+      "Küstennahe Gewässer",
+      "Weltweit",
+      "Seegebiet A2"
+    ]
+  },
+  {
+    "id": "SB_30",
+    "q": "Wo sind die Betriebsverfahren, die im Seefunkdienst anzuwenden sind, beschrieben?",
+    "correct": "Seeschiffahrtsverordnung",
+    "wrong": [
+      "Nach Bestätigung",
+      "Auf Kanal 16",
+      "Nur im Notfall"
+    ]
+  },
+  {
+    "id": "SB_34",
+    "q": "Welche Aussendungen sind gemäß der Vollzugsordnung für den Funkdienst verboten?",
+    "correct": "Jede Aussendung, die einen Notverkehr auf einer der internationalen Notfrequenzen stören könnte",
+    "wrong": [
+      "Über DSC",
+      "Nur im Notfall",
+      "Gemäß SOLAS"
+    ]
+  },
+  {
+    "id": "SB_35",
+    "q": "Welche Aussendungen sind gemäß der Vollzugsordnung für den Funkdienst verboten?",
+    "correct": "Jede Aussendung, die einen Notverkehr auf einer der internationalen Notfrequenzen stören könnte",
+    "wrong": [
+      "Nur im Notfall",
+      "Über DSC",
+      "Nach Bestätigung"
+    ]
+  },
+  {
+    "id": "SB_38",
+    "q": "In welchem Warndienst wird der Gruppenanruf (EGC) verwendet ?",
+    "correct": "Satelliten-Warndienst",
+    "wrong": [
+      "Nach Bestätigung",
+      "Gemäß SOLAS",
+      "Im Seegebiet A1"
+    ]
+  },
+  {
+    "id": "SB_39",
+    "q": "Welcher Dienst übermittelt MSI über Satelliten?",
+    "correct": "SafetyNET Service im EGC System",
+    "wrong": [
+      "Gemäß SOLAS",
+      "Über DSC",
+      "Durch den Kapitän"
+    ]
+  },
+  {
+    "id": "SB_4",
+    "q": "Welchen geografischen Bereich etwa umfaßt im GMDSS das Seegebiet A4 ?",
+    "correct": "Gewässer jeweils nördlich und südlich von 70° Breite nicht mit Inmarsat versorgt ( Polkappen)",
+    "wrong": [
+      "Inmarsat-Abdeckung",
+      "Seegebiet A4",
+      "Seegebiet A3"
+    ]
+  },
+  {
+    "id": "SB_40",
+    "q": "In welcher internationalen Vorschrift sind die Frequenzbereiche für die einzelnen Funkdienste festgelegt?",
+    "correct": "VO Funk Vollzugsordnung für den Funkdienst",
+    "wrong": [
+      "2182 kHz",
+      "Kanal 70 (DSC)",
+      "Kanal 6 (Koordination)"
+    ]
+  },
+  {
+    "id": "SB_43",
+    "q": "Darf das bisherige Verfahren betreffend den Not- und Sicherheitsverkehr („non-GMDSS“) weiter angewendet werden?",
+    "correct": "das Verfahren darf weiterhin von jenen Schiffen angewendet werden, die nicht mit GMDSS ausgerüstet sind",
+    "wrong": [
+      "Inmarsat-Abdeckung",
+      "Weltweit",
+      "Seegebiet A2"
+    ]
+  },
+  {
+    "id": "SB_45",
+    "q": "In welchem Fahrtbereich muß eine Jacht mit österreichischer Seezulassung mit einer UKW- Sprechfunkanlage ausgerüstet sein?",
+    "correct": "in den Fahrtbereichen 3 und 4",
+    "wrong": [
+      "Durch die Küstenfunkstelle",
+      "Nur im Notfall",
+      "In allen Seegebieten"
+    ]
+  },
+  {
+    "id": "SB_47",
+    "q": "Wo können sie sich informieren, welches RCC für ein bestimmtes Gebiet zuständig ist ?",
+    "correct": "im GMDSS Master Plan der IMO",
+    "wrong": [
+      "Im Seegebiet A1",
+      "Nur im Notfall",
+      "Auf Kanal 16"
+    ]
+  },
+  {
+    "id": "SB_5",
+    "q": "Wie lautet im GMDSS die Kurzbezeichnung für das nachfolgend beschriebene Seegebiet? \"Ein von der zuständigen Verwaltung festgelegtes Gebiet innerhalb der Sprechfunkreichweite mindestens einer GW-Küstenfunkstelle, die ununterbrochen für DSC-Alarmierungen zur Verfügung steht.\"",
+    "correct": "A2",
+    "wrong": [
+      "A1",
+      "A3",
+      "A4"
+    ]
+  },
+  {
+    "id": "SB_50",
+    "q": "Womit wird im GMDSS auf 2187,5 kHz ein Seenotverkehr eingeleitet?",
+    "correct": "mit der Notalarmierung",
+    "wrong": [
+      "Küstennahe Gewässer",
+      "Seegebiet A2",
+      "Weltweit"
+    ]
+  },
+  {
+    "id": "SB_55",
+    "q": "Auf welcher Grenzwellen-Frequenz erfolgt die DSC-Alarmierung?",
+    "correct": "auf 2187,5 kHz",
+    "wrong": [
+      "Kanal 70 (DSC)",
+      "2182 kHz",
+      "Kanal 13 (Brücke-Brücke)"
+    ]
+  },
+  {
+    "id": "SB_56",
+    "q": "Welche der genannten Frequenzen ist u.a. für die DSC-Alarmierung im Kurzwellenbereich zu benützen?",
+    "correct": "8414,5 kHz",
+    "wrong": [
+      "Kanal 6 (Koordination)",
+      "Kanal 70 (DSC)",
+      "Kanal 13 (Brücke-Brücke)"
+    ]
+  },
+  {
+    "id": "SB_57",
+    "q": "In welchem Frequenzbereich soll die DSC-Alarmierung Schiff – Land aus den Seegebieten A3 und A4 erfolgen?",
+    "correct": "auf einer der Kurzwellen Not- und Sicherheitsfrequenzen, vorzugsweise 8414,5 kHz",
+    "wrong": [
+      "2182 kHz",
+      "Kanal 70 (DSC)",
+      "Kanal 13 (Brücke-Brücke)"
+    ]
+  },
+  {
+    "id": "SB_58",
+    "q": "In welchem Frequenzbereich soll die DSC-Alarmierung von Schiffen in der Nähe in den Seegebieten A3 und A4 erfolgen?",
+    "correct": "auf 2187,5 kHz und/oder auf dem UKW-Kanal 70",
+    "wrong": [
+      "4125 kHz",
+      "Kanal 16 (Notruf und Anruf)",
+      "Kanal 6 (Koordination)"
+    ]
+  },
+  {
+    "id": "SB_59",
+    "q": "Auf welchem Gerät kann man durch drücken einer Taste einen Notalarm über das Raumsegment des GMDSS auslösen?",
+    "correct": "INMARSAT-C-Terminal",
+    "wrong": [
+      "Seegebiet A1",
+      "Seegebiet A2",
+      "Inmarsat-Abdeckung"
+    ]
+  },
+  {
+    "id": "SB_6",
+    "q": "Wie lautet im GMDSS die Kurzbezeichnung für das nachfolgend beschriebene Seegebiet? \"Ein Gebiet innerhalb der Überdeckung eines geostationären Inmarsat-Satelliten, der ununterbrochen für Alarmierungen zur Verfügung steht.\"",
+    "correct": "A3",
+    "wrong": [
+      "A1",
+      "A2",
+      "A4"
+    ]
+  },
+  {
+    "id": "SB_63",
+    "q": "Muss eine Seefunkstelle, die auf GW oder UKW einen DSC-Notalarm einer in ihrer Nähe befindlichen anderen Seefunkstelle empfangen hat, den Empfang über Sprechfunk bestätigen?",
+    "correct": "ja",
+    "wrong": [
+      "Gruppenruf",
+      "Über DSC auf Kanal 70",
+      "DSC-Anruf"
+    ]
+  },
+  {
+    "id": "SB_64",
+    "q": "Muss eine Seefunkstelle den Empfang eines DSC-Notalarms auf GW einer zweifellos weit entfernten Seefunkstelle, der sie nicht helfen kann, über Sprechfunk bestätigen?",
+    "correct": "die Bestätigung erfolgt in diesem Fall nur dann, wenn keine andere Funkstelle den Notalarm bestätigt",
+    "wrong": [
+      "Automatische Alarmierung",
+      "Selektivruf",
+      "DSC-Controller"
+    ]
+  },
+  {
+    "id": "SB_65",
+    "q": "Welche Maßnahmen soll eine Seefunkstelle ergreifen, wenn trotz ihrer Bestätigung auf der Frequenz 2182 kHz über den Empfang des DSC-Notalarms weiterhin DSC-Notalarme der zweifellos in der Nähe befindlichen Funkstelle in Not ausgesendet werden?",
+    "correct": "MRCC oder CS sollen entsprechend informiert werden. Kann nach Abstimmung mit MRCC oder CS der Ruf bestätigt werden.",
+    "wrong": [
+      "4125 kHz",
+      "Kanal 16 (Notruf und Anruf)",
+      "2182 kHz"
+    ]
+  },
+  {
+    "id": "SB_66",
+    "q": "Auf welcher Frequenz im GW-Bereich wird die Meldung, mit der im GMDSS der Notverkehr im Sprechfunk eingeleitet wird, ausgesendet?",
+    "correct": "auf der internationalen Not- und Sicherheitsfrequenz 2182 kHz",
+    "wrong": [
+      "2182 kHz",
+      "4125 kHz",
+      "Kanal 13 (Brücke-Brücke)"
+    ]
+  },
+  {
+    "id": "SB_67",
+    "q": "Auf welcher Frequenz wird der Notverkehr im Sprechfunk auf Grenzwelle im GMDSS abgewickelt?",
+    "correct": "auf 2182 kHz",
+    "wrong": [
+      "4125 kHz",
+      "156,8 MHz",
+      "Kanal 70 (DSC)"
+    ]
+  },
+  {
+    "id": "SB_70",
+    "q": "Darf ein Schiff, das selbst nicht in Not ist, für ein anderes Schiff auf 2187,5 kHz einen Notalarm aussenden?",
+    "correct": "ja, wenn das Schiff in Not nicht selbst in der Lage ist, den Notalarm auszusenden",
+    "wrong": [
+      "In allen Seegebieten",
+      "Über DSC",
+      "Durch die Küstenfunkstelle"
+    ]
+  },
+  {
+    "id": "SB_71",
+    "q": "Welche der angeführten GW-Frequenzen werden für Search and Rescue (SAR) „vor Ort“ benutzt?",
+    "correct": "3023 und 2182 kHz",
+    "wrong": [
+      "Kanal 13 (Brücke-Brücke)",
+      "2182 kHz",
+      "4125 kHz"
+    ]
+  },
+  {
+    "id": "SB_73",
+    "q": "Wie lautet auf Grenzwelle das Verfahren zur Rücknahme von Fehlalarmen über DSC?",
+    "correct": "Nach sofortiger Deaktivierung des Notalarmes Auf 2182 kHz: ALL STATONS ALL STATIONS ALL STATIONS THIS IS (Schiffsname)/ (Rufzeichen)/ (MMSI) Position (Breite, Länge) CANCEL MY DISTRESS ALERT OF (Datum/Zeit des Fehlalarms )UTC MASTER (Schiffsname)/(Rufzeichen)/(MMSI) (Datum/Zeit) UTC",
+    "wrong": [
+      "Gruppenruf",
+      "Automatische Alarmierung",
+      "DSC-Controller"
+    ]
+  },
+  {
+    "id": "SB_74",
+    "q": "Was müssen Sie tun, wenn Sie mit Ihrer Inmarsat-C-Anlage unabsichtlich einen Notalarm ausgesendet haben?",
+    "correct": "die zuständige RCC mittels einer Distress Priority Meldung über dieselbe CES(Coast earth Station), über die die Notalarmierung erfolgte, über den Widerruf der Notalarmierung wie folgt informieren: Name, Rufzeichen, IMN Position Cancel my Inmarsat-C distress alert of DATE, TIME (UTC) =Master+",
+    "wrong": [
+      "Nach Bestätigung",
+      "Durch den Kapitän",
+      "Über DSC"
+    ]
+  },
+  {
+    "id": "SB_77",
+    "q": "An wen wird der DSC-Dringlichkeitsanruf auf Kurzwelle im Regelfall gerichtet?",
+    "correct": "an alle Schiffe in einem definierten geografischen Gebiet oder an eine bestimmte Küstenfunkstelle",
+    "wrong": [
+      "Gruppenruf",
+      "DSC-Anruf",
+      "Über DSC auf Kanal 70"
+    ]
+  },
+  {
+    "id": "SB_78",
+    "q": "Auf welcher GW-Frequenz soll eine Seefunkstelle im Sprechfunk die Dringlichkeitsmeldung im GMDSS aussenden?",
+    "correct": "2182 kHz",
+    "wrong": [
+      "Kanal 13 (Brücke-Brücke)",
+      "Kanal 6 (Koordination)",
+      "Kanal 70 (DSC)"
+    ]
+  },
+  {
+    "id": "SB_8",
+    "q": "Auf welcher Frequenz im Grenzwellenbereich müssen Seefunkstellen, die Einrichtungen des GMDSS benützen, eine Empfangsbereitschaft für DSC sicherstellen, wenn sie auf See sind?",
+    "correct": "2187,5 kHz",
+    "wrong": [
+      "4125 kHz",
+      "2182 kHz",
+      "156,8 MHz"
+    ]
+  },
+  {
+    "id": "SB_80",
+    "q": "An wen darf der DSC-Sicherheitsanruf auf GW gerichtet werden?",
+    "correct": "an alle Schiffe, an alle Schiffe in einem definierten geografischen Gebiet oder an eine bestimmte Funkstelle",
+    "wrong": [
+      "Selektivruf",
+      "Gruppenruf",
+      "Über DSC auf Kanal 70"
+    ]
+  },
+  {
+    "id": "SB_81",
+    "q": "An wen wird der DSC-Sicherheitsanruf auf Kurzwelle im Regelfall gerichtet?",
+    "correct": "an alle Schiffe in einem definierten geografischen Gebiet oder an eine bestimmte Küstenfunkstelle",
+    "wrong": [
+      "Selektivruf",
+      "DSC-Anruf",
+      "Gruppenruf"
+    ]
+  },
+  {
+    "id": "SB_82",
+    "q": "Auf welcher GW-Frequenz soll eine Seefunkstelle im Sprechfunk die Sicherheitsmeldung im GMDSS im Regelfall aussenden?",
+    "correct": "2182 kHz",
+    "wrong": [
+      "156,8 MHz",
+      "Kanal 70 (DSC)",
+      "Kanal 6 (Koordination)"
+    ]
+  },
+  {
+    "id": "SB_84",
+    "q": "Wie können im Küstenbereich automatisch Warnnachrichten empfangen werden ?",
+    "correct": "über NAVTEX",
+    "wrong": [
+      "Auf Kanal 16",
+      "In allen Seegebieten",
+      "Im Seegebiet A1"
+    ]
+  },
+  {
+    "id": "SB_85",
+    "q": "Welcher Dienst wird auf 518 kHz ausgesendet ?",
+    "correct": "NAVTEX",
+    "wrong": [
+      "Durch die Küstenfunkstelle",
+      "Gemäß SOLAS",
+      "Durch den Kapitän"
+    ]
+  },
+  {
+    "id": "SB_87",
+    "q": "Welche Auswahlmöglichkeiten bestehen für den Empfang von NAVTEX - Sendungen?",
+    "correct": "es müssen die NAVTEX-Stationen und die Art der gewünschten Meldungen am Gerät eingegeben werden",
+    "wrong": [
+      "Durch die Küstenfunkstelle",
+      "Durch den Kapitän",
+      "Nur im Notfall"
+    ]
+  },
+  {
+    "id": "SB_88",
+    "q": "Welche Reichweite hat der NAVTEX-Dienst auf 518 kHz ?",
+    "correct": "ca. 400 sm vom Senderstandort aus",
+    "wrong": [
+      "Nur im Notfall",
+      "Auf Kanal 16",
+      "In allen Seegebieten"
+    ]
+  },
+  {
+    "id": "SB_89",
+    "q": "Worauf muss beim Einstellen eines NAVTEX-Empfängers geachtet werden?",
+    "correct": "Wahl der Küstenfunkstelle und Art der Aussendungen",
+    "wrong": [
+      "Durch die Küstenfunkstelle",
+      "Nur im Notfall",
+      "Auf Kanal 16"
+    ]
+  },
+  {
+    "id": "SB_9",
+    "q": "Auf welcher Frequenz ist im GMDSS ein Grenzwellen-DSC-Wachempfänger empfangsbereit ?",
+    "correct": "2187,5 kHz",
+    "wrong": [
+      "Kanal 6 (Koordination)",
+      "Kanal 16 (Notruf und Anruf)",
+      "4125 kHz"
+    ]
+  },
+  {
+    "id": "SB_91",
+    "q": "Mit welcher der genannten Einrichtungen können sie MSI über Satelliten empfangen?",
+    "correct": "INMARSAT-C Klasse 2",
+    "wrong": [
+      "Über DSC",
+      "Durch die Küstenfunkstelle",
+      "Gemäß SOLAS"
+    ]
+  },
+  {
+    "id": "SB_92",
+    "q": "Was ist ein EGC-Empfänger ?",
+    "correct": "INMARSAT-C Klasse 2",
+    "wrong": [
+      "Nur im Notfall",
+      "In allen Seegebieten",
+      "Über DSC"
+    ]
+  },
+  {
+    "id": "SB_95",
+    "q": "Was zeigt das Notzeichen außerhalb des GMDSS im Sprechfunk an?",
+    "correct": "dass ein Schiff von ernster und unmittelbar bevorstehender Gefahr bedroht ist und um sofortige Hilfe bittet",
+    "wrong": [
+      "Seegebiet A4",
+      "Weltweit",
+      "Inmarsat-Abdeckung"
+    ]
+  },
+  {
+    "id": "SB_97",
+    "q": "Was ist im Seefunkdienst außerhalb des GMDSS vor dem Aussenden eines Notanrufs auf Kanal 16 zu beachten?",
+    "correct": "es darf sofort mit dem Senden begonnen werden",
+    "wrong": [
+      "4125 kHz",
+      "2182 kHz",
+      "Kanal 16 (Notruf und Anruf)"
+    ]
+  },
+  {
+    "id": "SB_98",
+    "q": "Womit wird außerhalb des GMDSS ein Seenotverkehr eingeleitet?",
+    "correct": "mit dem Notanruf",
+    "wrong": [
+      "Weltweit",
+      "Seegebiet A1",
+      "Seegebiet A2"
+    ]
+  }
+]

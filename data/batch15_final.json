@@ -1,0 +1,14 @@
+[
+{"id":"SB_9","q":"Auf welcher Frequenz ist im GMDSS ein Grenzwellen-DSC-Wachempfänger empfangsbereit?","correct":"2187,5 kHz",
+ "wrong":["2182 kHz","2177 kHz","8414,5 kHz"]},
+{"id":"SB_91","q":"Mit welcher der genannten Einrichtungen können Sie MSI über Satelliten empfangen?","correct":"Inmarsat-C Klasse 2",
+ "wrong":["NAVTEX-Empfänger auf 518 kHz","DSC-Wachempfänger auf Kanal 70","406-MHz-EPIRB mit Rückkanal"]},
+{"id":"SB_92","q":"Was ist ein EGC-Empfänger?","correct":"Inmarsat-C Klasse 2",
+ "wrong":["Ein NAVTEX-Empfänger für 490 und 518 kHz","Ein DSC-Wachempfänger für Kanal 70","Ein Radartransponder im 9-GHz-Band"]},
+{"id":"SB_95","q":"Was zeigt das Notzeichen außerhalb des GMDSS im Sprechfunk an?","correct":"Dass ein Schiff von ernster und unmittelbar bevorstehender Gefahr bedroht ist und sofortige Hilfe braucht",
+ "wrong":["Dass ein Schiff manövrierunfähig ist, ohne dass unmittelbare Gefahr besteht","Dass eine wichtige Sicherheitsmeldung über Navigationsgefahren folgt","Dass ein Schiff Unterstützung bei technischen Problemen wünscht"]},
+{"id":"SB_97","q":"Was ist im Seefunkdienst außerhalb des GMDSS vor dem Aussenden eines Notanrufs zu beachten?","correct":"Es darf sofort mit dem Senden begonnen werden",
+ "wrong":["Die Frequenz muss zuerst abgehört werden, um laufenden Verkehr nicht zu stören","Eine Küstenfunkstelle muss zuerst um Erlaubnis gefragt werden","Der Notanruf muss über DSC angekündigt werden"]},
+{"id":"SB_98","q":"Womit wird außerhalb des GMDSS ein Seenotverkehr eingeleitet?","correct":"Mit dem Notanruf",
+ "wrong":["Mit der Notalarmierung über DSC","Mit dem Sicherheitszeichen SECURITE","Mit dem Dringlichkeitszeichen PAN PAN"]}
+]
