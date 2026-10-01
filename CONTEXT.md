@@ -8,8 +8,8 @@
 
 ## Current State
 
-**Production Version:** `lrc_lerntool.html` (v4, 98 KB, 286 questions)  
-**Status:** Production-ready, sent to Peter 2026-09-26  
+**Production Version:** `lrc_lerntool_v7_20261001_1927.html` (v7, 100 KB, 286 questions)  
+**Status:** Sent to Peter 2026-10-01, 10-question spot-check passed, awaiting full test  
 **Repository:** https://github.com/thespell290506/lrc  
 
 ### Question Coverage
@@ -51,10 +51,12 @@ const QUESTIONS = [  // MUST be uppercase
 ### v5 Data Corruption
 `lrc_questions_v5.json` has wrong distractor assignments — corrections were applied by ID number instead of question type. **Do not use as source.**
 
-### v4 Placeholder Block
-Questions `LRC_108` onwards in some builds contain category placeholders instead of content-specific distractors:
-- Generic phrases: "Im Seegebiet A1", "Über DSC", "Durch den Kapitän"
-- These pass regex validation but fail expert review
+### v3/v4 Pool-Phrase Contamination (Fixed in v7)
+Versions v3 and v4 contained 262 generic distractor slots across 16 pool phrases:
+- "Auf Kanal 16" ×31, "Über DSC" ×25, "Nach Bestätigung" ×24, "Nur im Notfall" ×22, "Durch den Kapitän" ×20, "Im Seegebiet A1" ×18, "4125 kHz" ×18, "Gemäß SOLAS" ×17, and 8 others
+- These passed structural validation but failed expert scrutiny in actual use
+- Status claims "all distractors validated" in commit `e4ed48d` and earlier CONTEXT.md were aspirational, not verified
+- **Lesson (AGENTS.md §8.1):** Status lines written at session-end without consumer-level verification are unreliable
 
 ### Validation Traps (2026-09-26 Lessons)
 1. **Self-checks must verify what consumers read**
@@ -127,10 +129,19 @@ ls -l lrc_lerntool.html versions/lrc_lerntool_STABLE_*.html
 
 ## Version History
 
-### v4 (2026-09-26) — PRODUCTION
+### v7 (2026-10-01) — PRODUCTION CANDIDATE
+- 286 questions, all rebuilt from scratch
+- Zero generic pool-phrase distractors (verified: "Auf Kanal 16", "Über DSC", etc. appear only as correct answers or in question text, never as distractors)
+- Every distractor semantically plausible but factually wrong, domain-specific per question type
+- Source: `data/rebuild_progress.json`
+- Peter spot-check: 10 questions tested, "perfect"
+- Full test pending 2026-10-02
+- 100 KB
+
+### v4 (2026-09-26) — SUPERSEDED
 - 286 questions
-- All distractors validated semantically
-- Sent to Peter, approved for instructor gift
+- **Pool-phrase contamination discovered:** 262 generic distractor slots across 16 banned phrases
+- Sent to Peter, initially approved — quality issues found in production use
 - 98 KB
 
 ### v3 (2026-09-26)
